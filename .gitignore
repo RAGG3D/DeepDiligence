@@ -1,0 +1,25 @@
+# Datasets - do NOT upload
+tam_data/
+tam_hl_mm_data/
+tam_*_research.json
+
+# Sensitive / environment
+.env
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Accidental path artifacts
+C:/
+
+# Empty directories
+resumes/
+
+# IDE / tool config
+.claude/
+
+# Script output logs
+script1_output.txt
+script3_output.txt
