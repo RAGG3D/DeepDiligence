@@ -8,13 +8,16 @@ of deleted maturity-curve rows (R444-446) and COGS rate row (R455).
 Also fills missing MS row C-column ratings from Peer Views.
 """
 
-import zipfile
-import re
 import io
+import os
+import re
 import shutil
 import sys
+import zipfile
 from pathlib import Path
 from datetime import datetime
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 
 _EMPTY_CALC_CHAIN = (
@@ -179,7 +182,7 @@ def _fill_missing_c_ratings(xml: str, ratings: dict) -> str:
 def _read_ratings(xlsx_path: Path) -> dict:
     """Read indication → rating mapping from Peer Views sheet."""
     try:
-        from generate_pipeline import _read_peer_views_ratings
+        from generate.generate_pipeline import _read_peer_views_ratings
         return _read_peer_views_ratings(xlsx_path)
     except Exception as e:
         print(f"  WARNING: Could not read Peer Views ratings: {e}")

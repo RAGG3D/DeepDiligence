@@ -14,16 +14,20 @@ Usage:
 
 import argparse
 import logging
+import os
 import re
 import shutil
+import sys
 import zipfile
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 # Reuse parsing from generate_scenarios.py
-from generate_scenarios import (
+from generate.generate_scenarios import (
     parse_gemini_reports, PipelineAsset,
     _asset_full_name, _xml_escape,
 )

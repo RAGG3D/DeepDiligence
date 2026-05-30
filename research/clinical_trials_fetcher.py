@@ -12,12 +12,16 @@ Usage:
 import argparse
 import json
 import logging
+import os
 import re
 import requests
+import sys
 import time
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -139,7 +143,7 @@ def fetch_latest_10k_text(ticker: str) -> Optional[str]:
 
     Returns full text content for NCT extraction.
     """
-    from sec_fetcher import SECFetcher
+    from core.sec_fetcher import SECFetcher
 
     try:
         fetcher = SECFetcher()
@@ -183,7 +187,7 @@ def fetch_press_releases(ticker: str) -> List[str]:
 
     Returns list of text contents.
     """
-    from sec_fetcher import SECFetcher
+    from core.sec_fetcher import SECFetcher
 
     fetcher = SECFetcher()
     cik = fetcher.get_cik(ticker)

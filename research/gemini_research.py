@@ -32,6 +32,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 try:
     from google import genai
     from google.genai import types as genai_types
@@ -953,7 +955,7 @@ def main():
 
     elif not args.skip_trials:
         try:
-            from clinical_trials_fetcher import get_company_trials, save_trial_data
+            from research.clinical_trials_fetcher import get_company_trials, save_trial_data
             logger.info("=" * 70)
             logger.info("STEP 1: Fetching Clinical Trials from ClinicalTrials.gov")
             logger.info("=" * 70)

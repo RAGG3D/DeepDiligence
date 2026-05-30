@@ -21,8 +21,8 @@ import logging
 import sys
 from typing import List
 
-from sec_fetcher import SECFetcher
-from excel_writer import update_workbook
+from core.sec_fetcher import SECFetcher
+from core.excel_writer import update_workbook
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 

@@ -764,7 +764,7 @@ MONTH_NAMES = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',
                7:'Jul',8:'Aug',9:'Sep',10:'Oct',11:'Nov',12:'Dec'}
 
 def detect_fye_month(ticker, cik=None):
-    from sec_fetcher import SECFetcher
+    from core.sec_fetcher import SECFetcher
     f = SECFetcher()
     resolved = cik.zfill(10) if cik else f.get_cik(ticker)
     facts = f.get_company_facts(resolved)
