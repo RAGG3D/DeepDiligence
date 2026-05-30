@@ -2,6 +2,12 @@
 
 An automated biotech/pharmaceutical DCF (Discounted Cash Flow) valuation pipeline. Integrates SEC EDGAR financial data, ClinicalTrials.gov clinical trial metadata, Google Gemini Deep Research, and Anthropic Claude to produce investment-grade Excel models with per-drug revenue forecasting, scenario analysis, and catalyst tracking.
 
+### Excel Tab Structure
+
+![AUTO_DCF Excel Tab Structure](auto_dcf_tabs.png)
+
+The workbook is organised into five functional groups: **Output** sheets (Catalyst, Earnings, Valuation), **Catalyst-specific forecasting** (FSA, Scenarios, Peer View, Pipeline), **Financials / DCF model** (RIS, RBS, RCFS, Schedules, FY DATA, FY DATA K USD), **Sentiment & historical data** (Historical Events, BBG DAPI), and **Database / variable generation** (TAM Solid, TAM Blood, Peer Views).
+
 ## Architecture Overview
 
 ```
