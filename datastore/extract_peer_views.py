@@ -32,6 +32,10 @@ from openpyxl.utils import get_column_letter
 THEME_RATING = {9: "BIC", 8: "T1", 7: "AVG"}   # fill theme -> rating
 DRUG_COLS = range(5, 41)                        # E .. AN
 
+# rating-legend labels that sit in a drug slot but are NOT drugs
+NON_DRUG = {"tier one", "best-in-class", "best in class", "average",
+            "avg", "bic", "t1", "bench mark", "benchmark"}
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -85,7 +89,8 @@ def main():
         if drug_row is None:
             continue
 
-        active = [c for c in DRUG_COLS if text(drug_row, c)]
+        active = [c for c in DRUG_COLS
+                  if text(drug_row, c) and text(drug_row, c).lower() not in NON_DRUG]
         if not active:
             continue
 
