@@ -107,6 +107,7 @@ flowchart TD
 | `indication` | incidence **rate** (epidemiology **input**, not derived) |
 | `reference_drug_sale` | peer ramps (Alimta, Tagrisso, …) + Xpovio cost lines used to *derive* parameters |
 | `param_input` | scalar globals (world population, growth rate) |
+| `peer_drug` / `peer_metric` | Peer Views: drug-vs-drug clinical readouts + **rating decoded from fill color → text** |
 
 ### 🟩 Layer 2 — everything computed, as views referencing Layer 1
 
@@ -166,6 +167,13 @@ The raw millions (when they come) **never enter Excel** — Excel's hard limit i
   tagged with its segment. Layer 1 now holds **~139 drugs (101 solid / 38 blood)
   across 29 indications/segments**. *(The sheet's list-price market-sizing — the
   UPPERCASE "purchases" rows — is Layer-2 math deferred to a later pass.)*
+- **Phase 1d — done:** normalized **Peer Views** via `extract_peer_views.py`.
+  Each section is a drug-vs-drug clinical-readout table; we extract **19 sections /
+  123 drugs / ~1,600 metric cells** into tidy `peer_drug` + `peer_metric` tables.
+  Crucially, the **BIC/T1/AVG rating — previously encoded only as cell fill
+  color — is decoded into an explicit text column** (`v_peer_rating`), so the data
+  no longer depends on Excel formatting. All three "data center" tabs (TAM Solid,
+  TAM Blood, Peer Views) are now in the store.
 - **Cross-indication TAM policy:** **include** an IO drug's minor indication
   slices (the more-complete definition) — this is the datastore's default.
 - **Next:** refine the maturity-curve / growth parameters and the blood
@@ -197,6 +205,7 @@ pip install duckdb openpyxl                       # one-time
 python datastore/extract_tam_solid.py            # harvest sheet parameters → seed
 python datastore/extract_legacy_drugs.py         # backfill legacy solid drugs → seed
 python datastore/extract_tam_blood.py            # backfill TAM Blood roster → seed
+python datastore/extract_peer_views.py           # normalize Peer Views (color→text) → seed
 python datastore/build_datastore.py              # build DB + publish CSVs
 python datastore/validate_vs_sheet.py            # fidelity check vs the live sheet
 ```

@@ -15,6 +15,7 @@
 --  spreadsheet row number. Adding a drug is an INSERT; no row ever shifts.
 -- ============================================================================
 
+DROP VIEW  IF EXISTS v_peer_rating;
 DROP VIEW  IF EXISTS v_param_cogs_price;
 DROP VIEW  IF EXISTS v_param_growth;
 DROP VIEW  IF EXISTS v_param_incidence;
@@ -23,6 +24,8 @@ DROP VIEW  IF EXISTS v_tam_by_indication_year;
 DROP VIEW  IF EXISTS v_drug_indication_revenue;
 DROP VIEW  IF EXISTS v_drug_split;
 
+DROP TABLE IF EXISTS peer_metric;
+DROP TABLE IF EXISTS peer_drug;
 DROP TABLE IF EXISTS drug_indication_split;
 DROP TABLE IF EXISTS drug_revenue;
 DROP TABLE IF EXISTS reference_drug_sale;
@@ -86,4 +89,28 @@ CREATE TABLE param_input (
     key   VARCHAR PRIMARY KEY,
     value DOUBLE,
     note  VARCHAR
+);
+
+-- Peer Views: drug-vs-drug clinical-readout comparison tables, extracted from
+-- the Peer Views sheet. One row per drug per section; the BIC/T1/AVG rating is
+-- DECODED from cell fill color into explicit text (no more color-as-data).
+CREATE TABLE peer_drug (
+    section_id INTEGER NOT NULL,             -- section order (disambiguates titles)
+    section    VARCHAR NOT NULL,             -- indication / setting title
+    col        VARCHAR NOT NULL,             -- source column letter (drug slot)
+    drug       VARCHAR,
+    ticker     VARCHAR,
+    rating     VARCHAR CHECK (rating IN ('BIC','T1','AVG') OR rating IS NULL),
+    PRIMARY KEY (section_id, col)
+);
+
+-- Long/tidy clinical metrics per drug (ORR, Median PFS/OS, sales, dates, ...).
+-- value is text because metrics are mixed-type (numbers, dates, free text).
+CREATE TABLE peer_metric (
+    section_id INTEGER NOT NULL,
+    section    VARCHAR NOT NULL,
+    col        VARCHAR NOT NULL,
+    metric     VARCHAR NOT NULL,
+    value      VARCHAR,
+    PRIMARY KEY (section_id, col, metric)
 );

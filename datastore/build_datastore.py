@@ -33,6 +33,7 @@ EXPORT_DIR = os.path.join(HERE, "export")
 SEED_PATH = os.path.join(HERE, "seed", "params_seed.json")
 LEGACY_PATH = os.path.join(HERE, "seed", "legacy_drugs.json")
 BLOOD_PATH = os.path.join(HERE, "seed", "blood_drugs.json")
+PEER_PATH = os.path.join(HERE, "seed", "peer_views.json")
 
 # Each source dir maps to a tam_group and a default split method.
 SOURCES = [
@@ -152,6 +153,21 @@ def main():
     if param_rows:
         con.executemany("INSERT INTO param_input VALUES (?,?,?)", param_rows)
 
+    # Peer Views (independent of the drug tables)
+    n_peer_sections = 0
+    if os.path.exists(PEER_PATH):
+        sections = json.load(open(PEER_PATH))
+        n_peer_sections = len(sections)
+        pd_rows, pm_rows = [], []
+        for sid, s in enumerate(sections):
+            for d in s["drugs"]:
+                pd_rows.append((sid, s["section"], d["col"], d.get("drug"),
+                                d.get("ticker"), d.get("rating")))
+                for metric, value in d.get("metrics", {}).items():
+                    pm_rows.append((sid, s["section"], d["col"], metric, value))
+        con.executemany("INSERT INTO peer_drug VALUES (?,?,?,?,?,?)", pd_rows)
+        con.executemany("INSERT INTO peer_metric VALUES (?,?,?,?,?)", pm_rows)
+
     con.execute(open(os.path.join(SCHEMA_DIR, "02_layer2_views.sql")).read())
 
     # ---- validate ----------------------------------------------------------
@@ -160,6 +176,10 @@ def main():
     n_rev = con.sql("SELECT count(*) FROM drug_revenue").fetchone()[0]
     print(f"\n=== DD Data Center built: {DB_PATH} ===")
     print(f"Layer 1: {n_drugs} drugs | {n_ind} indications | {n_rev} revenue rows")
+    if n_peer_sections:
+        n_pd = con.sql("SELECT count(*) FROM peer_drug").fetchone()[0]
+        n_rate = con.sql("SELECT count(*) FROM v_peer_rating").fetchone()[0]
+        print(f"Peer Views: {n_peer_sections} sections | {n_pd} drugs | {n_rate} rated")
     if conflicts:
         names = ", ".join(sorted({c[0] for c in conflicts})[:12])
         print(f"  (deduped {len(conflicts)} duplicate drug_id(s): {names}"
@@ -186,6 +206,9 @@ def main():
         "param_incidence":        "v_param_incidence",
         "param_growth":           "v_param_growth",
         "param_cogs_price":       "v_param_cogs_price",
+        "peer_drug":              "peer_drug",
+        "peer_metric":            "peer_metric",
+        "peer_rating":            "v_peer_rating",
         "drug":                   "drug",
         "drug_revenue":           "drug_revenue",
     }

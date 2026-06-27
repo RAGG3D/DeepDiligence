@@ -100,3 +100,10 @@ WITH x AS (
 SELECT
     (((selling_and_ga - ga) + manufacturing) / NULLIF(net_sale, 0)) AS cogs_price
 FROM x;
+
+-- 7) Clean Peer Views rating lookup: drug -> BIC/T1/AVG by section, color decoded
+--    into text. Excel XLOOKUPs this instead of reading cell fill colors.
+CREATE VIEW v_peer_rating AS
+SELECT section_id, section, drug, ticker, rating
+FROM peer_drug
+WHERE rating IS NOT NULL;
