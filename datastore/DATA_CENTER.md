@@ -160,11 +160,17 @@ The raw millions (when they come) **never enter Excel** — Excel's hard limit i
   guide. **Non-destructive — the live workbook is untouched.**
 - **Phase 1b — done:** backfilled the full legacy solid-tumor drug market
   (R9–R341) straight from the live sheet via `extract_legacy_drugs.py`.
-  Layer 1 now holds **~115 drugs / 26 indications**, so `v_tam_by_indication_year`
-  covers the whole market, not just the HL/MM set.
-- **Next:** refine the maturity-curve / growth parameters, decide the
-  cross-indication TAM policy (below), then repoint the downstream tabs from
-  row-based formulas to key-based lookups on a workbook **copy**.
+- **Phase 1c — done:** backfilled the **TAM Blood** roster via
+  `extract_tam_blood.py`. TAM Blood is mechanism-grouped (CAR-T, BTKi,
+  Heme-Other) plus red-font HL / MM blocks; we capture each drug's net sales
+  tagged with its segment. Layer 1 now holds **~139 drugs (101 solid / 38 blood)
+  across 29 indications/segments**. *(The sheet's list-price market-sizing — the
+  UPPERCASE "purchases" rows — is Layer-2 math deferred to a later pass.)*
+- **Cross-indication TAM policy:** **include** an IO drug's minor indication
+  slices (the more-complete definition) — this is the datastore's default.
+- **Next:** refine the maturity-curve / growth parameters and the blood
+  list-price market-sizing, then repoint the downstream tabs from row-based
+  formulas to key-based lookups on a workbook **copy**.
 
 ### 🎯 Fidelity check (`validate_vs_sheet.py`)
 
@@ -190,6 +196,7 @@ The datastore's TAM is compared to the sheet's own SUMIF TAM rows:
 pip install duckdb openpyxl                       # one-time
 python datastore/extract_tam_solid.py            # harvest sheet parameters → seed
 python datastore/extract_legacy_drugs.py         # backfill legacy solid drugs → seed
+python datastore/extract_tam_blood.py            # backfill TAM Blood roster → seed
 python datastore/build_datastore.py              # build DB + publish CSVs
 python datastore/validate_vs_sheet.py            # fidelity check vs the live sheet
 ```

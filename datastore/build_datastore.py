@@ -32,6 +32,7 @@ DB_PATH = os.path.join(HERE, "dd.duckdb")
 EXPORT_DIR = os.path.join(HERE, "export")
 SEED_PATH = os.path.join(HERE, "seed", "params_seed.json")
 LEGACY_PATH = os.path.join(HERE, "seed", "legacy_drugs.json")
+BLOOD_PATH = os.path.join(HERE, "seed", "blood_drugs.json")
 
 # Each source dir maps to a tam_group and a default split method.
 SOURCES = [
@@ -76,6 +77,8 @@ def load_json_drugs():
             conflicts.append((did, source))
             return
         base, company, molecule = parse_name(full)
+        company = d.get("company") or company          # explicit fields win
+        molecule = d.get("molecule") or molecule
         drugs[did] = (did, base, company, molecule, tam_group, source)
         for yr, val in d.get("revenues", {}).items():
             revenues.append((did, int(yr), float(val)))
@@ -98,6 +101,10 @@ def load_json_drugs():
     if os.path.exists(LEGACY_PATH):                       # legacy solid backfill
         for d in json.load(open(LEGACY_PATH)):
             add(d, "solid", "legacy_drugs.json")
+
+    if os.path.exists(BLOOD_PATH):                        # TAM Blood roster
+        for d in json.load(open(BLOOD_PATH)):
+            add(d, "blood", "blood_drugs.json")
 
     return list(drugs.values()), revenues, splits, indication_cases, conflicts
 
