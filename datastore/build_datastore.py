@@ -31,6 +31,7 @@ SCHEMA_DIR = os.path.join(HERE, "schema")
 DB_PATH = os.path.join(HERE, "dd.duckdb")
 EXPORT_DIR = os.path.join(HERE, "export")
 SEED_PATH = os.path.join(HERE, "seed", "params_seed.json")
+LEGACY_PATH = os.path.join(HERE, "seed", "legacy_drugs.json")
 
 # Each source dir maps to a tam_group and a default split method.
 SOURCES = [
@@ -57,36 +58,47 @@ def parse_name(full):
 
 
 def load_json_drugs():
-    """Return (drugs, revenues, splits, indication_cases) deduped by drug_id."""
+    """Return (drugs, revenues, splits, indication_cases, conflicts) deduped by drug_id.
+
+    Sources, in priority order (first occurrence of a drug_id wins):
+      1. tam_hl_mm_data/*.json  (blood, richest)
+      2. tam_data/*.json        (solid)
+      3. seed/legacy_drugs.json (solid, extracted from the live TAM Solid sheet)
+    """
     drugs, revenues, splits = {}, [], []
     indication_cases = {}   # indication_code -> max incidence_global_annual seen
     conflicts = []
 
-    for src_dir, tam_group, default_method in SOURCES:
+    def add(d, tam_group, source):
+        full = d["drug_name"]
+        did = slug(full)
+        if did in drugs:
+            conflicts.append((did, source))
+            return
+        base, company, molecule = parse_name(full)
+        drugs[did] = (did, base, company, molecule, tam_group, source)
+        for yr, val in d.get("revenues", {}).items():
+            revenues.append((did, int(yr), float(val)))
+        for ind in d.get("indications", []):
+            code = ind["name"].strip()
+            if "share" in ind:
+                splits.append((did, code, "share", float(ind["share"]), None))
+            else:
+                w = ind.get("incidence_global_annual")
+                splits.append((did, code, "incidence", None,
+                               float(w) if w is not None else None))
+                if w is not None:
+                    indication_cases[code] = max(indication_cases.get(code, 0), int(w))
+
+    for src_dir, tam_group, _ in SOURCES:
         for path in sorted(glob.glob(os.path.join(src_dir, "*.json"))):
             with open(path) as f:
-                d = json.load(f)
-            full = d["drug_name"]
-            did = slug(full)
-            if did in drugs:
-                conflicts.append((did, os.path.basename(path)))
-                continue
-            base, company, molecule = parse_name(full)
-            drugs[did] = (did, base, company, molecule, tam_group,
-                          os.path.basename(path))
-            for yr, val in d.get("revenues", {}).items():
-                revenues.append((did, int(yr), float(val)))
-            for ind in d.get("indications", []):
-                code = ind["name"].strip()
-                if "share" in ind:
-                    splits.append((did, code, "share", float(ind["share"]), None))
-                else:
-                    w = ind.get("incidence_global_annual")
-                    splits.append((did, code, "incidence", None,
-                                   float(w) if w is not None else None))
-                    if w is not None:
-                        indication_cases[code] = max(indication_cases.get(code, 0),
-                                                     int(w))
+                add(json.load(f), tam_group, os.path.basename(path))
+
+    if os.path.exists(LEGACY_PATH):                       # legacy solid backfill
+        for d in json.load(open(LEGACY_PATH)):
+            add(d, "solid", "legacy_drugs.json")
+
     return list(drugs.values()), revenues, splits, indication_cases, conflicts
 
 
@@ -142,8 +154,9 @@ def main():
     print(f"\n=== DD Data Center built: {DB_PATH} ===")
     print(f"Layer 1: {n_drugs} drugs | {n_ind} indications | {n_rev} revenue rows")
     if conflicts:
-        print(f"  (deduped {len(conflicts)} drug(s) present in both sources: "
-              f"{', '.join(c[0] for c in conflicts)})")
+        names = ", ".join(sorted({c[0] for c in conflicts})[:12])
+        print(f"  (deduped {len(conflicts)} duplicate drug_id(s): {names}"
+              f"{'...' if len(conflicts) > 12 else ''})")
 
     print("\nLayer 2 — TAM by indication (2024), top 12:")
     print(con.sql("""

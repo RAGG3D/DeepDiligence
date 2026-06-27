@@ -155,13 +155,32 @@ The raw millions (when they come) **never enter Excel** — Excel's hard limit i
 
 - **Store:** one DuckDB file (~4 MB, mostly fixed overhead) + a Parquet lake.
 - **Published to Excel:** all CSVs together ≈ tens of KB today.
-- **Phase 1 (this commit):** schema (Layer 1 + Layer 2), ingest from the
-  existing per-drug JSON, parameters seeded from the live `TAM Solid` sheet,
-  validated TAM rollups, CSV publishing + Power Query guide. **Non-destructive —
-  the live workbook is untouched.**
-- **Next:** backfill the legacy solid-tumor drugs into JSON, refine the
-  maturity-curve parameter semantics, then repoint the downstream tabs from
-  row-based formulas to key-based lookups on a workbook copy.
+- **Phase 1 — done:** schema (Layer 1 + Layer 2), ingest from per-drug JSON,
+  parameters seeded from the live `TAM Solid` sheet, CSV publishing + Power Query
+  guide. **Non-destructive — the live workbook is untouched.**
+- **Phase 1b — done:** backfilled the full legacy solid-tumor drug market
+  (R9–R341) straight from the live sheet via `extract_legacy_drugs.py`.
+  Layer 1 now holds **~115 drugs / 26 indications**, so `v_tam_by_indication_year`
+  covers the whole market, not just the HL/MM set.
+- **Next:** refine the maturity-curve / growth parameters, decide the
+  cross-indication TAM policy (below), then repoint the downstream tabs from
+  row-based formulas to key-based lookups on a workbook **copy**.
+
+### 🎯 Fidelity check (`validate_vs_sheet.py`)
+
+The datastore's TAM is compared to the sheet's own SUMIF TAM rows:
+
+| Indication | vs sheet | Why |
+|---|---|---|
+| **NSCLC, HNSCC** | within ~±13% (near-exact 2023) | dominated by drugs captured in full |
+| **BTC, Melanoma** | datastore **higher** | it now *comprehensively* adds Keytruda/Opdivo minor slices (e.g. 9% melanoma × $29.5 B) that the sheet's TAM rows don't sum |
+| **CRC** | datastore ~25% lower | a few contributors carry uncached / residual-formula splits |
+
+> 🧭 **A real modeling decision surfaces here:** should an immuno-oncology giant's
+> *small* share of an indication count toward that indication's TAM? The
+> datastore says yes (more complete); the legacy sheet said no. This is now an
+> explicit, one-line policy choice instead of a side effect of which cells Excel
+> happened to cache.
 
 ---
 
@@ -170,7 +189,9 @@ The raw millions (when they come) **never enter Excel** — Excel's hard limit i
 ```bash
 pip install duckdb openpyxl                       # one-time
 python datastore/extract_tam_solid.py            # harvest sheet parameters → seed
+python datastore/extract_legacy_drugs.py         # backfill legacy solid drugs → seed
 python datastore/build_datastore.py              # build DB + publish CSVs
+python datastore/validate_vs_sheet.py            # fidelity check vs the live sheet
 ```
 
 See **`POWER_QUERY_SETUP.md`** for wiring Excel to the published folder.
