@@ -24,3 +24,9 @@ resumes/
 # Script output logs
 script1_output.txt
 script3_output.txt
+
+# Data Center — code & docs are tracked; data artifacts are NOT
+datastore/dd.duckdb
+datastore/export/
+datastore/lake/
+datastore/seed/
