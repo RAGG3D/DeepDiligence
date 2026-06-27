@@ -38,18 +38,19 @@ This GUI step is the only part that can't be done headlessly.
         tam_by_indication_year[year],          F$6)     # F$6 = the column's year
 ```
 
-**Pattern 2 — revenue = TAM × market share × growth tier** (64 cells)
+**Pattern 2 — revenue = TAM × market share × maturity factor** (64 cells)
 ```excel
-# before — growth pinned to row 553 (T1), shifts when drugs are added
-... * F11 * INDEX('TAM Solid'!$F$553:$AH$553, <year offset>)
+# before — maturity pinned to row 553 (T1), a 29-wide row that shifts on insert
+... * F11 * INDEX('TAM Solid'!$F$553:$AH$553, <year-offset>)
 
-# after — growth pulled by tier name from the param table
-... * F11 * XLOOKUP("T1", param_growth[tier], param_growth[growth_factor])
+# after — keyed by (tier, year-offset) into the maturity table
+... * F11 * SUMIFS(param_maturity[factor],
+                   param_maturity[tier],        "T1",
+                   param_maturity[year_offset], <year-offset>)
 ```
-> ⚠️ `param_growth` is currently a single factor per tier (AVG/BIC/T1). If the
-> model needs a *per-year* maturity curve (the old `$F$553:$AH$553` was a 29-wide
-> row), extend `v_param_growth` to emit a tier × year grid first. Tracked as a
-> Layer-2 refinement.
+> `param_maturity` is the full curve: factor by years-since-launch (offset 1..29)
+> per tier (AVG/BIC/T1), extracted straight from the sheet's rows 551–553. The
+> `<year-offset>` is the same launch-relative index the old `INDEX` computed.
 
 **Pattern 3 — COGS/Price × revenue** (64 cells)
 ```excel

@@ -17,6 +17,7 @@
 
 DROP VIEW  IF EXISTS v_peer_rating;
 DROP VIEW  IF EXISTS v_param_cogs_price;
+DROP VIEW  IF EXISTS v_param_maturity;
 DROP VIEW  IF EXISTS v_param_growth;
 DROP VIEW  IF EXISTS v_param_incidence;
 DROP VIEW  IF EXISTS v_tam_by_group_year;
@@ -29,6 +30,7 @@ DROP TABLE IF EXISTS peer_drug;
 DROP TABLE IF EXISTS drug_indication_split;
 DROP TABLE IF EXISTS drug_revenue;
 DROP TABLE IF EXISTS reference_drug_sale;
+DROP TABLE IF EXISTS param_maturity;
 DROP TABLE IF EXISTS param_input;
 DROP TABLE IF EXISTS drug;
 DROP TABLE IF EXISTS indication;
@@ -89,6 +91,16 @@ CREATE TABLE param_input (
     key   VARCHAR PRIMARY KEY,
     value DOUBLE,
     note  VARCHAR
+);
+
+-- Maturity curve the revenue model actually uses: ramp factor by years-since-
+-- launch (year_offset 1..29) for each tier. This is what the Pipeline sheet's
+-- INDEX($F$553:$AH$553, ...) consumed as a row; here it is keyed, not positional.
+CREATE TABLE param_maturity (
+    tier        VARCHAR NOT NULL CHECK (tier IN ('AVG','BIC','T1')),
+    year_offset INTEGER NOT NULL,            -- 1 = launch year
+    factor      DOUBLE  NOT NULL,
+    PRIMARY KEY (tier, year_offset)
 );
 
 -- Peer Views: drug-vs-drug clinical-readout comparison tables, extracted from

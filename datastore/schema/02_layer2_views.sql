@@ -62,25 +62,12 @@ CREATE VIEW v_param_incidence AS
 SELECT indication_code, incidence_rate, incidence_global_annual
 FROM indication;
 
--- 5) Derived parameter: growth tiers from peer-drug sales ramps.
---    AVG = mean year-over-year growth across all reference drugs.
---    BIC = Tagrisso ramp (best-in-class launch trajectory).
---    T1  = Alunbrig ramp (tier-one trajectory).
-CREATE VIEW v_param_growth AS
-WITH yoy AS (
-    SELECT
-        item,
-        year,
-        value / NULLIF(LAG(value) OVER (PARTITION BY item ORDER BY year), 0) - 1
-            AS growth
-    FROM reference_drug_sale
-    WHERE purpose = 'growth'
-)
-SELECT 'AVG' AS tier, AVG(growth) AS growth_factor FROM yoy WHERE growth IS NOT NULL
-UNION ALL
-SELECT 'BIC', AVG(growth) FROM yoy WHERE item = 'Tagrisso'  AND growth IS NOT NULL
-UNION ALL
-SELECT 'T1',  AVG(growth) FROM yoy WHERE item = 'Alunbrig'  AND growth IS NOT NULL;
+-- 5) Derived parameter: the maturity curve the revenue model uses — ramp factor
+--    by years-since-launch per tier (AVG/BIC/T1). Pass-through of param_maturity,
+--    which is what Pipeline's INDEX($F$553:$AH$553, ...) consumed positionally.
+CREATE VIEW v_param_maturity AS
+SELECT tier, year_offset, factor
+FROM param_maturity;
 
 -- 6) Derived parameter: COGS / Price, reproduced from Xpovio's cost lines
 --    exactly as the sheet does (R556-R562):

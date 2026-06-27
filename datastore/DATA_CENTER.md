@@ -115,7 +115,7 @@ flowchart TD
 |---|---|
 | `v_drug_indication_revenue` | the per-drug `=K359*0.339` breakdown rows |
 | `v_tam_by_indication_year` | `=SUMIF($D$9:$D$399, …)` — now a `GROUP BY` |
-| `v_param_growth` (AVG/BIC/T1) | the maturity/growth rows (R551–R553) |
+| `v_param_maturity` (AVG/BIC/T1 × year-offset) | the maturity-curve rows (R551–R553) |
 | `v_param_cogs_price` | the Xpovio COGS chain (R556–R562) |
 | `v_param_incidence` | the incidence parameter rows |
 

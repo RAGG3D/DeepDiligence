@@ -28,6 +28,10 @@ COL2YEAR = {c: 2010 + (c - 6) for c in range(6, 35)}
 GROWTH_ROWS = {541: "Alimta", 543: "Alecensa", 545: "Iressa",
                547: "Alunbrig", 549: "Tagrisso"}
 
+# Maturity curves the model actually uses: factor by years-since-launch, per tier
+# (R551 Average / R552 Best-In-Class / R553 Tier-One, across cols F..AH).
+MATURITY_ROWS = {551: "AVG", 552: "BIC", 553: "T1"}
+
 # Xpovio cost lines (constants live in the K / 2015 column)
 COGS_CELLS = {  # item -> (row, col)
     "xpovio_net_sale":       (556, 11),
@@ -57,7 +61,8 @@ def extract(xlsx_path):
     ws_v = wb_val["TAM Solid"]
     ws_r = wb_raw["TAM Solid"]
 
-    seed = {"incidence": {}, "globals": {}, "reference_growth": {}, "cogs": {}}
+    seed = {"incidence": {}, "globals": {}, "reference_growth": {},
+            "maturity_curve": {}, "cogs": {}}
 
     # Incidence rates (R520-R538): label "<CODE> Incidence" -> rate
     for r in range(520, 539):
@@ -74,6 +79,12 @@ def extract(xlsx_path):
     # Peer-drug growth ramps (cached values are reliable here)
     for r, name in GROWTH_ROWS.items():
         seed["reference_growth"][name] = row_series(ws_v, r)
+
+    # Maturity curves: factor per year-offset (1..29) per tier
+    for r, tier in MATURITY_ROWS.items():
+        curve = [ws_v.cell(r, c).value for c in range(6, 35)]
+        seed["maturity_curve"][tier] = [v for v in curve
+                                        if isinstance(v, (int, float))]
 
     # Xpovio COGS constants (read literal cell, not a formula result)
     for item, (r, c) in COGS_CELLS.items():
@@ -97,6 +108,8 @@ def main():
 
     print(f"[extract] incidence indications : {len(seed['incidence'])}")
     print(f"[extract] growth reference drugs: {len(seed['reference_growth'])}")
+    print(f"[extract] maturity curves       : "
+          f"{ {t: len(v) for t, v in seed['maturity_curve'].items()} }")
     print(f"[extract] cogs lines            : "
           f"{sum(v is not None for v in seed['cogs'].values())}/4")
     print(f"[extract] wrote {args.out}")

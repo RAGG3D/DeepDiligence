@@ -153,6 +153,12 @@ def main():
     if param_rows:
         con.executemany("INSERT INTO param_input VALUES (?,?,?)", param_rows)
 
+    mat_rows = [(tier, i + 1, float(f))
+                for tier, curve in seed.get("maturity_curve", {}).items()
+                for i, f in enumerate(curve)]
+    if mat_rows:
+        con.executemany("INSERT INTO param_maturity VALUES (?,?,?)", mat_rows)
+
     # Peer Views (independent of the drug tables)
     n_peer_sections = 0
     if os.path.exists(PEER_PATH):
@@ -193,8 +199,9 @@ def main():
     """).fetchdf().to_string(index=False))
 
     print("\nLayer 2 — derived parameters:")
-    print("  growth tiers:",
-          con.sql("SELECT tier, round(growth_factor,4) FROM v_param_growth").fetchall())
+    mat = con.sql("SELECT tier, count(*) n, round(min(factor),3) lo, round(max(factor),3) hi "
+                  "FROM v_param_maturity GROUP BY tier ORDER BY tier").fetchall()
+    print("  maturity curves (tier, pts, min, max):", mat)
     cp = con.sql("SELECT round(cogs_price,4) FROM v_param_cogs_price").fetchone()
     print("  COGS/Price :", cp[0] if cp else None)
 
@@ -204,7 +211,7 @@ def main():
         "tam_by_group_year":      "v_tam_by_group_year",
         "drug_indication_revenue": "v_drug_indication_revenue",
         "param_incidence":        "v_param_incidence",
-        "param_growth":           "v_param_growth",
+        "param_maturity":         "v_param_maturity",
         "param_cogs_price":       "v_param_cogs_price",
         "peer_drug":              "peer_drug",
         "peer_metric":            "peer_metric",
