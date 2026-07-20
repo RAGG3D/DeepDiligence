@@ -1,5 +1,17 @@
 # AUTO_DCF
 
+## 五条核心指令
+
+| 指令 | 简短说明 |
+|------|----------|
+| `TICKER` | 为新公司建立或更新完整 DCF 模型，并完成财务、Pipeline、Scenarios、Catalyst、Historical Events 与交付审计。 |
+| `TICKER catalyst` | 调查最近的待发布临床事件，保留全部药物 breakdown，按 Conv. 过滤组合并生成按 RJConv. 排序的 Catalyst 情景。 |
+| `TICKER test EVENT` | 对已发生事件进行价格盲临床回测，建立 `Test-EVENT`，冻结医学预测后再由隔离流程用三个交易日数据评分。 |
+| `event EVENT` | 全会价格盲筛选，仅返回符合临床数据、美股上市及隔离资本门槛的生物医药 ticker 列表。 |
+| `TICKER post-catalyst` | 归档实际披露、价格反应、模型与审计记录，确认持久化成功后再清理 Catalyst 输入并恢复中性布局。 |
+
+所有研究指令都会持续扫描共享数据库；发现新事实或竞品缺口时立即写入正确模块。
+
 An automated biotech/pharmaceutical DCF (Discounted Cash Flow) valuation pipeline. Integrates SEC EDGAR financial data, ClinicalTrials.gov clinical trial metadata, Google Gemini Deep Research, and Anthropic Claude to produce investment-grade Excel models with per-drug revenue forecasting, scenario analysis, and catalyst tracking.
 
 ### Excel Tab Structure
