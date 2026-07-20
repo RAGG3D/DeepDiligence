@@ -1,0 +1,51 @@
+{
+  "as_of": "2026-07-12",
+  "legal_name": "Compass Therapeutics, Inc.",
+  "ticker": "CMPX",
+  "exchange": "Nasdaq Capital Market",
+  "country": "United States",
+  "trading_currency": "USD",
+  "reporting_currency": "USD",
+  "fiscal_year_end": "12-31",
+  "accounting_standard": "US GAAP",
+  "current_company_identity_start_date": "2020-06-17",
+  "price_history_start_date": "2021-03-04",
+  "ir_base_url": "https://investors.compasstherapeutics.com",
+  "ir_news_url": "https://investors.compasstherapeutics.com/news-events/news-releases",
+  "identity_basis": "Private Compass completed its reverse merger with Olivia Ventures on June 17, 2020. Current-company market history begins with the first post-transaction OTC quotation on March 4, 2021; predecessor shell-company prices are excluded from lifetime high/low statistics.",
+  "corporate_actions": [
+    {
+      "date": "2020-06-17",
+      "type": "reverse_merger_and_name_change",
+      "predecessor": "Olivia Ventures, Inc.",
+      "accounting_acquirer": "Private Compass Therapeutics",
+      "source": "https://www.sec.gov/Archives/edgar/data/1738021/000121390020015594/ea123278-8k_compassther.htm"
+    },
+    {
+      "date": "2021-03-04",
+      "type": "first_post_transaction_otc_trading_date",
+      "source": "https://www.sec.gov/Archives/edgar/data/1738021/000156459021011110/cmpx-10k_20201231.htm"
+    }
+  ],
+  "shares_outstanding": {
+    "value": 180087915,
+    "as_of": "2026-04-30",
+    "source": "https://www.sec.gov/Archives/edgar/data/1738021/000117184326003006/cmpx20260331_10q.htm"
+  },
+  "latest_reported_liquidity": {
+    "as_of": "2026-03-31",
+    "cash_and_cash_equivalents_usd_m": 55.168,
+    "current_marketable_securities_usd_m": 139.519,
+    "restricted_cash_usd_m": 0.568,
+    "unrestricted_liquidity_usd_m": 194.687,
+    "source": "https://www.sec.gov/Archives/edgar/data/1738021/000117184326003006/cmpx20260331_10q.htm"
+  },
+  "prior_year_reported_liquidity": {
+    "as_of": "2025-12-31",
+    "cash_and_cash_equivalents_usd_m": 30.643,
+    "current_marketable_securities_usd_m": 178.263,
+    "restricted_cash_usd_m": 0.568,
+    "unrestricted_liquidity_usd_m": 208.906,
+    "source": "https://www.sec.gov/Archives/edgar/data/1738021/000117184326003006/cmpx20260331_10q.htm"
+  }
+}

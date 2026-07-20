@@ -7,7 +7,7 @@ Reads FY DATA to discover all IS/BS/CFS items, then generates clean
 financial model sheets — no Reserved rows, all items from FY DATA included.
 
 Usage:
-    python generate_financials.py --ticker CMPX [--dry-run]
+    python generate_financials.py --ticker CMPX [--path "/path/DCF CMPX.xlsx"] [--dry-run]
 """
 import argparse
 import re
@@ -111,22 +111,59 @@ S_APIC_REP_H = 174  # APIC Reported hist (= S_FIN_H)
 S_APIC_REP_F = 195  # APIC Reported forecast
 
 # ── Constants ────────────────────────────────────────────────────────
-HIST_COLS = 4        # F-I (2021-2024) → map to FY DATA G-J
+HIST_COLS = 5        # Dynamically reset from FY DATA header in main()
 YEAR_COLS = 18       # F-W (2021-2038)
-FIRST_YEAR = 2021    # RBS starting year
-FY_OFFSET = 1        # RBS F → FY DATA G
+FIRST_YEAR = 2021    # Dynamically reset from FY DATA header in main()
+FY_OFFSET = 0        # RBS and FY DATA use the same historical columns
 
 # Financial Assets (not in Operating Assets)
 FINANCIAL_ASSETS = {"Cash And Cash Equivalents"}
-# Equity items
+# Investment-security balance-sheet lines are financial assets too, NOT
+# operating assets.  Matched case-insensitively by prefix so a company's
+# marketable-securities / short- or long-term-investments / time-deposit line
+# lands in Financial Assets (feeding Total Financial Assets, Total Investments
+# and the valuation net-cash bridge) instead of inflating Net Operating Assets
+# and being forecast average-then-flat.  Only the literal cash row keeps the
+# RCFS ending-cash plug forecast; these rows are forecast as ordinary
+# financial-asset data rows.
+INVESTMENT_ASSET_PREFIXES = (
+    "marketable securities",
+    "short-term investments",
+    "long-term investments",
+    "time deposits",
+    "investment securities",
+)
+# Equity items — share-capital line matched by prefix across taxonomies so a
+# US-GAAP "Common Stock, $… par value" or IFRS "Share Capital" line is
+# classified as equity (not misread as an operating liability), not just the
+# UK "Ordinary Shares, £0.01 Nominal Value" label. The emitted label is
+# mirrored verbatim from FY DATA; label normalization lives upstream.
 EQUITY_ITEMS = {
     "Ordinary Shares",
+    "Common Stock",
+    "Share Capital",
     "Additional Paid-In Capital",
     "Accumulated Deficit",
     "Accumulated Other Comprehensive (Loss) Income",
 }
 # PP&E comes from Schedules, not FY DATA
 PPE_ITEM = "Property And Equipment, Net"
+
+
+def _is_financial_asset(name: str, section: str) -> bool:
+    """Cash or an investment-security line → classified as a Financial Asset.
+
+    Cash is always financial (regardless of section).  Investment-security
+    lines are only treated as financial when they sit in the asset section, so
+    a like-named liability is never mis-routed.  The literal cash row is the
+    only one that keeps the RCFS ending-cash plug forecast (see generate_rbs).
+    """
+    if name in FINANCIAL_ASSETS:
+        return True
+    if section != "asset":
+        return False
+    low = name.lower()
+    return any(low.startswith(p) for p in INVESTMENT_ASSET_PREFIXES)
 
 
 def _strip_formula_cache(xml: str) -> str:
@@ -207,13 +244,38 @@ def _has_sum_formula(xml, row):
 
 
 def discover_fydata_items(zf, strings):
-    """Read FY DATA K USD → classified BS items."""
+    """Read FY DATA K USD → classified BS items.
+
+    Locate the Balance Sheet block by its section-header markers (the
+    'Balance Sheet' header row down to the following 'Balance Sheet Notes'
+    header) instead of a fixed row window, so a taller income-statement note
+    block above the BS section cannot push BS line items out of range.
+    """
     xml = zf.read("xl/worksheets/sheet15.xml").decode("utf-8")
+
+    # Find the 'Balance Sheet' section header (D-col label, no C tag) and the
+    # following 'Balance Sheet Notes' header that closes the block.
+    bs_start = bs_end = None
+    for row in range(1, 400):
+        d = _cell_text(xml, "D", row, strings)
+        if not d:
+            continue
+        dl = d.strip().lower()
+        if bs_start is None:
+            if dl == "balance sheet":
+                bs_start = row
+        elif dl.startswith("balance sheet note"):
+            bs_end = row
+            break
+    if bs_start is None:
+        bs_start, bs_end = 50, 90  # fallback to historical window if markers absent
+    if bs_end is None:
+        bs_end = bs_start + 60  # safe bound if the notes header is absent
 
     bs_items = []  # [(name, section)]
     section = "asset"
 
-    for row in range(50, 90):
+    for row in range(bs_start, bs_end):
         c = _cell_text(xml, "C", row, strings)
         d = _cell_text(xml, "D", row, strings)
 
@@ -233,6 +295,33 @@ def discover_fydata_items(zf, strings):
         bs_items.append((d, section))
 
     return bs_items
+
+
+def discover_fy_years(zf):
+    """Read active fiscal years from FY DATA K USD row 4, columns F:K."""
+    xml = zf.read("xl/worksheets/sheet15.xml").decode("utf-8")
+    years = []
+    for col_idx in range(6, 12):
+        col = _col_letter(col_idx)
+        m = re.search(rf'<c r="{col}4"[^>]*?(?:/>|>.*?</c>)', xml, re.S)
+        if not m:
+            continue
+        cell = m.group(0)
+        if 't="inlineStr"' in cell:
+            t = re.search(r'<t[^>]*>(.*?)</t>', cell)
+            raw = t.group(1).strip() if t else ""
+        else:
+            v = re.search(r'<v>([^<]*)</v>', cell)
+            raw = v.group(1).strip() if v else ""
+        try:
+            year = int(float(raw))
+        except (TypeError, ValueError):
+            continue
+        if 2000 <= year <= 2100:
+            years.append(year)
+    if not years:
+        return [FIRST_YEAR + i for i in range(HIST_COLS)]
+    return years
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -435,7 +524,7 @@ def _driver_row(r, label, c_tag, formula_template):
 
     for i in range(YEAR_COLS):
         col = _col_letter(6 + i)
-        ris_col = _col_letter(6 + i + 1)  # RIS offset +1
+        ris_col = col
         f = formula_template.replace("{COL}", ris_col).replace("{ROW}", str(r))
         cells.append(_c(col, r, S_DRIVER, formula=f))
 
@@ -521,7 +610,7 @@ def _equity_accum_deficit_row(r, name, n_hist):
             cells.append(_c(col, r, S_FIN_H, formula=f))
         else:
             prev = _col_letter(5 + i)
-            ris_col = _col_letter(6 + i + 1)
+            ris_col = col
             cells.append(_c(col, r, S_FIN_H,
                            formula=f"SUM(RIS!{ris_col}$92,{prev}{r})"))
 
@@ -546,7 +635,7 @@ def _equity_oci_row(r, name, n_hist):
             cells.append(_c(col, r, S_FIN_H, formula=f))
         else:
             prev = _col_letter(5 + i)
-            ris_col = _col_letter(6 + i + 1)
+            ris_col = col
             cells.append(_c(col, r, S_FIN_H,
                            formula=f"SUM(RIS!{ris_col}$96,{prev}{r})"))
 
@@ -590,7 +679,7 @@ def generate_rbs(bs_items, n_hist=4):
     equity = []
 
     for name, section in bs_items:
-        if name in FINANCIAL_ASSETS:
+        if _is_financial_asset(name, section):
             fin_assets.append(name)
         elif name == PPE_ITEM:
             continue  # comes from Schedules
@@ -695,8 +784,10 @@ def generate_rbs(bs_items, n_hist=4):
     r += 1
 
     fa_first = r
+    cash_row = None
     for name in fin_assets:
         if name in FINANCIAL_ASSETS:
+            cash_row = r  # actual RBS row of Cash And Cash Equivalents
             rows.append(_cash_row(r, name, n_hist))
         else:
             rows.append(_data_row(r, name, "BS", S_FIN_H, S_FIN_F, n_hist))
@@ -946,6 +1037,7 @@ def generate_rbs(bs_items, n_hist=4):
         "check1_row": check1_row,
         "shares_row": shares_row,
         "apic_modeled_row": apic_modeled_row,
+        "cash_row": cash_row,
         "total_rows": r - 1,
     }
 
@@ -1002,7 +1094,10 @@ def _generate_conditional_formatting(rows_xml, meta):
         first_r = check_refs[0].split(":")[0][1:]
         parts.append(
             f'<conditionalFormatting sqref="{sqref}">'
-            f'<cfRule type="expression" dxfId="61" priority="{priority}">'
+            # Existing warning style 55 is bold red and is valid in both the
+            # full build template and the cleaned delivery template.  The old
+            # hard-coded 61 pointed one past the cleaned workbook's dxfs array.
+            f'<cfRule type="expression" dxfId="55" priority="{priority}">'
             f'<formula>ABS(D{first_r})&gt;0.1</formula>'
             f'</cfRule></conditionalFormatting>')
 
@@ -1011,17 +1106,19 @@ def _generate_conditional_formatting(rows_xml, meta):
 
 # ── RCFS Ending-Cash formula fix ────────────────────────────────────
 
-def _patch_rcfs_cash_formulas(rcfs_xml: str, n_hist: int) -> str:
+def _patch_rcfs_cash_formulas(rcfs_xml: str, n_hist: int, cash_row: int = 33) -> str:
     """Fix RCFS R38 Ending Cash so that ALL historical columns read from RBS.
 
-    The RCFS template hardcodes G38=RBS!G33 and H38=RBS!H33 (years 2022-2023).
-    When n_hist > 3 (e.g. n_hist=4 includes 2024 at col I), col I38 was still
-    using the shared SUM formula, producing wrong beginning-cash for 2025+ and
-    therefore a broken RBS balance sheet check.
+    The RCFS template hardcodes G38=RBS!G{cash_row} and H38=RBS!H{cash_row}
+    (years 2022-2023). When n_hist > 3 (e.g. n_hist=4 includes 2024 at col I),
+    col I38 was still using the shared SUM formula, producing wrong
+    beginning-cash for 2025+ and therefore a broken RBS balance sheet check.
 
     Fix: for each historical col beyond H (cols I, J, … up to col for n_hist-1),
-    replace the shared-formula cell with an explicit RBS!{col}33 reference and
-    promote the first forecast col to be the new shared-formula anchor.
+    replace the shared-formula cell with an explicit RBS!{col}{cash_row}
+    reference and promote the first forecast col to be the new shared-formula
+    anchor. cash_row is the RBS row of Cash And Cash Equivalents (from
+    generate_rbs metadata); it defaults to 33 for the canonical skeleton.
     """
     if n_hist <= 3:
         return rcfs_xml  # G38 and H38 already correct; nothing to fix
@@ -1040,13 +1137,13 @@ def _patch_rcfs_cash_formulas(rcfs_xml: str, n_hist: int) -> str:
     anchor = fix_cols[0]  # 'I' for n_hist=4
     rcfs_xml = re.sub(
         rf'<c r="{anchor}38" s="\d+"><f[^<]*</f><v>[^<]*</v></c>',
-        f'<c r="{anchor}38" s="31"><f>RBS!{anchor}33</f><v></v></c>',
+        f'<c r="{anchor}38" s="31"><f>RBS!{anchor}{cash_row}</f><v></v></c>',
         rcfs_xml,
     )
     # Edge case: self-closing <f/>
     rcfs_xml = re.sub(
         rf'<c r="{anchor}38" s="\d+"><f[^/]*/><v>[^<]*</v></c>',
-        f'<c r="{anchor}38" s="31"><f>RBS!{anchor}33</f><v></v></c>',
+        f'<c r="{anchor}38" s="31"><f>RBS!{anchor}{cash_row}</f><v></v></c>',
         rcfs_xml,
     )
 
@@ -1057,7 +1154,7 @@ def _patch_rcfs_cash_formulas(rcfs_xml: str, n_hist: int) -> str:
     for col in fix_cols[1:]:
         rcfs_xml = re.sub(
             rf'<c r="{col}38" s="\d+"><f[^/]*/><v>[^<]*</v></c>',
-            f'<c r="{col}38" s="31"><f>RBS!{col}33</f><v></v></c>',
+            f'<c r="{col}38" s="31"><f>RBS!{col}{cash_row}</f><v></v></c>',
             rcfs_xml,
         )
 
@@ -1080,12 +1177,17 @@ def _patch_rcfs_cash_formulas(rcfs_xml: str, n_hist: int) -> str:
 # ── Main ─────────────────────────────────────────────────────────────
 
 def main():
+    global FIRST_YEAR, HIST_COLS, FY_OFFSET
+
     parser = argparse.ArgumentParser(description="Generate financial model sheets from FY DATA")
     parser.add_argument("--ticker", required=True)
+    parser.add_argument("--path", help="DCF workbook path (default: DD/{ticker}/DCF {ticker}.xlsx)")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    xlsx = Path(f"/mnt/c/Users/yzsun/Desktop/DD/{args.ticker}/DCF {args.ticker}.xlsx")
+    xlsx = Path(args.path) if args.path else Path(
+        f"/mnt/c/Users/yzsun/Desktop/DD/{args.ticker}/DCF {args.ticker}.xlsx"
+    )
     if not xlsx.exists():
         print(f"ERROR: {xlsx} not found")
         return
@@ -1098,6 +1200,11 @@ def main():
 
     with zipfile.ZipFile(xlsx, "r") as zf:
         strings = _load_shared_strings(zf)
+        years = discover_fy_years(zf)
+        FIRST_YEAR = years[0]
+        HIST_COLS = len(years)
+        FY_OFFSET = 0
+        print(f"FY DATA years: {years} (RBS hist cols={HIST_COLS}, FY offset={FY_OFFSET})")
         bs_items = discover_fydata_items(zf, strings)
 
         print(f"FY DATA BS items ({len(bs_items)}):")
@@ -1105,7 +1212,7 @@ def main():
             print(f"  [{section:10s}] {name}")
 
         # Generate RBS
-        rbs_rows, meta = generate_rbs(bs_items)
+        rbs_rows, meta = generate_rbs(bs_items, HIST_COLS)
 
         # Fix APIC row reference
         apic_row = meta["apic_modeled_row"]
@@ -1148,9 +1255,12 @@ def main():
             print("\n  DRY RUN — not written")
             return
 
-        # Patch RCFS Ending Cash formulas for historical cols beyond H
+        # Patch RCFS Ending Cash formulas for historical cols beyond H.
+        # Derive the RBS cash row from generate_rbs metadata rather than
+        # assuming the canonical row 33.
         rcfs_xml = zf.read(SHEET_RCFS).decode("utf-8")
-        rcfs_xml = _patch_rcfs_cash_formulas(rcfs_xml, HIST_COLS)
+        rcfs_xml = _patch_rcfs_cash_formulas(rcfs_xml, HIST_COLS,
+                                             meta["cash_row"] or 33)
 
         # Add fullCalcOnLoad
         wb_xml = zf.read("xl/workbook.xml").decode("utf-8")

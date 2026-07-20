@@ -19,6 +19,7 @@ Example
 import argparse
 import logging
 import sys
+from datetime import datetime
 from typing import List
 
 from core.sec_fetcher import SECFetcher
@@ -33,7 +34,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-DEFAULT_YEARS = [2020, 2021, 2022, 2023, 2024]
+def default_annual_years() -> List[int]:
+    """Return the latest five completed fiscal years for the current date."""
+    last_full_year = datetime.now().year - 1
+    return list(range(last_full_year - 4, last_full_year + 1))
 
 
 # ── CLI ────────────────────────────────────────────────────────────────────────
@@ -47,9 +51,9 @@ def parse_args() -> argparse.Namespace:
         help="Stock ticker symbol (e.g. CMPX)"
     )
     parser.add_argument(
-        "--years", nargs="+", type=int, default=DEFAULT_YEARS,
+        "--years", nargs="+", type=int, default=None,
         metavar="YEAR",
-        help=f"Fiscal years to fetch (default: {DEFAULT_YEARS})"
+        help="Fiscal years to fetch (default: latest five completed years)"
     )
     parser.add_argument(
         "--path", default=None,
@@ -117,7 +121,7 @@ def main() -> int:
         logging.getLogger().setLevel(logging.DEBUG)
 
     ticker = args.ticker.upper().strip()
-    years  = sorted(set(args.years))
+    years  = sorted(set(args.years or default_annual_years()))
 
     print(f"\n▶ Ticker : {ticker}")
     print(f"▶ Years  : {years}")

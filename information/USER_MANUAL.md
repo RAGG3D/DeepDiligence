@@ -24,14 +24,12 @@
 |--------|---------|------|----------|
 | SEC EDGAR XBRL | `data.sec.gov/api/xbrl/companyfacts/` | 财务数据 | sec_fetcher.py |
 | SEC EDGAR Submissions | `data.sec.gov/submissions/` | 10-K 文件列表 | sec_fetcher.py |
-| SEC EDGAR EFTS | `efts.sec.gov/LATEST/search-index` | 会议相关 8-K | fill_events.py |
-| Yahoo Finance | `yfinance.download(ticker)` | 历史股价 | fill_events.py |
-| GlobeNewswire | RSS feed | 新闻稿 | fill_events.py |
-| Google News | RSS feed | 新闻和会议信息 | fill_events.py |
+| 公司官方 IR 归档 | 官网分页/RSS/详情页 | 全部 press release | tools/fill_historical_events.py |
+| Yahoo Finance | `yfinance.download(ticker)` | 历史股价 | tools/fill_historical_events.py |
 | ClinicalTrials.gov | `clinicaltrials.gov/api/v2/studies/` | 临床试验数据 | clinical_trials_fetcher.py |
 | Gemini Deep Research | `deep-research-pro-preview-12-2025` | 药物市场研究 | gemini_research.py, gemini_research_4pass_demo.py |
 | Gemini 2.5 Flash | `gemini-2.5-flash` | 分析推理 | gemini_research_4pass_demo.py |
-| Anthropic Claude | Claude Haiku | 新闻摘要生成 | fill_events.py |
+| OpenAI web research | GPT research | 官网 PR + 学会 abstract / catalyst 解读 | research/gpt_research.py |
 
 ---
 
@@ -47,7 +45,7 @@
 │  Step 2: main.py + sec_fetcher.py ─> 填充 FY DATA (XBRL 财务数据)    │
 │          + excel_writer.py                                           │
 │                                                                      │
-│  Step 3: fill_events.py ───────────> 填充 Historical Events          │
+│  Step 3: tools/fill_historical_events.py ─> 官网全量 Historical Events │
 │                                      (股价 + 新闻 + AI 摘要)         │
 │                                                                      │
 │  Step 4: fill_tam.py ──────────────> 填充 TAM Solid+MM / TAM Blood   │
@@ -73,10 +71,12 @@
 | `main.py` | CLI 入口，填充 FY DATA | ticker, years | DCF xlsx FY DATA sheet |
 | `sec_fetcher.py` | SEC EDGAR 数据获取 | CIK | financial_data dict |
 | `excel_writer.py` | 手术式 xlsx 修补 | patches dict | 修改后的 xlsx |
-| `fill_events.py` | 填充 Historical Events | ticker | DCF xlsx HE sheet |
+| `tools/fill_historical_events.py` | 官网全量 Historical Events + 超链接 | ticker/news URL | DCF xlsx HE sheet |
 | `fill_tam.py` | 填充 TAM 药物数据 | xlsx path | TAM sheets |
 | `clinical_trials_fetcher.py` | ClinicalTrials.gov 数据 | ticker, company | JSON 文件 |
 | `gemini_research.py` | Gemini 单次研究 (base) | ticker, company | .md + .docx |
+| `apply_reference_model_styles.py` | 最终样式校准；Pipeline 使用锁定的 20260709 正确样式源 | ticker, xlsx | 不改公式/数据的格式修复 |
+| `build_valuation_charts.py` | 重建 Valuation Waterfall / Football Field，并校验图表对象存在 | ticker, xlsx | VALUATION 图表 |
 | `gemini_research_4pass_demo.py` | 4-pass: 1搜索→4报告 | ticker, drug | 4 组 .md + .docx |
 | `generate_scenarios.py` | 生成 Scenarios Sheet | report files | DCF xlsx Scenarios sheet |
 | `notify.py` | 邮件通知 | subject, body | Email |
@@ -206,10 +206,10 @@ python main.py --ticker CMPX --unit K                                  # 强制�
 
 ---
 
-## 6. 填充历史事件：`fill_events.py`
+## 6. 填充历史事件：`tools/fill_historical_events.py`
 
 ```bash
-python fill_events.py BHVN
+python tools/fill_historical_events.py --ticker BHVN --company-name "Biohaven Ltd" --news-url "<official IR archive>" --require-official-news
 ```
 
 **6 个数据源：** Yahoo Finance News, GlobeNewswire RSS, SEC EDGAR 8-K, Google News RSS, SEC EDGAR EFTS (会议), Google News Conferences
@@ -353,7 +353,7 @@ python create_template.py --ticker BHVN --cik 0001935979
 python main.py --ticker BHVN --years 2020 2021 2022 2023 2024 --cik 0001935979
 
 # Step 3: 填充 Historical Events
-python fill_events.py BHVN
+python tools/fill_historical_events.py --ticker BHVN --company-name "Biohaven Ltd" --news-url "<official IR archive>" --require-official-news
 
 # Step 4: 获取临床试验数据
 python clinical_trials_fetcher.py --ticker BHVN --company-name "Biohaven Ltd"
@@ -372,5 +372,5 @@ python generate_scenarios.py --ticker BHVN --report-dir /mnt/c/Users/yzsun/Deskt
 | 变量 | 用途 | 设置方式 |
 |------|------|----------|
 | `GEMINI_API_KEY` | Gemini API 密钥 | `export GEMINI_API_KEY='...'` |
-| `ANTHROPIC_API_KEY` | Claude API 密钥 (fill_events.py) | `.env` 文件 |
+| `OPENAI_API_KEY` | 公司/事件/Catalyst 全网研究 | `.env` 文件 |
 | `GMAIL_APP_PASSWORD` | 邮件通知密码 | `~/.bashrc` |

@@ -1,0 +1,55 @@
+{
+  "as_of": "2026-07-11",
+  "legal_name": "Protara Therapeutics, Inc.",
+  "ticker": "TARA",
+  "exchange": "Nasdaq Global Market",
+  "country": "United States",
+  "trading_currency": "USD",
+  "reporting_currency": "USD",
+  "fiscal_year_end": "12-31",
+  "accounting_standard": "US GAAP",
+  "current_company_identity_start_date": "2020-01-10",
+  "price_history_start_date": "2020-01-10",
+  "ir_base_url": "https://ir.protaratx.com",
+  "ir_news_url": "https://ir.protaratx.com/press-releases",
+  "identity_basis": "The current ArTara/Protara operating business began trading as TARA after the January 9, 2020 reverse merger; earlier vendor history belongs to predecessor Proteon Therapeutics and is excluded from current-company lifetime statistics.",
+  "corporate_actions": [
+    {
+      "date": "2020-01-09",
+      "type": "reverse_stock_split",
+      "ratio": "1-for-40",
+      "source": "https://www.sec.gov/Archives/edgar/data/1359931/000110465920003115/tm201618d1_8k.htm"
+    },
+    {
+      "date": "2020-01-09",
+      "type": "reverse_merger_and_name_change",
+      "predecessor": "Proteon Therapeutics, Inc.",
+      "accounting_acquirer": "Private ArTara",
+      "first_tara_trading_date": "2020-01-10",
+      "source": "https://ir.protaratx.com/news-releases/news-release-details/artara-therapeutics-completes-merger-transaction-proteon"
+    }
+  ],
+  "shares_outstanding": {
+    "value": 56204237,
+    "as_of": "2026-05-08",
+    "source": "https://www.sec.gov/Archives/edgar/data/1359931/000121390026055463/ea0287944-10q_protara.htm"
+  },
+  "latest_reported_liquidity": {
+    "as_of": "2026-03-31",
+    "cash_and_cash_equivalents_usd_m": 14.737,
+    "current_marketable_debt_securities_usd_m": 121.049,
+    "noncurrent_marketable_debt_securities_usd_m": 41.641,
+    "unrestricted_liquidity_usd_m": 177.427,
+    "source": "https://www.sec.gov/Archives/edgar/data/1359931/000121390026055463/ea0287944-10q_protara.htm"
+  },
+  "prior_year_reported_liquidity": {
+    "as_of": "2025-12-31",
+    "cash_and_cash_equivalents_usd_m": 49.657,
+    "current_marketable_debt_securities_usd_m": 105.897,
+    "noncurrent_marketable_debt_securities_usd_m": 42.336,
+    "restricted_cash_usd_m": 0.745,
+    "other_noncurrent_assets_usd_m": 2.95,
+    "unrestricted_liquidity_usd_m": 197.89,
+    "source": "https://www.sec.gov/Archives/edgar/data/1359931/000121390026055463/ea0287944-10q_protara.htm"
+  }
+}

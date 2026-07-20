@@ -232,12 +232,12 @@ C:\Users\yzsun\Desktop\DD\CMPX\
 
 This workflow complements:
 - **fill_tam.py**: Populates TAM sheets with drug revenue data (inputs to Gemini)
-- **fill_events.py**: Historical Events sheet (catalyst analysis for Gemini context)
+- **tools/fill_historical_events.py**: exhaustive official Historical Events source layer
 - **main.py**: DCF data fill from SEC filings
 
 Typical full workflow:
 1. `fill_tam.py` → Get latest drug revenue data
-2. `fill_events.py` → Populate historical events
+2. `tools/fill_historical_events.py` → Populate all official releases + source hyperlinks
 3. `gemini_research.py` → Analyze pipeline (uses TAM + events as context)
 4. `generate_scenarios.py` → Create Scenarios sheet
 5. `main.py` → Fill fundamental data from 10-K

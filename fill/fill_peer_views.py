@@ -44,7 +44,7 @@ _EXCEL_EPOCH = datetime(1899, 12, 30)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-#  DRUG READOUT DATACLASS — 39 fields
+#  DRUG READOUT DATACLASS — 40 fields
 # ══════════════════════════════════════════════════════════════════════════════
 
 @dataclass
@@ -89,6 +89,10 @@ class DrugReadout:
     stock_change_1d: str = ""
     stock_change_3d: str = ""
     source: str = ""
+    # Per-competitor competitiveness tier parsed from a "- Rating: <val>" line.
+    # Stored raw (e.g. "Best-in-Class" / "T1" / "Average"); the DB upsert maps it
+    # to a BIC/T1/AVG code via update_peer_database._assessment_to_rating.
+    rating: str = ""
 
     indication: str = ""  # Set from the PEER_VIEW_START block
 
@@ -139,6 +143,8 @@ _GEMINI_KEY_MAP: Dict[str, str] = {
     "stock change 1d": "stock_change_1d",
     "stock change 3d": "stock_change_3d",
     "source": "source",
+    # Per-competitor competitiveness tier (raw string; mapped downstream).
+    "rating": "rating",
 }
 
 # Mapping from Excel D-column labels → DrugReadout field names
@@ -272,14 +278,14 @@ def _parse_readouts(block_body: str, indication: str) -> List[DrugReadout]:
     """Parse individual drug readouts from a PEER_VIEW block body."""
     readouts: List[DrugReadout] = []
 
-    # Split by readout headers: "##### Drug: CTX-009 — Readout 1"
-    readout_re = re.compile(
-        r'#####\s+Drug:\s+.+?(?:—|--|-)\s*Readout\s+\d+',
-        re.IGNORECASE,
-    )
+    # Split on EVERY drug header ("##### Drug: <name> ...") so each drug in the
+    # block becomes its own readout, regardless of whether the header carries a
+    # "— Readout N", "— Marketed"/"— Clinical"/"— Approved", or a bare label.
+    # The old regex only split on "— Readout N", so peers tagged otherwise (and
+    # the ticker's own asset) collapsed into a single overwrite-merged readout.
+    readout_re = re.compile(r'^#####[ \t]+Drug:.*$', re.MULTILINE)
     parts = readout_re.split(block_body)
-    # First part is before any readout header (skip)
-    # Also get the headers for drug name extraction
+    # First part is before any drug header (skip); headers pair with bodies.
     headers = readout_re.findall(block_body)
 
     for header, body in zip(headers, parts[1:]):
@@ -298,16 +304,34 @@ def _parse_readouts(block_body: str, indication: str) -> List[DrugReadout]:
             if field_name and hasattr(readout, field_name):
                 setattr(readout, field_name, value)
 
-        # Fall back: extract drug name from header if not in body
+        # Fall back: extract drug name from the header if the body lacks it.
         if not readout.drug_name:
-            hdr_m = re.search(r'Drug:\s+(.+?)(?:\s*(?:—|--|-)\s*Readout)', header)
-            if hdr_m:
-                readout.drug_name = hdr_m.group(1).strip()
+            readout.drug_name = _drug_name_from_header(header)
 
         if readout.drug_name:
             readouts.append(readout)
 
     return readouts
+
+
+def _drug_name_from_header(header: str) -> str:
+    """Extract the drug name from a "##### Drug: NAME — <label>" header.
+
+    Strips a trailing whitespace-delimited dash label ("— Readout N",
+    "— Marketed", "— Clinical", "— Approved", or any "— ...") while leaving
+    intra-token hyphens such as "BHV-1400" intact (the dash separator must have
+    surrounding whitespace to be treated as a label delimiter).
+    """
+    m = re.search(r'Drug:\s*(.+?)\s*$', header)
+    if not m:
+        return ""
+    name = m.group(1).strip()
+    name = re.sub(
+        r'\s+[—–-]\s+(?:Readout\s*\d+|Marketed|Clinical|Approved|.*)$',
+        '',
+        name,
+    ).strip()
+    return name
 
 
 def scan_report_files(report_dir: Path) -> str:

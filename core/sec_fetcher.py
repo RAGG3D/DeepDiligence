@@ -344,39 +344,56 @@ class SECFetcher:
     def get_cik(self, ticker: str) -> str:
         """
         Resolve ticker → zero-padded 10-digit CIK string.
-        Uses the SEC EDGAR full-text search API.
+
+        The dedicated ticker→CIK map (company_tickers.json) is tried FIRST: it is
+        the authoritative, reliable source and covers foreign private issuers
+        (e.g. MOLN, a Swiss 20-F filer). The legacy full-text `search-index`
+        endpoint is flaky (frequent HTTP 500) and is only a last resort — its
+        failure must never abort resolution.
         """
-        # Try the ticker lookup endpoint first
-        url = "https://efts.sec.gov/LATEST/search-index"
-        params = {
-            "q": f'"{ticker.upper()}"',
-            "dateRange": "custom",
-            "startdt": "2018-01-01",
-            "forms": "10-K,20-F",
-        }
-        resp = self.session.get(url, params=params, timeout=20)
-        resp.raise_for_status()
+        # 1) Authoritative dedicated tickers JSON.
+        try:
+            tickers_url = "https://www.sec.gov/files/company_tickers.json"
+            r = self.session.get(tickers_url, timeout=20)
+            r.raise_for_status()
+            for entry in r.json().values():
+                if entry.get("ticker", "").upper() == ticker.upper():
+                    cik = str(entry["cik_str"]).zfill(10)
+                    logger.info(f"Resolved {ticker} → CIK {cik} (via tickers JSON)")
+                    return cik
+        except Exception as exc:
+            logger.warning(f"tickers JSON lookup failed for {ticker}: {exc}")
 
-        # Try the company search page as a fallback / primary
-        r2 = self.session.get(
-            self.COMPANY_SEARCH_URL,
-            params={"CIK": ticker, "type": "10-K,20-F", "action": "getcompany"},
-            timeout=20,
-        )
-        ciks = re.findall(r"CIK=(\d+)", r2.text)
-        if ciks:
-            cik = str(int(ciks[0])).zfill(10)
-            logger.info(f"Resolved {ticker} → CIK {cik}")
-            return cik
-
-        # Also try the dedicated tickers JSON
-        tickers_url = "https://www.sec.gov/files/company_tickers.json"
-        r3 = self.session.get(tickers_url, timeout=20)
-        for entry in r3.json().values():
-            if entry.get("ticker", "").upper() == ticker.upper():
-                cik = str(entry["cik_str"]).zfill(10)
-                logger.info(f"Resolved {ticker} → CIK {cik} (via tickers JSON)")
+        # 2) Company search page.
+        try:
+            r2 = self.session.get(
+                self.COMPANY_SEARCH_URL,
+                params={"CIK": ticker, "type": "10-K,20-F", "action": "getcompany"},
+                timeout=20,
+            )
+            ciks = re.findall(r"CIK=(\d+)", r2.text)
+            if ciks:
+                cik = str(int(ciks[0])).zfill(10)
+                logger.info(f"Resolved {ticker} → CIK {cik} (via company search)")
                 return cik
+        except Exception as exc:
+            logger.warning(f"company search lookup failed for {ticker}: {exc}")
+
+        # 3) Last resort: legacy full-text search-index (frequently 500s).
+        try:
+            resp = self.session.get(
+                "https://efts.sec.gov/LATEST/search-index",
+                params={"q": f'"{ticker.upper()}"', "forms": "10-K,20-F"},
+                timeout=20,
+            )
+            if resp.ok:
+                ciks = re.findall(r'"cik":\s*"?(\d+)"?', resp.text)
+                if ciks:
+                    cik = str(int(ciks[0])).zfill(10)
+                    logger.info(f"Resolved {ticker} → CIK {cik} (via search-index)")
+                    return cik
+        except Exception as exc:
+            logger.warning(f"search-index lookup failed for {ticker}: {exc}")
 
         raise ValueError(f"Cannot resolve CIK for ticker '{ticker}'")
 
@@ -504,6 +521,124 @@ class SECFetcher:
                     )
 
         return result
+
+    # ── Interim (10-Q) annualization for a not-yet-filed FY ────────────────────
+
+    @staticmethod
+    def _has_annual_filing(
+        facts: dict,
+        year: int,
+        taxonomy: str,
+        form_types: tuple,
+    ) -> bool:
+        """True if an annual (fp='FY') filing for `year` exists in the facts.
+
+        Scans every concept in the taxonomy for a duration entry filed on a
+        10-K/20-F with end-year == `year`. Returns as soon as one is found,
+        so a company whose latest 10-K is already on file (the normal case
+        for MOLN/CMPX and for BHVN today) short-circuits immediately.
+        """
+        tax_data = facts.get("facts", {}).get(taxonomy, {})
+        ystr = str(year)
+        for concept_data in tax_data.values():
+            for entries in concept_data.get("units", {}).values():
+                for e in entries:
+                    if (
+                        e.get("form") in form_types
+                        and e.get("fp") == "FY"
+                        and e.get("end", "")[:4] == ystr
+                    ):
+                        return True
+        return False
+
+    @staticmethod
+    def _annualized_quarterly_value(
+        entries: list,
+        year: int,
+        is_flow: bool,
+        quarterly_form_types: tuple = ("10-Q", "10-Q/A"),
+    ) -> Optional[float]:
+        """Estimate a not-yet-filed fiscal year from interim 10-Q data (req1).
+
+        Flow (duration) items — use single-quarter (≈3-month) facts:
+          1 quarter available  → q * 4
+          2 quarters available → avg(2) * 4
+          3 quarters available → avg(3) * 4
+        Instant (balance-sheet) items — use the latest available quarter-end
+        value for the year.
+
+        Returns None when no usable interim data exists (e.g. IFRS foreign
+        private issuers that file 6-Ks rather than structured 10-Qs), leaving
+        the caller's annual path untouched.
+        """
+        ystr = str(year)
+        if is_flow:
+            from datetime import date
+
+            by_fp: Dict[str, Tuple[str, float]] = {}  # fp -> (filed, val)
+            for e in entries:
+                if e.get("form") not in quarterly_form_types:
+                    continue
+                fp = e.get("fp", "")
+                if fp not in ("Q1", "Q2", "Q3"):
+                    continue
+                start = e.get("start", "")
+                end = e.get("end", "")
+                if end[:4] != ystr:
+                    continue
+                # Keep only single-quarter (~3-month) durations, not YTD.
+                try:
+                    span = (
+                        date(int(end[:4]), int(end[5:7]), int(end[8:10]))
+                        - date(int(start[:4]), int(start[5:7]), int(start[8:10]))
+                    ).days
+                except (ValueError, IndexError):
+                    continue
+                if not (80 <= span <= 100):
+                    continue
+                prev = by_fp.get(fp)
+                if prev is None or e.get("filed", "") > prev[0]:
+                    by_fp[fp] = (e.get("filed", ""), e["val"])
+
+            vals = [v for _, v in by_fp.values()]
+            if not vals:
+                return None
+            return (sum(vals) / len(vals)) * 4
+
+        # Instant: latest available quarter-end value for the target year.
+        candidates = [
+            e for e in entries
+            if e.get("form") in quarterly_form_types
+            and e.get("end", "")[:4] == ystr
+        ]
+        if not candidates:
+            return None
+        candidates.sort(key=lambda x: (x.get("end", ""), x.get("filed", "")))
+        return candidates[-1]["val"]
+
+    def _extract_annualized_quarterly(
+        self,
+        facts: dict,
+        concepts: List[str],
+        year: int,
+        is_flow: bool,
+        taxonomy: str = "us-gaap",
+        currency: str = "USD",
+    ) -> Optional[float]:
+        """Try each concept in order; return the first interim-annualized
+        estimate for `year`, or None. Mirrors extract_concept_by_year's
+        concept/unit selection so the estimate lands in the same raw units.
+        """
+        tax_data = facts.get("facts", {}).get(taxonomy, {})
+        for concept in concepts:
+            if concept not in tax_data:
+                continue
+            units = tax_data[concept].get("units", {})
+            entries = units.get(currency) or units.get("shares") or []
+            val = self._annualized_quarterly_value(entries, year, is_flow)
+            if val is not None:
+                return val
+        return None
 
     # ── Zero propagation ──────────────────────────────────────────────────────
 
@@ -766,6 +901,289 @@ class SECFetcher:
 
         return years, items
 
+    @staticmethod
+    def _parse_number_cell(cell: str) -> Optional[float]:
+        """Parse one SEC table cell into a float.
+
+        Handles IFRS/SEC table artifacts such as `( 11,171 )`, em dashes,
+        standalone currency symbols, and NBSPs. Returns None for text cells.
+        """
+        if cell is None:
+            return None
+        cleaned = (
+            str(cell)
+            .replace("\xa0", " ")
+            .replace("\u00a0", " ")
+            .replace("$", "")
+            .replace(",", "")
+            .strip()
+        )
+        if not cleaned or cleaned in {"—", "–", "-", "−"}:
+            return 0.0
+        cleaned = re.sub(r"\s+", " ", cleaned)
+        neg = False
+        if cleaned.startswith("(") and cleaned.endswith(")"):
+            neg = True
+            cleaned = cleaned[1:-1].strip()
+        # Tables often split parentheses into separate text fragments; remove
+        # remaining spaces so "( 11 171 )" style values still parse.
+        cleaned = cleaned.replace(" ", "")
+        try:
+            val = float(cleaned)
+            return -val if neg else val
+        except ValueError:
+            return None
+
+    @classmethod
+    def _numeric_values_from_cells(cls, cells: List[str]) -> List[float]:
+        vals: List[float] = []
+        for cell in cells:
+            if cell is None:
+                continue
+            if not str(cell).replace("\xa0", " ").replace("\u00a0", " ").strip():
+                continue
+            v = cls._parse_number_cell(cell)
+            if v is not None:
+                vals.append(v)
+        return vals
+
+    @staticmethod
+    def _clean_note_label(label: str) -> str:
+        label = label.replace("\xa0", " ").replace("\u00a0", " ").strip()
+        label = re.sub(r"\(\d+\)\s*,?\s*", "", label)
+        label = re.sub(r"\s+", " ", label)
+        return label
+
+    @classmethod
+    def _parse_ifrs_expense_sections(
+        cls, table
+    ) -> Dict[str, Tuple[List[int], List[Tuple[str, List[float]]]]]:
+        """Parse IFRS Note 16 style R&D / SG&A expense table.
+
+        Molecular Partners' 20-F uses one combined table headed:
+          Research and development expenses
+          Selling, general and administrative expenses
+        with expense amounts shown in parentheses. The DCF model stores expense
+        details as positive numbers so they sum to the positive IS expense row.
+        """
+        rows = []
+        for tr in table.find_all("tr"):
+            cells = [
+                c.get_text(" ", strip=True)
+                .replace("\xa0", " ")
+                .replace("\u00a0", " ")
+                for c in tr.find_all(["td", "th"])
+            ]
+            if cells:
+                rows.append(cells)
+
+        table_text = " ".join(" ".join(r) for r in rows).lower()
+        # Detect the combined R&D / SG&A expense note by its two section
+        # headers only.  A company-specific sub-line name (e.g. "research
+        # consumables") would exclude other IFRS filers; the structural
+        # >=1-numeric-sub-row-under-each-header check below replaces it.
+        if (
+            "research and development expenses" not in table_text
+            or "selling, general and administrative expenses" not in table_text
+        ):
+            return {}
+
+        result: Dict[str, Tuple[List[int], List[Tuple[str, List[float]]]]] = {}
+        active: Optional[str] = None
+        years: List[int] = []
+        section_years: Dict[str, List[int]] = {}
+        items: Dict[str, List[Tuple[str, List[float]]]] = {"rd": [], "ga": []}
+
+        for row in rows:
+            row_text = " ".join(row)
+            row_lower = row_text.lower()
+            found_years = [int(y) for y in re.findall(r"\b(20\d{2})\b", row_text)]
+
+            if "research and development expenses" in row_lower and len(row) <= 6:
+                active = "rd"
+                years = []
+                continue
+            if "selling, general and administrative expenses" in row_lower and len(row) <= 6:
+                active = "ga"
+                years = []
+                continue
+            if "restructuring expenses" in row_lower:
+                active = None
+                years = []
+                continue
+            if found_years and active in {"rd", "ga"}:
+                years = found_years
+                section_years[active] = found_years
+                continue
+            if active not in {"rd", "ga"} or not years:
+                continue
+
+            label = cls._clean_note_label(row[0] if row else "")
+            if not label:
+                continue
+            label_lower = label.lower()
+            if label_lower.startswith("total"):
+                active = active
+                continue
+            if "in chf" in label_lower:
+                continue
+
+            vals = cls._numeric_values_from_cells(row[1:])
+            if len(vals) < len(years):
+                continue
+            vals = [abs(v) for v in vals[: len(years)]]
+            items[active].append((label, vals))
+
+        for section, section_items in items.items():
+            if section_items:
+                result[section] = (section_years.get(section, years), section_items)
+
+        # Structural gate: a genuine combined expense note has at least one
+        # numeric sub-row under BOTH headers.  This replaces the old
+        # company-specific line-item check and avoids false positives on
+        # summary tables that merely mention both header phrases.
+        if not (result.get("rd") and result.get("ga")):
+            return {}
+
+        return result
+
+    @classmethod
+    def _parse_ifrs_ppe_tables(
+        cls, soup: BeautifulSoup
+    ) -> Optional[Tuple[List[int], List[Tuple[str, List[float]]]]]:
+        """Parse IFRS PP&E tables by asset class using carrying amounts.
+
+        Molecular Partners discloses one table per year with columns such as
+        Lab equipment, Office equipment, IT hardware, Right-of-use assets, and
+        Leasehold improvements. The workbook has five PP&E detail rows, so the
+        carrying-amount split is the most useful DCF-ready decomposition.
+        """
+        year_to_values: Dict[int, Dict[str, float]] = {}
+        ordered_labels: List[str] = []
+
+        for table in soup.find_all("table"):
+            txt = " ".join(table.get_text(" ", strip=True).split())
+            low = txt.lower()
+            # Anchor on the generic carrying-amount phrase; the header-row
+            # check below requires a 'Total' column plus >=2 asset classes,
+            # so we do not need the reference-specific 'lab equipment' label.
+            if "carrying amount at december 31" not in low:
+                continue
+
+            rows = []
+            for tr in table.find_all("tr"):
+                cells = [
+                    c.get_text(" ", strip=True)
+                    .replace("\xa0", " ")
+                    .replace("\u00a0", " ")
+                    for c in tr.find_all(["td", "th"])
+                ]
+                if cells:
+                    rows.append(cells)
+            if len(rows) < 3:
+                continue
+
+            labels: List[str] = []
+            for row in rows[:3]:
+                nonempty = [cls._clean_note_label(c) for c in row[1:] if c and c.strip()]
+                # A PP&E carrying-amount header row has a 'Total' column plus
+                # >=2 asset-class columns (whatever the filer names them).
+                asset_cols = [c for c in nonempty if c != "Total"]
+                if "Total" in nonempty and len(asset_cols) >= 2:
+                    labels = nonempty
+                    break
+            if not labels:
+                continue
+
+            for row in rows:
+                row_text = " ".join(row)
+                m = re.search(r"Carrying amount at December 31,\s*(20\d{2})", row_text)
+                if not m:
+                    continue
+                year = int(m.group(1))
+                vals = cls._numeric_values_from_cells(row[1:])
+                if len(vals) < len(labels):
+                    continue
+                values = dict(zip(labels, vals[: len(labels)]))
+                year_to_values[year] = values
+                for label in labels:
+                    if label != "Total" and label not in ordered_labels:
+                        ordered_labels.append(label)
+
+        if not year_to_values:
+            return None
+
+        years = sorted(year_to_values.keys(), reverse=True)
+        items: List[Tuple[str, List[float]]] = []
+        for label in ordered_labels:
+            items.append((label, [year_to_values[y].get(label, 0) for y in years]))
+        return years, items
+
+    @classmethod
+    def _parse_ifrs_accrued_tables(
+        cls, soup: BeautifulSoup
+    ) -> Optional[Tuple[List[int], List[Tuple[str, List[float]]]]]:
+        """Parse IFRS accrued expenses table by category.
+
+        Molecular Partners discloses a compact table headed `in CHF thousands`
+        with columns for two years and rows such as `Accrued project costs and
+        royalties`, `Accrued payroll and bonuses`, and `Other`.
+        """
+        for table in soup.find_all("table"):
+            txt = " ".join(table.get_text(" ", strip=True).split())
+            low = txt.lower()
+            # Detect the accrued-liabilities movement table by its balance
+            # anchor in an accrued context, not a reference-specific line item.
+            # The year-header row is required structurally inside the loop below.
+            if (
+                "balance at december 31" not in low
+                or "accrued" not in low
+            ):
+                continue
+            if "trade payables" in low and "lease liabilities" in low:
+                continue
+
+            rows = []
+            for tr in table.find_all("tr"):
+                cells = [
+                    c.get_text(" ", strip=True)
+                    .replace("\xa0", " ")
+                    .replace("\u00a0", " ")
+                    for c in tr.find_all(["td", "th"])
+                ]
+                if cells:
+                    rows.append(cells)
+
+            years: List[int] = []
+            items: List[Tuple[str, List[float]]] = []
+            for row in rows:
+                row_text = " ".join(row)
+                found_years = [int(y) for y in re.findall(r"\b(20\d{2})\b", row_text)]
+                if found_years and not years:
+                    years = found_years
+                    continue
+                if not years:
+                    continue
+
+                label = cls._clean_note_label(row[0] if row else "")
+                if not label:
+                    continue
+                label_lower = label.lower()
+                if label_lower.startswith("balance at"):
+                    continue
+                if "in chf" in label_lower:
+                    continue
+
+                vals = cls._numeric_values_from_cells(row[1:])
+                if len(vals) < len(years):
+                    continue
+                items.append((label, vals[: len(years)]))
+
+            if years and items:
+                return years, items
+
+        return None
+
     def _find_note_tables(
         self, html: str
     ) -> Dict[str, Tuple[List[int], List[Tuple[str, List[float]]]]]:
@@ -776,43 +1194,73 @@ class SECFetcher:
         soup = BeautifulSoup(html, "html.parser")
         result: Dict[str, Tuple[List[int], List[Tuple[str, List[float]]]]] = {}
 
-        # ── R&D table: contains "Total research and development" ─────────
+        # ── IFRS combined expense note (e.g. Molecular Partners 20-F Note 16)
         for table in soup.find_all("table"):
-            if "otal research and development" in table.get_text().lower():
-                years, items = self._parse_note_table(table)
-                if items:
-                    result["rd"] = (years, items)
+            parsed = self._parse_ifrs_expense_sections(table)
+            if parsed:
+                result.update(parsed)
                 break
 
-        # ── PP&E table: after "Property and equipment consist" ───────────
-        for text_node in soup.find_all(
-            string=re.compile(r"[Pp]roperty and equipment consist")
-        ):
-            next_table = text_node.find_next("table")
-            if next_table:
-                years, items = self._parse_note_table(next_table)
-                if items:
-                    result["ppe"] = (years, items)
-                break
+        # ── IFRS PP&E asset-class carrying amount tables
+        ppe_ifrs = self._parse_ifrs_ppe_tables(soup)
+        if ppe_ifrs:
+            result["ppe"] = ppe_ifrs
 
-        # ── Accrued table: after "Accrued expenses consist" ──────────────
-        for text_node in soup.find_all(
-            string=re.compile(r"[Aa]ccrued expenses consist")
-        ):
-            next_table = text_node.find_next("table")
-            if next_table:
-                years, items = self._parse_note_table(next_table)
-                if items:
-                    result["accrued"] = (years, items)
-                break
+        # ── R&D table: contains "Total research and development" ─────────
+        if "rd" not in result:
+            for table in soup.find_all("table"):
+                if "otal research and development" in table.get_text().lower():
+                    years, items = self._parse_note_table(table)
+                    if items:
+                        result["rd"] = (years, items)
+                    break
+
+        # ── PP&E table: after "Property and equipment[, net] consist[ed] …"
+        # Match the table-intro phrasing (e.g. "Property and equipment, net
+        # consisted of the following:") as well as bare "…consist…". Iterate
+        # ALL matching text nodes and keep the FIRST whose following table
+        # actually parses to items, so a depreciation-policy narrative
+        # sentence (whose next table is the useful-lives table → 0 items)
+        # falls through to the real per-asset-class breakdown table.
+        if "ppe" not in result:
+            for text_node in soup.find_all(
+                string=re.compile(r"[Pp]roperty and equipment.*consist")
+            ):
+                next_table = text_node.find_next("table")
+                if next_table:
+                    years, items = self._parse_note_table(next_table)
+                    if items:
+                        result["ppe"] = (years, items)
+                        break
+
+        # ── Accrued table: after "Accrued expenses … consist[ed] …" ──────
+        # Broaden the anchor so titles like "Accrued expenses and other
+        # current liabilities consisted of the following:" match too, and
+        # keep the FIRST matching node whose table parses to items rather
+        # than unconditionally breaking on the first (which may be a
+        # narrative sentence whose next table yields 0 items).
+        accrued_ifrs = self._parse_ifrs_accrued_tables(soup)
+        if accrued_ifrs:
+            result["accrued"] = accrued_ifrs
+        else:
+            for text_node in soup.find_all(
+                string=re.compile(r"[Aa]ccrued expenses.*consist")
+            ):
+                next_table = text_node.find_next("table")
+                if next_table:
+                    years, items = self._parse_note_table(next_table)
+                    if items:
+                        result["accrued"] = (years, items)
+                        break
 
         # ── G&A table: contains "Total general and administrative" ───────
-        for table in soup.find_all("table"):
-            if "otal general and administrative" in table.get_text().lower():
-                years, items = self._parse_note_table(table)
-                if items:
-                    result["ga"] = (years, items)
-                break
+        if "ga" not in result:
+            for table in soup.find_all("table"):
+                if "otal general and administrative" in table.get_text().lower():
+                    years, items = self._parse_note_table(table)
+                    if items:
+                        result["ga"] = (years, items)
+                    break
 
         return result
 
@@ -876,13 +1324,13 @@ class SECFetcher:
 
         for fy in sorted(filings_to_download, reverse=True):
             url = filings_to_download[fy]
-            logger.info(f"  Downloading FY{fy} 10-K …")
+            logger.info(f"  Downloading FY{fy} {form_label} …")
             time.sleep(0.3)
             try:
                 resp = self.session.get(url, timeout=120)
                 resp.raise_for_status()
             except Exception as e:
-                logger.warning(f"  Failed to download FY{fy} 10-K: {e}")
+                logger.warning(f"  Failed to download FY{fy} {form_label}: {e}")
                 continue
 
             tables = self._find_note_tables(resp.text)
@@ -1033,6 +1481,25 @@ class SECFetcher:
         # factor=1/1000 → 1/1000000, factor=1 (shares) → 1 (unchanged)
         mm_scale = 1.0 if reporting_unit == "K" else 1 / 1000
 
+        # ── req1 interim rule: if the trailing requested FY has no annual
+        # 10-K/20-F on file yet, estimate that year from interim 10-Q data
+        # (1q×4 / 2q-avg×4 / 3q-avg×4 for flows; latest quarter-end for
+        # instants). Gated strictly to the trailing not-yet-filed year, so
+        # completed/filed years — and the entire MOLN/CMPX/BHVN-today annual
+        # path — are byte-for-byte unaffected.
+        trailing_year = max(years) if years else None
+        trailing_year_needs_interim = (
+            trailing_year is not None
+            and not self._has_annual_filing(
+                facts, trailing_year, taxonomy, form_types
+            )
+        )
+        if trailing_year_needs_interim:
+            logger.info(
+                f"  FY{trailing_year} has no annual {form_types[0]} on file; "
+                f"estimating it from interim 10-Q data (req1 rule)."
+            )
+
         result: Dict[Tuple, Dict[int, Optional[float]]] = {}
 
         for col_c, col_b, col_d, concepts, factor, is_flow in XBRL_MAP:
@@ -1053,6 +1520,26 @@ class SECFetcher:
                     taxonomy=taxonomy, form_types=form_types,
                     currency=xbrl_currency,
                 )
+
+            # ── req1 interim fallback for the trailing not-yet-filed FY ──
+            if trailing_year_needs_interim and raw.get(trailing_year) is None:
+                if taxonomy == "ifrs-full":
+                    interim_concepts = IFRS_CONCEPTS.get(
+                        (col_c, col_b, col_d), []
+                    )
+                else:
+                    interim_concepts = concepts
+                q_val = self._extract_annualized_quarterly(
+                    facts, interim_concepts, trailing_year, is_flow,
+                    taxonomy=taxonomy, currency=xbrl_currency,
+                )
+                if q_val is not None:
+                    raw[trailing_year] = q_val
+                    logger.info(
+                        f"  Interim-annualized ({col_c}, {col_b!r}, "
+                        f"'{col_d[:30]}') FY{trailing_year} → {q_val:,.0f}"
+                    )
+
             converted = {}
             has_any_data = False
             for year, val in raw.items():
@@ -1105,6 +1592,38 @@ class SECFetcher:
                     for y, v in sorted(converted.items())
                 )
             )
+
+        # ── Post-processing: add NON-CURRENT marketable securities to the
+        # financial-asset line. SEC filers often split current/non-current AFS
+        # securities; keeping only the current concept understates liquidity and
+        # makes residual balancing bury the non-current tranche in Other Assets.
+        marketable_key = ("BS", None, "Marketable Securities")
+        if marketable_key in result:
+            noncurrent_marketable_raw = self.extract_concept_by_year(
+                facts,
+                ["MarketableSecuritiesNoncurrent",
+                 "AvailableForSaleSecuritiesNoncurrent",
+                 "InvestmentsNoncurrent"],
+                years,
+                is_flow=False,
+                fiscal_year_end_month=fye_month,
+                taxonomy=taxonomy, form_types=form_types,
+                currency=xbrl_currency,
+            )
+            if any(v is not None for v in noncurrent_marketable_raw.values()):
+                logger.info("  Adding non-current marketable securities to Marketable Securities")
+                for year in years:
+                    raw_value = noncurrent_marketable_raw.get(year)
+                    if raw_value is None:
+                        continue
+                    divisor = 1000 if reporting_unit == "K" else 1000000
+                    amount = round(raw_value / divisor)
+                    current_value = result[marketable_key].get(year, 0) or 0
+                    result[marketable_key][year] = current_value + amount
+                    logger.info(
+                        f"    {year}: Marketable Securities {current_value:,} + "
+                        f"non-current {amount:,} = {result[marketable_key][year]:,}"
+                    )
 
         # ── Post-processing: Add Restricted Cash to Other Assets ──────────────
         # RestrictedCashNoncurrent is often reported separately but should be
@@ -1320,30 +1839,22 @@ class SECFetcher:
         rename_map[("BS", None, "Deferred revenue, Current Portion")] = \
             "Operating Lease Liabilities, Current Portion"
 
-        # ISN R&D Notes (rows R28-R36): map notes sub-keys to row positions
-        # Original Excel has 9 rows (sub 1-9) with Bicycle Therapeutics names
-        rename_map[("ISN", 1, None)] = "Research And Development Expenses"
-        for sub in range(2, 10):
-            rename_map[("ISN", sub, None)] = ""  # zero-fill rows
+        # BS equity: the base template carries Bicycle Therapeutics' UK-listed
+        # "Ordinary Shares, £0.01 Nominal Value" label.  Keep that literal only
+        # as the template row-match key, but relabel col D to the filer's own
+        # instrument (US GAAP → Common Stock, IFRS → Share Capital) so no new
+        # ticker inherits BCYC's £0.01 nominal-value share label.
+        rename_map[("BS", None, "Ordinary Shares, £0.01 Nominal Value")] = (
+            "Common Stock" if taxonomy == "us-gaap" else "Share Capital"
+        )
 
-        # ISN G&A Notes (rows R42-R46): 5 rows
-        rename_map[("ISN", 1, None, "GA")] = "General And Administrative Expenses"
-        for sub in range(2, 6):
-            rename_map[("ISN", sub, None, "GA")] = ""  # zero-fill rows
-
-        # BSN PP&E Notes (rows R93-R97): 5 rows
-        rename_map[("BSN", 1, None, "PPE")] = "Property, Plant And Equipment, Gross"
-        rename_map[("BSN", 2, None, "PPE")] = ""  # zero
-        rename_map[("BSN", 3, None, "PPE")] = ""  # zero
-        rename_map[("BSN", 4, None, "PPE")] = ""  # zero
-        rename_map[("BSN", 5, None, "PPE")] = "Accumulated Depreciation"
-
-        # BSN Accrued Notes (rows R103-R107): 5 rows
-        rename_map[("BSN", 1, None, "ACC")] = "Accrued Employee Benefits"
-        rename_map[("BSN", 2, None, "ACC")] = "Other Accrued Liabilities (Balancing)"
-        rename_map[("BSN", 3, None, "ACC")] = ""  # zero
-        rename_map[("BSN", 4, None, "ACC")] = ""  # zero
-        rename_map[("BSN", 5, None, "ACC")] = "Other Accrued Liabilities"
+        # NOTE: ISN/BSN row labels are NOT driven through rename_map.  They are
+        # written by excel_writer._write_notes_section from note_details (with a
+        # "Reserved"/hidden fallback for unused note rows), and every ISN/BSN
+        # financial_data key is skipped in the standard rename loop.  The former
+        # 4-tuple ("ISN"/"BSN", n, None, tag) and ("ISN", 1, None) entries here
+        # were never consumed (_collect_kusd_patches only reads len==3 keys
+        # whose new name is itself a financial_data key), so they were removed.
 
         logger.info(f"  Rename map: {len(rename_map)} entries")
 

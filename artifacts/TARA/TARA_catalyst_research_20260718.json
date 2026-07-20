@@ -1,0 +1,20 @@
+{
+  "ticker": "TARA",
+  "as_of": "2026-07-18",
+  "event_date": null,
+  "event_name": "THRIVE-3 IV Choline Chloride interim results (2H 2026)",
+  "drug": "IV Choline Chloride",
+  "indication": "Choline deficiency in adolescent and adult patients receiving long-term parenteral support",
+  "expected_disclosure": "The first THRIVE-3 Phase 2b open-label dose-confirmation interim analysis is expected in the second half of 2026. The clinically relevant fields should include safety and tolerability, dose selection, plasma free-choline pharmacokinetics and change from baseline at week 8 across the planned 24-patient dose-confirmation stage.",
+  "relevant_targets": [
+    "IV-Choline-Chloride - PS"
+  ],
+  "sources": [
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-3",
+    "https://clinicaltrials.gov/study/NCT06910943"
+  ],
+  "uncertainties": [
+    "The exact disclosure date, evaluable denominator and cutoff have not been announced.",
+    "The first analysis may emphasize pharmacokinetics, plasma choline and dose confirmation rather than longer-term hepatic outcomes."
+  ]
+}

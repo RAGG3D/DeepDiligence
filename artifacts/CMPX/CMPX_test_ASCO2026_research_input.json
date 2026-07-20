@@ -1,0 +1,234 @@
+{
+  "ticker": "CMPX",
+  "event": "ASCO2026",
+  "event_name": "ASCO2026",
+  "event_date": "2026-05-30",
+  "public_disclosure_date": "2026-05-21",
+  "venue": "2026 ASCO Annual Meeting, poster abstract 2629",
+  "data_cutoff": "Not reported in the available ASCO abstract or company clinical release",
+  "trial": "NCT06150664",
+  "phase": "Phase 1 dose escalation",
+  "relevant_targets": [
+    "CTX-8371 - NSCLC",
+    "CTX-8371 - TNBC",
+    "CTX-8371 - HL"
+  ],
+  "reported_data": [
+    {
+      "target": "CTX-8371 - NSCLC",
+      "population": "Post-checkpoint-inhibitor advanced malignancies; 15 patients completed DLT evaluation and had at least one post-baseline assessment across the mixed dose-escalation cohort. The NSCLC-specific denominator was not disclosed.",
+      "n_enrolled": 15,
+      "n_evaluable": 15,
+      "efficacy": "One fourth-line NSCLC patient had an initial pseudoprogression followed by complete resolution of target lesions. Across all tumor types, three responses occurred among 15 evaluable patients; at 3.0 and 10.0 mg/kg the aggregate ORR was 33% (2/6 evaluable).",
+      "safety": "No DLTs were observed. All treatment-related adverse events were grade 1 or 2 except one asymptomatic grade 3 lipase increase.",
+      "follow_up": "Response duration for the NSCLC patient was not reported in the company clinical release; follow-up therefore remains immature.",
+      "source_ids": ["S1", "S2", "S3"]
+    },
+    {
+      "target": "CTX-8371 - TNBC",
+      "population": "Post-checkpoint-inhibitor advanced malignancies; 15 patients completed DLT evaluation and had at least one post-baseline assessment across the mixed dose-escalation cohort. The TNBC-specific denominator was not disclosed.",
+      "n_enrolled": 15,
+      "n_evaluable": 15,
+      "efficacy": "One fourth-line TNBC patient achieved a confirmed deep partial response with more than 90% reduction in target lesions. Across all tumor types, three responses occurred among 15 evaluable patients; at 3.0 and 10.0 mg/kg the aggregate ORR was 33% (2/6 evaluable).",
+      "safety": "No DLTs were observed. All treatment-related adverse events were grade 1 or 2 except one asymptomatic grade 3 lipase increase.",
+      "follow_up": "The TNBC response was ongoing at 10.5+ months at the ASCO 2026 disclosure.",
+      "source_ids": ["S1", "S2", "S3"]
+    },
+    {
+      "target": "CTX-8371 - HL",
+      "population": "Post-checkpoint-inhibitor advanced malignancies; 15 patients completed DLT evaluation and had at least one post-baseline assessment across the mixed dose-escalation cohort. The HL-specific denominator was not disclosed.",
+      "n_enrolled": 15,
+      "n_evaluable": 15,
+      "efficacy": "One heavily pretreated HL patient achieved a partial metabolic response after prior ABVD, BEAM/autologous transplant, nivolumab and brentuximab. Across all tumor types, three responses occurred among 15 evaluable patients; at 3.0 and 10.0 mg/kg the aggregate ORR was 33% (2/6 evaluable).",
+      "safety": "No DLTs were observed. All treatment-related adverse events were grade 1 or 2 except one asymptomatic grade 3 lipase increase.",
+      "follow_up": "The HL response was ongoing at 7.5+ months at the ASCO 2026 disclosure.",
+      "source_ids": ["S1", "S2", "S3"]
+    }
+  ],
+  "competitor_comparisons": [
+    {
+      "target": "CTX-8371 - NSCLC",
+      "competitor": "Datopotamab deruxtecan in TROPION-PanTumor01",
+      "matched_setting": "Heavily pretreated advanced NSCLC in a phase 1 cohort; median three prior regimens, providing a maturity-matched later-line benchmark although the mechanism and eligibility differ.",
+      "clinical_comparison": "Datopotamab deruxtecan produced a 26% objective response rate in 50 patients, median response duration of 10.5 months and median progression-free survival of 6.9 months. The CTX-8371 NSCLC response is clinically encouraging, but one responder without a target-specific denominator or disclosed duration cannot yet establish comparable response reliability.",
+      "limitations": "Cross-trial comparison; different target, treatment, eligibility and response-assessment timing. The CTX-8371 result comes from a mixed-tumor dose-escalation cohort.",
+      "source_ids": ["S4"]
+    },
+    {
+      "target": "CTX-8371 - TNBC",
+      "competitor": "Sacituzumab govitecan in ASCENT",
+      "matched_setting": "Relapsed or refractory metastatic TNBC after at least two prior chemotherapy regimens; a later-line benchmark, though not all patients were selected for prior checkpoint-inhibitor exposure and the modality differs.",
+      "clinical_comparison": "Sacituzumab govitecan achieved a 35% objective response rate, median progression-free survival of 5.6 months and median overall survival of 12.1 months in the randomized study. The CTX-8371 response depth and 10.5+ month ongoing duration are notable, but a single response with no TNBC-specific denominator is insufficient to infer a cohort-level response rate.",
+      "limitations": "Cross-trial comparison across a randomized phase 3 antibody-drug conjugate study and a phase 1 bispecific dose-escalation cohort; prior-treatment composition and sample size differ materially.",
+      "source_ids": ["S5"]
+    },
+    {
+      "target": "CTX-8371 - HL",
+      "competitor": "Acimtamig plus AlloNK in LuminICE-203",
+      "matched_setting": "Heavily pretreated relapsed or refractory classical HL after chemotherapy, brentuximab and PD-1 pathway therapy; a close disease-line benchmark but with a cell-therapy combination rather than bispecific monotherapy.",
+      "clinical_comparison": "Initial phase 2 LuminICE-203 data reported a 90% objective response rate with 60% complete responses among 10 evaluable patients. The 7.5+ month CTX-8371 metabolic response supports activity after multiple prior therapies, but the undisclosed HL denominator prevents comparison with the high cohort-level response benchmark.",
+      "limitations": "Cross-trial comparison with different mechanism, combination regimen, sample size and response-assessment schedule; both datasets are early and nonrandomized.",
+      "source_ids": ["S6"]
+    }
+  ],
+  "target_assessments": [
+    {
+      "target": "CTX-8371 - NSCLC",
+      "observed_outcome": "Increase",
+      "data_quality": "Low-to-moderate: confirmed antitumor activity and favorable early safety, but only one NSCLC responder, no indication-specific denominator, no disclosed response duration and a mixed-tumor phase 1 cohort.",
+      "clinical_interpretation": "The complete resolution of target lesions after pseudoprogression is a genuine activity signal in a fourth-line patient. It supports a modest upward revision, while the absent denominator and immature durability keep Remain equally plausible and preserve a limited downside branch.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.02,
+          "loa_change": 0.015,
+          "conviction": 0.45,
+          "rationale": "A confirmed later-line response plus clean dose-escalation safety supports a small improvement, constrained by the single-patient evidence and missing indication-specific denominator."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.45,
+          "rationale": "The result may remain hypothesis-generating until expansion data establish reproducible response rate and durability in NSCLC."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.02,
+          "loa_change": -0.015,
+          "conviction": 0.1,
+          "rationale": "If the isolated response does not reproduce in expansion or durability proves short, the early signal would warrant a modest reduction."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "The disclosed activity, absence of DLTs and expansion initiation do not support suspension."
+        }
+      ]
+    },
+    {
+      "target": "CTX-8371 - TNBC",
+      "observed_outcome": "Increase",
+      "data_quality": "Moderate for a phase 1 signal: confirmed deep and durable response with favorable early safety, offset by a single TNBC responder and no TNBC-specific denominator.",
+      "clinical_interpretation": "A greater than 90% lesion reduction ongoing beyond 10.5 months in a fourth-line patient is clinically meaningful and supports the strongest upward revision among the three indications. The adjustment remains bounded because reproducibility and subgroup response rate are unknown.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.04,
+          "loa_change": 0.03,
+          "conviction": 0.65,
+          "rationale": "Response depth, duration and tolerability together support a meaningful but still phase-1-sized improvement."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.3,
+          "rationale": "One durable responder cannot establish a TNBC cohort response rate; expansion could leave assumptions unchanged."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.03,
+          "loa_change": -0.02,
+          "conviction": 0.05,
+          "rationale": "A reduction would require the deep response to prove non-reproducible or an unfavorable efficacy pattern to emerge in expansion."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "The ongoing durable response and benign early tolerability do not support suspension."
+        }
+      ]
+    },
+    {
+      "target": "CTX-8371 - HL",
+      "observed_outcome": "Increase",
+      "data_quality": "Low-to-moderate: a sustained metabolic response in a heavily pretreated patient and favorable early safety, but only one HL response and no HL-specific denominator in the mixed cohort.",
+      "clinical_interpretation": "Activity after transplant, nivolumab and brentuximab is clinically relevant and warrants a modest increase. The high response rates reported by a closely matched investigational competitor and the absence of a CTX-8371 HL denominator temper the magnitude.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.025,
+          "loa_change": 0.02,
+          "conviction": 0.55,
+          "rationale": "A 7.5+ month metabolic response after multiple standard therapies supports a modest improvement, with the competitor efficacy bar limiting the adjustment."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.4,
+          "rationale": "The single-patient signal may be insufficient to change assumptions until a dedicated HL expansion reports a denominator and response durability."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.03,
+          "loa_change": -0.025,
+          "conviction": 0.05,
+          "rationale": "A reduction would require non-replication or materially weaker cohort activity relative to the high response benchmark in heavily pretreated HL."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "The observed response, manageable safety and expansion activity do not support suspension."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-promising-phase-1-clinical-data-ctx",
+      "source_kind": "company_clinical_release",
+      "title": "Compass Therapeutics to Present Phase 1 Clinical Data for CTX-8371 at the 2026 ASCO Annual Meeting",
+      "accessed": "2026-07-17"
+    },
+    {
+      "id": "S2",
+      "url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.2629",
+      "source_kind": "conference_abstract",
+      "title": "Phase 1 dose escalation of CTX-8371 in patients with advanced malignancies post checkpoint inhibition",
+      "accessed": "2026-07-17"
+    },
+    {
+      "id": "S3",
+      "url": "https://clinicaltrials.gov/study/NCT06150664",
+      "source_kind": "clinical_trial_registry",
+      "title": "Study of CTX-8371 in Patients With Advanced Malignancies",
+      "accessed": "2026-07-17"
+    },
+    {
+      "id": "S4",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37327461/",
+      "source_kind": "peer_reviewed_publication",
+      "title": "TROPION-PanTumor01: Datopotamab deruxtecan in advanced or metastatic NSCLC",
+      "accessed": "2026-07-17"
+    },
+    {
+      "id": "S5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33882206/",
+      "source_kind": "peer_reviewed_publication",
+      "title": "Sacituzumab govitecan in metastatic triple-negative breast cancer",
+      "accessed": "2026-07-17"
+    },
+    {
+      "id": "S6",
+      "url": "https://ashpublications.org/blood/article/144/Supplement%201/3052/533781/Investigating-the-Novel-Combination-of-the-Innate",
+      "source_kind": "conference_abstract",
+      "title": "Initial phase 2 LuminICE-203 results in relapsed or refractory classical Hodgkin lymphoma",
+      "accessed": "2026-07-17"
+    }
+  ],
+  "limitations": [
+    "The company did not disclose indication-specific enrolled or evaluable denominators; the mixed-cohort total of 15 is repeated only to preserve the reported overall denominator.",
+    "The data-cutoff date and NSCLC response duration were not reported in the available disclosure.",
+    "All target judgments are cross-trial clinical interpretations from early, nonrandomized CTX-8371 data and should be updated when indication-specific expansion cohorts mature.",
+    "No security-market information was retrieved or used."
+  ]
+}

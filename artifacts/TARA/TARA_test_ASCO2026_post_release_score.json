@@ -1,0 +1,96 @@
+{
+  "ticker": "TARA",
+  "event": "ASCO2026",
+  "scoring_agent_role": "independent_post_release_agent",
+  "clinical_artifact_sha256": "0e44ccc3e378d725bb383a136169f0bf6e16b29e770ca573ee5071228566bd4a",
+  "blind_prediction_sha256": "aad6c77b0836f2db2158ffa1c7e842621f487b4f1f7556b6dda13286691ef79a",
+  "post_release": {
+    "release_date": "2026-02-23",
+    "include_release_date_close": false,
+    "release_timing_basis": "Company stated the data release was in the evening of 2026-02-23; exclude that day's close.",
+    "official_release_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+    "market_ticker": "TARA",
+    "source_url": "https://finance.yahoo.com/quote/TARA/history/",
+    "sessions": [
+      {
+        "date": "2026-02-24",
+        "close": 5.46999979019165
+      },
+      {
+        "date": "2026-02-25",
+        "close": 5.960000038146973
+      },
+      {
+        "date": "2026-02-26",
+        "close": 5.769999980926514
+      }
+    ]
+  },
+  "intraday": {
+    "market_ticker": "TARA",
+    "granularity": "60m",
+    "regular_session_only": true,
+    "price_field": "unadjusted High",
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/TARA?period1=1771891200&period2=1772150400&interval=60m&includePrePost=false&events=div%2Csplits",
+    "daily_highs": [
+      {
+        "date": "2026-02-24",
+        "raw_high": 6.329999923706055,
+        "bar_start": "2026-02-24T09:30:00-05:00",
+        "bar_count": 7
+      },
+      {
+        "date": "2026-02-25",
+        "raw_high": 6.09499979019165,
+        "bar_start": "2026-02-25T12:30:00-05:00",
+        "bar_count": 7
+      },
+      {
+        "date": "2026-02-26",
+        "raw_high": 6.047999858856201,
+        "bar_start": "2026-02-26T09:30:00-05:00",
+        "bar_count": 7
+      }
+    ],
+    "three_day_peak": {
+      "date": "2026-02-24",
+      "raw_high": 6.329999923706055,
+      "bar_start": "2026-02-24T09:30:00-05:00",
+      "bar_count": 7
+    },
+    "independent_agent_note": "Regular-session 60m raw High; bar time identifies the peak hour, not the exact trade minute."
+  },
+  "target_scores": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "score": 3,
+      "rationale": "虽识别12个月数据偏弱，却仍显著高估正面重估。"
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "score": 2,
+      "rationale": "高 conviction 上调与连续三日负反应方向相反。"
+    }
+  ],
+  "highest_rjconv_scenario_test": {
+    "rule": "max RJConv. (raw Table-3 conviction product); all exact ties retained",
+    "three_day_real_peak": 6.329999923706055,
+    "three_day_peak_bar_start": "2026-02-24T09:30:00-05:00",
+    "highest_rjconv": 0.45499999999999996,
+    "scenarios": [
+      {
+        "row": 10,
+        "scenario_id": 10,
+        "outcomes": {
+          "TARA-002-NMIBC - NMIBC-BU": "Increase",
+          "TARA-002-NMIBC - NMIBC-BN": "Increase"
+        },
+        "rjconv": 0.45499999999999996,
+        "blind_final_market_price": 7.313372424094165,
+        "result": "MISS",
+        "difference_usd_per_share": 0.9833725003881106,
+        "difference_as_pct_of_real_peak": 0.15535110777890357
+      }
+    ]
+  }
+}

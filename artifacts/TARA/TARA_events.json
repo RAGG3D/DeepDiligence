@@ -1,0 +1,105 @@
+[
+  {
+    "date": "2023-09-20",
+    "evt": "[COMPANY PR] Phase 1b/2; first patient dosed in ADVANCED-2; planned N=102",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-1b2"
+  },
+  {
+    "date": "2024-04-05",
+    "evt": "$45 million private placement announced to fund TARA-002 and IV Choline",
+    "category": "Financing"
+  },
+  {
+    "date": "2024-09-09",
+    "evt": "[COMPANY PR] Phase 2 initial data; N=3; CR=2/3; all TEAEs mild/moderate and resolved",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-completion-first-cohort-phase-2"
+  },
+  {
+    "date": "2024-09-09",
+    "evt": "[ESPEN Poster] prospective observational data; N=78; choline deficiency=78% (61/78); liver injury among deficient=63% (38/60)",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-results-thrive-1-prospective",
+    "abstract_url": "https://ir.protaratx.com/static-files/7b90a75c-d146-4edb-a39f-87ad5393fe91"
+  },
+  {
+    "date": "2024-12-05",
+    "evt": "[CALL] Phase 2 initial data; N=27; 72% 6m landmark CR; no Grade 2+ TRAEs",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-positive-results-ongoing-phase-2-advanced-2"
+  },
+  {
+    "date": "2024-12-09",
+    "evt": "$100 million underwritten public offering priced at $6.25 per share",
+    "category": "Financing"
+  },
+  {
+    "date": "2025-03-05",
+    "evt": "FY2024 update guided to multiple 2025 TARA-002 readouts and THRIVE-3 start",
+    "category": "Corporate"
+  },
+  {
+    "date": "2025-08-11",
+    "evt": "Q2 update maintained 2025 STARBORN-1 and NMIBC milestones",
+    "category": "Corporate"
+  },
+  {
+    "date": "2025-11-19",
+    "evt": "[CALL] Phase 2 interim; N=12; 8/8 8-week clinical success; 5/6 macrocystic CR; no serious AEs",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-interim-results-0"
+  },
+  {
+    "date": "2025-12-03",
+    "evt": "[CALL] Phase 2 updated interim; N=31/29 efficacy; 69% 6m and 50% 12m landmark CR; no Grade 3+ TRAEs",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-updated-interim-data-phase-2"
+  },
+  {
+    "date": "2025-12-04",
+    "evt": "$75 million public offering priced at $5.75 per share before option exercise",
+    "category": "Financing"
+  },
+  {
+    "date": "2026-01-07",
+    "evt": "[COMPANY PR] Phase 2b/3; first patient dosed in registrational THRIVE-3",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-3"
+  },
+  {
+    "date": "2026-01-12",
+    "evt": "Company disclosed FDA Breakthrough Therapy and Fast Track designations for TARA-002 in LM",
+    "category": "Regulatory"
+  },
+  {
+    "date": "2026-02-23",
+    "evt": "[ASCO GU Poster] Phase 2 updated interim; N=35; CR-any=65.7% (23/35); 6m CR=68.2% (15/22); 12m CR=33.3% (5/15); no Grade 3+ TRAEs",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+    "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.7_suppl.743"
+  },
+  {
+    "date": "2026-03-10",
+    "evt": "FY2025 results reported $197.9 million unrestricted liquidity and runway into 2028",
+    "category": "Corporate"
+  },
+  {
+    "date": "2026-05-13",
+    "evt": "Q1 update disclosed planned LM BLA submission in the second half of 2027",
+    "category": "Regulatory"
+  },
+  {
+    "date": "2026-05-15",
+    "evt": "[AUA 2026 Poster] Phase 2 updated 12m data; N=29; CR-any=72.4% (21/29); 6m CR=66.7% (18/27); 12m CR=55% (11/20)",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-updated-12-month-data"
+  },
+  {
+    "date": "2026-05-20",
+    "evt": "[ISSVA Poster] Phase 2 updated interim; N=16 treated; 10/10 8-week clinical success; 1/16 related Grade 3 TEAE; no serious TEAEs",
+    "category": "Clinical Data",
+    "url": "https://ir.protaratx.com/static-files/9197cd45-87a3-419b-b988-68181d3c29cf",
+    "abstract_url": "https://ir.protaratx.com/static-files/9197cd45-87a3-419b-b988-68181d3c29cf"
+  }
+]

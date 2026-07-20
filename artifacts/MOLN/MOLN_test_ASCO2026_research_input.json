@@ -1,0 +1,125 @@
+{
+  "ticker": "MOLN",
+  "event": "ASCO2026",
+  "event_name": "ASCO2026",
+  "event_date": "2026-05-30",
+  "public_disclosure_date": "2026-05-30",
+  "venue": "2026 ASCO Annual Meeting, trial-in-progress poster TPS3176",
+  "data_cutoff": "No therapeutic Phase 1/2a cohort data cutoff was reported in the ASCO trial-in-progress disclosure",
+  "trial": "NCT07278479",
+  "phase": "Phase 1/2a dose escalation and expansion",
+  "relevant_targets": [
+    "MP0712 - SCLC",
+    "MP0712 - EP-NEC",
+    "MP0712 - LCNEC"
+  ],
+  "reported_data": [
+    {
+      "target": "MP0712 - SCLC",
+      "population": "The planned trial enrolls adults with DLL3-expressing small cell lung cancer after standard therapy, but the ASCO presentation described the protocol while dosing continued in the first cohort and did not disclose a therapeutic cohort denominator.",
+      "n_enrolled": 0,
+      "n_evaluable": 0,
+      "efficacy": "No RECIST response, disease-control, progression, survival or therapeutic dosimetry result from the Phase 1/2a cohort was disclosed. Separate diagnostic-isotope imaging under a named-patient access program showed specific uptake in tumor lesions but was not a therapeutic efficacy dataset.",
+      "safety": "No Phase 1/2a adverse-event, serious-adverse-event or dose-limiting-toxicity counts were disclosed at this event.",
+      "follow_up": "No therapeutic patient follow-up duration was disclosed; initial clinical data remained expected later in 2026.",
+      "source_ids": ["S1", "S2", "S3"]
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "population": "The planned trial includes other DLL3-expressing neuroendocrine carcinomas, including extrapulmonary disease, but the ASCO presentation was a protocol poster and disclosed no target-specific therapeutic cohort denominator.",
+      "n_enrolled": 0,
+      "n_evaluable": 0,
+      "efficacy": "No indication-specific response, disease-control, progression or survival result was reported from the Phase 1/2a therapeutic study.",
+      "safety": "No indication-specific or pooled Phase 1/2a safety results were disclosed.",
+      "follow_up": "No therapeutic follow-up duration was disclosed at the event.",
+      "source_ids": ["S1", "S2", "S3"]
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "population": "The planned trial includes DLL3-expressing large-cell neuroendocrine carcinoma, but the ASCO presentation described study design and disclosed no target-specific therapeutic cohort denominator.",
+      "n_enrolled": 0,
+      "n_evaluable": 0,
+      "efficacy": "No LCNEC response, disease-control, progression or survival result was reported from the Phase 1/2a therapeutic study.",
+      "safety": "No LCNEC-specific or pooled Phase 1/2a safety results were disclosed.",
+      "follow_up": "No therapeutic follow-up duration was disclosed at the event.",
+      "source_ids": ["S1", "S2", "S3"]
+    }
+  ],
+  "competitor_comparisons": [
+    {
+      "target": "MP0712 - SCLC",
+      "competitor": "Tarlatamab in relapsed extensive-stage SCLC",
+      "matched_setting": "DLL3-directed therapy after platinum-based treatment in relapsed extensive-stage SCLC; modality, dose and development maturity differ from targeted alpha therapy.",
+      "clinical_comparison": "The randomized DeLLphi-304 study established a mature DLL3 efficacy benchmark, with median overall survival of 13.6 versus 8.3 months and median progression-free survival of 4.2 versus 3.2 months against chemotherapy. The MP0712 ASCO protocol poster supplied no therapeutic result that can be compared with this benchmark.",
+      "limitations": "Cross-modality comparison between a DLL3 bispecific T-cell engager with randomized clinical evidence and an early targeted alpha therapy protocol without disclosed therapeutic outcomes.",
+      "source_ids": ["S4"]
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "competitor": "Obrixtamig in DLL3-positive extrapulmonary neuroendocrine carcinoma",
+      "matched_setting": "Heavily pretreated DLL3-positive extrapulmonary neuroendocrine carcinoma in a Phase 1 dose-escalation study.",
+      "clinical_comparison": "At doses of at least 90 micrograms per kilogram, obrixtamig reported a 27.9% objective response rate among 61 extrapulmonary neuroendocrine carcinoma patients and a 19.6% confirmed response rate in later step-up cohorts. MP0712 disclosed no therapeutic cohort result at ASCO2026.",
+      "limitations": "Different DLL3 modality, dosing, eligibility and response-assessment maturity; the MP0712 side of the comparison contains no therapeutic outcome data.",
+      "source_ids": ["S5"]
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "competitor": "Obrixtamig in DLL3-positive large-cell neuroendocrine carcinoma",
+      "matched_setting": "Heavily pretreated DLL3-positive large-cell neuroendocrine carcinoma in a Phase 1 dose-escalation study.",
+      "clinical_comparison": "At doses of at least 90 micrograms per kilogram, obrixtamig reported a 70% objective response rate among 10 LCNEC patients, with a 44.4% confirmed response rate in later step-up cohorts. MP0712 disclosed no therapeutic cohort result at ASCO2026.",
+      "limitations": "Very small competitor subgroup, different modality and dose, and no MP0712 therapeutic outcome dataset at this event.",
+      "source_ids": ["S5"]
+    }
+  ],
+  "target_assessments": [
+    {
+      "target": "MP0712 - SCLC",
+      "observed_outcome": "Remain",
+      "data_quality": "Low for therapeutic interpretation: the event confirmed study activation and design but contained no Phase 1/2a therapeutic efficacy, safety, dosimetry or follow-up denominator.",
+      "clinical_interpretation": "The protocol presentation and separate diagnostic uptake observation support continued development but do not justify changing SCLC assumptions before therapeutic cohort data are available.",
+      "outcomes": [
+        {"outcome": "Increase", "market_share_change": 0.01, "loa_change": 0.005, "conviction": 0.05, "rationale": "Study activation and tumor uptake are directionally supportive, but they are insufficient therapeutic evidence for a material revision."},
+        {"outcome": "Remain", "market_share_change": 0.0, "loa_change": 0.0, "conviction": 0.9, "rationale": "No therapeutic efficacy or safety result was disclosed, so the pre-event clinical assumptions should remain unchanged."},
+        {"outcome": "Decrease", "market_share_change": -0.01, "loa_change": -0.005, "conviction": 0.05, "rationale": "A small downside branch reflects execution and translation uncertainty, not a disclosed negative clinical result."},
+        {"outcome": "Suspension", "market_share_change": -1.0, "loa_change": -1.0, "conviction": 0.0, "rationale": "The study was actively recruiting and dosing, with no disclosed reason to suspend development."}
+      ]
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "observed_outcome": "Remain",
+      "data_quality": "Low: the trial-in-progress disclosure provided no EP-NEC therapeutic cohort size, response, safety or follow-up result.",
+      "clinical_interpretation": "The event established inclusion of DLL3-expressing neuroendocrine tumors but did not test clinical efficacy against the emerging competitor benchmark.",
+      "outcomes": [
+        {"outcome": "Increase", "market_share_change": 0.01, "loa_change": 0.005, "conviction": 0.05, "rationale": "Specific diagnostic uptake and ongoing dosing are supportive but not therapeutic proof."},
+        {"outcome": "Remain", "market_share_change": 0.0, "loa_change": 0.0, "conviction": 0.9, "rationale": "No therapeutic EP-NEC result was disclosed, so assumptions remain unchanged."},
+        {"outcome": "Decrease", "market_share_change": -0.01, "loa_change": -0.005, "conviction": 0.05, "rationale": "A small uncertainty branch remains because translation into treatment activity is untested."},
+        {"outcome": "Suspension", "market_share_change": -1.0, "loa_change": -1.0, "conviction": 0.0, "rationale": "Active enrollment and the absence of a negative clinical finding do not support suspension."}
+      ]
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "observed_outcome": "Remain",
+      "data_quality": "Low: no LCNEC therapeutic denominator, efficacy, safety, dosimetry or follow-up result was reported.",
+      "clinical_interpretation": "LCNEC remains biologically relevant for DLL3 targeting, but the event did not supply evidence to change assumptions relative to an early but high competitor response benchmark.",
+      "outcomes": [
+        {"outcome": "Increase", "market_share_change": 0.01, "loa_change": 0.005, "conviction": 0.05, "rationale": "The study rationale and diagnostic uptake are supportive but not sufficient for a therapeutic revision."},
+        {"outcome": "Remain", "market_share_change": 0.0, "loa_change": 0.0, "conviction": 0.9, "rationale": "No LCNEC therapeutic result was disclosed, making no change the clinically appropriate base interpretation."},
+        {"outcome": "Decrease", "market_share_change": -0.01, "loa_change": -0.005, "conviction": 0.05, "rationale": "A small downside branch reflects uncertain translation and a demanding early competitor benchmark."},
+        {"outcome": "Suspension", "market_share_change": -1.0, "loa_change": -1.0, "conviction": 0.0, "rationale": "No safety or development finding at the event suggested suspension."}
+      ]
+    }
+  ],
+  "sources": [
+    {"id": "S1", "url": "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-holds-presentations-asco-and-snmmi-2026-dll3", "source_kind": "company_clinical_release", "title": "Molecular Partners presents the MP0712 Phase 1 trial-in-progress program at ASCO and SNMMI 2026", "accessed": "2026-07-18"},
+    {"id": "S2", "url": "https://www.molecularpartners.com/wp-content/uploads/ASCO_2026_MP0712_Phase_1_Trial-in-Progress_Poster.pdf", "source_kind": "conference_poster", "title": "MP0712 Phase 1 trial-in-progress poster at ASCO 2026", "accessed": "2026-07-18"},
+    {"id": "S3", "url": "https://clinicaltrials.gov/study/NCT07278479", "source_kind": "clinical_trial_registry", "title": "Phase 1/2a study of lead-212 MP0712 in DLL3-expressing solid tumors", "accessed": "2026-07-18"},
+    {"id": "S4", "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-traditional-approval-tarlatamab-dlle-extensive-stage-small-cell-lung-cancer", "source_kind": "regulator_clinical_document", "title": "FDA clinical efficacy summary for tarlatamab in extensive-stage SCLC", "accessed": "2026-07-18"},
+    {"id": "S5", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12440289/", "source_kind": "peer_reviewed_publication", "title": "Phase 1 obrixtamig study in DLL3-positive neuroendocrine carcinomas", "accessed": "2026-07-18"}
+  ],
+  "limitations": [
+    "ASCO2026 was a trial-in-progress disclosure and did not provide therapeutic cohort results, so all three observed outcomes are Remain.",
+    "Diagnostic-isotope uptake under named-patient access cannot be treated as therapeutic efficacy for lead-212 MP0712.",
+    "Competitor comparisons are cross-modality and cannot substitute for MP0712 therapeutic safety, dosimetry and response data.",
+    "No security-market information was retrieved or used."
+  ]
+}

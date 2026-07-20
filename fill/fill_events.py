@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """
-Biotech Catalyst Analyst — auto-fills Historical Events sheet in DCF Excel files.
+LEGACY Historical Events implementation.
+
+Production builds must use ``tools/fill_historical_events.py``. This module is
+retained only for reference because it deduplicates same-day releases, does not
+preserve source hyperlinks and cannot enforce the company-PR + meeting-abstract
+requirement.
 
 Usage:
     python fill_events.py TICKER
@@ -1603,6 +1608,10 @@ def fill_historical_events(ticker: str, force: bool = False) -> None:
     force=True  → overwrite EVT cells even if they already contain text
                   (useful to refresh with better summaries)
     """
+    raise RuntimeError(
+        "fill/fill_events.py is legacy and unsafe for delivery; use "
+        "tools/fill_historical_events.py with --require-official-news"
+    )
     ticker = ticker.upper()
     sep = "=" * 60
     print(f"\n{sep}")

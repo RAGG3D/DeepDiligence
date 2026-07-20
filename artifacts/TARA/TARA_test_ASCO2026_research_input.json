@@ -1,0 +1,95 @@
+{
+  "ticker": "TARA",
+  "event": "ASCO2026",
+  "event_name": "ASCO2026",
+  "event_date": "2026-02-27",
+  "public_disclosure_date": "2026-02-23",
+  "venue": "2026 ASCO Genitourinary Cancers Symposium",
+  "data_cutoff": "2026-01-28",
+  "trial": "NCT05951179",
+  "phase": "Phase 2 open-label ADVANCED-2",
+  "relevant_targets": [
+    "TARA-002-NMIBC - NMIBC-BU",
+    "TARA-002-NMIBC - NMIBC-BN"
+  ],
+  "reported_data": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "n_enrolled": 35,
+      "n_evaluable": 35,
+      "efficacy": "Complete response at any time was 65.7% (23/35), six-month complete response was 68.2% (15/22), and 12-month complete response was 33.3% (5/15). The Kaplan-Meier estimated probability of maintaining complete response for six months was 71.1%; 5/5 responders maintained response from nine to 12 months, and reinduction converted 8/13 patients to a six-month complete response.",
+      "safety": "Most treatment-related adverse events were grade 1 and transient. There were no grade 3 or greater treatment-related adverse events, no related serious adverse events and no discontinuations due to treatment-related adverse events.",
+      "follow_up": "Landmark follow-up was available through 12 months for 15 patients, but the denominator was still small and the registrational cohort remained open to enrollment.",
+      "source_ids": ["S1", "S2", "S3"]
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "n_enrolled": 31,
+      "n_evaluable": 29,
+      "efficacy": "Complete response at any time was 72.4% (21/29), six-month complete response was 66.7% (18/27), and 12-month complete response was 57.9% (11/19). The Kaplan-Meier estimated probability of maintaining complete response for six months was 73.1%; 11/11 responders maintained response from nine to 12 months, and reinduction converted 4/6 patients to a six-month complete response.",
+      "safety": "Most treatment-related adverse events were grade 1 and transient. There were no grade 3 or greater treatment-related adverse events, no related serious adverse events and no discontinuations due to treatment-related adverse events.",
+      "follow_up": "Landmark follow-up was available through 12 months for 19 patients; the cohort was fully enrolled but longer durability remained immature.",
+      "source_ids": ["S1", "S2", "S3"]
+    }
+  ],
+  "competitor_comparisons": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "matched_setting": "BCG-unresponsive NMIBC with carcinoma in situ with or without papillary tumors in a single-arm registrational cohort.",
+      "clinical_comparison": "The FDA clinical summary reported an 82% complete response rate among 83 patients, with 51% of responders maintaining response for at least 12 months. TARA-002 showed encouraging six-month activity and a favorable safety profile, but its 12-month landmark denominator was small and its observed 12-month complete-response proportion was lower.",
+      "limitations": "Cross-trial comparison with different schedules, response adjudication, follow-up maturity and denominators; the TARA-002 cohort remained an interim analysis.",
+      "source_ids": ["S4"]
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "matched_setting": "BCG-naïve high-risk NMIBC after resection; randomized Phase 3 evidence, although the systemic checkpoint-plus-BCG regimen and endpoint differ from intravesical TARA-002.",
+      "clinical_comparison": "CREST randomized 352 patients to sasanlimab plus BCG induction and maintenance and 351 to BCG alone, with an event-free-survival hazard ratio of 0.68 and estimated 36-month event-free survival of 82.1% versus 74.8%. TARA-002's 57.9% 12-month complete response and clean early tolerability are encouraging, but follow-up and sample size are far less mature.",
+      "limitations": "Cross-trial comparison across different endpoints, treatment modalities, follow-up horizons and study designs; TARA-002 lacks randomized evidence at this event.",
+      "source_ids": ["S5"]
+    }
+  ],
+  "target_assessments": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "observed_outcome": "Increase",
+      "data_quality": "Moderate: clinically meaningful six-month activity and a clean tolerability profile in 35 evaluable patients, offset by a small 12-month denominator, declining landmark response and ongoing enrollment.",
+      "clinical_interpretation": "The six-month response, successful reinduction and lack of severe treatment-related toxicity support a positive revision. The lower 12-month landmark result and stronger mature intravesical competitor benchmark constrain the size and preserve both neutral and modest downside branches.",
+      "outcomes": [
+        {"outcome": "Increase", "market_share_change": 0.05, "loa_change": 0.04, "conviction": 0.65, "rationale": "A 68.2% six-month complete response, reinduction activity and no grade 3 or greater treatment-related toxicity support a meaningful positive adjustment."},
+        {"outcome": "Remain", "market_share_change": 0.0, "loa_change": 0.0, "conviction": 0.25, "rationale": "The immature 12-month denominator and competitive efficacy bar could leave assumptions unchanged until the registrational cohort matures."},
+        {"outcome": "Decrease", "market_share_change": -0.04, "loa_change": -0.03, "conviction": 0.1, "rationale": "The 33.3% 12-month landmark proportion and stronger mature benchmark create a limited downside branch despite favorable six-month data."},
+        {"outcome": "Suspension", "market_share_change": -1.0, "loa_change": -1.0, "conviction": 0.0, "rationale": "Observed efficacy, tolerability and continuing registrational enrollment do not support suspension."}
+      ]
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "observed_outcome": "Increase",
+      "data_quality": "Moderate: a nearly complete cohort with 29 evaluable patients, consistent six- and 12-month complete responses and favorable safety, but still a small nonrandomized dataset.",
+      "clinical_interpretation": "The 57.9% 12-month complete response and clean safety support a positive revision. The randomized CREST benchmark and the lack of a control arm keep a substantial neutral branch and limit extrapolation.",
+      "outcomes": [
+        {"outcome": "Increase", "market_share_change": 0.04, "loa_change": 0.035, "conviction": 0.7, "rationale": "Consistent six- and 12-month complete responses, reinduction activity and no severe treatment-related toxicity support an upward adjustment."},
+        {"outcome": "Remain", "market_share_change": 0.0, "loa_change": 0.0, "conviction": 0.25, "rationale": "The nonrandomized 29-patient evidence may not justify a durable assumption change against a mature randomized competitor standard."},
+        {"outcome": "Decrease", "market_share_change": -0.03, "loa_change": -0.025, "conviction": 0.05, "rationale": "A downside interpretation would require later durability or controlled efficacy to disappoint; current data make this below the retention threshold."},
+        {"outcome": "Suspension", "market_share_change": -1.0, "loa_change": -1.0, "conviction": 0.0, "rationale": "The efficacy and safety disclosure does not support suspension."}
+      ]
+    }
+  ],
+  "sources": [
+    {"id": "S1", "url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg", "source_kind": "company_clinical_release", "title": "TARA-002 interim ADVANCED-2 results presented at ASCO GU 2026", "accessed": "2026-07-18"},
+    {"id": "S2", "url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.7_suppl.743", "source_kind": "conference_abstract", "title": "ADVANCED-2 interim efficacy and safety in BCG-unresponsive high-grade NMIBC", "accessed": "2026-07-18"},
+    {"id": "S3", "url": "https://clinicaltrials.gov/study/NCT05951179", "source_kind": "clinical_trial_registry", "title": "ADVANCED-2 study of intravesical TARA-002 in high-risk NMIBC", "accessed": "2026-07-18"},
+    {"id": "S4", "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer", "source_kind": "regulator_clinical_document", "title": "FDA clinical efficacy summary for gemcitabine intravesical system in BCG-unresponsive NMIBC", "accessed": "2026-07-18"},
+    {"id": "S5", "url": "https://pubmed.ncbi.nlm.nih.gov/40450141/", "source_kind": "peer_reviewed_publication", "title": "Randomized Phase 3 CREST study of sasanlimab plus BCG in BCG-naïve high-risk NMIBC", "accessed": "2026-07-18"}
+  ],
+  "limitations": [
+    "The BCG-unresponsive 12-month landmark denominator was 15 and the cohort remained open, so durability estimates were immature.",
+    "The BCG-naïve cohort was nonrandomized and had 29 evaluable participants despite near-complete enrollment.",
+    "Competitor comparisons differ in endpoint, modality, schedule, adjudication and follow-up and are used only to bound clinical interpretation.",
+    "Only information available for the ASCO GU 2026 disclosure was used; later updates were not used to revise the event interpretation.",
+    "No security-market information was retrieved or used."
+  ]
+}

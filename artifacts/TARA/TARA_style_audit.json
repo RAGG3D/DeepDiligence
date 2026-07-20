@@ -1,0 +1,1009 @@
+{
+  "ticker": "TARA",
+  "workbook": "/mnt/c/Users/yzsun/Desktop/DD/TARA/DCF TARA.xlsx",
+  "reference": "/mnt/c/Users/yzsun/Desktop/DD/MOLN/DCF MOLN.xlsx",
+  "pipeline_reference": "/mnt/c/Users/yzsun/Desktop/DD/MOLN/DCF MOLN completed_pre_calcstate_20260709_035047.xlsx",
+  "mismatch_count": 16569,
+  "first_mismatches": [
+    {
+      "sheet": "Earnings",
+      "address": "3",
+      "kind": "row height"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "E4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "F4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "G4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "H4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "4",
+      "kind": "row height"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "C8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "D8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "E8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "F8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "G8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "H8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "C18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "D18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "E18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "F18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "G18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "Earnings",
+      "address": "H18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "G2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "H2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "I2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "J2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "L2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "M2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "N2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "O2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "P2",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C6",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "G11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "H11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "I11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "J11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F14",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F16",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F17",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F18",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F19",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F20",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B21",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C21",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D21",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "F21",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B29",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C29",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D29",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B35",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C35",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D35",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C38",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B40",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C40",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D40",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C48",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "B59",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C59",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "D59",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C61",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C62",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "VALUATION",
+      "address": "C63",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y4",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "4",
+      "kind": "row height"
+    },
+    {
+      "sheet": "FSA",
+      "address": "5",
+      "kind": "row height"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y8",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y9",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y10",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y11",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y12",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "L13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "M13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "N13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "O13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "P13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Q13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "R13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "S13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "T13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "U13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "V13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "W13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "X13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "Y13",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "H15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "I15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "J15",
+      "kind": "cell style"
+    },
+    {
+      "sheet": "FSA",
+      "address": "K15",
+      "kind": "cell style"
+    }
+  ]
+}

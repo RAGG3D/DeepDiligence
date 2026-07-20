@@ -1,0 +1,24 @@
+{
+  "ticker": "MOLN",
+  "as_of": "2026-07-12",
+  "event_date": null,
+  "event_name": "MP0712 Phase 1/2a initial clinical data (within coming months; 2026)",
+  "drug": "MP0712",
+  "indication": "SCLC, lung LCNEC and extrapulmonary NEC",
+  "expected_disclosure": "Initial early dose-escalation data from the first MP0712 cohorts. The study is designed to report safety/tolerability (AEs, SAEs and DLTs), 203Pb imaging/biodistribution and organ/tumor dosimetry, PK, and any evaluable preliminary RECIST activity. The company has not announced the exact conference, cutoff date, patient count, or which efficacy fields will be mature; comprehensive safety and efficacy data are expected in 2027.",
+  "relevant_targets": [
+    "MP0712 - SCLC",
+    "MP0712 - EP-NEC",
+    "MP0712 - LCNEC"
+  ],
+  "sources": [
+    "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-updates-clinical-progress-across-expanding",
+    "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-and-orano-med-announce-first-patients-dosed",
+    "https://clinicaltrials.gov/study/NCT07278479",
+    "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.TPS3176"
+  ],
+  "uncertainties": [
+    "The company only specifies 'within the next months' and has not named a venue.",
+    "The first readout may be dominated by safety and dosimetry; preliminary antitumor efficacy may be immature."
+  ]
+}

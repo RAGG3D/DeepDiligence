@@ -22,8 +22,11 @@ import glob
 import json
 import os
 import re
+from pathlib import Path
 
 import duckdb
+
+from tam_overrides import annualized_rows, incidence_inputs, load_overrides
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -34,6 +37,8 @@ SEED_PATH = os.path.join(HERE, "seed", "params_seed.json")
 LEGACY_PATH = os.path.join(HERE, "seed", "legacy_drugs.json")
 BLOOD_PATH = os.path.join(HERE, "seed", "blood_drugs.json")
 PEER_PATH = os.path.join(HERE, "seed", "peer_views.json")
+TAM_OVERRIDE_PATH = os.path.join(HERE, "seed", "tam_overrides.json")
+RESEARCH_FACT_PATH = os.path.join(HERE, "seed", "research_facts.json")
 
 # Each source dir maps to a tam_group and a default split method.
 SOURCES = [
@@ -121,9 +126,22 @@ def main():
     drugs, revenues, splits, ind_cases, conflicts = load_json_drugs()
     seed = json.load(open(SEED_PATH)) if os.path.exists(SEED_PATH) else \
         {"incidence": {}, "globals": {}, "reference_growth": {}, "cogs": {}}
+    tam_overrides = load_overrides(Path(TAM_OVERRIDE_PATH))
+    override_incidence = incidence_inputs(tam_overrides)
 
     # full indication universe = incidence keys + every indication used in a split
-    ind_codes = set(seed.get("incidence", {})) | {s[1] for s in splits}
+    seed_incidence = dict(seed.get("incidence", {}))
+    seed_global_cases = dict(ind_cases)
+    for code, (rate, global_cases) in override_incidence.items():
+        if rate is not None:
+            seed_incidence[code] = rate
+        if global_cases is not None:
+            seed_global_cases[code] = int(global_cases)
+    ind_codes = (
+        set(seed_incidence)
+        | {s[1] for s in splits}
+        | {item["indication_code"] for item in tam_overrides}
+    )
 
     # ---- build database ----------------------------------------------------
     if os.path.exists(DB_PATH):
@@ -133,7 +151,7 @@ def main():
 
     con.executemany(
         "INSERT INTO indication VALUES (?,?,?)",
-        [(c, seed.get("incidence", {}).get(c), ind_cases.get(c)) for c in sorted(ind_codes)])
+        [(c, seed_incidence.get(c), seed_global_cases.get(c)) for c in sorted(ind_codes)])
     con.executemany("INSERT INTO drug VALUES (?,?,?,?,?,?)", drugs)
     con.executemany("INSERT INTO drug_revenue VALUES (?,?,?)", revenues)
     con.executemany("INSERT INTO drug_indication_split VALUES (?,?,?,?,?)", splits)
@@ -159,6 +177,14 @@ def main():
     if mat_rows:
         con.executemany("INSERT INTO param_maturity VALUES (?,?,?)", mat_rows)
 
+    tam_rows = annualized_rows(tam_overrides)
+    if tam_rows:
+        con.executemany(
+            "INSERT INTO tam_override VALUES (?,?,?,?,?,?,?)",
+            [(code, group, year, tam, ticker, drug, note)
+             for code, group, year, tam, ticker, drug, note in tam_rows],
+        )
+
     # Peer Views (independent of the drug tables)
     n_peer_sections = 0
     if os.path.exists(PEER_PATH):
@@ -174,6 +200,27 @@ def main():
         con.executemany("INSERT INTO peer_drug VALUES (?,?,?,?,?,?)", pd_rows)
         con.executemany("INSERT INTO peer_metric VALUES (?,?,?,?,?)", pm_rows)
 
+    # Incremental facts discovered by all research workflows.  This seed is the
+    # durable ledger; rebuilding DuckDB must never discard newly researched
+    # competitor efficacy, safety, dose or price facts.
+    n_research_facts = 0
+    if os.path.exists(RESEARCH_FACT_PATH):
+        fact_payload = json.load(open(RESEARCH_FACT_PATH))
+        fact_rows = fact_payload.get("facts", []) if isinstance(fact_payload, dict) else []
+        columns = (
+            "fact_id", "context_ticker", "subject", "indication", "comparator",
+            "metric_group", "metric", "value", "unit", "population", "dose",
+            "as_of_date", "source_url", "source_kind", "classification", "status",
+            "retrieved_at",
+        )
+        rows = [tuple(item.get(column) for column in columns) for item in fact_rows]
+        if rows:
+            con.executemany(
+                "INSERT INTO research_fact VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                rows,
+            )
+        n_research_facts = len(rows)
+
     con.execute(open(os.path.join(SCHEMA_DIR, "02_layer2_views.sql")).read())
 
     # ---- validate ----------------------------------------------------------
@@ -186,10 +233,13 @@ def main():
         n_pd = con.sql("SELECT count(*) FROM peer_drug").fetchone()[0]
         n_rate = con.sql("SELECT count(*) FROM v_peer_rating").fetchone()[0]
         print(f"Peer Views: {n_peer_sections} sections | {n_pd} drugs | {n_rate} rated")
+    print(f"Incremental research facts: {n_research_facts}")
     if conflicts:
         names = ", ".join(sorted({c[0] for c in conflicts})[:12])
         print(f"  (deduped {len(conflicts)} duplicate drug_id(s): {names}"
               f"{'...' if len(conflicts) > 12 else ''})")
+    if tam_rows:
+        print(f"TAM overrides: {len(tam_overrides)} indications | {len(tam_rows)} year rows")
 
     print("\nLayer 2 — TAM by indication (2024), top 12:")
     print(con.sql("""
@@ -216,8 +266,10 @@ def main():
         "peer_drug":              "peer_drug",
         "peer_metric":            "peer_metric",
         "peer_rating":            "v_peer_rating",
+        "research_fact":          "research_fact",
         "drug":                   "drug",
         "drug_revenue":           "drug_revenue",
+        "tam_override":           "tam_override",
     }
     out_dirs = [EXPORT_DIR]
     if args.excel_dir and os.path.isdir(os.path.dirname(args.excel_dir.rstrip("/"))):

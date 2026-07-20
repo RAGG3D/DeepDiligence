@@ -1,0 +1,252 @@
+{
+  "event": "ESMO Congress 2025",
+  "mode": "completed",
+  "event_dates": {
+    "start": "2025-10-17",
+    "end": "2025-10-21"
+  },
+  "screen_as_of": "2026-07-19",
+  "price_blind": true,
+  "candidates": [
+    {
+      "ticker": "AGEN",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dor", "os", "ae", "discontinuation"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1517MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "ALXO",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dor", "pfs", "os", "ae"],
+      "official_clinical_sources": [
+        "https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1323MO.html.pdf",
+        "https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1324MO.html.pdf"
+      ],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "ARVN",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["cr", "ae", "discontinuation"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/293MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "BCAB",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["pr", "pfs", "ae", "dlt"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1581P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "BCTX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["pfs", "ae", "discontinuation"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/570P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "CATX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["pr", "ae", "dlt"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1033MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "CGEN",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cbr", "pfs", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1196P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "CRBP",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dcr", "pr", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/967P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "CRVS",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pfs", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/2596MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "DCTH",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pfs", "os", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/LBA59.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "EVAX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dor", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1516MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "IMMP",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "dcr", "ae"],
+      "official_clinical_sources": [
+        "https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/2686O.html.pdf",
+        "https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1857P.html.pdf"
+      ],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "INO",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["patient outcome", "cr", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1541P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "IOBT",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pfs", "os", "trae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1557P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "LPTX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pfs", "os", "ae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/LBA34.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "OLMA",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pfs", "trae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/502P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "PYXS",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dcr", "cr", "pr", "trae", "discontinuation"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/965P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "REPL",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "dor", "trae"],
+      "official_clinical_sources": [
+        "https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1644P.html.pdf",
+        "https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1661P.html.pdf"
+      ],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "RNAZ",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["ae", "sae", "dlt"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/983P.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "SNSE",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "pfs", "ae", "discontinuation"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/1521MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "TOVX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["os", "pfs", "dor", "orr", "sae"],
+      "official_clinical_sources": ["https://s3.eu-central-1.amazonaws.com/m-anage.com.storage.esmo/static/esmo2025_abstracts/2216MO.html.pdf"],
+      "eligible": true,
+      "exclusion_reason": ""
+    }
+  ]
+}

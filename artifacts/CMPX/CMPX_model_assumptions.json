@@ -1,0 +1,63 @@
+{
+  "source": "Manual Codex critical judgement using Compass Q1 2026 Form 10-Q, April 2026 randomized tovecimig BTC release, ASCO 2026 CTX-8371 abstract, current ClinicalTrials.gov protocols and 2026 company disclosures; as of 2026-07-12",
+  "economic_share": {
+    "CTX-009": 1.0,
+    "CTX-10726": 1.0,
+    "CTX-471": 1.0,
+    "CTX-8371": 1.0
+  },
+  "ratings": {
+    "CTX-009": {
+      "BTC": "T1",
+      "mCRC": "AVG"
+    },
+    "CTX-10726": {
+      "GC": "AVG",
+      "HCC": "AVG",
+      "EC": "AVG",
+      "RCC": "AVG"
+    },
+    "CTX-471": {
+      "ES-SCLC": "AVG",
+      "LCNEC": "T1",
+      "EP-NEC": "T1"
+    },
+    "CTX-8371": {
+      "NSCLC": "AVG",
+      "TNBC": "T1",
+      "HL": "T1",
+      "HNSCC": "AVG",
+      "MEL": "AVG"
+    }
+  },
+  "market_share": {
+    "CTX-009": {
+      "BTC": {"base_peak": 0.12, "bull_peak": 0.20, "bear_peak": 0.04},
+      "mCRC": {"base_peak": 0.03, "bull_peak": 0.07, "bear_peak": 0.01}
+    },
+    "CTX-10726": {
+      "GC": {"base_peak": 0.015, "bull_peak": 0.03, "bear_peak": 0.003},
+      "HCC": {"base_peak": 0.02, "bull_peak": 0.04, "bear_peak": 0.002},
+      "EC": {"base_peak": 0.012, "bull_peak": 0.025, "bear_peak": 0.001},
+      "RCC": {"base_peak": 0.018, "bull_peak": 0.035, "bear_peak": 0.002}
+    },
+    "CTX-471": {
+      "ES-SCLC": {"base_peak": 0.04, "bull_peak": 0.08, "bear_peak": 0.015},
+      "LCNEC": {"base_peak": 0.06, "bull_peak": 0.12, "bear_peak": 0.02},
+      "EP-NEC": {"base_peak": 0.055, "bull_peak": 0.10, "bear_peak": 0.02}
+    },
+    "CTX-8371": {
+      "NSCLC": {"base_peak": 0.05, "bull_peak": 0.10, "bear_peak": 0.015},
+      "TNBC": {"base_peak": 0.07, "bull_peak": 0.12, "bear_peak": 0.02},
+      "HL": {"base_peak": 0.15, "bull_peak": 0.25, "bear_peak": 0.05},
+      "HNSCC": {"base_peak": 0.02, "bull_peak": 0.05, "bear_peak": 0.005},
+      "MEL": {"base_peak": 0.02, "bull_peak": 0.05, "bear_peak": 0.005}
+    }
+  },
+  "market_share_notes": {
+    "CTX-009": "INCLUDE BTC: randomized Phase 2/3 data showed ORR 17.1% versus 5.3% and PFS HR 0.44, supporting a Tier One profile, while the failed unadjusted ITT OS endpoint and crossover interpretation cap base peak at 12%. INCLUDE mCRC: Phase 2 activity was modest and non-randomized, so base peak is reduced to 3% pending a validated registration path.",
+    "CTX-10726": "INCLUDE GC: current Phase 1 protocol contains a gastric cohort; 1.5% base reflects pre-efficacy status. INCLUDE HCC: current Phase 1 protocol contains an HCC cohort; 2.0% base reflects large competition and no human efficacy. INCLUDE EC: current Phase 1 protocol contains an endometrial cohort; 1.2% base reflects early stage and crowded immunotherapy. INCLUDE RCC: current Phase 1 protocol contains an RCC cohort; 1.8% base reflects early stage and established VEGF/checkpoint standards.",
+    "CTX-471": "INCLUDE ES-SCLC: the active Phase 2 high-grade NCAM-positive NEN protocol can enroll advanced pulmonary small-cell disease, but approved DLL3/checkpoint competition caps base at 4%. INCLUDE LCNEC: rarity, high unmet need and biomarker selection support a 6% base, with no efficacy yet. INCLUDE EP-NEC: lack of targeted standards supports a 5.5% base, discounted for pre-efficacy Phase 2 status. Historical melanoma and mesothelioma signals are not separate active registration cohorts and are not forecast as current programs.",
+    "CTX-8371": "INCLUDE NSCLC: one response among the initial 15 evaluable patients supports retaining the active expansion cohort, but a crowded market caps base at 5%. INCLUDE TNBC: the durable initial response and active expansion support a 7% base. INCLUDE HL: post-checkpoint unmet need and an observed metabolic response support a 15% base in the small addressable segment. INCLUDE HNSCC: the registered expansion remains active but has no reported response, limiting base to 2%. INCLUDE MEL: the registered expansion remains active but has no reported response, limiting base to 2%."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "source": "Manually curated from Protara company releases, 2026 corporate presentation, ISSVA 2026 poster, ClinicalTrials.gov, and Buchman et al. JPEN 2001",
+  "as_of": "2026-07-11",
+  "rows": [
+    {
+      "drug": "TARA-002-NMIBC",
+      "indication": "NMIBC-BU",
+      "rating": "Tier One",
+      "status": "Phase 2 registrational cohort; enrollment expected complete 2H 2026",
+      "mechanism": "Intravesical inactivated Streptococcus pyogenes immunopotentiator; TLR2/NOD2 agonism",
+      "line": "BCG-unresponsive high-risk NMIBC with CIS +/- Ta/T1",
+      "n": "35 efficacy-evaluable; 22 six-month evaluable; 15 twelve-month evaluable",
+      "orr": "CR any time 23/35 (65.7%); six-month landmark CR 15/22 (68.2%)",
+      "cr": "Twelve-month landmark CR 5/15 (33.3%)",
+      "pfs": "NR",
+      "os": "NR",
+      "safety": "No grade 3 or higher treatment-related adverse events and no related serious adverse events",
+      "source": "Protara ASCO GU release dated 2026-02-23; ADVANCED-2 NCT05951179; data cutoff 2026-01-28"
+    },
+    {
+      "drug": "TARA-002-NMIBC",
+      "indication": "NMIBC-BN",
+      "rating": "Tier One",
+      "status": "Phase 2 cohort complete; ADVANCED-3 registrational trial planned for 2H 2026",
+      "mechanism": "Intravesical inactivated Streptococcus pyogenes immunopotentiator; TLR2/NOD2 agonism",
+      "line": "BCG-naive high-risk NMIBC with CIS +/- Ta/T1",
+      "n": "29 efficacy-evaluable; 27 six-month evaluable; 20 twelve-month evaluable",
+      "orr": "CR any time 21/29 (72.4%); six-month landmark CR 18/27 (66.7%)",
+      "cr": "Twelve-month landmark CR 11/20 (55.0%)",
+      "pfs": "NR",
+      "os": "NR",
+      "safety": "No grade 3 or higher treatment-related adverse events and no treatment-related discontinuations",
+      "source": "Protara AUA release dated 2026-05-15; ADVANCED-2 NCT05951179; data cutoff 2026-04-05"
+    },
+    {
+      "drug": "TARA-002-LM",
+      "indication": "LM",
+      "rating": "Tier One",
+      "status": "Phase 2a/b STARBORN-1; BLA planned for 2H 2027",
+      "mechanism": "Intracystic inactivated Streptococcus pyogenes immunopotentiator derived from the OK-432 master cell bank",
+      "line": "Pediatric macrocystic and mixed cystic lymphatic malformations",
+      "n": "16 treated; 12 completed treatment; 10 evaluable at eight weeks",
+      "orr": "10/12 (83%) clinical success or improvement among treatment completers; 10/10 (100%) clinical success at eight weeks",
+      "cr": "Not reported for the full 2026 cohort",
+      "pfs": "NR",
+      "os": "NR",
+      "safety": "TEAEs were generally mild to moderate; 1/16 (6%) had a Grade 3 TEAE and related Grade 3 TEAE; no serious TEAEs or adverse events of special interest",
+      "source": "STARBORN-1 ISSVA 2026 poster; NCT05871970; data cutoff 2026-04-10"
+    },
+    {
+      "drug": "IV-Choline-Chloride",
+      "indication": "PS",
+      "rating": "Best-in-Class",
+      "status": "Registrational Phase 3 THRIVE-3 (seamless 2b/3 design); interim analysis expected 2H 2026",
+      "mechanism": "Intravenous phospholipid substrate replacement providing choline during parenteral support",
+      "line": "Adolescent and adult patients on long-term parenteral support when oral or enteral nutrition is inadequate",
+      "n": "Historical randomized study n=15; THRIVE-3 planned n=129",
+      "orr": "NR",
+      "cr": "NR",
+      "pfs": "NR",
+      "os": "NR",
+      "safety": "Historical 2 g/day randomized study supported biochemical and hepatic effects; current registrational safety data not yet reported",
+      "source": "Buchman et al., JPEN 2001, PMID 11531217; THRIVE-3 NCT06910943; Protara release dated 2026-01-07"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "ticker": "MOLN",
+  "event": "ASCO2026",
+  "scoring_agent_role": "independent_post_release_agent",
+  "clinical_artifact_sha256": "38d5f96120c4f2f48237623acc2da9be8272bccb403c98b94c2f59d075235918",
+  "blind_prediction_sha256": "6fe99eb91b7bbe85cb95357a59cc5a200d08d6305df83be5a947b608a44dd2a8",
+  "post_release": {
+    "release_date": "2026-05-30",
+    "include_release_date_close": false,
+    "release_timing_basis": "2026-05-30 was Saturday; start with the next completed trading session.",
+    "official_release_url": "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-holds-presentations-asco-and-snmmi-2026-dll3",
+    "market_ticker": "MOLN",
+    "source_url": "https://finance.yahoo.com/quote/MOLN/history/",
+    "sessions": [
+      {"date": "2026-06-01", "close": 3.950000047683716},
+      {"date": "2026-06-02", "close": 3.9200000762939453},
+      {"date": "2026-06-03", "close": 4.03000020980835}
+    ]
+  },
+  "intraday": {
+    "market_ticker": "MOLN",
+    "granularity": "60m",
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/MOLN?period1=1780272000&period2=1780531200&interval=60m&includePrePost=false&events=div%2Csplits",
+    "independent_agent_note": "Regular-session 60m raw High; sparse trading produced 1/3/3 bars and each daily High matches the daily series.",
+    "daily_highs": [
+      {"date": "2026-06-01", "raw_high": 3.95},
+      {"date": "2026-06-02", "raw_high": 4.0654},
+      {"date": "2026-06-03", "raw_high": 4.12}
+    ]
+  },
+  "target_scores": [
+    {
+      "target": "MP0712 - SCLC",
+      "score": 9,
+      "rationale": "无治疗结果即不改估值，三日反应接近中性。"
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "score": 9,
+      "rationale": "正确避免把诊断摄取或入组误判为治疗有效性。"
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "score": 9,
+      "rationale": "缺少疗效与安全性分母时保持不变十分准确。"
+    }
+  ]
+}

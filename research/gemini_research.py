@@ -34,20 +34,26 @@ from typing import Dict, List, Optional, Tuple
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
+from datastore.research_fact_store import (
+    database_sync_prompt,
+    extract_database_updates,
+    scan_research_context,
+    upsert_research_facts,
+)
+
 try:
     from google import genai
     from google.genai import types as genai_types
-except ImportError:
-    print("ERROR: google-genai not installed. Run: pip install google-genai")
-    sys.exit(1)
+except ImportError:  # importable without the SDK; only main() actually needs it
+    genai = None
+    genai_types = None
 
 try:
     from docx import Document
     from docx.shared import Pt, RGBColor
     from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 except ImportError:
-    print("ERROR: python-docx not installed. Run: pip install python-docx")
-    sys.exit(1)
+    Document = None
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -61,6 +67,7 @@ logger = logging.getLogger(__name__)
 _SOC_DRUGS = {
     "placebo", "pembrolizumab", "nivolumab", "atezolizumab", "durvalumab",
     "ipilimumab", "docetaxel", "paclitaxel", "carboplatin", "cisplatin",
+    "cemiplimab",
     "gemcitabine", "pemetrexed", "bevacizumab", "trastuzumab", "rituximab",
     "cetuximab", "capecitabine", "fluorouracil", "5-fu", "oxaliplatin",
     "irinotecan", "doxorubicin", "cyclophosphamide", "etoposide",
@@ -92,6 +99,15 @@ Use Google Search to find ALL relevant data. Every number MUST have a cited sour
 
 ## STRICT RULES (violating any rule invalidates the report)
 
+**R0 — Source lineage and arithmetic gate**: Use SEC/issuer filings and official IR first;
+FDA/ClinicalTrials.gov and original conference publications next; secondary aggregators only when
+no primary source exists. For every number preserve its as-of/data-cut date and classify it as
+Reported Fact, Company Estimate/Claim, Market Data, or Analyst Assumption. Recompute percentages
+from the reported numerator/denominator. If a press release, filing and presentation conflict,
+show the conflict and do not silently select one. Safety summaries must state Grade 3+, serious
+events, discontinuations and denominator separately; "generally mild/moderate" must not be rewritten
+as "all mild/moderate." Company price history must not be used to infer clinical facts.
+
 **R1 — No vague indications**: NEVER write "Multiple indications", "Solid tumor(s)", "Advanced malignancies", "Various cancers". List EVERY specific cancer type by standard abbreviation (NSCLC, TNBC, BTC, CRC, mUC, HNSCC, OV, HL, Melanoma, etc.). Source each indication with NCT number or 10-K page.
 
 **R2 — No unsupported numbers**: NEVER use "illustrative", "qualitative", "hypothetical". Every market share % and timeline year must be backed by cited data and explicit reasoning.
@@ -120,6 +136,11 @@ Use Google Search to find ALL relevant data. Every number MUST have a cited sour
 - ALL known indications with source (NCT#, 10-K page, press release)
 - Current clinical stage (highest phase across indications)
 - Key differentiation vs existing therapies
+- Ownership: wholly owned vs partnered/collaboration. For any partnered program, read the
+  collaboration agreement (10-K/20-F, press releases) and derive {ticker}'s NET economic share
+  of that drug's product sales (blended royalty tier / profit split / who books revenue).
+- Emit ONE machine-parseable line exactly: `Economic share: NN%` (integer percent of net product
+  sales {ticker} retains; `Economic share: 100%` if wholly owned).
 
 ### Chapter 2: Multi-Indication Forecasting Strategy
 **MANDATORY PROCESS** — Before writing Chapter 3, you MUST:
@@ -130,12 +151,23 @@ Use Google Search to find ALL relevant data. Every number MUST have a cited sour
 5. If combining, the combined name MUST list specific cancers (e.g. "HNSCC/NSCLC/OV Combined"), NEVER "Other Solid Tumors"
 
 ### Chapter 3: Per-Indication Analysis
-**For EACH indication (or combined group), provide ALL of the following:**
+**For EACH indication (or combined group), head the section EXACTLY**
+`### 3.N <Full Indication Name> (ABBR)` (N = 1,2,3…; ABBR = the standard abbreviation in
+parentheses, e.g. `### 3.1 Spinocerebellar Ataxia (SCA)`), **then provide ALL of the following:**
 
 #### 3.X.1 TAM (Total Addressable Market)
 - Patient count for the SPECIFIC line+biomarker subgroup (not all-comers)
 - 2024 patients, growth rate (CAGR), 2030 patients, 2038 patients
 - Source: epidemiology reports, IQVIA, company investor presentation
+
+Then emit this EXACT table — the header text MUST contain the literal "Addressable Market ($MM)"
+and the FIRST numeric column after Year is the addressable market in US$ millions
+(incidence × treated fraction × annual treatment cost). Downstream software reads it:
+| Year | Addressable Market ($MM) |
+| :--- | :--- |
+| 2024 | <$MM> |
+| 2030 | <$MM> |
+| 2038 | <$MM> |
 
 #### 3.X.2 Comprehensive Efficacy Data — This Drug
 **MANDATORY**: For EVERY clinical readout/data presentation of this drug in this indication, create a row. Include ALL officially published data — omitting any is a violation.
@@ -149,12 +181,17 @@ Table format (one row per readout event):
 
 #### 3.X.3 Competitive Landscape — Marketed Drugs
 **MANDATORY**: Include EVERY marketed drug for this indication+line. EXHAUSTIVE — no omissions.
+**ONE ROW PER DATED READOUT/DATASET**, never a single summary row per drug: if a competitor has
+multiple pivotal/label datasets (e.g. Tarlatamab DeLLphi-301 AND DeLLphi-304), give EACH its own
+dated row.
 
-| Drug | Company | Line | Latest Sale (MM USD) | ORR | CR | PR | DCR | Median PFS (mo) | Median OS (mo) | ≥G3 AEs (%) | Route | Total Treatment Line | Median Treatment Line | Source |
+| Drug | Dataset/Study (NCT#) | Data Date | Company | Line | Latest Sale (MM USD) | ORR | CR | PR | DCR | Median PFS (mo) | Median OS (mo) | ≥G3 AEs (%) | Route | Total Treatment Line | Median Treatment Line | Source |
 
 #### 3.X.4 Competitive Landscape — Clinical-Stage Drugs
+**ONE ROW PER DATED READOUT/DATASET**: list EVERY publicly presented readout of each clinical-stage
+competitor as a separate dated row (two rows if a drug reported two datasets), never one summary row.
 
-| Drug | Company | Phase | NCT# | Treatment Line | Evaluable Patients | ORR | CR | DCR | Median PFS (mo) | Median OS (mo) | ≥G3 AEs (%) | Est. Approval Year | Source |
+| Drug | Dataset/Study (NCT#) | Data Date | Company | Phase | NCT# | Treatment Line | Evaluable Patients | ORR | CR | DCR | Median PFS (mo) | Median OS (mo) | ≥G3 AEs (%) | Est. Approval Year | Source |
 - For each, explain how you estimated the approval year (cite comparables)
 - If omitting a weak/late competitor, state: "Omitted [Drug]: [reason]"
 
@@ -162,7 +199,9 @@ Table format (one row per readout event):
 - Quantified comparison vs EACH competitor (ORR X% vs Y%, PFS X mo vs Y mo, CR X% vs Y%)
 - Line-matched (2L vs 2L only)
 - Safety comparison: ≥G3 AE rate for this drug vs each competitor
-- Assessment: Best-in-class / Above-average / Average / Below-average
+- Assessment: emit a line `Assessment: <label>` using EXACTLY one accepted tier label —
+  Best-in-Class, Tier One (a.k.a. Above-average), Average, or Below-average
+  (Best-in-Class→BIC, Tier One/Above-average→T1, Average/Below-average→AVG)
 - Route advantage (oral vs IV)? Convenience advantage (dosing schedule)?
 
 #### 3.X.6 Data Transfer Analysis (if applicable)
@@ -226,6 +265,7 @@ For EACH indication, estimate the treatment cost based on ALL marketed comparabl
 - Company: {{company}}
 - Ticker: {{ticker or "Private"}}
 - Innovation: {{BIC/FIC/ADC/BsAb/Oral/etc.}}
+- Rating: {{BIC | T1 | AVG}}
 - Target: {{target}}
 - Result: {{Approved/Phase X/Continuing/Suspended}}
 - NCT#: {{NCT number or /}}
@@ -274,9 +314,10 @@ For EACH indication, estimate the treatment cost based on ALL marketed comparabl
 - Then marketed drugs (sorted by latest annual sale descending), then clinical-stage drugs (sorted by phase descending)
 - For approved drugs: include the pivotal trial readout AND the most recent label-expansion readout
 - For clinical-stage drugs: include EVERY publicly presented data readout
+- Rating: give EACH drug (including {drug_name}) its competitiveness tier in THIS indication — one of BIC (best-in-class), T1 (tier one / above-average), or AVG (average / below-average)
 - Private companies: set Ticker to "Private"
 - Stock prices: use the stock price on the trading day BEFORE and AFTER data presentation/publication. Write "/" if the company was private or data is not findable
-- Each readout is ONE data presentation event (same drug may have multiple readouts)
+- Each readout is ONE DATED data presentation event (same drug may have MULTIPLE readouts): emit a SEPARATE `##### Drug: … — Readout N` block for EACH dated dataset (e.g. Tarlatamab DeLLphi-301 AND DeLLphi-304 = two blocks) — never collapse a drug's datasets into a single summary block
 
 ### Chapter 6: Catalyst Data
 
@@ -518,6 +559,7 @@ def run_drug_research(ticker: str, company_name: str,
         ticker=ticker,
         drug_trials_text=drug_trials_text,
     )
+    prompt += database_sync_prompt(scan_research_context(ticker))
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -625,6 +667,19 @@ def run_drug_research(ticker: str, company_name: str,
 
         except Exception as e:
             last_exc = e
+            if (
+                "Failed to get interaction ID" in str(e)
+                or "400" in str(e)
+                or "Bad Request" in str(e)
+            ):
+                logger.warning(
+                    "  Deep Research agent unavailable for %s; "
+                    "falling back to Gemini Flash grounded report.",
+                    drug_name,
+                )
+                return run_flash_research_fallback(
+                    ticker, company_name, drug_name, drug_trials_text
+                )
             if attempt < 3:
                 logger.warning(f"  Attempt {attempt} failed: {e}. Retrying in 15s...")
                 time.sleep(15)
@@ -632,6 +687,187 @@ def run_drug_research(ticker: str, company_name: str,
                 raise last_exc
 
     raise last_exc  # Should never reach here
+
+
+def run_flash_research_fallback(ticker: str, company_name: str,
+                                drug_name: str, drug_trials_text: str,
+                                model: str = "gemini-2.5-flash") -> str:
+    """Fast parser-compatible report when Deep Research is unavailable.
+
+    This is a workflow continuity fallback, not a license to produce vague
+    models.  The prompt keeps the exact Chapter 3/4/PEER_VIEW markers consumed
+    by generate_scenarios.py, generate_pipeline.py, and fill_peer_views.py.
+    """
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        raise ValueError("GEMINI_API_KEY environment variable not set")
+
+    client = genai.Client(api_key=api_key)
+    prompt = f"""
+You are a biotech equity research analyst. Use Google Search grounding and write
+a parser-compatible DCF input report for {drug_name} from {company_name}
+({ticker}). Every numeric TAM, price, stage year, market share, and clinical
+metric must include a source URL or "NR" if not publicly reported.
+
+ClinicalTrials.gov context:
+{drug_trials_text}
+
+STRICT OUTPUT FORMAT:
+
+# Chapter 1: Drug Overview
+- **Drug name:** {drug_name}
+- **Target:** target/mechanism
+- **Indications:** list every specific indication from trials/company pipeline
+- **Current clinical stage:** highest phase
+- **Ownership/economics:** wholly owned or partnered; for a partnership derive {ticker}'s
+  NET economic share of product sales from the collaboration terms.
+- **Economic share:** emit ONE machine-parseable line exactly `Economic share: NN%`
+  (integer percent of net product sales {ticker} retains; `Economic share: 100%` if wholly owned).
+
+# Chapter 2: Multi-Indication Forecasting Strategy
+Classify each indication as separate forecast or excluded/combined, with
+source-backed reasoning.
+
+# Chapter 3: Per-Indication Analysis
+For EACH specific indication that should be forecast, create a section exactly:
+## 3.N Full Indication Name (ABBR)
+
+Inside each section include:
+### 3.N.1 TAM
+(the FIRST numeric column after Year MUST be Addressable Market in US$ millions — software reads it)
+| Year | Addressable Market ($MM) | Patients | Source |
+| 2024 | ... | ... | URL |
+| 2030 | ... | ... | URL |
+| 2038 | ... | ... | URL |
+
+### 3.N.5 Differentiation Assessment
+Write one explicit line, using EXACTLY one accepted tier label:
+Assessment: Best-in-Class OR Tier One (a.k.a. Above-average) OR Average OR Below-average
+Then a 1-2 sentence head-to-head comparison vs marketed/clinical competitors.
+
+### 3.N.7 Market Share Projection — BASE Case (2024-2038)
+| Year | Market Share | Reasoning |
+| 2024 | 0% | Pre-approval |
+| 2025 | 0% | Pre-approval |
+| 2026 | ...% | source-backed |
+| 2027 | ...% | source-backed |
+| 2028 | ...% | source-backed |
+| 2029 | ...% | source-backed |
+| 2030 | ...% | source-backed |
+| 2031 | ...% | source-backed |
+| 2032 | ...% | source-backed |
+| 2033 | ...% | source-backed |
+| 2034 | ...% | source-backed |
+| 2035 | ...% | source-backed |
+| 2036 | ...% | source-backed |
+| 2037 | ...% | source-backed |
+| 2038 | ...% | source-backed |
+
+### 3.N.8 Market Share Projection — BULL Case (2024-2038)
+Same table format.
+
+### 3.N.9 Market Share Projection — BEAR Case (2024-2038)
+Same table format.
+
+### 3.N.10 Treatment Pricing Estimation
+| Parameter | Value | Source |
+| Total Treatment Cost Per Patient (MM USD) | ... | URL and calculation |
+| Route | ... | URL |
+| Dosing Schedule | ... | URL |
+
+# Chapter 4: Stage Timeline
+| Stage | Year | Source / Reasoning |
+| 1 (Phase I) | YYYY | source |
+| 2 (Phase II) | YYYY | source |
+| 3 (Phase III) | YYYY | source/prediction |
+| 4 (NDA/BLA Filing) | YYYY | source/prediction |
+| 5 (Approval) | YYYY | source/prediction |
+
+# Chapter 5: Peer View Data Collection
+For EACH indication, output one PEER_VIEW block. Include {drug_name} first and
+at least 3 marketed/clinical peers if available:
+#### PEER_VIEW_START: ABBR
+##### Drug: {drug_name} — Readout 1
+- Drug Name: {drug_name}
+- Company: {company_name}
+- Ticker: {ticker}
+- Innovation: /
+- Rating: BIC | T1 | AVG
+- Target: /
+- Result: Phase X/Approved/Continuing
+- NCT#: /
+- Treatment Line: /
+- Phase: /
+- Stage: 1-5
+- Data Date: YYYY-MM-DD or /
+- Conference: /
+- N: /
+- ORR: /
+- BICR ORR: /
+- CR: /
+- PR: /
+- DCR: /
+- Median PFS: /
+- Median rPFS: /
+- Median OS: /
+- 6 Mo PFS Rate: /
+- 12 Mo PFS Rate: /
+- 24 Mo PFS Rate: /
+- 18 Mo OS Rate: /
+- 24 Mo OS Rate: /
+- Median DFS: /
+- Median Follow-Up: /
+- GEQ G3 SAE Pct: /
+- GEQ G3 Clinical AE: /
+- Route: /
+- Dosing Schedule: /
+- Latest Annual Sale: /
+- 1st Yr Sale: /
+- Stock Price Day Before: /
+- Stock Price Day After: /
+- Stock Change 1d: /
+- Stock Change 3d: /
+- Source: URL
+#### PEER_VIEW_END: ABBR
+
+# Chapter 6: Catalyst Data
+Upcoming readouts/regulatory catalysts in table form.
+
+# Chapter 7: Source Summary
+List sources.
+"""
+    prompt += database_sync_prompt(scan_research_context(ticker))
+    last_exc = None
+    model_queue = [model, "gemini-2.5-flash-lite"]
+    for model_name in dict.fromkeys(model_queue):
+        for attempt in range(1, 4):
+            try:
+                logger.info(
+                    f"  Running Flash fallback for {drug_name} "
+                    f"(model={model_name}, attempt={attempt})..."
+                )
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt,
+                    config=genai_types.GenerateContentConfig(
+                        tools=[genai_types.Tool(google_search=genai_types.GoogleSearch())],
+                    ),
+                )
+                text = response.text or ""
+                if "Chapter 3" not in text or "Chapter 4" not in text:
+                    raise ValueError(f"Flash fallback returned incomplete report for {drug_name}")
+                logger.info(f"  Flash fallback {drug_name}: {len(text):,} chars generated")
+                return text
+            except Exception as exc:
+                last_exc = exc
+                wait = 20 * attempt
+                logger.warning(
+                    f"  Flash fallback failed for {drug_name} "
+                    f"({model_name}, attempt {attempt}): {exc}. "
+                    f"Retrying in {wait}s..."
+                )
+                time.sleep(wait)
+    raise last_exc
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -736,8 +972,13 @@ def _run_chapter_mode(args):
             continue
 
         try:
+            prompt += database_sync_prompt(scan_research_context(args.ticker))
             text = run_chapter_research(
                 args.ticker, args.company_name, drug_name, prompt)
+            stored = upsert_research_facts(
+                extract_database_updates(text), args.ticker
+            )
+            logger.info("  Database scan active: stored/refreshed %d facts", len(stored))
 
             # Save chapter output
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -924,6 +1165,8 @@ def main():
                         help="Skip ClinicalTrials.gov fetching")
     parser.add_argument("--chapter", choices=["pricing", "peer_view", "catalyst"],
                         help="Run single chapter research (supplements existing report)")
+    parser.add_argument("--force", action="store_true",
+                        help="Regenerate reports even if a matching report already exists")
 
     args = parser.parse_args()
 
@@ -999,6 +1242,17 @@ def main():
     results = []
     for idx, drug in enumerate(drugs, 1):
         drug_name = drug["name"]
+        safe_name = re.sub(r'[^\w\-]', '_', drug_name)
+        existing = sorted(output_dir.glob(f"{args.ticker}_{safe_name}_research_*.md"))
+        if existing and not args.force:
+            logger.info(f"Skipping {drug_name}: existing report {existing[-1].name}")
+            results.append({
+                "drug": drug_name,
+                "status": "SKIPPED",
+                "chars": existing[-1].stat().st_size,
+                "docx": "",
+            })
+            continue
         logger.info(f"\n{'─'*60}")
         logger.info(f"[{idx}/{len(drugs)}] Researching: {drug_name}")
         logger.info(f"  Indications: {drug.get('indications', ['unknown'])}")
@@ -1019,6 +1273,10 @@ def main():
                 args.ticker, args.company_name,
                 drug_name, drug_trials_text,
             )
+            stored = upsert_research_facts(
+                extract_database_updates(report), args.ticker
+            )
+            logger.info("  Database scan active: stored/refreshed %d facts", len(stored))
             md_path, docx_path = save_drug_report(
                 report, output_dir, args.ticker, drug_name,
             )

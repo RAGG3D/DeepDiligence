@@ -1,0 +1,1156 @@
+{
+  "official_release_count": 69,
+  "official_release_urls": [
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-announces-phase-2-data-ctx-009-combination",
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-phase-1-data-ctx-471-novel-cd137",
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-promising-phase-1-clinical-data-ctx",
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/tovecimig-ctx-009-meets-primary-endpoint-ongoing-randomized",
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/tovecimig-demonstrates-statistically-significant-benefit",
+    "https://www.globenewswire.com/news-release/2023/01/06/2584442/0/en/compass-therapeutics-announces-first-patient-dosed-in-the-phase-2-u-s-study-of-ctx-009-in-patients-with-metastatic-colorectal-cancer.html",
+    "https://www.globenewswire.com/news-release/2023/02/02/2600453/0/en/compass-therapeutics-to-participate-in-the-svb-securities-global-biopharma-conference.html",
+    "https://www.globenewswire.com/news-release/2023/03/15/2627650/0/en/compass-therapeutics-reports-fourth-quarter-and-full-year-2022-financial-results-and-provides-business-update.html",
+    "https://www.globenewswire.com/news-release/2023/03/28/2635669/0/en/compass-therapeutics-to-participate-in-the-cantor-fitzgerald-future-of-oncology-symposium.html",
+    "https://www.globenewswire.com/news-release/2023/04/19/2650043/0/en/compass-therapeutics-to-participate-in-the-stifel-2023-virtual-targeted-oncology-days.html",
+    "https://www.globenewswire.com/news-release/2023/04/26/2655070/0/en/compass-therapeutics-to-participate-in-the-h-c-wainwright-bioconnect-investor-conference-at-nasdaq.html",
+    "https://www.globenewswire.com/news-release/2023/05/04/2661507/0/en/compass-therapeutics-reports-first-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2023/06/01/2680515/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+    "https://www.globenewswire.com/news-release/2023/06/22/2693312/0/en/compass-therapeutics-to-be-added-to-the-russell-2000-and-russell-3000-indexes.html",
+    "https://www.globenewswire.com/news-release/2023/08/03/2717954/0/en/compass-therapeutics-reports-second-quarter-2023-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2023/08/30/2734246/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+    "https://www.globenewswire.com/news-release/2023/11/07/2775057/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+    "https://www.globenewswire.com/news-release/2023/11/09/2777240/0/en/compass-therapeutics-reports-third-quarter-2023-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2024/01/05/2804605/0/en/compass-therapeutics-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2024/02/28/2836911/0/en/compass-therapeutics-announces-publication-of-ctx-8371-preclinical-data-in-oncoimmunology-its-bispecific-antibody-checkpoint-inhibitor-now-advancing-to-first-in-human-clinical-tria.html",
+    "https://www.globenewswire.com/news-release/2024/02/29/2837924/0/en/compass-therapeutics-to-participate-in-the-leerink-partners-global-biopharma-conference.html",
+    "https://www.globenewswire.com/news-release/2024/03/21/2850270/0/en/compass-therapeutics-reports-2023-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2024/04/09/2860242/0/en/compass-therapeutics-presents-data-demonstrating-elimination-of-mhc-class-i-negative-tumors-in-in-vivo-models-at-the-2024-american-association-for-cancer-research-aacr-annual-meeti.html",
+    "https://www.globenewswire.com/news-release/2024/04/10/2860690/0/en/compass-therapeutics-to-participate-in-the-stifel-targeted-oncology-days.html",
+    "https://www.globenewswire.com/news-release/2024/04/12/2862132/0/en/compass-therapeutics-announces-poster-presentations-at-the-cholangiocarcinoma-foundation-2024-annual-conference.html",
+    "https://www.globenewswire.com/news-release/2024/04/16/2863573/0/en/compass-therapeutics-announces-first-patient-dosed-in-the-phase-1-study-of-ctx-8371-in-patients-with-solid-tumors.html",
+    "https://www.globenewswire.com/news-release/2024/04/25/2869573/0/en/compass-therapeutics-receives-fda-fast-track-designation-for-the-investigation-of-ctx-009-in-combination-with-paclitaxel-for-the-treatment-of-patients-with-metastatic-or-locally-ad.html",
+    "https://www.globenewswire.com/news-release/2024/05/13/2880386/0/en/compass-therapeutics-reports-2024-first-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2024/05/14/2881305/0/en/compass-therapeutics-to-participate-in-the-h-c-wainwright-2nd-annual-bioconnect-investor-conference.html",
+    "https://www.globenewswire.com/news-release/2024/05/28/2889425/0/en/compass-therapeutics-announces-ceo-transition.html",
+    "https://www.globenewswire.com/news-release/2024/05/30/2890689/0/en/compass-therapeutics-to-participate-in-the-jefferies-global-healthcare-conference.html",
+    "https://www.globenewswire.com/news-release/2024/08/06/2925007/0/en/compass-therapeutics-completes-patient-enrollment-in-companion-002-a-randomized-study-of-ctx-009-in-combination-with-paclitaxel-and-provides-an-update-on-the-development-plan-in-bi.html",
+    "https://www.globenewswire.com/news-release/2024/08/07/2925880/0/en/compass-therapeutics-to-participate-in-the-wedbush-pacgrow-healthcare-conference.html",
+    "https://www.globenewswire.com/news-release/2024/08/12/2928347/0/en/compass-therapeutics-reports-2024-second-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2024/09/03/2939597/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+    "https://www.globenewswire.com/news-release/2024/10/04/2958406/0/en/compass-therapeutics-announces-upcoming-poster-presentation-at-the-39th-society-for-immunotherapy-of-cancer-annual-meeting.html",
+    "https://www.globenewswire.com/news-release/2024/11/08/2977735/0/en/compass-therapeutics-presents-novel-biomarker-data-related-to-ctx-471-clinical-activity-at-the-39th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+    "https://www.globenewswire.com/news-release/2024/11/12/2979049/0/en/compass-therapeutics-reports-2024-third-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2024/11/13/2980256/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+    "https://www.globenewswire.com/news-release/2024/12/02/2989730/0/en/compass-therapeutics-to-participate-in-the-piper-sandler-36th-annual-healthcare-conference.html",
+    "https://www.globenewswire.com/news-release/2024/12/10/2994469/0/en/compass-therapeutics-appoints-biopharmaceutical-industry-leader-barry-shin-as-chief-financial-officer.html",
+    "https://www.globenewswire.com/news-release/2025/01/08/3006206/0/en/compass-therapeutics-provides-corporate-update-and-announces-advancement-of-a-new-drug-candidate.html",
+    "https://www.globenewswire.com/news-release/2025/01/29/3017139/0/en/compass-therapeutics-to-participate-in-the-guggenheim-securities-smid-cap-biotech-conference.html",
+    "https://www.globenewswire.com/news-release/2025/02/27/3033812/0/en/compass-therapeutics-reports-2024-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2025/03/31/3052773/0/en/compass-therapeutics-to-host-webcast-highlighting-top-line-clinical-data-from-the-ongoing-randomized-phase-2-3-study-evaluating-tovecimig-in-patients-with-biliary-tract-cancer.html",
+    "https://www.globenewswire.com/news-release/2025/04/02/3054684/0/en/compass-therapeutics-to-participate-in-the-stifel-2025-virtual-targeted-oncology-forum.html",
+    "https://www.globenewswire.com/news-release/2025/04/21/3064600/0/en/compass-therapeutics-announces-first-patient-dosed-in-an-investigator-sponsored-trial-of-tovecimig-in-the-first-line-setting-for-patients-with-biliary-tract-cancer.html",
+    "https://www.globenewswire.com/news-release/2025/04/28/3069126/0/en/index.html",
+    "https://www.globenewswire.com/news-release/2025/05/06/3074957/0/en/compass-therapeutics-to-participate-in-upcoming-may-investor-events.html",
+    "https://www.globenewswire.com/news-release/2025/05/08/3077176/0/en/compass-therapeutics-reports-2025-first-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2025/05/28/3089415/0/en/compass-therapeutics-to-participate-in-the-jefferies-global-healthcare-conference.html",
+    "https://www.globenewswire.com/news-release/2025/08/08/3130354/0/en/compass-therapeutics-to-present-second-quarter-financial-results-and-provide-business-update-on-august-11-2025.html",
+    "https://www.globenewswire.com/news-release/2025/08/11/3130767/0/en/compass-therapeutics-reports-2025-second-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2025/08/12/3132087/0/en/compass-therapeutics-announces-proposed-public-offering.html",
+    "https://www.globenewswire.com/news-release/2025/08/13/3132264/0/en/compass-therapeutics-announces-pricing-of-upsized-120-million-public-offering.html",
+    "https://www.globenewswire.com/news-release/2025/08/26/3139182/0/en/compass-therapeutics-to-participate-in-upcoming-september-investor-events.html",
+    "https://www.globenewswire.com/news-release/2025/11/03/3179225/0/en/compass-therapeutics-to-participate-in-upcoming-november-investor-events.html",
+    "https://www.globenewswire.com/news-release/2025/11/04/3180398/0/en/compass-therapeutics-presents-preclinical-data-on-ctx-10726-a-differentiated-pd-1-x-vegf-a-bispecific-antibody-at-the-40th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+    "https://www.globenewswire.com/news-release/2025/11/05/3181347/0/en/compass-therapeutics-reports-third-quarter-2025-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2025/11/25/3194262/0/en/compass-therapeutics-to-participate-in-upcoming-december-investor-events.html",
+    "https://www.globenewswire.com/news-release/2025/12/17/3206900/0/en/compass-therapeutics-to-participate-in-the-j-p-morgan-2026-healthcare-conference.html",
+    "https://www.globenewswire.com/news-release/2026/01/05/3212707/0/en/compass-therapeutics-announces-key-leadership-appointments.html",
+    "https://www.globenewswire.com/news-release/2026/01/05/3213223/0/en/compass-announces-inducement-grants-under-nasdaq-listing-rule-5635-c-4.html",
+    "https://www.globenewswire.com/news-release/2026/01/06/3213585/0/en/compass-therapeutics-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2026/03/05/3250042/0/en/compass-therapeutics-reports-2025-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2026/04/24/3281064/0/en/compass-therapeutics-to-announce-topline-secondary-endpoints-from-the-phase-2-3-companion-002-study-of-tovecimig-in-patients-with-biliary-tract-cancer.html",
+    "https://www.globenewswire.com/news-release/2026/05/05/3287540/0/en/compass-therapeutics-reports-2026-first-quarter-financial-results-and-provides-corporate-update.html",
+    "https://www.globenewswire.com/news-release/2026/05/12/3292725/0/en/compass-therapeutics-to-participate-in-upcoming-may-investor-events.html",
+    "https://www.globenewswire.com/news-release/2026/05/28/3302708/0/en/compass-therapeutics-to-participate-in-upcoming-june-investor-events.html"
+  ],
+  "events": [
+    {
+      "date": "2023-01-06",
+      "title": "Compass Therapeutics Announces First Patient Dosed in the Phase 2 U.S. Study of CTX-009 in Patients with Metastatic Colorectal Cancer",
+      "evt": "[ASCO] Phase 2; Preliminary results",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2023/01/06/2584442/0/en/compass-therapeutics-announces-first-patient-dosed-in-the-phase-2-u-s-study-of-ctx-009-in-patients-with-metastatic-colorectal-cancer.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/01/06/2584442/0/en/compass-therapeutics-announces-first-patient-dosed-in-the-phase-2-u-s-study-of-ctx-009-in-patients-with-metastatic-colorectal-cancer.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-01-18",
+      "evt": "Share move after ASCO GI Phase 2 updated N 24",
+      "category": "Other"
+    },
+    {
+      "date": "2023-01-19",
+      "evt": "[ASCO GI] Phase 2 updated; N=24 (22 evaluable); ORR 37.5% (9 PR), 2L 63.6%, 3L 15.4%; mDoR/mPFS 9.4mo; 12mo OS 53%; grade 3+ TRAE 75%",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-announces-phase-2-data-ctx-009-combination",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2023.41.4_suppl.540",
+      "venue": "ASCO GI",
+      "phase": "Phase 2",
+      "data_type": "updated",
+      "patient_size": "N=24; 22 evaluable",
+      "orr": "37.5% overall; 63.6% 2L; 15.4% 3L",
+      "survival": "mDoR/mPFS 9.4 months; 12-month OS 53%",
+      "safety": "grade 3+ TRAE 75%",
+      "source_url": "https://www.globenewswire.com/news-release/2023/01/19/2592170/0/en/compass-therapeutics-announces-that-the-phase-2-data-of-ctx-009-in-combination-with-paclitaxel-in-patients-with-biliary-tract-cancers-btc-will-be-presented-at-the-asco-gi-cancers-s.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2023-01-24",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-02-02",
+      "title": "Compass Therapeutics to Participate in the SVB Securities Global Biopharma Conference",
+      "evt": "to Participate in the SVB Securities Global Biopharma Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/02/02/2600453/0/en/compass-therapeutics-to-participate-in-the-svb-securities-global-biopharma-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/02/02/2600453/0/en/compass-therapeutics-to-participate-in-the-svb-securities-global-biopharma-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-03-15",
+      "title": "Compass Therapeutics Reports Fourth Quarter and Full Year 2022 Financial Results and Provides Business Update",
+      "evt": "Reports Fourth Quarter and Full Year 2022 Financial Results and Provides Business Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2023/03/15/2627650/0/en/compass-therapeutics-reports-fourth-quarter-and-full-year-2022-financial-results-and-provides-business-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/03/15/2627650/0/en/compass-therapeutics-reports-fourth-quarter-and-full-year-2022-financial-results-and-provides-business-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO GI"
+    },
+    {
+      "date": "2023-03-28",
+      "title": "Compass Therapeutics to Participate in the Cantor Fitzgerald Future of Oncology Symposium",
+      "evt": "to Participate in the Cantor Fitzgerald Future of Oncology Symposium",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/03/28/2635669/0/en/compass-therapeutics-to-participate-in-the-cantor-fitzgerald-future-of-oncology-symposium.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/03/28/2635669/0/en/compass-therapeutics-to-participate-in-the-cantor-fitzgerald-future-of-oncology-symposium.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-04-19",
+      "title": "Compass Therapeutics to Participate in the Stifel 2023 Virtual Targeted Oncology Days",
+      "evt": "to Participate in the Stifel 2023 Virtual Targeted Oncology Days",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/04/19/2650043/0/en/compass-therapeutics-to-participate-in-the-stifel-2023-virtual-targeted-oncology-days.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/04/19/2650043/0/en/compass-therapeutics-to-participate-in-the-stifel-2023-virtual-targeted-oncology-days.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-04-20",
+      "evt": "Share move after to Participate in the Stifel 2023 Virtual",
+      "category": "Other"
+    },
+    {
+      "date": "2023-04-25",
+      "evt": "Share move after to Participate in the H.C. Wainwright BioConnect",
+      "category": "Other"
+    },
+    {
+      "date": "2023-04-26",
+      "title": "Compass Therapeutics to Participate in the H.C. Wainwright BioConnect Investor Conference at NASDAQ",
+      "evt": "to Participate in the H.C. Wainwright BioConnect Investor Conference at NASDAQ",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/04/26/2655070/0/en/compass-therapeutics-to-participate-in-the-h-c-wainwright-bioconnect-investor-conference-at-nasdaq.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/04/26/2655070/0/en/compass-therapeutics-to-participate-in-the-h-c-wainwright-bioconnect-investor-conference-at-nasdaq.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-05-04",
+      "title": "Compass Therapeutics Reports First Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports First Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2023/05/04/2661507/0/en/compass-therapeutics-reports-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/05/04/2661507/0/en/compass-therapeutics-reports-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO GI"
+    },
+    {
+      "date": "2023-05-05",
+      "evt": "Share move after Reports First Quarter Financial Results and Provides",
+      "category": "Other"
+    },
+    {
+      "date": "2023-05-22",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-06-01",
+      "title": "Compass Therapeutics to Participate in Upcoming Investor Events",
+      "evt": "to Participate in Upcoming Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/06/01/2680515/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/06/01/2680515/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-06-20",
+      "evt": "Share move after to be Added to the Russell 2000",
+      "category": "Other"
+    },
+    {
+      "date": "2023-06-22",
+      "title": "Compass Therapeutics to be Added to the Russell 2000\u00ae\u00a0and Russell 3000\u00ae\u00a0Indexes",
+      "evt": "to be Added to the Russell 2000\u00ae and Russell 3000\u00ae Indexes",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/06/22/2693312/0/en/compass-therapeutics-to-be-added-to-the-russell-2000-and-russell-3000-indexes.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/06/22/2693312/0/en/compass-therapeutics-to-be-added-to-the-russell-2000-and-russell-3000-indexes.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-07-07",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-08-03",
+      "title": "Compass Therapeutics Reports Second Quarter 2023 Financial Results and Provides Corporate Update",
+      "evt": "Reports Second Quarter 2023 Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2023/08/03/2717954/0/en/compass-therapeutics-reports-second-quarter-2023-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/08/03/2717954/0/en/compass-therapeutics-reports-second-quarter-2023-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-08-30",
+      "title": "Compass Therapeutics to Participate in Upcoming Investor Events",
+      "evt": "to Participate in Upcoming Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/08/30/2734246/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/08/30/2734246/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-10-10",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-11-07",
+      "title": "Compass Therapeutics to Participate in Upcoming Investor Events",
+      "evt": "to Participate in Upcoming Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2023/11/07/2775057/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/11/07/2775057/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-11-09",
+      "title": "Compass Therapeutics Reports Third Quarter 2023 Financial Results and Provides Corporate Update",
+      "evt": "Reports Third Quarter 2023 Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2023/11/09/2777240/0/en/compass-therapeutics-reports-third-quarter-2023-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2023/11/09/2777240/0/en/compass-therapeutics-reports-third-quarter-2023-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2023-11-13",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-11-14",
+      "evt": "Share move with biotech rally",
+      "category": "Other"
+    },
+    {
+      "date": "2023-12-11",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-12-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-05",
+      "title": "Compass Therapeutics Provides Corporate Update",
+      "evt": "Provides Corporate Update",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/01/05/2804605/0/en/compass-therapeutics-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/01/05/2804605/0/en/compass-therapeutics-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-01-08",
+      "evt": "Share move with biotech rally",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-16",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-06",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-08",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-09",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-13",
+      "evt": "Share move with biotech weakness",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-28",
+      "title": "Compass Therapeutics Announces Publication of CTX-8371 Preclinical Data in OncoImmunology, its Bispecific Antibody Checkpoint Inhibitor, now Advancing to First-in-Human Clinical Trial",
+      "evt": "[ASCO] Phase 1",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/02/28/2836911/0/en/compass-therapeutics-announces-publication-of-ctx-8371-preclinical-data-in-oncoimmunology-its-bispecific-antibody-checkpoint-inhibitor-now-advancing-to-first-in-human-clinical-tria.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/02/28/2836911/0/en/compass-therapeutics-announces-publication-of-ctx-8371-preclinical-data-in-oncoimmunology-its-bispecific-antibody-checkpoint-inhibitor-now-advancing-to-first-in-human-clinical-tria.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-02-29",
+      "title": "Compass Therapeutics to Participate in the Leerink Partners Global Biopharma Conference",
+      "evt": "to Participate in the Leerink Partners Global Biopharma Conference",
+      "category": "Partnership",
+      "url": "https://www.globenewswire.com/news-release/2024/02/29/2837924/0/en/compass-therapeutics-to-participate-in-the-leerink-partners-global-biopharma-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/02/29/2837924/0/en/compass-therapeutics-to-participate-in-the-leerink-partners-global-biopharma-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-03-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-03-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-03-21",
+      "title": "Compass Therapeutics Reports 2023 Financial Results and Provides Corporate Update",
+      "evt": "Reports 2023 Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2024/03/21/2850270/0/en/compass-therapeutics-reports-2023-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/03/21/2850270/0/en/compass-therapeutics-reports-2023-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-04-09",
+      "evt": "[AACR] Preclinical updated: CTX-471 eliminated MHC-I-negative tumors in vivo and expanded NK/CD8 immune activity; no patient data",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/04/09/2860242/0/en/compass-therapeutics-presents-data-demonstrating-elimination-of-mhc-class-i-negative-tumors-in-in-vivo-models-at-the-2024-american-association-for-cancer-research-aacr-annual-meeti.html",
+      "venue": "AACR",
+      "data_type": "preclinical updated",
+      "source_url": "https://www.globenewswire.com/news-release/2024/04/09/2860242/0/en/compass-therapeutics-presents-data-demonstrating-elimination-of-mhc-class-i-negative-tumors-in-in-vivo-models-at-the-2024-american-association-for-cancer-research-aacr-annual-meeti.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2024-04-10",
+      "title": "Compass Therapeutics to Participate in the Stifel Targeted Oncology Days",
+      "evt": "to Participate in the Stifel Targeted Oncology Days",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/04/10/2860690/0/en/compass-therapeutics-to-participate-in-the-stifel-targeted-oncology-days.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/04/10/2860690/0/en/compass-therapeutics-to-participate-in-the-stifel-targeted-oncology-days.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-04-12",
+      "title": "Compass Therapeutics Announces Poster Presentations at the Cholangiocarcinoma Foundation 2024 Annual Conference",
+      "evt": "[ASCO] Phase 1",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/04/12/2862132/0/en/compass-therapeutics-announces-poster-presentations-at-the-cholangiocarcinoma-foundation-2024-annual-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/04/12/2862132/0/en/compass-therapeutics-announces-poster-presentations-at-the-cholangiocarcinoma-foundation-2024-annual-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-04-16",
+      "title": "Compass Therapeutics Announces First Patient Dosed in the Phase 1 Study of CTX-8371 in Patients with Solid Tumors",
+      "evt": "[ASCO] Phase 1",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/04/16/2863573/0/en/compass-therapeutics-announces-first-patient-dosed-in-the-phase-1-study-of-ctx-8371-in-patients-with-solid-tumors.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/04/16/2863573/0/en/compass-therapeutics-announces-first-patient-dosed-in-the-phase-1-study-of-ctx-8371-in-patients-with-solid-tumors.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-04-25",
+      "title": "Compass Therapeutics Receives FDA Fast Track Designation for the Investigation of CTX-009 in Combination with Paclitaxel for the Treatment of Patients with Metastatic or Locally Advanced Biliary Tract Tumors That Have Been Previously Treated",
+      "evt": "[ASCO] Phase 2; n= 9; overall response rate of 37.5%",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/04/25/2869573/0/en/compass-therapeutics-receives-fda-fast-track-designation-for-the-investigation-of-ctx-009-in-combination-with-paclitaxel-for-the-treatment-of-patients-with-metastatic-or-locally-ad.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/04/25/2869573/0/en/compass-therapeutics-receives-fda-fast-track-designation-for-the-investigation-of-ctx-009-in-combination-with-paclitaxel-for-the-treatment-of-patients-with-metastatic-or-locally-ad.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-05-01",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-05-13",
+      "title": "Compass Therapeutics Reports 2024 First Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports 2024 First Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2024/05/13/2880386/0/en/compass-therapeutics-reports-2024-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/05/13/2880386/0/en/compass-therapeutics-reports-2024-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-05-14",
+      "title": "Compass Therapeutics to Participate in the H.C. Wainwright 2nd Annual\u00a0BioConnect Investor Conference",
+      "evt": "to Participate in the H.C. Wainwright 2nd Annual BioConnect Investor Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/05/14/2881305/0/en/compass-therapeutics-to-participate-in-the-h-c-wainwright-2nd-annual-bioconnect-investor-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/05/14/2881305/0/en/compass-therapeutics-to-participate-in-the-h-c-wainwright-2nd-annual-bioconnect-investor-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-05-23",
+      "evt": "[ASCO] Phase 1 updated; N=79 (19 escalation/60 expansion); CR 1/3 SCLC; PR 3/11 melanoma and 1/4 mesothelioma; DLT thrombocytopenia resolved; liver toxicity 6.3%, 80% AEs grade 1-2",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-phase-1-data-ctx-471-novel-cd137",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2024.42.16_suppl.2535",
+      "venue": "ASCO",
+      "phase": "Phase 1 updated",
+      "patient_size": "N=79",
+      "orr": "PR 3/11 melanoma; PR 1/4 mesothelioma",
+      "cr": "1/3 SCLC",
+      "safety": "resolved thrombocytopenia DLT; liver toxicity 6.3%; 80% AEs grade 1-2",
+      "source_url": "https://www.globenewswire.com/news-release/2024/05/23/2887702/0/en/compass-therapeutics-to-present-phase-1-data-for-ctx-471-a-novel-cd137-agonist-antibody-demonstrating-anti-tumor-activity-in-patients-who-have-progressed-on-approved-pd-1-or-pd-l1-.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2024-05-28",
+      "title": "Compass Therapeutics Announces CEO Transition",
+      "evt": "Announces CEO Transition",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/05/28/2889425/0/en/compass-therapeutics-announces-ceo-transition.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/05/28/2889425/0/en/compass-therapeutics-announces-ceo-transition.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-05-30",
+      "title": "Compass Therapeutics to Participate in the Jefferies Global Healthcare Conference",
+      "evt": "to Participate in the Jefferies Global Healthcare Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/05/30/2890689/0/en/compass-therapeutics-to-participate-in-the-jefferies-global-healthcare-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/05/30/2890689/0/en/compass-therapeutics-to-participate-in-the-jefferies-global-healthcare-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-06-27",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-06-28",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-07-10",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-07-11",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-07-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-07-31",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-08-06",
+      "title": "Compass Therapeutics Completes Patient Enrollment in COMPANION-002, a Randomized Study of CTX-009 in Combination with Paclitaxel, and Provides an Update on the Development Plan in Biliary Tract Cancer",
+      "evt": "[ASCO] Phase 2; primary",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/08/06/2925007/0/en/compass-therapeutics-completes-patient-enrollment-in-companion-002-a-randomized-study-of-ctx-009-in-combination-with-paclitaxel-and-provides-an-update-on-the-development-plan-in-bi.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/08/06/2925007/0/en/compass-therapeutics-completes-patient-enrollment-in-companion-002-a-randomized-study-of-ctx-009-in-combination-with-paclitaxel-and-provides-an-update-on-the-development-plan-in-bi.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-08-07",
+      "title": "Compass Therapeutics to Participate in the Wedbush PacGrow Healthcare Conference",
+      "evt": "to Participate in the Wedbush PacGrow Healthcare Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/08/07/2925880/0/en/compass-therapeutics-to-participate-in-the-wedbush-pacgrow-healthcare-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/08/07/2925880/0/en/compass-therapeutics-to-participate-in-the-wedbush-pacgrow-healthcare-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-08-08",
+      "evt": "Share move after to Participate in the Wedbush PacGrow Healthcare",
+      "category": "Other"
+    },
+    {
+      "date": "2024-08-12",
+      "title": "Compass Therapeutics Reports 2024 Second Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports 2024 Second Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2024/08/12/2928347/0/en/compass-therapeutics-reports-2024-second-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/08/12/2928347/0/en/compass-therapeutics-reports-2024-second-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-08-29",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-08-30",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-09-03",
+      "title": "Compass Therapeutics to Participate in Upcoming Investor Events",
+      "evt": "to Participate in Upcoming Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/09/03/2939597/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/09/03/2939597/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-09-09",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-10-04",
+      "title": "Compass Therapeutics Announces Upcoming Poster Presentation at the 39th Society for Immunotherapy of Cancer Annual Meeting",
+      "evt": "[SITC] Phase 1",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/10/04/2958406/0/en/compass-therapeutics-announces-upcoming-poster-presentation-at-the-39th-society-for-immunotherapy-of-cancer-annual-meeting.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/10/04/2958406/0/en/compass-therapeutics-announces-upcoming-poster-presentation-at-the-39th-society-for-immunotherapy-of-cancer-annual-meeting.html",
+      "source_kind": "company_press_release",
+      "venue": "SITC"
+    },
+    {
+      "date": "2024-10-08",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-10-11",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-11-08",
+      "evt": "[SITC] Phase 1 updated biomarker: baseline NCAM/CD56 tumor expression associated with CTX-471 response/disease control; prior efficacy CR 1 SCLC plus 4 PR; generally well tolerated",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/11/08/2977735/0/en/compass-therapeutics-presents-novel-biomarker-data-related-to-ctx-471-clinical-activity-at-the-39th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+      "venue": "SITC",
+      "phase": "Phase 1 updated biomarker",
+      "orr": "4 PR (melanoma/mesothelioma)",
+      "cr": "1 SCLC",
+      "safety": "generally well tolerated",
+      "source_url": "https://www.globenewswire.com/news-release/2024/11/08/2977735/0/en/compass-therapeutics-presents-novel-biomarker-data-related-to-ctx-471-clinical-activity-at-the-39th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2024-11-12",
+      "title": "Compass Therapeutics Reports 2024 Third Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports 2024 Third Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2024/11/12/2979049/0/en/compass-therapeutics-reports-2024-third-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/11/12/2979049/0/en/compass-therapeutics-reports-2024-third-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-11-13",
+      "title": "Compass Therapeutics to Participate in Upcoming Investor Events",
+      "evt": "to Participate in Upcoming Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/11/13/2980256/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/11/13/2980256/0/en/compass-therapeutics-to-participate-in-upcoming-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-11-15",
+      "evt": "Share move after to Participate in Upcoming Investor Events",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-02",
+      "title": "Compass Therapeutics to Participate in the Piper Sandler 36th Annual Healthcare Conference",
+      "evt": "to Participate in the Piper Sandler 36th Annual Healthcare Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2024/12/02/2989730/0/en/compass-therapeutics-to-participate-in-the-piper-sandler-36th-annual-healthcare-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/12/02/2989730/0/en/compass-therapeutics-to-participate-in-the-piper-sandler-36th-annual-healthcare-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-12-06",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-10",
+      "title": "Compass Therapeutics Appoints Biopharmaceutical Industry Leader\u00a0Barry Shin as Chief Financial Officer",
+      "evt": "Appoints Biopharmaceutical Industry Leader Barry Shin as Chief Financial Officer",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2024/12/10/2994469/0/en/compass-therapeutics-appoints-biopharmaceutical-industry-leader-barry-shin-as-chief-financial-officer.html",
+      "source_url": "https://www.globenewswire.com/news-release/2024/12/10/2994469/0/en/compass-therapeutics-appoints-biopharmaceutical-industry-leader-barry-shin-as-chief-financial-officer.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2024-12-12",
+      "evt": "Share move after Appoints Biopharmaceutical Industry Leader Barry Shin as",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-23",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-03",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-07",
+      "evt": "Share move after Provides Corporate Update and Announces Advancement of",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Compass Therapeutics Provides Corporate Update and Announces Advancement of a New Drug Candidate",
+      "evt": "Provides Corporate Update and Announces Advancement of a New Drug Candidate",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/01/08/3006206/0/en/compass-therapeutics-provides-corporate-update-and-announces-advancement-of-a-new-drug-candidate.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/01/08/3006206/0/en/compass-therapeutics-provides-corporate-update-and-announces-advancement-of-a-new-drug-candidate.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-01-13",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-23",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-24",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-28",
+      "evt": "Share move after to Participate in the Guggenheim Securities SMID",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Compass Therapeutics to Participate in the Guggenheim Securities SMID Cap Biotech Conference",
+      "evt": "to Participate in the Guggenheim Securities SMID Cap Biotech Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/01/29/3017139/0/en/compass-therapeutics-to-participate-in-the-guggenheim-securities-smid-cap-biotech-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/01/29/3017139/0/en/compass-therapeutics-to-participate-in-the-guggenheim-securities-smid-cap-biotech-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-02-05",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-02-10",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-02-20",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Compass Therapeutics Reports 2024 Financial Results and Provides Corporate Update",
+      "evt": "Reports 2024 Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2025/02/27/3033812/0/en/compass-therapeutics-reports-2024-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/02/27/3033812/0/en/compass-therapeutics-reports-2024-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-03-10",
+      "evt": "Share move with market weakness",
+      "category": "Other"
+    },
+    {
+      "date": "2025-03-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Compass Therapeutics to Host Webcast Highlighting Top-Line Clinical Data from the Ongoing Randomized Phase 2/3 Study Evaluating Tovecimig in Patients with Biliary Tract Cancer",
+      "evt": "[ASCO] Phase 2",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2025/03/31/3052773/0/en/compass-therapeutics-to-host-webcast-highlighting-top-line-clinical-data-from-the-ongoing-randomized-phase-2-3-study-evaluating-tovecimig-in-patients-with-biliary-tract-cancer.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/03/31/3052773/0/en/compass-therapeutics-to-host-webcast-highlighting-top-line-clinical-data-from-the-ongoing-randomized-phase-2-3-study-evaluating-tovecimig-in-patients-with-biliary-tract-cancer.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-04-01",
+      "evt": "[CALL] Phase 2/3 primary; N=168 (111/57); BICR ORR 17.1% vs 5.3%, p=0.031; CR 1 vs 0; PD 16.2% vs 42.1%; safety DMC continued study unchanged",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/tovecimig-ctx-009-meets-primary-endpoint-ongoing-randomized",
+      "venue": "CALL",
+      "phase": "Phase 2/3",
+      "data_type": "primary",
+      "patient_size": "N=168 (111/57)",
+      "orr": "17.1% vs 5.3%; p=0.031",
+      "cr": "1 vs 0",
+      "safety": "DMC recommended continuation without modification",
+      "source_url": "https://www.globenewswire.com/news-release/2025/04/01/3053162/0/en/tovecimig-ctx-009-meets-primary-endpoint-in-the-ongoing-randomized-phase-2-3-study-in-patients-with-biliary-tract-cancer.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Compass Therapeutics to Participate in the Stifel 2025 Virtual Targeted Oncology Forum",
+      "evt": "to Participate in the Stifel 2025 Virtual Targeted Oncology Forum",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/04/02/3054684/0/en/compass-therapeutics-to-participate-in-the-stifel-2025-virtual-targeted-oncology-forum.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/04/02/3054684/0/en/compass-therapeutics-to-participate-in-the-stifel-2025-virtual-targeted-oncology-forum.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-04-04",
+      "evt": "Share move after to Participate in the Stifel 2025 Virtual",
+      "category": "Other"
+    },
+    {
+      "date": "2025-04-09",
+      "evt": "Share move with market/biotech rally",
+      "category": "Other"
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Compass Therapeutics Announces First Patient Dosed in an Investigator Sponsored Trial of Tovecimig in the First-Line Setting for Patients with Biliary Tract Cancer",
+      "evt": "[ASCO] Phase 2; primary",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2025/04/21/3064600/0/en/compass-therapeutics-announces-first-patient-dosed-in-an-investigator-sponsored-trial-of-tovecimig-in-the-first-line-setting-for-patients-with-biliary-tract-cancer.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/04/21/3064600/0/en/compass-therapeutics-announces-first-patient-dosed-in-an-investigator-sponsored-trial-of-tovecimig-in-the-first-line-setting-for-patients-with-biliary-tract-cancer.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-04-22",
+      "evt": "Share move after ASCO Phase 2 primary",
+      "category": "Other"
+    },
+    {
+      "date": "2025-04-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-04-28",
+      "evt": "[AACR] Preclinical updated: CTX-471 plus tovecimig enhanced efficacy in checkpoint-refractory models with increased tumor killing, antigen presentation and interferon signaling; no patient data",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2025/04/28/3069126/0/en/index.html",
+      "venue": "AACR",
+      "data_type": "preclinical updated",
+      "source_url": "https://www.globenewswire.com/news-release/2025/04/28/3069126/0/en/compass-therapeutics-presents-data-on-enhanced-efficacy-of-ctx-471-in-combination-with-tovecimig-in-checkpoint-refractory-models-at-the-american-association-for-cancer-research-aac.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2025-05-06",
+      "title": "Compass Therapeutics to Participate in Upcoming May Investor Events",
+      "evt": "to Participate in Upcoming May Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/05/06/3074957/0/en/compass-therapeutics-to-participate-in-upcoming-may-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/05/06/3074957/0/en/compass-therapeutics-to-participate-in-upcoming-may-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-05-08",
+      "title": "Compass Therapeutics Reports 2025 First Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports 2025 First Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2025/05/08/3077176/0/en/compass-therapeutics-reports-2025-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/05/08/3077176/0/en/compass-therapeutics-reports-2025-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-05-12",
+      "evt": "Share move with market/biotech rally",
+      "category": "Other"
+    },
+    {
+      "date": "2025-05-28",
+      "title": "Compass Therapeutics to Participate in the Jefferies Global Healthcare Conference",
+      "evt": "to Participate in the Jefferies Global Healthcare Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/05/28/3089415/0/en/compass-therapeutics-to-participate-in-the-jefferies-global-healthcare-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/05/28/3089415/0/en/compass-therapeutics-to-participate-in-the-jefferies-global-healthcare-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-06-05",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-06-18",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-07-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-07-23",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-08-08",
+      "title": "Compass Therapeutics to Present Second Quarter Financial Results and Provide Business Update on August 11, 2025",
+      "evt": "to Present Second Quarter Financial Results and Provide Business Update on August 11, 2025",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2025/08/08/3130354/0/en/compass-therapeutics-to-present-second-quarter-financial-results-and-provide-business-update-on-august-11-2025.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/08/08/3130354/0/en/compass-therapeutics-to-present-second-quarter-financial-results-and-provide-business-update-on-august-11-2025.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-08-11",
+      "title": "Compass Therapeutics Reports 2025 Second Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports 2025 Second Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2025/08/11/3130767/0/en/compass-therapeutics-reports-2025-second-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/08/11/3130767/0/en/compass-therapeutics-reports-2025-second-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-08-12",
+      "title": "Compass Therapeutics Announces Proposed Public Offering",
+      "evt": "Announces Proposed Public Offering",
+      "category": "Financing",
+      "url": "https://www.globenewswire.com/news-release/2025/08/12/3132087/0/en/compass-therapeutics-announces-proposed-public-offering.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/08/12/3132087/0/en/compass-therapeutics-announces-proposed-public-offering.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-08-13",
+      "title": "Compass Therapeutics Announces Pricing of Upsized $120 Million Public Offering",
+      "evt": "Announces Pricing of Upsized $120 Million Public Offering",
+      "category": "Financing",
+      "url": "https://www.globenewswire.com/news-release/2025/08/13/3132264/0/en/compass-therapeutics-announces-pricing-of-upsized-120-million-public-offering.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/08/13/3132264/0/en/compass-therapeutics-announces-pricing-of-upsized-120-million-public-offering.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-08-26",
+      "title": "Compass Therapeutics to Participate in Upcoming September Investor Events",
+      "evt": "to Participate in Upcoming September Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/08/26/3139182/0/en/compass-therapeutics-to-participate-in-upcoming-september-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/08/26/3139182/0/en/compass-therapeutics-to-participate-in-upcoming-september-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-09-30",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-10-08",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-10-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-11-03",
+      "title": "Compass Therapeutics to Participate in Upcoming November Investor Events",
+      "evt": "to Participate in Upcoming November Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/11/03/3179225/0/en/compass-therapeutics-to-participate-in-upcoming-november-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/11/03/3179225/0/en/compass-therapeutics-to-participate-in-upcoming-november-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-11-04",
+      "evt": "[SITC] Preclinical updated: CTX-10726 PD-1\u00d7VEGF-A bispecific showed differentiated dual-pathway activity and supported Phase 1 advancement; no patient data",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2025/11/04/3180398/0/en/compass-therapeutics-presents-preclinical-data-on-ctx-10726-a-differentiated-pd-1-x-vegf-a-bispecific-antibody-at-the-40th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+      "venue": "SITC",
+      "data_type": "preclinical updated",
+      "source_url": "https://www.globenewswire.com/news-release/2025/11/04/3180398/0/en/compass-therapeutics-presents-preclinical-data-on-ctx-10726-a-differentiated-pd-1-x-vegf-a-bispecific-antibody-at-the-40th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2025-11-05",
+      "title": "Compass Therapeutics Reports Third Quarter 2025 Financial Results and Provides Corporate Update",
+      "evt": "Reports Third Quarter 2025 Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2025/11/05/3181347/0/en/compass-therapeutics-reports-third-quarter-2025-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/11/05/3181347/0/en/compass-therapeutics-reports-third-quarter-2025-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "SITC"
+    },
+    {
+      "date": "2025-11-11",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-11-25",
+      "title": "Compass Therapeutics to Participate in Upcoming December Investor Events",
+      "evt": "to Participate in Upcoming December Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/11/25/3194262/0/en/compass-therapeutics-to-participate-in-upcoming-december-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/11/25/3194262/0/en/compass-therapeutics-to-participate-in-upcoming-december-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2025-12-17",
+      "title": "Compass Therapeutics to Participate in the J.P. Morgan 2026 Healthcare Conference",
+      "evt": "to Participate in the J.P. Morgan 2026 Healthcare Conference",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2025/12/17/3206900/0/en/compass-therapeutics-to-participate-in-the-j-p-morgan-2026-healthcare-conference.html",
+      "source_url": "https://www.globenewswire.com/news-release/2025/12/17/3206900/0/en/compass-therapeutics-to-participate-in-the-j-p-morgan-2026-healthcare-conference.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-01-05",
+      "title": "Compass Therapeutics Announces Key Leadership Appointments",
+      "evt": "Announces Key Leadership Appointments",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2026/01/05/3212707/0/en/compass-therapeutics-announces-key-leadership-appointments.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/01/05/3212707/0/en/compass-therapeutics-announces-key-leadership-appointments.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-01-05",
+      "title": "Compass Announces Inducement Grants Under\u00a0Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Compass Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2026/01/05/3213223/0/en/compass-announces-inducement-grants-under-nasdaq-listing-rule-5635-c-4.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/01/05/3213223/0/en/compass-announces-inducement-grants-under-nasdaq-listing-rule-5635-c-4.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-01-06",
+      "title": "Compass Therapeutics Provides Corporate Update",
+      "evt": "Provides Corporate Update",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2026/01/06/3213585/0/en/compass-therapeutics-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/01/06/3213585/0/en/compass-therapeutics-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO GI"
+    },
+    {
+      "date": "2026-01-07",
+      "evt": "Share move after Provides Corporate Update",
+      "category": "Other"
+    },
+    {
+      "date": "2026-01-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-03-05",
+      "title": "Compass Therapeutics Reports 2025 Financial Results and Provides Corporate Update",
+      "evt": "Reports 2025 Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2026/03/05/3250042/0/en/compass-therapeutics-reports-2025-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/03/05/3250042/0/en/compass-therapeutics-reports-2025-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-04-16",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-04-17",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-04-20",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-04-24",
+      "title": "Compass Therapeutics to Announce Topline Secondary Endpoints from the Phase 2/3 COMPANION-002 Study of Tovecimig in Patients with Biliary Tract Cancer",
+      "evt": "[ASCO] Phase 2",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2026/04/24/3281064/0/en/compass-therapeutics-to-announce-topline-secondary-endpoints-from-the-phase-2-3-companion-002-study-of-tovecimig-in-patients-with-biliary-tract-cancer.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/04/24/3281064/0/en/compass-therapeutics-to-announce-topline-secondary-endpoints-from-the-phase-2-3-companion-002-study-of-tovecimig-in-patients-with-biliary-tract-cancer.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-04-27",
+      "evt": "[CALL] Phase 2/3 updated secondary; N=168 (111/57); ORR 17.1% vs 5.3%; PFS 4.7 vs 2.6mo, HR 0.44, p<0.0001; ITT OS 8.9 vs 9.4mo, HR 1.05; crossover OS 12.8 vs 6.1mo; grade 3+ related HTN 44%, neutropenia 36%",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/tovecimig-demonstrates-statistically-significant-benefit",
+      "venue": "CALL",
+      "phase": "Phase 2/3",
+      "data_type": "updated secondary",
+      "patient_size": "N=168 (111/57)",
+      "orr": "17.1% vs 5.3%",
+      "survival": "PFS 4.7 vs 2.6 months; ITT OS 8.9 vs 9.4 months; crossover OS 12.8 vs 6.1 months",
+      "safety": "grade 3+ related hypertension 44%; neutropenia 36%",
+      "source_url": "https://www.globenewswire.com/news-release/2026/04/27/3281512/0/en/tovecimig-demonstrates-statistically-significant-benefit-in-companion-002-randomized-phase-2-3-study-in-patients-with-biliary-tract-cancer.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2026-04-29",
+      "evt": "Share move after CALL Phase 2 3 updated secondary N",
+      "category": "Other"
+    },
+    {
+      "date": "2026-05-01",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-05-05",
+      "title": "Compass Therapeutics Reports 2026 First Quarter Financial Results and Provides Corporate Update",
+      "evt": "Reports 2026 First Quarter Financial Results and Provides Corporate Update",
+      "category": "Corporate",
+      "url": "https://www.globenewswire.com/news-release/2026/05/05/3287540/0/en/compass-therapeutics-reports-2026-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/05/05/3287540/0/en/compass-therapeutics-reports-2026-first-quarter-financial-results-and-provides-corporate-update.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-05-12",
+      "title": "Compass Therapeutics to Participate in Upcoming May Investor Events",
+      "evt": "to Participate in Upcoming May Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2026/05/12/3292725/0/en/compass-therapeutics-to-participate-in-upcoming-may-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/05/12/3292725/0/en/compass-therapeutics-to-participate-in-upcoming-may-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-05-21",
+      "evt": "[ASCO] Phase 1 initial; N=15 evaluable; ORR 20% overall (3/15), 33% at top doses (2/6); responses TNBC/HL/NSCLC, TNBC 10.5+mo and HL 7.5+mo; no DLT, one asymptomatic grade 3 lipase",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-promising-phase-1-clinical-data-ctx",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.2629",
+      "venue": "ASCO",
+      "phase": "Phase 1",
+      "data_type": "initial",
+      "patient_size": "N=15 evaluable",
+      "orr": "20% overall (3/15); 33% at top doses (2/6)",
+      "survival": "TNBC response 10.5+ months; HL response 7.5+ months",
+      "safety": "no DLT; one asymptomatic grade 3 lipase increase",
+      "source_url": "https://www.globenewswire.com/news-release/2026/05/21/3299774/0/en/compass-therapeutics-to-present-promising-phase-1-clinical-data-for-ctx-8371-in-patients-with-advanced-malignancies-treated-in-the-post-checkpoint-inhibitor-setting-at-the-2026-asc.html",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2026-05-28",
+      "title": "Compass Therapeutics to Participate in Upcoming June Investor Events",
+      "evt": "to Participate in Upcoming June Investor Events",
+      "category": "Other",
+      "url": "https://www.globenewswire.com/news-release/2026/05/28/3302708/0/en/compass-therapeutics-to-participate-in-upcoming-june-investor-events.html",
+      "source_url": "https://www.globenewswire.com/news-release/2026/05/28/3302708/0/en/compass-therapeutics-to-participate-in-upcoming-june-investor-events.html",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    }
+  ]
+}

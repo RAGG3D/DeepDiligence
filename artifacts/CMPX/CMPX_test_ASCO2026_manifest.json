@@ -1,0 +1,346 @@
+{
+  "ticker": "CMPX",
+  "event": "ASCO2026",
+  "sheet_name": "Test-ASCO2026",
+  "research_clinical_only": true,
+  "clinical_interpretation_price_blind": true,
+  "pre_event_price_calibration_used": true,
+  "same_day_or_post_event_price_data_used": false,
+  "observed_market_data_used": true,
+  "model_implied_valuation": true,
+  "clinical_only": false,
+  "price_data_used": true,
+  "price_calibration": {
+    "market_ticker": "CMPX",
+    "currency": "USD",
+    "provider": "Yahoo Finance via yfinance",
+    "source_url": "https://finance.yahoo.com/quote/CMPX/history/",
+    "price_field": "unadjusted Close",
+    "window_days": 7,
+    "window_start": "2026-05-14",
+    "window_end_exclusive": "2026-05-21",
+    "sessions": [
+      {
+        "date": "2026-05-14",
+        "close": 1.9800000190734863
+      },
+      {
+        "date": "2026-05-15",
+        "close": 1.8600000143051147
+      },
+      {
+        "date": "2026-05-18",
+        "close": 1.8300000429153442
+      },
+      {
+        "date": "2026-05-19",
+        "close": 1.809999942779541
+      },
+      {
+        "date": "2026-05-20",
+        "close": 1.8899999856948853
+      }
+    ],
+    "session_count": 5,
+    "average_close": 1.8740000009536744,
+    "same_day_or_post_event_prices_used": false,
+    "method": "proportional scaling of existing target LOAs with [0%,100%] constraints",
+    "proportional_scale": 0.9102134185973979,
+    "unrisked_total": 5.199363538544019,
+    "feasible_market_price_min": -2.3475524033130415,
+    "feasible_market_price_max": 7.54691594185706,
+    "prior_risk_adjusted_total": 2.05885780484475,
+    "estimated_breakdown_total": 1.8740000009536744,
+    "relative_error": 0.0,
+    "targets": {
+      "CTX-009 - BTC": {
+        "unrisked_value": -1.801391939126008,
+        "prior_loa": 0.8,
+        "estimated_loa": 0.7281707348779184,
+        "calibrated_market_price": -1.3117208921165437
+      },
+      "CTX-009 - mCRC": {
+        "unrisked_value": 2.369977894482519,
+        "prior_loa": 0.5,
+        "estimated_loa": 0.45510670929869895,
+        "calibrated_market_price": 1.0785928406685985
+      },
+      "CTX-10726 - GC": {
+        "unrisked_value": -0.3583508844932777,
+        "prior_loa": 0.2,
+        "estimated_loa": 0.1820426837194796,
+        "calibrated_market_price": -0.06523515672640551
+      },
+      "CTX-10726 - HCC": {
+        "unrisked_value": 0.29609096861421313,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.02695059727581578
+      },
+      "CTX-10726 - EC": {
+        "unrisked_value": 0.0815115065583788,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.007419286703952619
+      },
+      "CTX-10726 - RCC": {
+        "unrisked_value": 0.39191682533805217,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.03567279533967878
+      },
+      "CTX-471 - ES-SCLC": {
+        "unrisked_value": -0.1878095796937559,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": -0.0170946799578394
+      },
+      "CTX-471 - LCNEC": {
+        "unrisked_value": 0.1166396940757134,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.010616701468880977
+      },
+      "CTX-471 - EP-NEC": {
+        "unrisked_value": 0.10003743487296313,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.009105541558343432
+      },
+      "CTX-8371 - NSCLC": {
+        "unrisked_value": 1.9444759536544987,
+        "prior_loa": 0.5,
+        "estimated_loa": 0.45510670929869895,
+        "calibrated_market_price": 0.8849440525781483
+      },
+      "CTX-8371 - TNBC": {
+        "unrisked_value": 1.0702292434452456,
+        "prior_loa": 0.8,
+        "estimated_loa": 0.7281707348779184,
+        "calibrated_market_price": 0.7793096146873632
+      },
+      "CTX-8371 - HL": {
+        "unrisked_value": 0.9019722179035066,
+        "prior_loa": 0.5,
+        "estimated_loa": 0.45510670929869895,
+        "calibrated_market_price": 0.41049360796891393
+      },
+      "CTX-8371 - HNSCC": {
+        "unrisked_value": 0.08862367269592752,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.008066645609321707
+      },
+      "CTX-8371 - MEL": {
+        "unrisked_value": 0.18544053021604245,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.0910213418597398,
+        "calibrated_market_price": 0.016879045895445807
+      }
+    }
+  },
+  "blind_snapshot": {
+    "frozen_before_post_release_fetch": true,
+    "frozen_at": "2026-07-18T20:34:35.436548+10:00",
+    "original_manifest_sha256": "4e0f0a5e38cf8b795cbf12397bca766a084aeb0885382ea9484985f3cc711cd7",
+    "clinical_artifact_sha256": "c8b0337cd086aae3cac79687dadf419ba8148825258fc5e26724cb7c5d79aeb9",
+    "blind_prediction_sha256": "d5eaf1028aaad06df5c5e8a1a064d5f86bb3b632fe1976cff9f957f312b62bff",
+    "clinical_interpretation_price_blind": true,
+    "blind_stage_post_release_market_data_used": false,
+    "blind_sheet_digest": "9d519baf65d23dac2598283fb7a3942edd08141e7503509962ed8bdae2a027e9",
+    "blind_sheet_original_max_row": 84
+  },
+  "post_release_scoring_market_data_used": true,
+  "post_release_scoring": {
+    "status": "complete",
+    "agent_role": "independent_post_release_agent",
+    "release_date": "2026-05-21",
+    "release_timing_basis": "2026-05-21 17:00 EDT release was after the regular Nasdaq close; start next completed session.",
+    "include_release_date_close": false,
+    "price_field": "unadjusted Close",
+    "source_url": "https://finance.yahoo.com/quote/CMPX/history/",
+    "sessions": [
+      {
+        "date": "2026-05-22",
+        "close": 2.069999933242798
+      },
+      {
+        "date": "2026-05-26",
+        "close": 2.200000047683716
+      },
+      {
+        "date": "2026-05-27",
+        "close": 2.2699999809265137
+      }
+    ],
+    "intraday": {
+      "market_ticker": "CMPX",
+      "granularity": "60m",
+      "regular_session_only": true,
+      "price_field": "unadjusted High",
+      "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CMPX?period1=1779408000&period2=1779926400&interval=60m&includePrePost=false&events=div%2Csplits",
+      "daily_highs": [
+        {
+          "date": "2026-05-22",
+          "raw_high": 2.1500000953674316,
+          "bar_start": "2026-05-22T12:30:00-04:00",
+          "bar_count": 7
+        },
+        {
+          "date": "2026-05-26",
+          "raw_high": 2.2249999046325684,
+          "bar_start": "2026-05-26T15:30:00-04:00",
+          "bar_count": 7
+        },
+        {
+          "date": "2026-05-27",
+          "raw_high": 2.440000057220459,
+          "bar_start": "2026-05-27T10:30:00-04:00",
+          "bar_count": 7
+        }
+      ],
+      "three_day_peak": {
+        "date": "2026-05-27",
+        "raw_high": 2.440000057220459,
+        "bar_start": "2026-05-27T10:30:00-04:00",
+        "bar_count": 7
+      },
+      "independent_agent_note": "Regular-session 60m raw High; bar time identifies the peak hour, not the exact trade minute."
+    },
+    "highest_rjconv_scenario_test": {
+      "rule": "max RJConv. (raw Table-3 conviction product); all exact ties retained",
+      "three_day_real_peak": 2.440000057220459,
+      "three_day_peak_bar_start": "2026-05-27T10:30:00-04:00",
+      "highest_rjconv": 0.16087500000000005,
+      "scenarios": [
+        {
+          "row": 10,
+          "scenario_id": 46,
+          "outcomes": {
+            "CTX-8371 - NSCLC": "Increase",
+            "CTX-8371 - TNBC": "Increase",
+            "CTX-8371 - HL": "Increase"
+          },
+          "rjconv": 0.16087500000000005,
+          "blind_final_market_price": 1.953313461919919,
+          "result": "REACHED",
+          "difference_usd_per_share": 0.4866865953005399,
+          "difference_as_pct_of_real_peak": 0.19946171470788895
+        },
+        {
+          "row": 11,
+          "scenario_id": 47,
+          "outcomes": {
+            "CTX-8371 - NSCLC": "Remain",
+            "CTX-8371 - TNBC": "Increase",
+            "CTX-8371 - HL": "Increase"
+          },
+          "rjconv": 0.16087500000000005,
+          "blind_final_market_price": 1.9241463226151014,
+          "result": "REACHED",
+          "difference_usd_per_share": 0.5158537346053576,
+          "difference_as_pct_of_real_peak": 0.21141546004429013
+        }
+      ]
+    },
+    "target_scores": [
+      {
+        "target": "CTX-8371 - NSCLC",
+        "score": 6,
+        "rationale": "方向基本正确，但平局判断及+$0.0292贡献明显偏保守。"
+      },
+      {
+        "target": "CTX-8371 - TNBC",
+        "score": 7,
+        "rationale": "正确识别最强阳性信号，但+$0.0321仍低估整体反应。"
+      },
+      {
+        "target": "CTX-8371 - HL",
+        "score": 6,
+        "rationale": "阳性方向正确，幅度与 conviction 偏谨慎。"
+      }
+    ],
+    "score_artifact": "/home/nazdaq_44sun/Investment/DeepDiligence/artifacts/CMPX/CMPX_test_ASCO2026_post_release_score.json",
+    "audit": {
+      "blind_prediction_unchanged": true,
+      "blind_sheet_digest": "9d519baf65d23dac2598283fb7a3942edd08141e7503509962ed8bdae2a027e9",
+      "post_release_close_cells": [
+        "D2",
+        "E2",
+        "F2"
+      ],
+      "score_cells": {
+        "CTX-8371 - NSCLC": "M2",
+        "CTX-8371 - TNBC": "Q2",
+        "CTX-8371 - HL": "U2"
+      },
+      "post_release_sessions": [
+        {
+          "date": "2026-05-22",
+          "close": 2.069999933242798
+        },
+        {
+          "date": "2026-05-26",
+          "close": 2.200000047683716
+        },
+        {
+          "date": "2026-05-27",
+          "close": 2.2699999809265137
+        }
+      ],
+      "score_count": 3,
+      "strikethrough_cells": 0
+    }
+  },
+  "research": "/home/nazdaq_44sun/Investment/DeepDiligence/artifacts/CMPX/CMPX_test_ASCO2026_clinical.json",
+  "workbook": "/mnt/c/Users/yzsun/Desktop/DD/CMPX/DCF CMPX.xlsx",
+  "audit": {
+    "sheet": "Test-ASCO2026",
+    "max_row": 84,
+    "max_col": 65,
+    "formulas": 586,
+    "target_universe": 14,
+    "active_targets": 3,
+    "scenario_count": 12,
+    "scenario_ids": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "scenarios_module": {
+      "label": "Test Scenarios - ASCO2026",
+      "divider_row": 912,
+      "first_id": 46,
+      "last_id": 57
+    },
+    "research_clinical_only": true,
+    "clinical_interpretation_price_blind": true,
+    "pre_event_price_calibration_used": true,
+    "same_day_or_post_event_price_data_used": false,
+    "average_close": 1.8740000009536744,
+    "base_breakdown_total": 1.8740000009536744,
+    "base_price_relative_error": 0.0,
+    "model_implied_valuation": true,
+    "observed_market_data_used": true,
+    "native_data_table": "B8:C21",
+    "calculation_state": "automatic_non_stale"
+  },
+  "blind_stage_same_day_or_post_event_price_data_used": false,
+  "rjconv_naming_migration": {
+    "migrated_at": "2026-07-18T11:16:04+00:00",
+    "scope": "terminology_only",
+    "old_main_label": "Conv.",
+    "new_main_label": "RJConv.",
+    "formula_or_value_change": false,
+    "table3_target_conviction_label_retained": true
+  }
+}

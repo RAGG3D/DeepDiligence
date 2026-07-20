@@ -2,7 +2,7 @@
 """
 clinical_trials_fetcher.py -- Fetch clinical trial data from ClinicalTrials.gov
 
-Extracts NCT numbers from company 10-K/press releases and fetches detailed trial data
+Extracts NCT numbers from company annual reports / press releases and fetches detailed trial data
 including indications, phases, and status.
 
 Usage:
@@ -19,9 +19,11 @@ import sys
 import time
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
-from datetime import datetime
+from datetime import date, datetime, timedelta
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
+from datastore.research_fact_store import upsert_research_facts
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -32,6 +34,27 @@ logger = logging.getLogger(__name__)
 # ══════════════════════════════════════════════════════════════════════════════
 
 CLINICALTRIALS_API_BASE = "https://clinicaltrials.gov/api/v2"
+
+
+def sponsor_search_names(company_name: str) -> List[str]:
+    """Exact sponsor name followed by a legal-suffix fallback.
+
+    ClinicalTrials.gov lead-sponsor search is unexpectedly literal for some
+    issuers: ``Protara Therapeutics, Inc.`` returns zero while the registered
+    sponsor ``Protara Therapeutics`` returns all studies.  Preserve the user's
+    exact name first and add only one conservatively stripped fallback.
+    """
+    exact = re.sub(r"\s+", " ", str(company_name or "")).strip()
+    if not exact:
+        return []
+    stripped = re.sub(
+        r"(?:,?\s+(?:incorporated|inc\.?|corporation|corp\.?|limited|ltd\.?|"
+        r"plc|llc|l\.l\.c\.|ag|n\.v\.|nv|s\.a\.|sa))\s*$",
+        "",
+        exact,
+        flags=re.IGNORECASE,
+    ).strip(" ,")
+    return [exact] if not stripped or stripped == exact else [exact, stripped]
 
 
 def fetch_trial_details(nct_id: str) -> Optional[Dict]:
@@ -137,11 +160,13 @@ def extract_nct_numbers(text: str) -> List[str]:
     return sorted(nct_ids)
 
 
-def fetch_latest_10k_text(ticker: str) -> Optional[str]:
+def fetch_latest_annual_report_text(ticker: str) -> Optional[str]:
     """
-    Fetch latest 10-K text from SEC EDGAR.
+    Fetch latest annual-report text from SEC EDGAR.
 
     Returns full text content for NCT extraction.
+
+    Supports both domestic issuers (10-K) and foreign private issuers (20-F).
     """
     from core.sec_fetcher import SECFetcher
 
@@ -157,33 +182,51 @@ def fetch_latest_10k_text(ticker: str) -> Optional[str]:
         response.raise_for_status()
         data = response.json()
 
-        # Find latest 10-K
+        # Find latest annual report. Prefer 10-K/10-K/A for domestic issuers,
+        # then 20-F/20-F/A for FPIs such as MOLN.
         recent_filings = data.get("filings", {}).get("recent", {})
         forms = recent_filings.get("form", [])
         accession_numbers = recent_filings.get("accessionNumber", [])
+        primary_docs = recent_filings.get("primaryDocument", [])
 
-        for form, accession in zip(forms, accession_numbers):
-            if form == "10-K":
-                # Construct document URL
+        annual_forms = {"10-K", "10-K/A", "20-F", "20-F/A"}
+        cik_num = str(int(cik))
+
+        for form, accession, primary_doc in zip(forms, accession_numbers, primary_docs):
+            if form in annual_forms:
                 accession_no_dash = accession.replace("-", "")
-                doc_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_no_dash}/{accession}.txt"
+                if primary_doc:
+                    doc_url = (
+                        f"https://www.sec.gov/Archives/edgar/data/"
+                        f"{cik_num}/{accession_no_dash}/{primary_doc}"
+                    )
+                else:
+                    doc_url = (
+                        f"https://www.sec.gov/Archives/edgar/data/"
+                        f"{cik_num}/{accession_no_dash}/{accession}.txt"
+                    )
 
                 doc_response = requests.get(doc_url, headers=headers, timeout=30)
                 doc_response.raise_for_status()
 
                 return doc_response.text
 
-        logger.warning(f"No 10-K found for {ticker}")
+        logger.warning(f"No 10-K/20-F annual report found for {ticker}")
         return None
 
     except Exception as e:
-        logger.error(f"Failed to fetch 10-K for {ticker}: {e}")
+        logger.error(f"Failed to fetch annual report for {ticker}: {e}")
         return None
+
+
+def fetch_latest_10k_text(ticker: str) -> Optional[str]:
+    """Backward-compatible alias for older callers."""
+    return fetch_latest_annual_report_text(ticker)
 
 
 def fetch_press_releases(ticker: str) -> List[str]:
     """
-    Fetch recent press releases from SEC EDGAR 8-K filings.
+    Fetch recent press releases from SEC EDGAR 8-K / 6-K filings.
 
     Returns list of text contents.
     """
@@ -201,25 +244,43 @@ def fetch_press_releases(ticker: str) -> List[str]:
         response.raise_for_status()
         data = response.json()
 
-        # Get recent 8-K filings (last 2 years)
+        # Get recent 8-K/6-K filings (last 2 years). FPIs file clinical
+        # updates and press releases on 6-K, so ignoring 6-K misses many NCTs.
         recent_filings = data.get("filings", {}).get("recent", {})
         forms = recent_filings.get("form", [])
         accession_numbers = recent_filings.get("accessionNumber", [])
+        primary_docs = recent_filings.get("primaryDocument", [])
         filing_dates = recent_filings.get("filingDate", [])
 
         press_release_texts = []
 
-        for form, accession, filing_date in zip(forms, accession_numbers, filing_dates):
-            if form != "8-K":
+        # Recency cutoff derived from the build date (last 2 years), not a
+        # frozen literal, so the NCT-extraction window stays consistent across
+        # builds instead of drifting wider every year.
+        cutoff = (datetime.now() - timedelta(days=730)).strftime("%Y-%m-%d")
+
+        cik_num = str(int(cik))
+        for form, accession, primary_doc, filing_date in zip(
+            forms, accession_numbers, primary_docs, filing_dates
+        ):
+            if form not in {"8-K", "8-K/A", "6-K", "6-K/A"}:
                 continue
 
             # Only process recent filings (last 2 years)
-            if filing_date < "2024-01-01":
+            if filing_date < cutoff:
                 continue
 
-            # Construct 8-K document URL
             accession_no_dash = accession.replace("-", "")
-            doc_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_no_dash}/{accession}.txt"
+            if primary_doc:
+                doc_url = (
+                    f"https://www.sec.gov/Archives/edgar/data/"
+                    f"{cik_num}/{accession_no_dash}/{primary_doc}"
+                )
+            else:
+                doc_url = (
+                    f"https://www.sec.gov/Archives/edgar/data/"
+                    f"{cik_num}/{accession_no_dash}/{accession}.txt"
+                )
 
             try:
                 doc_response = requests.get(doc_url, headers=headers, timeout=10)
@@ -261,17 +322,19 @@ def get_company_trials(ticker: str, company_name: Optional[str] = None) -> Dict:
     """
     logger.info(f"Fetching clinical trial data for {ticker}...")
 
-    # Step 1: Extract NCT numbers from 10-K
-    logger.info("Step 1: Extracting NCT numbers from latest 10-K...")
+    # Step 1: Extract NCT numbers from annual report
+    logger.info("Step 1: Extracting NCT numbers from latest annual report...")
     nct_from_10k = []
 
-    text_10k = fetch_latest_10k_text(ticker)
+    text_10k = fetch_latest_annual_report_text(ticker)
     if text_10k:
         nct_from_10k = extract_nct_numbers(text_10k)
-        logger.info(f"  Found {len(nct_from_10k)} NCT IDs in 10-K: {nct_from_10k}")
+        logger.info(
+            f"  Found {len(nct_from_10k)} NCT IDs in annual report: {nct_from_10k}"
+        )
 
     # Step 2: Extract NCT numbers from press releases
-    logger.info("Step 2: Extracting NCT numbers from recent 8-K filings...")
+    logger.info("Step 2: Extracting NCT numbers from recent 8-K/6-K filings...")
     nct_from_press = []
 
     press_texts = fetch_press_releases(ticker)
@@ -284,8 +347,17 @@ def get_company_trials(ticker: str, company_name: Optional[str] = None) -> Dict:
     # Step 3: Search by company name (if provided)
     nct_from_search = []
     if company_name:
-        logger.info(f"Step 3: Searching ClinicalTrials.gov for '{company_name}'...")
-        nct_from_search = search_trials_by_sponsor(company_name)
+        names = sponsor_search_names(company_name)
+        logger.info(f"Step 3: Searching ClinicalTrials.gov for '{names[0]}'...")
+        for index, sponsor_name in enumerate(names):
+            if index:
+                logger.info(
+                    f"  Exact sponsor search returned zero; retrying without "
+                    f"legal suffix: '{sponsor_name}'"
+                )
+            nct_from_search = search_trials_by_sponsor(sponsor_name)
+            if nct_from_search:
+                break
         logger.info(f"  Found {len(nct_from_search)} NCT IDs via sponsor search")
 
     # Combine and deduplicate
@@ -321,6 +393,38 @@ def get_company_trials(ticker: str, company_name: Optional[str] = None) -> Dict:
         if phase not in phases_summary:
             phases_summary[phase] = []
         phases_summary[phase].append(nct_id)
+
+    facts = []
+    for nct_id, trial in trials.items():
+        source = f"https://clinicaltrials.gov/study/{nct_id}"
+        common = {
+            "subject": nct_id,
+            "indication": "; ".join(trial.get("conditions") or []),
+            "population": "; ".join(trial.get("conditions") or []),
+            "as_of_date": date.today().isoformat(),
+            "source_url": source,
+            "source_kind": "clinical_trial_registry",
+            "classification": "Reported Fact",
+            "status": "reported",
+        }
+        for metric, value in (
+            ("title", trial.get("title")),
+            ("status", trial.get("status")),
+            ("phase", trial.get("phase")),
+            ("sponsor", trial.get("sponsor")),
+            ("interventions", "; ".join(trial.get("interventions") or [])),
+            ("start_date", trial.get("start_date")),
+            ("primary_completion_date", trial.get("completion_date")),
+        ):
+            if value:
+                facts.append({
+                    **common,
+                    "metric_group": "trial",
+                    "metric": metric,
+                    "value": value,
+                })
+    stored = upsert_research_facts(facts, ticker)
+    logger.info("Database scan active: stored/refreshed %d registry facts", len(stored))
 
     return {
         "nct_ids": all_nct_ids,
@@ -359,7 +463,7 @@ def main():
     )
     parser.add_argument("--ticker", required=True, help="Stock ticker (e.g., CMPX)")
     parser.add_argument("--company-name", help="Company name for sponsor search")
-    parser.add_argument("--output-dir", help="Output directory (default: C:\\Users\\yzsun\\Desktop\\DD\\{TICKER})")
+    parser.add_argument("--output-dir", help="Output directory (default: /mnt/c/Users/yzsun/Desktop/DD/{TICKER} on WSL)")
 
     args = parser.parse_args()
 
@@ -367,7 +471,10 @@ def main():
     if args.output_dir:
         output_dir = Path(args.output_dir)
     else:
-        output_dir = Path(f"C:/Users/yzsun/Desktop/DD/{args.ticker}")
+        wsl_dir = Path(f"/mnt/c/Users/yzsun/Desktop/DD/{args.ticker}")
+        output_dir = wsl_dir if wsl_dir.parent.exists() else Path(
+            f"C:/Users/yzsun/Desktop/DD/{args.ticker}"
+        )
 
     # Fetch trial data
     trial_data = get_company_trials(args.ticker, args.company_name)

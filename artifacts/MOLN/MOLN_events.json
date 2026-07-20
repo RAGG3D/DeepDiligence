@@ -1,0 +1,112 @@
+[
+  {
+    "date": "2023-08-24",
+    "evt": "H1 update lowered expense guidance; cash CHF218m",
+    "category": "Corporate"
+  },
+  {
+    "date": "2023-10-26",
+    "evt": "Q3 update: expense guidance and cash position",
+    "category": "Corporate"
+  },
+  {
+    "date": "2024-01-05",
+    "evt": "Novartis returned ensovibep rights; program terminated",
+    "category": "Corporate"
+  },
+  {
+    "date": "2024-01-08",
+    "evt": "Orano DLL3 RDT co-development announced",
+    "category": "Partnership"
+  },
+  {
+    "date": "2024-03-14",
+    "evt": "FY2023 results; operating expenses CHF68.1m",
+    "category": "Corporate"
+  },
+  {
+    "date": "2024-06-11",
+    "evt": "MP0712 preclinical data presented at SNMMI",
+    "category": "Clinical Data"
+  },
+  {
+    "date": "2024-08-26",
+    "evt": "H1 update: MP0712 nominated; Orano highlighted",
+    "category": "Corporate"
+  },
+  {
+    "date": "2024-10-22",
+    "evt": "Orano agreement revised; MP0726 rights retained",
+    "category": "Partnership"
+  },
+  {
+    "date": "2024-10-29",
+    "evt": "$20m ADS offering priced",
+    "category": "Financing"
+  },
+  {
+    "date": "2025-01-12",
+    "evt": "Orano partnership expanded to ten RDT programs",
+    "category": "Partnership"
+  },
+  {
+    "date": "2025-05-15",
+    "evt": "Q1: Orano expansion; MP0712 IND expected",
+    "category": "Corporate"
+  },
+  {
+    "date": "2025-08-25",
+    "evt": "H1 update: MP0533 activity; runway into 2027",
+    "category": "Corporate"
+  },
+  {
+    "date": "2025-10-30",
+    "evt": "MP0712 IND filed; Phase 1 launch expected",
+    "category": "Regulatory"
+  },
+  {
+    "date": "2025-11-12",
+    "evt": "Initial human MP0712 imaging shown at TRP Europe",
+    "category": "Clinical Data"
+  },
+  {
+    "date": "2026-01-11",
+    "evt": "JPM: MP0712 trial started; MP0317 open",
+    "category": "Clinical Data"
+  },
+  {
+    "date": "2026-03-12",
+    "evt": "FY2025 results; MP0712 study initiated",
+    "category": "Corporate"
+  },
+  {
+    "date": "2026-04-14",
+    "evt": "AGM approved proposals; Clare Fisher elected",
+    "category": "Corporate"
+  },
+  {
+    "date": "2026-04-19",
+    "evt": "MP0632 lead nominated; AACR data presented",
+    "category": "Clinical Data"
+  },
+  {
+    "date": "2026-05-01",
+    "evt": "MP0317 Phase 1 data published in Nature Cancer",
+    "category": "Clinical Data"
+  },
+  {
+    "date": "2026-05-12",
+    "evt": "Q1: MP0712 and MP0317 trials initiated",
+    "category": "Corporate"
+  },
+  {
+    "date": "2026-07-02",
+    "evt": "First patients dosed in MP0712 Phase 1/2a",
+    "category": "Clinical Data"
+  },
+  {
+    "date": "2026-07-06",
+    "evt": "MP0712 dosing ongoing; initial data expected",
+    "category": "Clinical Data"
+  }
+]

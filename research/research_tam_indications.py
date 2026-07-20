@@ -23,6 +23,17 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
+REPO = Path(__file__).resolve().parent.parent
+if str(REPO) not in sys.path:
+    sys.path.insert(0, str(REPO))
+
+from datastore.research_fact_store import (
+    database_sync_prompt,
+    extract_database_updates,
+    scan_research_context,
+    upsert_research_facts,
+)
+
 try:
     from google import genai
 except ImportError:
@@ -168,6 +179,7 @@ def research_indication(
         indication_full=info["full_name"],
         indication_desc=info["description"],
     )
+    prompt += database_sync_prompt(scan_research_context("TAM"))
 
     log.info(f"  Querying Gemini for {indication} ({info['full_name']})...")
 
@@ -180,6 +192,9 @@ def research_indication(
     except Exception as e:
         log.error(f"  Gemini error for {indication}: {e}")
         return None
+
+    stored = upsert_research_facts(extract_database_updates(text), "TAM")
+    log.info("  Database scan active: stored/refreshed %d facts", len(stored))
 
     # Extract JSON from response
     json_m = re.search(r'```json\s*(.*?)\s*```', text, re.DOTALL)

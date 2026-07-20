@@ -1,0 +1,65 @@
+{
+  "source": "Manual Codex critical judgement using Protara 2025 Form 10-K, May 2026 corporate presentation, current ClinicalTrials.gov records, FDA labels, company clinical releases, and cited peer publications; as of 2026-07-11",
+  "economic_share": {
+    "IV-Choline-Chloride": 1.0,
+    "TARA-002-LM": 1.0,
+    "TARA-002-NMIBC": 1.0
+  },
+  "ratings": {
+    "IV-Choline-Chloride": {
+      "PS": "BIC"
+    },
+    "TARA-002-LM": {
+      "LM": "T1"
+    },
+    "TARA-002-NMIBC": {
+      "NMIBC-BN": "T1",
+      "NMIBC-BU": "T1",
+      "NMIBC-PAP": "AVG",
+      "NMIBC-SYS": "AVG"
+    }
+  },
+  "market_share": {
+    "IV-Choline-Chloride": {
+      "PS": {
+        "base_peak": 0.30,
+        "bull_peak": 0.45,
+        "bear_peak": 0.12
+      }
+    },
+    "TARA-002-LM": {
+      "LM": {
+        "base_peak": 0.25,
+        "bull_peak": 0.40,
+        "bear_peak": 0.10
+      }
+    },
+    "TARA-002-NMIBC": {
+      "NMIBC-BN": {
+        "base_peak": 0.07,
+        "bull_peak": 0.13,
+        "bear_peak": 0.02
+      },
+      "NMIBC-BU": {
+        "base_peak": 0.09,
+        "bull_peak": 0.16,
+        "bear_peak": 0.03
+      },
+      "NMIBC-PAP": {
+        "base_peak": 0.0,
+        "bull_peak": 0.0,
+        "bear_peak": 0.0
+      },
+      "NMIBC-SYS": {
+        "base_peak": 0.0,
+        "bull_peak": 0.0,
+        "bear_peak": 0.0
+      }
+    }
+  },
+  "market_share_notes": {
+    "IV-Choline-Chloride": "INCLUDE PS: the 30% base peak reflects first-mover status, no approved IV choline product globally, an estimated 30,000 long-term home-PS population and 78% reported choline deficiency, offset by a biomarker primary endpoint, uncertain payer conversion and compounding/workflow friction; 12% bear and 45% bull bracket slow versus broad guideline-led adoption.",
+    "TARA-002-LM": "INCLUDE LM: the 25% base peak recognizes the potential first FDA-approved localized therapy and 10/10 clinical success among eight-week evaluable STARBORN-1 patients at the April 10, 2026 cutoff, but discounts the 16-patient dataset, non-randomized design, variable lesion biology and strong low-cost off-label sclerotherapy outcomes; 10% bear and 40% bull reflect these adoption bounds.",
+    "TARA-002-NMIBC": "INCLUDE NMIBC-BU: 68.2% six-month landmark CR and clean tolerability support a differentiated BCG-free option, but Inlexzo's 82% any-time CR and several approved/late-stage bladder-sparing competitors cap the base peak at 9%. INCLUDE NMIBC-BN: 55.0% twelve-month landmark CR and no grade 3+ treatment-related events support inclusion, while BCG, intravesical chemotherapy and sasanlimab plus BCG constrain the base peak to 7%. EXCLUDE NMIBC-PAP: papillary-only expansion remains preclinical/exploratory with no active registrational efficacy dataset. EXCLUDE NMIBC-SYS: systemic priming or subcutaneous administration remains exploratory and has no independently financeable clinical program or approval path."
+  }
+}

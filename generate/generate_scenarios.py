@@ -10,6 +10,7 @@ Usage:
 """
 
 import argparse
+import json
 import logging
 import re
 import shutil
@@ -19,6 +20,12 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from core.model_assumptions import filter_assets_by_assumptions
 
 
 _EMPTY_CALC_CHAIN = (
@@ -74,13 +81,40 @@ _PHASE_TO_STAGE = {
 
 
 def parse_gemini_reports(report_dir: Path, ticker: str) -> List[PipelineAsset]:
-    """Parse all per-drug Gemini Deep Research reports in a directory."""
+    """Parse the newest per-drug Gemini report for each asset.
+
+    Research is intentionally versioned rather than overwritten.  Reading every
+    version duplicates drugs and, worse, lets stale clinical assumptions flow
+    into Scenarios/Pipeline.  The timestamp embedded in the filename is the
+    authoritative version; mtime is only a fallback for non-standard names.
+    """
     pattern = f"{ticker}_*_research_*.md"
     files = sorted(report_dir.glob(pattern))
     if not files:
         logger.error(f"No report files matching '{pattern}' in {report_dir}")
         return []
-    logger.info(f"Found {len(files)} report files in {report_dir}")
+    latest: Dict[str, Path] = {}
+    prefix = f"{ticker}_"
+    marker = "_research_"
+    for path in files:
+        name = path.stem
+        if not name.startswith(prefix) or marker not in name:
+            continue
+        drug, version = name[len(prefix):].split(marker, 1)
+        key = drug.upper()
+        current = latest.get(key)
+        current_version = (
+            current.stem.split(marker, 1)[1] if current is not None else ""
+        )
+        if current is None or (version, path.stat().st_mtime) > (
+            current_version, current.stat().st_mtime
+        ):
+            latest[key] = path
+    files = sorted(latest.values())
+    logger.info(
+        f"Found {len(files)} latest per-drug reports in {report_dir} "
+        f"({len(list(report_dir.glob(pattern)))} versioned files total)"
+    )
     assets = []
     for f in files:
         asset = _parse_single_drug_report(f, ticker)
@@ -825,34 +859,44 @@ def _asset_full_name(asset: PipelineAsset) -> str:
 
 def _spacer_row(row_num: int) -> str:
     """Empty spacer row — only Y column styled."""
-    return f'<row r="{row_num}"><c r="Y{row_num}" s="502"/></row>'
+    return (
+        f'<row r="{row_num}" customFormat="false" ht="15" hidden="false" '
+        f'customHeight="false" outlineLevel="0" collapsed="false">'
+        f'<c r="Y{row_num}" s="247"/></row>'
+    )
 
 
 def _section_divider_row(row_num: int, label: str) -> str:
     """Section divider with thick bottom border (e.g. 'Break Down')."""
-    parts = [f'<row r="{row_num}" ht="15.75" thickBot="1">']
+    parts = [
+        f'<row r="{row_num}" customFormat="false" ht="15" hidden="false" '
+        f'customHeight="false" outlineLevel="0" collapsed="false">'
+    ]
     for ci in range(1, 14):
         c = _col_letter(ci)
         if c == 'C':
-            parts.append(f'<c r="C{row_num}" s="57" t="inlineStr"><is><t>{_xml_escape(label)}</t></is></c>')
+            parts.append(f'<c r="C{row_num}" s="229" t="inlineStr"><is><t>{_xml_escape(label)}</t></is></c>')
         else:
-            parts.append(f'<c r="{c}{row_num}" s="57"/>')
+            parts.append(f'<c r="{c}{row_num}" s="229"/>')
     for ci in range(14, 25):
-        parts.append(f'<c r="{_col_letter(ci)}{row_num}" s="15"/>')
-    parts.append(f'<c r="Y{row_num}" s="497"/>')
+        parts.append(f'<c r="{_col_letter(ci)}{row_num}" s="230"/>')
+    parts.append(f'<c r="Y{row_num}" s="231"/>')
     parts.append('</row>')
     return ''.join(parts)
 
 
 def _scenario_header_row(row_num: int, scenario_num: int, scenario_name: str) -> str:
     """Scenario header row: B=number, C=name, D-X empty."""
-    parts = [f'<row r="{row_num}">']
-    parts.append(f'<c r="A{row_num}" s="69"/>')
-    parts.append(f'<c r="B{row_num}" s="433"><v>{scenario_num}</v></c>')
-    parts.append(f'<c r="C{row_num}" s="70" t="inlineStr"><is><t>{_xml_escape(scenario_name)}</t></is></c>')
+    parts = [
+        f'<row r="{row_num}" customFormat="false" ht="15" hidden="false" '
+        f'customHeight="false" outlineLevel="0" collapsed="false">'
+    ]
+    parts.append(f'<c r="A{row_num}" s="248"/>')
+    parts.append(f'<c r="B{row_num}" s="249"><v>{scenario_num}</v></c>')
+    parts.append(f'<c r="C{row_num}" s="250" t="inlineStr"><is><t>{_xml_escape(scenario_name)}</t></is></c>')
     for ci in range(4, 25):
-        parts.append(f'<c r="{_col_letter(ci)}{row_num}" s="71"/>')
-    parts.append(f'<c r="Y{row_num}" s="502"/>')
+        parts.append(f'<c r="{_col_letter(ci)}{row_num}" s="251"/>')
+    parts.append(f'<c r="Y{row_num}" s="247"/>')
     parts.append('</row>')
     return ''.join(parts)
 
@@ -860,18 +904,21 @@ def _scenario_header_row(row_num: int, scenario_num: int, scenario_name: str) ->
 def _scenario_asset_row(row_num: int, header_row: int, abs_asset_row: int,
                         abs_first: int, abs_last: int, first_ms_row: int) -> str:
     """Scenario asset row with SUMIF formulas referencing Absolute section."""
-    parts = [f'<row r="{row_num}">']
-    parts.append(f'<c r="A{row_num}" s="434"><f>B{header_row}</f></c>')
-    parts.append(f'<c r="B{row_num}" s="52" t="str"><f>C{header_row}</f><v></v></c>')
-    parts.append(f'<c r="C{row_num}" s="73"><f>$C${abs_asset_row}</f></c>')
-    parts.append(f'<c r="D{row_num}" s="71"/>')
+    parts = [
+        f'<row r="{row_num}" customFormat="false" ht="15" hidden="false" '
+        f'customHeight="false" outlineLevel="0" collapsed="false">'
+    ]
+    parts.append(f'<c r="A{row_num}" s="252"><f>B{header_row}</f></c>')
+    parts.append(f'<c r="B{row_num}" s="153" t="str"><f>C{header_row}</f><v></v></c>')
+    parts.append(f'<c r="C{row_num}" s="253"><f>$C${abs_asset_row}</f></c>')
+    parts.append(f'<c r="D{row_num}" s="251"/>')
     for ci in range(5, 25):
         c = _col_letter(ci)
         f = (f'IF($Y{first_ms_row}=0,0,'
              f'SUMIF($C${abs_first}:$C${abs_last},$C{row_num},'
              f'{c}${abs_first}:{c}${abs_last}))')
-        parts.append(f'<c r="{c}{row_num}" s="74"><f>{f}</f></c>')
-    parts.append(f'<c r="Y{row_num}" s="503"/>')
+        parts.append(f'<c r="{c}{row_num}" s="254"><f>{f}</f></c>')
+    parts.append(f'<c r="Y{row_num}" s="255"/>')
     parts.append('</row>')
     return ''.join(parts)
 
@@ -882,30 +929,36 @@ def _scenario_ms_row(row_num: int, scenario_asset_row: int,
 
     peak: float value (literal) or str formula (e.g. '=$Y$11').
     """
-    parts = [f'<row r="{row_num}">']
-    parts.append(f'<c r="A{row_num}" s="434"><f>A{scenario_asset_row}</f></c>')
-    parts.append(f'<c r="B{row_num}" s="52" t="str"><f>B{scenario_asset_row}</f><v></v></c>')
+    parts = [
+        f'<row r="{row_num}" customFormat="false" ht="15" hidden="false" '
+        f'customHeight="false" outlineLevel="0" collapsed="false">'
+    ]
+    parts.append(f'<c r="A{row_num}" s="252"><f>A{scenario_asset_row}</f></c>')
+    parts.append(f'<c r="B{row_num}" s="153" t="str"><f>B{scenario_asset_row}</f><v></v></c>')
     # C: MS name formula
     if indication in ("All", "All Indications Combined"):
         cf = f'C{scenario_asset_row}&amp;" Market Share"'
     else:
         cf = f'C{scenario_asset_row}&amp;" {_xml_escape(indication)} Market Share"'
-    parts.append(f'<c r="C{row_num}" s="75" t="str"><f>{cf}</f><v></v></c>')
-    parts.append(f'<c r="D{row_num}" s="52" t="inlineStr"><is><t>[%]</t></is></c>')
+    parts.append(f'<c r="C{row_num}" s="204" t="str"><f>{cf}</f><v></v></c>')
+    parts.append(f'<c r="D{row_num}" s="153" t="inlineStr"><is><t>[%]</t></is></c>')
     # E-G: literal 0
     for ci in range(5, 8):
-        parts.append(f'<c r="{_col_letter(ci)}{row_num}" s="76"><v>0</v></c>')
+        parts.append(f'<c r="{_col_letter(ci)}{row_num}" s="256"><v>0</v></c>')
     # H-X: IF formulas
     for ci in range(8, 25):
         c = _col_letter(ci)
         p = _col_letter(ci - 1)
-        f = f'IF({c}{scenario_asset_row}=5,$Y{row_num},MAX($I{row_num}:{p}{row_num}))'
-        parts.append(f'<c r="{c}{row_num}" s="77"><f>{f}</f></c>')
+        # Start the carry-forward range at the first historical column.  The
+        # former $I:<prior> range is reversed for H/I, which Excel normalizes
+        # into a range containing the formula cell itself (a circular ref).
+        f = f'IF({c}{scenario_asset_row}=5,$Y{row_num},MAX($E{row_num}:{p}{row_num}))'
+        parts.append(f'<c r="{c}{row_num}" s="257"><f>{f}</f></c>')
     # Y: peak
     if isinstance(peak, str) and peak.startswith('='):
-        parts.append(f'<c r="Y{row_num}" s="505"><f>{peak[1:]}</f></c>')
+        parts.append(f'<c r="Y{row_num}" s="258"><f>{peak[1:]}</f></c>')
     else:
-        parts.append(f'<c r="Y{row_num}" s="505"><v>{peak}</v></c>')
+        parts.append(f'<c r="Y{row_num}" s="258"><v>{peak}</v></c>')
     parts.append('</row>')
     return ''.join(parts)
 
@@ -935,6 +988,27 @@ def _breakdown_peak_provider(included_assets: set, abs_ms_rows: Dict):
     """Formula ref for included assets, 0 for excluded (disabled)."""
     def provider(asset_name, ind):
         if asset_name in included_assets:
+            r = abs_ms_rows.get((asset_name, ind))
+            return f"=$Y${r}" if r else 0
+        return 0
+    return provider
+
+
+def _single_indication_peak_provider(selected_asset: str, selected_ind: str,
+                                     abs_ms_rows: Dict):
+    """Formula ref for one selected drug×indication, 0 for everything else."""
+    def provider(asset_name, ind):
+        if asset_name == selected_asset and ind == selected_ind:
+            r = abs_ms_rows.get((asset_name, ind))
+            return f"=$Y${r}" if r else 0
+        return 0
+    return provider
+
+
+def _cumulative_indication_peak_provider(included_pairs: set, abs_ms_rows: Dict):
+    """Formula ref for included drug×indication pairs, 0 for excluded pairs."""
+    def provider(asset_name, ind):
+        if (asset_name, ind) in included_pairs:
             r = abs_ms_rows.get((asset_name, ind))
             return f"=$Y${r}" if r else 0
         return 0
@@ -971,6 +1045,111 @@ def _extract_unified_peaks(assets: List[PipelineAsset], scenario: str) -> Option
                 if shares:
                     peaks[asset.name][ind] = max(shares.values())
     return peaks if has_data else None
+
+
+def _load_model_assumptions(report_dir: Path, ticker: str,
+                            explicit_path: Optional[Path] = None) -> Dict:
+    """Load approved model assumptions shared by Scenarios and Pipeline.
+
+    The research reports provide a full year-by-year curve.  User/GPT-approved
+    assumptions can override the curve's peak without editing the reports:
+
+      {
+        "market_share": {
+          "MP0712": {
+            "SCLC": {"base_peak": 0.12, "bull_peak": 0.24, "bear_peak": 0.04}
+          }
+        }
+      }
+    """
+    candidates: List[Path] = []
+    if explicit_path:
+        candidates.append(explicit_path)
+    candidates.extend([
+        report_dir / f"{ticker}_model_assumptions.json",
+        report_dir / f"{ticker.upper()}_model_assumptions.json",
+        report_dir.parent / f"{ticker}_model_assumptions.json",
+        report_dir.parent / f"{ticker.upper()}_model_assumptions.json",
+    ])
+    for path in candidates:
+        if not path or not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            logger.warning(f"Could not read assumptions file {path}: {exc}")
+            continue
+        logger.info(f"Loaded model assumptions: {path}")
+        return data
+    return {}
+
+
+def _coerce_peak(value) -> Optional[float]:
+    if value is None or value == "":
+        return None
+    try:
+        peak = float(value)
+    except Exception:
+        return None
+    if peak > 1:
+        peak /= 100.0
+    return max(0.0, peak)
+
+
+def _scale_curve_to_peak(curve: Dict[int, float], peak: float) -> Dict[int, float]:
+    """Scale an existing launch/ramp shape to a new peak."""
+    if not curve:
+        return curve
+    old_peak = max(curve.values()) if curve else 0.0
+    if old_peak <= 0:
+        return {year: (peak if value else 0.0) for year, value in curve.items()}
+    scale = peak / old_peak
+    return {year: min(peak, max(0.0, value * scale)) for year, value in curve.items()}
+
+
+def _apply_market_share_assumptions(assets: List[PipelineAsset], assumptions: Dict) -> None:
+    overrides = assumptions.get("market_share") or {}
+    if not isinstance(overrides, dict) or not overrides:
+        return
+
+    for asset in assets:
+        drug_overrides = overrides.get(asset.name) or overrides.get(asset.name.upper())
+        if not isinstance(drug_overrides, dict):
+            continue
+        for ind, spec in drug_overrides.items():
+            if not isinstance(spec, dict):
+                continue
+            if ind not in asset.market_shares:
+                logger.warning(f"{asset.name}/{ind}: market-share override ignored; indication not parsed")
+                continue
+
+            # Preserve an explicit numeric zero. ``x or fallback`` loses zero
+            # and would accidentally keep a non-zero report curve in a bear
+            # case (or in an exclusion spec before filtering).
+            base_peak = _coerce_peak(
+                spec["base_peak"] if "base_peak" in spec else spec.get("base")
+            )
+            bull_peak = _coerce_peak(
+                spec["bull_peak"] if "bull_peak" in spec else spec.get("bull")
+            )
+            bear_peak = _coerce_peak(
+                spec["bear_peak"] if "bear_peak" in spec else spec.get("bear")
+            )
+
+            if base_peak is not None:
+                asset.market_shares[ind] = _scale_curve_to_peak(asset.market_shares[ind], base_peak)
+            if bull_peak is not None:
+                source = asset.bull_shares.get(ind) or asset.market_shares[ind]
+                asset.bull_shares[ind] = _scale_curve_to_peak(source, bull_peak)
+            if bear_peak is not None:
+                source = asset.bear_shares.get(ind) or asset.market_shares[ind]
+                asset.bear_shares[ind] = _scale_curve_to_peak(source, bear_peak)
+            logger.info(
+                f"  Market-share override {asset.name}/{ind}: "
+                f"base={max(asset.market_shares[ind].values()):.1%}, "
+                f"bull={max(asset.bull_shares.get(ind, asset.market_shares[ind]).values()):.1%}, "
+                f"bear={max(asset.bear_shares.get(ind, asset.market_shares[ind]).values()):.1%}"
+            )
 
 
 def _catalyst_peak_provider(catalyst_asset_name: str, catalyst: 'CatalystEvent',
@@ -1084,26 +1263,37 @@ def generate_scenarios_from_template(
         full_name = _asset_full_name(asset)
 
         # ── Asset row ──
-        rp = [f'<row r="{current_row}" spans="1:31" s="65" customFormat="1">']
-        rp.append(f'<c r="A{current_row}" s="62"><v>4</v></c>')
-        rp.append(f'<c r="B{current_row}" s="34" t="inlineStr"><is><t> Absolute</t></is></c>')
-        rp.append(f'<c r="C{current_row}" s="63" t="inlineStr"><is><t>{_xml_escape(full_name)}</t></is></c>')
-        rp.append(f'<c r="D{current_row}" s="61"/>')
+        rp = [
+            f'<row r="{current_row}" s="110" customFormat="true" ht="15" '
+            f'hidden="false" customHeight="false" outlineLevel="0" collapsed="false">'
+        ]
+        rp.append(f'<c r="A{current_row}" s="238"><v>4</v></c>')
+        rp.append(f'<c r="B{current_row}" s="239" t="inlineStr"><is><t> Absolute</t></is></c>')
+        rp.append(f'<c r="C{current_row}" s="240" t="inlineStr"><is><t>{_xml_escape(full_name)}</t></is></c>')
+        rp.append(f'<c r="D{current_row}" s="236"/>')
+        approval_year = asset.stages.get(5)
         for ci in range(5, 25):
             year = 2019 + (ci - 5)
             c = _col_letter(ci)
             stage_num = None
-            for sn, sy in asset.stages.items():
-                if sy == year:
-                    stage_num = sn
-                    break
-            if stage_num:
-                rp.append(f'<c r="{c}{current_row}" s="64"><v>{stage_num}</v></c>')
+            # Approval is a continuing state, not a one-year event.  Persisting
+            # Stage 5 keeps terminal-year revenue and market-share formulas live
+            # even after a dependency-chain rebuild.  Earlier stages remain
+            # discrete milestone years, as in the original template.
+            if approval_year is not None and year >= approval_year:
+                stage_num = 5
             else:
-                rp.append(f'<c r="{c}{current_row}" s="64"/>')
-        rp.append(f'<c r="Y{current_row}" s="500"/>')
+                for sn, sy in asset.stages.items():
+                    if sy == year:
+                        stage_num = sn
+                        break
+            if stage_num:
+                rp.append(f'<c r="{c}{current_row}" s="241"><v>{stage_num}</v></c>')
+            else:
+                rp.append(f'<c r="{c}{current_row}" s="241"/>')
+        rp.append(f'<c r="Y{current_row}" s="242"/>')
         if current_row == 10:
-            rp.append(f'<c r="AA{current_row}" s="72" t="inlineStr"><is><t>Stage 5 = Approved</t></is></c>')
+            rp.append(f'<c r="AA{current_row}" s="228" t="inlineStr"><is><t>Stage 5 = Approved</t></is></c>')
         rp.append('</row>')
         new_rows.append(''.join(rp))
         asset_row = current_row
@@ -1117,28 +1307,31 @@ def generate_scenarios_from_template(
             peak_share = max(shares_dict.values()) if shares_dict else 0.01
             abs_ms_peaks[(asset.name, ind_name)] = peak_share
 
-            rp = [f'<row r="{current_row}" spans="1:31">']
-            rp.append(f'<c r="A{current_row}" s="62"><v>4</v></c>')
-            rp.append(f'<c r="B{current_row}" s="34" t="inlineStr"><is><t> Absolute</t></is></c>')
+            rp = [
+                f'<row r="{current_row}" customFormat="false" ht="15" hidden="false" '
+                f'customHeight="false" outlineLevel="0" collapsed="false">'
+            ]
+            rp.append(f'<c r="A{current_row}" s="238"><v>4</v></c>')
+            rp.append(f'<c r="B{current_row}" s="239" t="inlineStr"><is><t> Absolute</t></is></c>')
             if ind_name in ("All Indications Combined", "All"):
                 formula = f'C{asset_row}&amp;" Market Share"'
                 cached = f'{full_name} Market Share'
             else:
                 formula = f'C{asset_row}&amp;" {_xml_escape(ind_name)} Market Share"'
                 cached = f'{full_name} {ind_name} Market Share'
-            rp.append(f'<c r="C{current_row}" s="66" t="str"><f>{formula}</f><v>{_xml_escape(cached)}</v></c>')
-            rp.append(f'<c r="D{current_row}" s="34" t="inlineStr"><is><t>[%]</t></is></c>')
+            rp.append(f'<c r="C{current_row}" s="243" t="str"><f>{formula}</f><v>{_xml_escape(cached)}</v></c>')
+            rp.append(f'<c r="D{current_row}" s="239" t="inlineStr"><is><t>[%]</t></is></c>')
             for ci in range(5, 8):
                 c = _col_letter(ci)
                 v = shares_dict.get(2019 + (ci - 5), 0)
-                rp.append(f'<c r="{c}{current_row}" s="67"><v>{v}</v></c>')
+                rp.append(f'<c r="{c}{current_row}" s="244"><v>{v}</v></c>')
             for ci in range(8, 25):
                 c = _col_letter(ci)
                 p = _col_letter(ci - 1)
-                f = f'IF({c}{asset_row}=5,$Y{current_row},MAX($I{current_row}:{p}{current_row}))'
+                f = f'IF({c}{asset_row}=5,$Y{current_row},MAX($E{current_row}:{p}{current_row}))'
                 v = shares_dict.get(2019 + (ci - 5), 0)
-                rp.append(f'<c r="{c}{current_row}" s="68"><f>{f}</f><v>{v}</v></c>')
-            rp.append(f'<c r="Y{current_row}" s="501"><v>{peak_share}</v></c>')
+                rp.append(f'<c r="{c}{current_row}" s="245"><f>{f}</f><v>{v}</v></c>')
+            rp.append(f'<c r="Y{current_row}" s="246"><v>{peak_share}</v></c>')
             rp.append('</row>')
             new_rows.append(''.join(rp))
             current_row += 1
@@ -1180,21 +1373,32 @@ def generate_scenarios_from_template(
     logger.info(f"  Bear (Scenario 3): rows {s}-{current_row - 1}")
 
     # ═══════════════════════════════════════════════════════════════════════
-    #  MODULE 2: Break Down (cumulative drug addition)
+    #  MODULE 2: Break Down (cumulative drug×indication waterfall blocks)
     # ═══════════════════════════════════════════════════════════════════════
     new_rows.append(_spacer_row(current_row)); current_row += 1
     new_rows.append(_section_divider_row(current_row, "Break Down")); current_row += 1
 
-    for k in range(len(assets)):
-        new_rows.append(_spacer_row(current_row)); current_row += 1
-        name = f"{assets[k].name} Only" if k == 0 else f"+{assets[k].name}"
-        s = current_row
-        included = {a.name for a in assets[:k + 1]}
-        current_row = _add_scenario_block(
-            new_rows, current_row, 5 + k, name, assets,
-            abs_first, abs_last, abs_asset_rows, abs_ms_rows,
-            _breakdown_peak_provider(included, abs_ms_rows))
-        logger.info(f"  Breakdown '{name}' (Scenario {5 + k}): rows {s}-{current_row - 1}")
+    breakdown_num = 5
+    included_pairs = set()
+    for asset in assets:
+        indications = list(asset.market_shares.keys()) or ["All"]
+        for ind in indications:
+            included_pairs.add((asset.name, ind))
+            new_rows.append(_spacer_row(current_row)); current_row += 1
+            if ind in ("All", "All Indications Combined"):
+                name = f"{asset.name} Cumulative"
+            else:
+                name = f"{asset.name} {ind} Cumulative"
+            s = current_row
+            current_row = _add_scenario_block(
+                new_rows, current_row, breakdown_num, name, assets,
+                abs_first, abs_last, abs_asset_rows, abs_ms_rows,
+                _cumulative_indication_peak_provider(set(included_pairs), abs_ms_rows))
+            logger.info(
+                f"  Breakdown '{name}' (Scenario {breakdown_num}): "
+                f"rows {s}-{current_row - 1}"
+            )
+            breakdown_num += 1
 
     # ═══════════════════════════════════════════════════════════════════════
     #  MODULE 3: Catalyst Scenarios
@@ -1207,7 +1411,7 @@ def generate_scenarios_from_template(
     new_rows.append(_spacer_row(current_row)); current_row += 1
     new_rows.append(_section_divider_row(current_row, "Catalyst Scenarios")); current_row += 1
 
-    cat_num = 5 + len(assets)
+    cat_num = breakdown_num
 
     if all_catalysts:
         for asset, cat in all_catalysts:
@@ -1319,6 +1523,8 @@ def main():
     parser.add_argument("--research-file", help="Legacy: single combined research file")
     parser.add_argument("--dcf-file", help="DCF file path")
     parser.add_argument("--template-file", help="Template file (default: DCF Template 2020.xlsx)")
+    parser.add_argument("--assumptions-file",
+                        help="Approved model assumptions JSON with market_share overrides")
     parser.add_argument("--dry-run", action="store_true", help="Parse only, don't write Excel")
 
     args = parser.parse_args()
@@ -1345,6 +1551,19 @@ def main():
     if not assets:
         logger.error("No assets found")
         sys.exit(1)
+
+    assumptions = _load_model_assumptions(
+        Path(args.report_dir) if args.report_dir else Path(f"/mnt/c/Users/yzsun/Desktop/DD/{args.ticker}/pipeline_base4/"),
+        args.ticker,
+        Path(args.assumptions_file) if args.assumptions_file else None,
+    )
+    assets, excluded = filter_assets_by_assumptions(assets, assumptions)
+    for drug, indication in excluded:
+        logger.info(f"  Approved assumptions EXCLUDE {drug}/{indication} (all scenario peaks are zero)")
+    if not assets:
+        logger.error("Approved assumptions excluded every parsed pipeline asset")
+        sys.exit(1)
+    _apply_market_share_assumptions(assets, assumptions)
 
     _print_summary(assets)
 
@@ -1375,7 +1594,8 @@ def main():
     print(f"{'='*70}")
     print(f"Ticker: {args.ticker}")
     print(f"Assets: {len(assets)}")
-    print(f"Modules: Absolute + Base/Bull/Bear + {len(assets)} Breakdown + {total_cats * 2 or 1} Catalyst")
+    breakdown_blocks = sum(len(a.market_shares or {"All": {}}) for a in assets)
+    print(f"Modules: Absolute + Base/Bull/Bear + {breakdown_blocks} Breakdown + {total_cats * 2 or 1} Catalyst")
     print(f"Bull peaks: {'from report' if has_bull else 'same as base'}")
     print(f"Bear peaks: {'from report' if has_bear else 'same as base'}")
     print(f"Catalysts: {total_cats} events ({total_cats * 2} blocks)")

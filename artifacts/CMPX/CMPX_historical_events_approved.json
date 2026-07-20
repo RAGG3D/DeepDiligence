@@ -1,0 +1,106 @@
+{
+  "events": [
+    {
+      "date": "2023-01-19",
+      "evt": "[ASCO GI] Phase 2 updated; N=24 (22 evaluable); ORR 37.5% (9 PR), 2L 63.6%, 3L 15.4%; mDoR/mPFS 9.4mo; 12mo OS 53%; grade 3+ TRAE 75%",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-announces-phase-2-data-ctx-009-combination",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2023.41.4_suppl.540",
+      "venue": "ASCO GI",
+      "phase": "Phase 2",
+      "data_type": "updated",
+      "patient_size": "N=24; 22 evaluable",
+      "orr": "37.5% overall; 63.6% 2L; 15.4% 3L",
+      "survival": "mDoR/mPFS 9.4 months; 12-month OS 53%",
+      "safety": "grade 3+ TRAE 75%"
+    },
+    {
+      "date": "2024-04-09",
+      "evt": "[AACR] Preclinical updated: CTX-471 eliminated MHC-I-negative tumors in vivo and expanded NK/CD8 immune activity; no patient data",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/04/09/2860242/0/en/compass-therapeutics-presents-data-demonstrating-elimination-of-mhc-class-i-negative-tumors-in-in-vivo-models-at-the-2024-american-association-for-cancer-research-aacr-annual-meeti.html",
+      "venue": "AACR",
+      "data_type": "preclinical updated"
+    },
+    {
+      "date": "2024-05-23",
+      "evt": "[ASCO] Phase 1 updated; N=79 (19 escalation/60 expansion); CR 1/3 SCLC; PR 3/11 melanoma and 1/4 mesothelioma; DLT thrombocytopenia resolved; liver toxicity 6.3%, 80% AEs grade 1-2",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-phase-1-data-ctx-471-novel-cd137",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2024.42.16_suppl.2535",
+      "venue": "ASCO",
+      "phase": "Phase 1 updated",
+      "patient_size": "N=79",
+      "cr": "1/3 SCLC",
+      "orr": "PR 3/11 melanoma; PR 1/4 mesothelioma",
+      "safety": "resolved thrombocytopenia DLT; liver toxicity 6.3%; 80% AEs grade 1-2"
+    },
+    {
+      "date": "2024-11-08",
+      "evt": "[SITC] Phase 1 updated biomarker: baseline NCAM/CD56 tumor expression associated with CTX-471 response/disease control; prior efficacy CR 1 SCLC plus 4 PR; generally well tolerated",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2024/11/08/2977735/0/en/compass-therapeutics-presents-novel-biomarker-data-related-to-ctx-471-clinical-activity-at-the-39th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+      "venue": "SITC",
+      "phase": "Phase 1 updated biomarker",
+      "cr": "1 SCLC",
+      "orr": "4 PR (melanoma/mesothelioma)",
+      "safety": "generally well tolerated"
+    },
+    {
+      "date": "2025-04-01",
+      "evt": "[CALL] Phase 2/3 primary; N=168 (111/57); BICR ORR 17.1% vs 5.3%, p=0.031; CR 1 vs 0; PD 16.2% vs 42.1%; safety DMC continued study unchanged",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/tovecimig-ctx-009-meets-primary-endpoint-ongoing-randomized",
+      "venue": "CALL",
+      "phase": "Phase 2/3",
+      "data_type": "primary",
+      "patient_size": "N=168 (111/57)",
+      "orr": "17.1% vs 5.3%; p=0.031",
+      "cr": "1 vs 0",
+      "safety": "DMC recommended continuation without modification"
+    },
+    {
+      "date": "2025-04-28",
+      "evt": "[AACR] Preclinical updated: CTX-471 plus tovecimig enhanced efficacy in checkpoint-refractory models with increased tumor killing, antigen presentation and interferon signaling; no patient data",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2025/04/28/3069126/0/en/index.html",
+      "venue": "AACR",
+      "data_type": "preclinical updated"
+    },
+    {
+      "date": "2025-11-04",
+      "evt": "[SITC] Preclinical updated: CTX-10726 PD-1×VEGF-A bispecific showed differentiated dual-pathway activity and supported Phase 1 advancement; no patient data",
+      "category": "Clinical Data",
+      "url": "https://www.globenewswire.com/news-release/2025/11/04/3180398/0/en/compass-therapeutics-presents-preclinical-data-on-ctx-10726-a-differentiated-pd-1-x-vegf-a-bispecific-antibody-at-the-40th-society-for-immunotherapy-of-cancer-sitc-annual-meeting.html",
+      "venue": "SITC",
+      "data_type": "preclinical updated"
+    },
+    {
+      "date": "2026-04-27",
+      "evt": "[CALL] Phase 2/3 updated secondary; N=168 (111/57); ORR 17.1% vs 5.3%; PFS 4.7 vs 2.6mo, HR 0.44, p<0.0001; ITT OS 8.9 vs 9.4mo, HR 1.05; crossover OS 12.8 vs 6.1mo; grade 3+ related HTN 44%, neutropenia 36%",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/tovecimig-demonstrates-statistically-significant-benefit",
+      "venue": "CALL",
+      "phase": "Phase 2/3",
+      "data_type": "updated secondary",
+      "patient_size": "N=168 (111/57)",
+      "orr": "17.1% vs 5.3%",
+      "survival": "PFS 4.7 vs 2.6 months; ITT OS 8.9 vs 9.4 months; crossover OS 12.8 vs 6.1 months",
+      "safety": "grade 3+ related hypertension 44%; neutropenia 36%"
+    },
+    {
+      "date": "2026-05-21",
+      "evt": "[ASCO] Phase 1 initial; N=15 evaluable; ORR 20% overall (3/15), 33% at top doses (2/6); responses TNBC/HL/NSCLC, TNBC 10.5+mo and HL 7.5+mo; no DLT, one asymptomatic grade 3 lipase",
+      "category": "Clinical Data",
+      "url": "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-promising-phase-1-clinical-data-ctx",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.2629",
+      "venue": "ASCO",
+      "phase": "Phase 1",
+      "data_type": "initial",
+      "patient_size": "N=15 evaluable",
+      "orr": "20% overall (3/15); 33% at top doses (2/6)",
+      "survival": "TNBC response 10.5+ months; HL response 7.5+ months",
+      "safety": "no DLT; one asymptomatic grade 3 lipase increase"
+    }
+  ]
+}

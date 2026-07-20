@@ -1,0 +1,65 @@
+{
+  "source": "MOLN clinical/pipeline/peer review refresh, 2026-07-08",
+  "economic_share": {
+    "MP0712": 0.5,
+    "MP0317": 1.0,
+    "MP0533": 1.0
+  },
+  "ratings": {
+    "MP0712": {
+      "SCLC": "T1",
+      "EP-NEC": "T1",
+      "LCNEC": "T1"
+    },
+    "MP0317": {
+      "BTC": "AVG"
+    },
+    "MP0533": {
+      "AML": "T1",
+      "MDS": "AVG"
+    }
+  },
+  "market_share": {
+    "MP0317": {
+      "BTC": {
+        "base_peak": 0.08,
+        "bull_peak": 0.16,
+        "bear_peak": 0.03
+      }
+    },
+    "MP0533": {
+      "AML": {
+        "base_peak": 0.16,
+        "bull_peak": 0.28,
+        "bear_peak": 0.05
+      },
+      "MDS": {
+        "base_peak": 0.08,
+        "bull_peak": 0.15,
+        "bear_peak": 0.03
+      }
+    },
+    "MP0712": {
+      "SCLC": {
+        "base_peak": 0.12,
+        "bull_peak": 0.24,
+        "bear_peak": 0.04
+      },
+      "EP-NEC": {
+        "base_peak": 0.18,
+        "bull_peak": 0.30,
+        "bear_peak": 0.06
+      },
+      "LCNEC": {
+        "base_peak": 0.15,
+        "bull_peak": 0.28,
+        "bear_peak": 0.05
+      }
+    }
+  },
+  "market_share_notes": {
+    "MP0712": "Tier One for DLL3 radionuclide strategy: higher peak share than an average late entrant, but capped below dominant share because tarlatamab is already approved in ES-SCLC and DLL3 ADCs remain active competitors.",
+    "MP0533": "AML is Tier One because the CD3/TAA/TAA logic can differentiate in relapsed AML/MDS, but early clinical response data still cap peak share below validated broad AML standards.",
+    "MP0317": "BTC remains Average until randomized activity is shown; CD40 localization can support adoption if safety/combination data mature."
+  }
+}

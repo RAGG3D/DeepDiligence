@@ -1,0 +1,6338 @@
+{
+  "ticker": "MOLN",
+  "event": "ASCO2026",
+  "event_name": "ASCO2026",
+  "event_date": "2026-05-30",
+  "public_disclosure_date": "2026-05-30",
+  "venue": "2026 ASCO Annual Meeting, trial-in-progress poster TPS3176",
+  "data_cutoff": "No therapeutic Phase 1/2a cohort data cutoff was reported in the ASCO trial-in-progress disclosure",
+  "trial": "NCT07278479",
+  "phase": "Phase 1/2a dose escalation and expansion",
+  "relevant_targets": [
+    "MP0712 - SCLC",
+    "MP0712 - EP-NEC",
+    "MP0712 - LCNEC"
+  ],
+  "reported_data": [
+    {
+      "target": "MP0712 - SCLC",
+      "population": "The planned trial enrolls adults with DLL3-expressing small cell lung cancer after standard therapy, but the ASCO presentation described the protocol while dosing continued in the first cohort and did not disclose a therapeutic cohort denominator.",
+      "n_enrolled": 0,
+      "n_evaluable": 0,
+      "efficacy": "No RECIST response, disease-control, progression, survival or therapeutic dosimetry result from the Phase 1/2a cohort was disclosed. Separate diagnostic-isotope imaging under a named-patient access program showed specific uptake in tumor lesions but was not a therapeutic efficacy dataset.",
+      "safety": "No Phase 1/2a adverse-event, serious-adverse-event or dose-limiting-toxicity counts were disclosed at this event.",
+      "follow_up": "No therapeutic patient follow-up duration was disclosed; initial clinical data remained expected later in 2026.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "population": "The planned trial includes other DLL3-expressing neuroendocrine carcinomas, including extrapulmonary disease, but the ASCO presentation was a protocol poster and disclosed no target-specific therapeutic cohort denominator.",
+      "n_enrolled": 0,
+      "n_evaluable": 0,
+      "efficacy": "No indication-specific response, disease-control, progression or survival result was reported from the Phase 1/2a therapeutic study.",
+      "safety": "No indication-specific or pooled Phase 1/2a safety results were disclosed.",
+      "follow_up": "No therapeutic follow-up duration was disclosed at the event.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "population": "The planned trial includes DLL3-expressing large-cell neuroendocrine carcinoma, but the ASCO presentation described study design and disclosed no target-specific therapeutic cohort denominator.",
+      "n_enrolled": 0,
+      "n_evaluable": 0,
+      "efficacy": "No LCNEC response, disease-control, progression or survival result was reported from the Phase 1/2a therapeutic study.",
+      "safety": "No LCNEC-specific or pooled Phase 1/2a safety results were disclosed.",
+      "follow_up": "No therapeutic follow-up duration was disclosed at the event.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    }
+  ],
+  "competitor_comparisons": [
+    {
+      "target": "MP0712 - SCLC",
+      "competitor": "Tarlatamab in relapsed extensive-stage SCLC",
+      "matched_setting": "DLL3-directed therapy after platinum-based treatment in relapsed extensive-stage SCLC; modality, dose and development maturity differ from targeted alpha therapy.",
+      "clinical_comparison": "The randomized DeLLphi-304 study established a mature DLL3 efficacy benchmark, with median overall survival of 13.6 versus 8.3 months and median progression-free survival of 4.2 versus 3.2 months against chemotherapy. The MP0712 ASCO protocol poster supplied no therapeutic result that can be compared with this benchmark.",
+      "limitations": "Cross-modality comparison between a DLL3 bispecific T-cell engager with randomized clinical evidence and an early targeted alpha therapy protocol without disclosed therapeutic outcomes.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "competitor": "Obrixtamig in DLL3-positive extrapulmonary neuroendocrine carcinoma",
+      "matched_setting": "Heavily pretreated DLL3-positive extrapulmonary neuroendocrine carcinoma in a Phase 1 dose-escalation study.",
+      "clinical_comparison": "At doses of at least 90 micrograms per kilogram, obrixtamig reported a 27.9% objective response rate among 61 extrapulmonary neuroendocrine carcinoma patients and a 19.6% confirmed response rate in later step-up cohorts. MP0712 disclosed no therapeutic cohort result at ASCO2026.",
+      "limitations": "Different DLL3 modality, dosing, eligibility and response-assessment maturity; the MP0712 side of the comparison contains no therapeutic outcome data.",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "competitor": "Obrixtamig in DLL3-positive large-cell neuroendocrine carcinoma",
+      "matched_setting": "Heavily pretreated DLL3-positive large-cell neuroendocrine carcinoma in a Phase 1 dose-escalation study.",
+      "clinical_comparison": "At doses of at least 90 micrograms per kilogram, obrixtamig reported a 70% objective response rate among 10 LCNEC patients, with a 44.4% confirmed response rate in later step-up cohorts. MP0712 disclosed no therapeutic cohort result at ASCO2026.",
+      "limitations": "Very small competitor subgroup, different modality and dose, and no MP0712 therapeutic outcome dataset at this event.",
+      "source_ids": [
+        "S5"
+      ]
+    }
+  ],
+  "target_assessments": [
+    {
+      "target": "MP0712 - SCLC",
+      "observed_outcome": "Remain",
+      "data_quality": "Low for therapeutic interpretation: the event confirmed study activation and design but contained no Phase 1/2a therapeutic efficacy, safety, dosimetry or follow-up denominator.",
+      "clinical_interpretation": "The protocol presentation and separate diagnostic uptake observation support continued development but do not justify changing SCLC assumptions before therapeutic cohort data are available.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.01,
+          "loa_change": 0.005,
+          "conviction": 0.05,
+          "rationale": "Study activation and tumor uptake are directionally supportive, but they are insufficient therapeutic evidence for a material revision."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.9,
+          "rationale": "No therapeutic efficacy or safety result was disclosed, so the pre-event clinical assumptions should remain unchanged."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.01,
+          "loa_change": -0.005,
+          "conviction": 0.05,
+          "rationale": "A small downside branch reflects execution and translation uncertainty, not a disclosed negative clinical result."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "The study was actively recruiting and dosing, with no disclosed reason to suspend development."
+        }
+      ]
+    },
+    {
+      "target": "MP0712 - EP-NEC",
+      "observed_outcome": "Remain",
+      "data_quality": "Low: the trial-in-progress disclosure provided no EP-NEC therapeutic cohort size, response, safety or follow-up result.",
+      "clinical_interpretation": "The event established inclusion of DLL3-expressing neuroendocrine tumors but did not test clinical efficacy against the emerging competitor benchmark.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.01,
+          "loa_change": 0.005,
+          "conviction": 0.05,
+          "rationale": "Specific diagnostic uptake and ongoing dosing are supportive but not therapeutic proof."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.9,
+          "rationale": "No therapeutic EP-NEC result was disclosed, so assumptions remain unchanged."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.01,
+          "loa_change": -0.005,
+          "conviction": 0.05,
+          "rationale": "A small uncertainty branch remains because translation into treatment activity is untested."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "Active enrollment and the absence of a negative clinical finding do not support suspension."
+        }
+      ]
+    },
+    {
+      "target": "MP0712 - LCNEC",
+      "observed_outcome": "Remain",
+      "data_quality": "Low: no LCNEC therapeutic denominator, efficacy, safety, dosimetry or follow-up result was reported.",
+      "clinical_interpretation": "LCNEC remains biologically relevant for DLL3 targeting, but the event did not supply evidence to change assumptions relative to an early but high competitor response benchmark.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.01,
+          "loa_change": 0.005,
+          "conviction": 0.05,
+          "rationale": "The study rationale and diagnostic uptake are supportive but not sufficient for a therapeutic revision."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.9,
+          "rationale": "No LCNEC therapeutic result was disclosed, making no change the clinically appropriate base interpretation."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.01,
+          "loa_change": -0.005,
+          "conviction": 0.05,
+          "rationale": "A small downside branch reflects uncertain translation and a demanding early competitor benchmark."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "No safety or development finding at the event suggested suspension."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://investors.molecularpartners.com/news-releases/news-release-details/molecular-partners-holds-presentations-asco-and-snmmi-2026-dll3",
+      "source_kind": "company_clinical_release",
+      "title": "Molecular Partners presents the MP0712 Phase 1 trial-in-progress program at ASCO and SNMMI 2026",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S2",
+      "url": "https://www.molecularpartners.com/wp-content/uploads/ASCO_2026_MP0712_Phase_1_Trial-in-Progress_Poster.pdf",
+      "source_kind": "conference_poster",
+      "title": "MP0712 Phase 1 trial-in-progress poster at ASCO 2026",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S3",
+      "url": "https://clinicaltrials.gov/study/NCT07278479",
+      "source_kind": "clinical_trial_registry",
+      "title": "Phase 1/2a study of lead-212 MP0712 in DLL3-expressing solid tumors",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S4",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-traditional-approval-tarlatamab-dlle-extensive-stage-small-cell-lung-cancer",
+      "source_kind": "regulator_clinical_document",
+      "title": "FDA clinical efficacy summary for tarlatamab in extensive-stage SCLC",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S5",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12440289/",
+      "source_kind": "peer_reviewed_publication",
+      "title": "Phase 1 obrixtamig study in DLL3-positive neuroendocrine carcinomas",
+      "accessed": "2026-07-18"
+    }
+  ],
+  "limitations": [
+    "ASCO2026 was a trial-in-progress disclosure and did not provide therapeutic cohort results, so all three observed outcomes are Remain.",
+    "Diagnostic-isotope uptake under named-patient access cannot be treated as therapeutic efficacy for lead-212 MP0712.",
+    "Competitor comparisons are cross-modality and cannot substitute for MP0712 therapeutic safety, dosimetry and response data.",
+    "No security-market information was retrieved or used."
+  ],
+  "internal_clinical_context_rows": [
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IOB-022",
+      "ticker": "IOBT",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "45222",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "43656",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "43415",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "43777",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "44902",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "44540",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "44120",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "42710",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "KEYTRUDA + Placebo",
+      "ticker": "MRK",
+      "rating": null,
+      "metric": "ORR (Confirmed)",
+      "value": "0.277",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "0.698",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "0.4",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "0.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "12 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "12 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "12 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "CR",
+      "value": "0.01",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2020-04-06 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2023-09-10 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2025-09-07 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2024-09-09 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "36.8%",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "12 Mo PFS Rate",
+      "value": "53% (from earlier phase 2 study)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "12 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "12 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "12 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Conference",
+      "value": "ASCO 2026",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "ClinicalTrials.gov protocol",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Conference",
+      "value": "ClinicalTrials.gov protocol",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "ClinicalTrials.gov protocol",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IOB-022",
+      "ticker": "IOBT",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Cancer Vaccine",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Mono Antibody",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Mono Antibody",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Protein",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "Oral",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "Oral",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Mono Antibody",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Mono Antibody",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "KEYTRUDA + Placebo",
+      "ticker": "MRK",
+      "rating": null,
+      "metric": "Patient Number",
+      "value": "314",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "18 Mo OS",
+      "value": "0.734",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "0.819",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "43980",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "42255",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "44224",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "45435",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "43792",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "18 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "18 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "18 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2023-10-20 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "105",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "ADC (B7-H3)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "345",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "604",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2023-10-31 (FDA Approval)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2024-11-20 (FDA Accelerated Approval)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "17.1%",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "18 Mo OS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "18 Mo OS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "18 Mo OS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "DCR",
+      "value": "60% overall (9/15)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IOB-022",
+      "ticker": "IOBT",
+      "rating": "T1",
+      "metric": "ORR (Confirmed)",
+      "value": "0.56",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "5.6",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "19.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "16.9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "6",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Median DFS",
+      "value": "≥ 36 Mo",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "19.2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "22.8",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Median rPFS",
+      "value": "6.1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Median DFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "24 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "24 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "24 Mo OS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "100",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Transcription Inhib.",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "5.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "BsAb (PD-1 x VEGF)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "ADC (TROP2)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "200 mg every 3 weeks or 400 mg every 6 weeks (pembrolizumab)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "20 mg/kg intravenously every two weeks",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-05-08 (FDA Approval)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "24 Mo OS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "24 Mo OS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "24 Mo OS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "2026-05-30",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-07-12",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "2026-07-12",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-07-12",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IOB-022",
+      "ticker": "IOBT",
+      "rating": "T1",
+      "metric": "PFS >= 6 Mo",
+      "value": "12:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "16.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Median rPFS",
+      "value": "9.7",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Median rPFS",
+      "value": "8.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Patient Number",
+      "value": "1900-07-24 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "37.7",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "24 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "24 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "24 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "BiTE (DLL3 x CD3)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "9.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "ORR",
+      "value": "0.52",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "16.8",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "14.6",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "1069 (total, 1:1 randomization)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "87",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "750 mg every two weeks",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "Company press release / investor update",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "24 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "24 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "24 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Dosing Schedule",
+      "value": "Every two weeks",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "0.3 or 0.6 mg/kg every two weeks",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Dosing Schedule",
+      "value": "0.3 or 0.6 mg/kg every two weeks",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "0.3 or 0.6 mg/kg every two weeks",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IOB-022",
+      "ticker": "IOBT",
+      "rating": "T1",
+      "metric": "Patient Number",
+      "value": "18",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "6.6",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "6.1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "6.9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "6 Mo PFS",
+      "value": "0.72",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "1900-10-03 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "4",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Patient Number",
+      "value": "1900-03-21 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Median rPFS",
+      "value": "16.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "6 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "6 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "6 Mo PFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "14.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "3.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "6.8",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "5.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "GEQ G3 Clinical AE",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "GEQ G3 Clinical AE",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "22 (total), 19 (evaluable for efficacy)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "6 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "6 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "6 Mo PFS Rate",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "15 evaluable overall",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "58 total planned across the two-dose study",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "58 total planned across the two-dose study",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "58 total planned across the two-dose study",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IOB-022",
+      "ticker": "IOBT",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "ORR (Confirmed)",
+      "value": "0.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "ORR (Confirmed)",
+      "value": "0.357",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "ORR (Confirmed)",
+      "value": "0.41",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "ORR (Confirmed)",
+      "value": "0.57",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "ORR (Confirmed)",
+      "value": "0.405",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "ORR (Confirmed)",
+      "value": "0.351",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "ORR (Confirmed)",
+      "value": "0.294",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "BICR ORR",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "0.78",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "0.667",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "0.7",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "0.69",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "0.286",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "BICR ORR",
+      "value": "0",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "0.83",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "BICR ORR",
+      "value": "0",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "BICR ORR",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "0.39",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "0.637",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "0.9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "0.57",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "0.286",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "0.678",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "HER2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "HER2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "1900-06-18 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "BICR ORR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "4.9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "0.352",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Phase 2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "ORR",
+      "value": "0.447",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "0.312",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "55% (leading to interruption of pembrolizumab)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "GEQ G3 Clinical AE",
+      "value": "Diarrhea, musculoskeletal pain, fatigue, nausea, infusion-related reactions, dyspnea, rash, constipation, vomiting, abdominal pain, edema.",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-04-27",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "BICR ORR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "BICR ORR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "No DLTs; one asymptomatic grade 3 lipase increase",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "NCAM-positive biomarker-selected CD137 agonist",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "NCAM-positive biomarker-selected CD137 agonist",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "NCAM-positive biomarker-selected CD137 agonist",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "PFS >= 6 Mo",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "PFS >= 6 Mo",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "PFS >= 6 Mo",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "PFS >= 6 Mo",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "PFS >= 6 Mo",
+      "value": "15:41:45.600000",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "PFS >= 6 Mo",
+      "value": "-",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "PFS >= 6 Mo",
+      "value": "13:13:26.400000",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Date",
+      "value": "2016-12-08 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "44862",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "43620",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "43756",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "2022-06-07 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Date",
+      "value": "2013-09-30 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2014-05-31 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Date",
+      "value": "2013-09-30 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Date",
+      "value": "2016-12-08 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "45212",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "42652",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "43754",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "40335",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "43792",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "2022-06-07 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2022-06-06 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "HER2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Total Treatment Line",
+      "value": "1+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "HER2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Total Treatment Line",
+      "value": "1,2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "CR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "CR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "CR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "CR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "ORR",
+      "value": "0.4",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Total Treatment Line",
+      "value": "3L+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Immune checkpoint inhibitor (PD-1) in combination with chemotherapy.",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Bispecific antibody targeting HER2 in two places.",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "Biweekly (CTX-009), Weekly (Paclitaxel) in 4-week cycles",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "CR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "CR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "PD-1 x PD-L1 bispecific with PD-1 cleavage",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT07684170",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "NCT#",
+      "value": "NCT07684170",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT07684170",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "27",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "14",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "17",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "7",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "309",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "134",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "34",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "29.1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "8.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Median Follow-Up",
+      "value": "25.9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Median Follow-Up",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Total Treatment Line",
+      "value": "1+, Adjuvant",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Iressa",
+      "ticker": "AZN",
+      "rating": "AVG",
+      "metric": "Treatment Line",
+      "value": "1+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Total Treatment Line",
+      "value": "1,2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Lazcluze",
+      "ticker": "0",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "HER2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "DCR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "DCR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "DCR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "DCR",
+      "value": "0.688",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "DCR",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "PR",
+      "value": "0.39",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "I-DXd (DS-7300)",
+      "ticker": "4568 JP Equity",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "3L+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Phase 3 Positive",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Phase 3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "12.7 months (pembro + chemo) vs 10.9 months (chemo)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Bispecific antibody targeting HER2 and HER3.",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "168 randomized (111 tovecimig + paclitaxel; 57 paclitaxel control)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "Conference",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Conference",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "NCT#",
+      "value": "NCT06150664",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "ORR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "I",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "I",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "I",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "I/II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "I",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median rPFS",
+      "value": "29.6",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Median rPFS",
+      "value": "18.4",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median rPFS",
+      "value": "11.1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Median rPFS",
+      "value": "\\",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Median rPFS",
+      "value": "14.4",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Tagrisso",
+      "ticker": "AZN",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "1+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Rybrevant",
+      "ticker": "JNJ",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Total Treatment Line",
+      "value": "1+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "44714",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "44213",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "44743",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "45444",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "45035",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Total Treatment Line",
+      "value": "2L/3L",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Total Treatment Line",
+      "value": "2L",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Total Treatment Line",
+      "value": "2L+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Median Follow-Up",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "GEQ G3 Clinical AE",
+      "value": "Common TEAEs hypertension 69% and fatigue 67%",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "DCR",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "ORR",
+      "value": "20% overall (3/15); one response in NSCLC",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Cyramza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Enoblituzumab",
+      "ticker": "MGNX",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "IMP-321",
+      "ticker": "IMMP",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Krazati",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Lenvima",
+      "ticker": "4523 JP Equity",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "MK-1308",
+      "ticker": "MRK",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 2,
+      "section": "+ KEYTRUDA 1L NSCLC",
+      "drug": "Portrazza",
+      "ticker": "LLY",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Patient Number",
+      "value": "Severe Adverse Event",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Patient Number",
+      "value": "9",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "10",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "32",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "14",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Patient Number",
+      "value": "17",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "18",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Patient Number",
+      "value": "17",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Patient Number",
+      "value": "Severe Adverse Event",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "51",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Patient Number",
+      "value": "124",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "30",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Patient Number",
+      "value": "14",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "170",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Patient Number",
+      "value": "14",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Patient Number",
+      "value": "146",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 5,
+      "section": "EGFR-Positive NSCLC Drug",
+      "drug": "Vizimpro",
+      "ticker": "PFE",
+      "rating": "AVG",
+      "metric": "Treatment Line",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "Dosing Schedule",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Dosing Schedule",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "Dosing Schedule",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "Dosing Schedule",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "2L/3L",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "2L (Post-TKI/CPI)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "2L+ (Nonsquamous)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT04003636 (KEYNOTE-966)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "HERIZON-BTC-01",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "Related grade 3+ hypertension 44%; neutropenia 36%",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "PR",
+      "value": "1 NSCLC response; duration 2.3 months",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Phase 2 not yet recruiting; no efficacy data from the current protocol",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Phase 2 not yet recruiting; no efficacy data from the current protocol",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Phase 2 not yet recruiting; no efficacy data from the current protocol",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "1/2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "1/2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "103",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "126",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "108 (Cohort A)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "80 (Cohort 1)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "88",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Total Treatment Line",
+      "value": "3L+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "≥G3 SAE/Patients",
+      "value": "0.46",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "≥G3 SAE/Patients",
+      "value": "0.5",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "≥G3 SAE/Patients",
+      "value": "0.26",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "NR (statistically significant improvement in OS)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "NR (demonstrated antitumor activity)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Bispecific antibody targeting DLL4 and VEGF-A.",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "Dosing Schedule",
+      "value": "q3w or q6w (common)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Dosing Schedule",
+      "value": "q2w or q4w (common)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "Dosing Schedule",
+      "value": "q2w or q3w or q4w (common)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "IV",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Route",
+      "value": "IV",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "IV",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Result",
+      "value": "Suspended",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "Trk/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Result",
+      "value": "Suspended",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "NDA",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Result",
+      "value": "Suspended",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Result",
+      "value": "Suspended",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Continuing",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Small Molecule",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Bispecific (HER2)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "3L+",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Lurbinectedin",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "≥G3 clinical AE",
+      "value": "Neutropenia",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Ivonescimab",
+      "ticker": "SMMT",
+      "rating": "BIC",
+      "metric": "≥G3 clinical AE",
+      "value": "Chemo + HTN",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 16,
+      "section": "NSCLC 2L Post-CPI",
+      "drug": "Dato-DXd",
+      "ticker": "AZN",
+      "rating": "T1",
+      "metric": "≥G3 clinical AE",
+      "value": "Stomatitis, ILD",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "2b",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "eNRGy clinical trial",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "CTX-009",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "ITT 8.9 vs 9.4 months; HR 1.05; p=0.78. Control crossover OS 12.8 vs 6.1 months; HR 0.54; p=0.04",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Keytruda (Pembrolizumab)",
+      "ticker": "MRK",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Opdivo (Nivolumab)",
+      "ticker": "BMY",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "Tecentriq (Atezolizumab)",
+      "ticker": "RHHBY",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 34,
+      "section": "NSCLC",
+      "drug": "CTX-8371",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "Phase 1 dose escalation; one NSCLC response",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 37,
+      "section": "EP-NEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "CD137 (4-1BB)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 38,
+      "section": "ES-SCLC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "CD137 (4-1BB)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 39,
+      "section": "LCNEC",
+      "drug": "CTX-471",
+      "ticker": "CMPX",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "CD137 (4-1BB)",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Target",
+      "value": "ALK",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Zidesamtinib",
+      "ticker": "NUVL",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Taletrectinib",
+      "ticker": "NUVB",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "1900-01-01 00:00:00",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Augtyro",
+      "ticker": "4503 JP Equity",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "ALK/Trk/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "Rozlytrek",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "ALK/Trk/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "FAK/ALK/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 3,
+      "section": "ROS1-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Target",
+      "value": "ALK/Trk",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Ensartinib",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "ALK",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "TSR-011",
+      "ticker": "",
+      "rating": null,
+      "metric": "Target",
+      "value": "ALK/Trk",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xospata",
+      "ticker": "",
+      "rating": null,
+      "metric": "Target",
+      "value": "ALK",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "NVL-655",
+      "ticker": "NUVL",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "ALK",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Zykadia",
+      "ticker": "NVS",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "ALK/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Lobrena",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "ALK/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Xalkori",
+      "ticker": "4503 JP Equity",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "ALK/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "Alunbrig",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "HER2",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "APG-2449",
+      "ticker": "",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "FAK/ALK/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 4,
+      "section": "ALK-Positive NSCLC Drug",
+      "drug": "WX-0593",
+      "ticker": "",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "ALK/ROS1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Futibatinib",
+      "ticker": "JAZZ",
+      "rating": "BIC",
+      "metric": "Median DFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Ivosidenib",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Median DFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Pemigatinib",
+      "ticker": "INCY",
+      "rating": "T1",
+      "metric": "Median DFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Zanidatamab",
+      "ticker": "JAZZ",
+      "rating": "AVG",
+      "metric": "Median DFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 9,
+      "section": "Biliary Tract Cancer (BTC)",
+      "drug": "Liposomal Irinotecan",
+      "ticker": "Private / IPN",
+      "rating": "AVG",
+      "metric": "Median DFS",
+      "value": "/",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 15,
+      "section": "SCLC 3L+",
+      "drug": "Tarlatamab (Imdelltra)",
+      "ticker": "AMGN",
+      "rating": "BIC",
+      "metric": "≥G3 SAE/Patients",
+      "value": "0.3",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Pembrolizumab (Keytruda) + Gemcitabine/Cisplatin",
+      "ticker": "MRK",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Approved",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zanidatamab (Ziihera)",
+      "ticker": "JAZZ",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Accelerated Approval",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 25,
+      "section": "BTC",
+      "drug": "Zenocutuzumab-zbco (Bizengri)",
+      "ticker": "NR",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "36.8%",
+      "origin": "dd.duckdb.peer_metric"
+    }
+  ],
+  "target_universe": [
+    "MP0317 - BTC",
+    "MP0533 - AML",
+    "MP0533 - MDS",
+    "MP0712 - SCLC",
+    "MP0712 - EP-NEC",
+    "MP0712 - LCNEC"
+  ],
+  "sheet_name": "Test-ASCO2026",
+  "clinical_only": true,
+  "price_data_used": true,
+  "pre_event_price_calibration": {
+    "market_ticker": "MOLN",
+    "currency": "USD",
+    "provider": "Yahoo Finance via yfinance",
+    "source_url": "https://finance.yahoo.com/quote/MOLN/history/",
+    "price_field": "unadjusted Close",
+    "window_days": 7,
+    "window_start": "2026-05-23",
+    "window_end_exclusive": "2026-05-30",
+    "sessions": [
+      {
+        "date": "2026-05-26",
+        "close": 4.050000190734863
+      },
+      {
+        "date": "2026-05-27",
+        "close": 4.039999961853027
+      },
+      {
+        "date": "2026-05-28",
+        "close": 4.002999782562256
+      },
+      {
+        "date": "2026-05-29",
+        "close": 4.199999809265137
+      }
+    ],
+    "session_count": 4,
+    "average_close": 4.073249936103821,
+    "same_day_or_post_event_prices_used": false,
+    "method": "proportional scaling of existing target LOAs with [0%,100%] constraints",
+    "proportional_scale": 0.8669435513933772,
+    "unrisked_total": 46.98402715559939,
+    "feasible_market_price_min": 0.0,
+    "feasible_market_price_max": 46.98402715559939,
+    "prior_risk_adjusted_total": 4.698402715559939,
+    "estimated_breakdown_total": 4.073249936103821,
+    "relative_error": 0.0,
+    "targets": {
+      "MP0317 - BTC": {
+        "unrisked_value": 21.966776778670244,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.08669435513933772,
+        "calibrated_market_price": 1.9043955473165952
+      },
+      "MP0533 - AML": {
+        "unrisked_value": 9.435848352781289,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.08669435513933772,
+        "calibrated_market_price": 0.8180347881369558
+      },
+      "MP0533 - MDS": {
+        "unrisked_value": 4.466114203589537,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.08669435513933772,
+        "calibrated_market_price": 0.3871868908588318
+      },
+      "MP0712 - SCLC": {
+        "unrisked_value": 8.550113243761281,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.08669435513933772,
+        "calibrated_market_price": 0.7412465540361953
+      },
+      "MP0712 - EP-NEC": {
+        "unrisked_value": 1.3568257264696015,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.08669435513933772,
+        "calibrated_market_price": 0.11762913139274554
+      },
+      "MP0712 - LCNEC": {
+        "unrisked_value": 1.2083488503274395,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.08669435513933772,
+        "calibrated_market_price": 0.10475702436249748
+      }
+    }
+  },
+  "clinical_interpretation_price_blind": true,
+  "pre_event_price_calibration_used": true,
+  "same_day_or_post_event_price_data_used": false
+}

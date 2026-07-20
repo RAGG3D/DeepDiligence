@@ -1,0 +1,8 @@
+{
+  "ticker": "CMPX",
+  "workbook": "/mnt/c/Users/yzsun/Desktop/DD/CMPX/DCF CMPX.xlsx",
+  "reference": "/mnt/c/Users/yzsun/Desktop/DD/MOLN/DCF MOLN.xlsx",
+  "pipeline_reference": "/mnt/c/Users/yzsun/Desktop/DD/MOLN/DCF MOLN completed_pre_calcstate_20260709_035047.xlsx",
+  "mismatch_count": 0,
+  "first_mismatches": []
+}

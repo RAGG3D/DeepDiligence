@@ -27,6 +27,8 @@ from typing import Any, Dict, List, Optional, Tuple
 import openpyxl
 from openpyxl.utils import get_column_letter, column_index_from_string
 
+from . import _openpyxl_compat  # noqa: F401  (widens drawing pitchFamily cap on import)
+
 logger = logging.getLogger(__name__)
 
 # ── xlsx XML namespaces ───────────────────────────────────────────────────────
@@ -90,16 +92,110 @@ def _build_year_col_map(ws) -> Dict[int, int]:
 
     for col_idx in range(FIRST_DATA_COL, FIRST_DATA_COL + MAX_YEAR_COLS):
         val = row[col_idx - 1].value
-        if isinstance(val, (int, float)) and 2000 <= int(val) <= 2099:
-            base_year = int(val)
-            base_col  = col_idx
-            year_col[base_year] = col_idx
-        elif base_year is not None and val is None:
+        if base_year is None:
+            # Locate the anchor: the first cell holding a raw year integer.
+            if isinstance(val, (int, float)) and 2000 <= int(val) <= 2099:
+                base_year, base_col = int(val), col_idx
+                year_col[base_year] = col_idx
+            continue
+        # Once the anchor is found, columns are POSITIONAL (base, base+1, …).
+        # This holds regardless of header content — '=F4+1' formulas, literal
+        # ints, or non-year label strings (the base template ships BCYC's
+        # '2024 Q2'/'2024 Q1' in the last two columns). Stop only at a truly
+        # empty trailing column.
+        if val is None or val == "":
             break
-        elif base_year is not None and isinstance(val, str) and val.startswith("="):
-            year_col[base_year + (col_idx - base_col)] = col_idx
+        year_col[base_year + (col_idx - base_col)] = col_idx
 
     return year_col
+
+
+def _active_year_col_map(years: List[int]) -> Dict[int, int]:
+    """Map requested fiscal years onto the fixed historical columns F:K."""
+    active_years: List[int] = []
+    for year in years:
+        y = int(year)
+        if y not in active_years:
+            active_years.append(y)
+    if len(active_years) > MAX_YEAR_COLS:
+        logger.warning(
+            "Received %d fiscal years but workbook has %d historical columns; "
+            "using the most recent %d.",
+            len(active_years),
+            MAX_YEAR_COLS,
+            MAX_YEAR_COLS,
+        )
+        active_years = active_years[-MAX_YEAR_COLS:]
+    return {year: FIRST_DATA_COL + idx for idx, year in enumerate(active_years)}
+
+
+def _extra_year_cols(year_col: Dict[int, int]) -> List[int]:
+    active_cols = set(year_col.values())
+    return [
+        col_idx
+        for col_idx in range(FIRST_DATA_COL, FIRST_DATA_COL + MAX_YEAR_COLS)
+        if col_idx not in active_cols
+    ]
+
+
+def _add_year_header_patches(
+    patches: List[Tuple[int, int, Any]],
+    year_col: Dict[int, int],
+) -> None:
+    col_to_year = {col: year for year, col in year_col.items()}
+    for col_idx in range(FIRST_DATA_COL, FIRST_DATA_COL + MAX_YEAR_COLS):
+        year = col_to_year.get(col_idx)
+        if year is None:
+            patches.append((HEADER_ROW, col_idx, ("text", "")))
+        else:
+            patches.append((HEADER_ROW, col_idx, year))
+
+
+def _balance_data_map_to_total(
+    data_map: Dict[int, Tuple[str, Dict[int, float]]],
+    total_vals: Dict[int, Optional[float]],
+    active_years: List[int],
+    preferred_fragments: Tuple[str, ...] = ("other",),
+) -> None:
+    """Close small filing/parser rounding differences inside a note section."""
+    if not data_map or not total_vals:
+        return
+
+    candidate_idx = None
+    for fragment in preferred_fragments:
+        for idx, (name, yr_vals) in data_map.items():
+            if isinstance(yr_vals, dict) and fragment in name.lower():
+                candidate_idx = idx
+                break
+        if candidate_idx is not None:
+            break
+    if candidate_idx is None:
+        for idx in sorted(data_map):
+            if isinstance(data_map[idx][1], dict):
+                candidate_idx = idx
+        if candidate_idx is None:
+            return
+
+    name, yr_vals = data_map[candidate_idx]
+    adjusted = dict(yr_vals)
+    for year in active_years:
+        total = total_vals.get(year)
+        if total is None:
+            continue
+        detail_sum = 0
+        for _, vals in data_map.values():
+            if isinstance(vals, dict):
+                detail_sum += vals.get(year, 0) or 0
+        diff = (total or 0) - detail_sum
+        if diff:
+            adjusted[year] = (adjusted.get(year, 0) or 0) + diff
+            logger.info(
+                "  Balanced note detail '%s' by %+g in FY%d",
+                name,
+                diff,
+                year,
+            )
+    data_map[candidate_idx] = (name, adjusted)
 
 
 def _build_row_map(ws_formula, ws_data, year_col: Dict[int, int]) -> Dict[Tuple, int]:
@@ -173,18 +269,22 @@ def _collect_kusd_patches(
 
     ws      = wb[target_sheet]
     ws_data = wb_data[target_sheet]
-    year_col = _build_year_col_map(ws)
+    year_col = _active_year_col_map(years)
     row_map  = _build_row_map(ws, ws_data, year_col)
 
-    # ── Determine ALL year columns (including ones beyond `years` list) ────
-    # E.g. template has 2020-2025 but `years` = [2020..2024] → also write 0
-    # for 2025 to clear template placeholders.
-    all_template_years = sorted(year_col.keys())
+    active_years = sorted(year_col.keys())
+    extra_cols = _extra_year_cols(year_col)
 
     logger.info(
-        f"K USD sheet: {len(year_col)} year columns {all_template_years}, "
+        f"K USD sheet: {len(year_col)} requested year columns {active_years}, "
         f"{len(row_map)} writable rows"
     )
+
+    # Keep the fiscal-year headers in sync with the dynamic workflow.  This
+    # prevents the base template's 2020 / quarterly placeholders from becoming
+    # the anchor for a later run.
+    patches: List[Tuple[int, int, Any]] = []
+    _add_year_header_patches(patches, year_col)
 
     # ── Build reverse rename: financial_data key → Excel row_map key ────────
     new_to_original: Dict[str, Tuple] = {}
@@ -227,7 +327,6 @@ def _collect_kusd_patches(
         f"BSN PP&E={len(bsn_ppe_rows)}, BSN Accrued={len(bsn_acc_rows)}"
     )
 
-    patches: List[Tuple[int, int, Any]] = []
     hidden_rows: set = set()
     show_rows: set = set()  # rows to explicitly unhide (may have been hidden before)
 
@@ -243,9 +342,11 @@ def _collect_kusd_patches(
             continue
         # Zero all year columns, blank col D, and hide
         patches.append((row_num, COL_D, ("text", "")))
-        for year in all_template_years:
+        for year in active_years:
             if year in year_col:
                 patches.append((row_num, year_col[year], 0))
+        for col_idx in extra_cols:
+            patches.append((row_num, col_idx, 0))
         hidden_rows.add(row_num)
         logger.info(f"  SBC row R{row_num} zeroed and will be hidden")
 
@@ -266,12 +367,9 @@ def _collect_kusd_patches(
                 new_name, year_vals = data_map[idx]
                 show_rows.add(row_num)  # ensure visible (may have been hidden)
             else:
-                # Keep template placeholder name if it exists;
-                # if D is blank (old template), set a filler name
-                if col_d and str(col_d).strip():
-                    new_name = None   # keep existing placeholder name
-                else:
-                    new_name = f"Reserved {idx+1}"  # fill blank D
+                # Never keep template placeholder names on unused rows: hidden
+                # stale ticker-specific labels were the source of BCYC/BT leaks.
+                new_name = "Reserved"
                 year_vals = None
                 hidden_rows.add(row_num)  # unused row → hide
 
@@ -280,8 +378,8 @@ def _collect_kusd_patches(
                 patches.append((row_num, COL_D, ("text", new_name)))
                 logger.debug(f"  Rename R{row_num} col D → '{new_name}'")
 
-            # Write numeric data for ALL template year columns
-            for year in all_template_years:
+            # Write numeric data for all requested fiscal years.
+            for year in active_years:
                 if year not in year_col:
                     continue
                 col_idx = year_col[year]
@@ -297,6 +395,10 @@ def _collect_kusd_patches(
                         v = financial_data[year_vals].get(year)
                         val = v if v is not None else 0
                 patches.append((row_num, col_idx, val))
+            for col_idx in extra_cols:
+                cell = ws.cell(row=row_num, column=col_idx)
+                if not _is_formula(cell.value):
+                    patches.append((row_num, col_idx, 0))
 
     # ── Process ISN R&D Notes ───────────────────────────────────────────────
     if isn_rd_rows:
@@ -304,27 +406,30 @@ def _collect_kusd_patches(
         rd_total_key = ("IS", None, "Research And Development")
         rd_total_vals = financial_data.get(rd_total_key, {})
         if rd_detail:
-            # Use parsed detail items from 10-K; reserve LAST row for remainder
             n_rows = len(isn_rd_rows)
-            max_detail = n_rows - 1  # reserve last slot for "Other"
             data_map = {}
-            for i, (name, yr_vals) in enumerate(rd_detail):
-                if i >= max_detail:
-                    break
+            max_detail = n_rows if len(rd_detail) <= n_rows else n_rows - 1
+            for i, (name, yr_vals) in enumerate(rd_detail[:max_detail]):
                 data_map[i] = (name, yr_vals)
-            # Compute remainder = IS_total - SUM(detail items written)
-            remainder: Dict[int, float] = {}
-            for year in all_template_years:
-                total = rd_total_vals.get(year) or 0
-                detail_sum = sum(
-                    (data_map[j][1].get(year, 0) if isinstance(data_map[j][1], dict) else 0)
-                    for j in data_map
-                )
-                remainder[year] = total - detail_sum
-            data_map[n_rows - 1] = ("Other Research And Development", remainder)
+            if len(rd_detail) > max_detail:
+                remainder: Dict[int, float] = {}
+                for year in active_years:
+                    total = rd_total_vals.get(year) or 0
+                    detail_sum = sum(
+                        (data_map[j][1].get(year, 0) if isinstance(data_map[j][1], dict) else 0)
+                        for j in data_map
+                    )
+                    remainder[year] = total - detail_sum
+                data_map[n_rows - 1] = ("Other Research And Development", remainder)
+            _balance_data_map_to_total(
+                data_map,
+                rd_total_vals,
+                active_years,
+                ("other", "royalt", "facility"),
+            )
             logger.info(
-                f"  R&D notes: {len(data_map) - 1} detail items from 10-K + "
-                f"1 remainder row (of {n_rows} available rows)"
+                f"  R&D notes: {len(data_map)} detail rows from filing "
+                f"(of {n_rows} available rows)"
             )
             _write_notes_section(isn_rd_rows, data_map)
         else:
@@ -341,25 +446,28 @@ def _collect_kusd_patches(
         ga_total_vals = financial_data.get(ga_total_key, {})
         if ga_detail:
             n_rows = len(isn_ga_rows)
-            max_detail = n_rows - 1  # reserve last slot for "Other"
             data_map = {}
-            for i, (name, yr_vals) in enumerate(ga_detail):
-                if i >= max_detail:
-                    break
+            max_detail = n_rows if len(ga_detail) <= n_rows else n_rows - 1
+            for i, (name, yr_vals) in enumerate(ga_detail[:max_detail]):
                 data_map[i] = (name, yr_vals)
-            # Compute remainder = IS_total - SUM(detail items written)
-            ga_remainder: Dict[int, float] = {}
-            for year in all_template_years:
-                total = ga_total_vals.get(year) or 0
-                detail_sum = sum(
-                    (data_map[j][1].get(year, 0) if isinstance(data_map[j][1], dict) else 0)
-                    for j in data_map
-                )
-                ga_remainder[year] = total - detail_sum
-            data_map[n_rows - 1] = ("Other General And Administrative", ga_remainder)
+            if len(ga_detail) > max_detail:
+                ga_remainder: Dict[int, float] = {}
+                for year in active_years:
+                    total = ga_total_vals.get(year) or 0
+                    detail_sum = sum(
+                        (data_map[j][1].get(year, 0) if isinstance(data_map[j][1], dict) else 0)
+                        for j in data_map
+                    )
+                    ga_remainder[year] = total - detail_sum
+                data_map[n_rows - 1] = ("Other General And Administrative", ga_remainder)
+            _balance_data_map_to_total(
+                data_map,
+                ga_total_vals,
+                active_years,
+                ("other", "facility"),
+            )
             logger.info(
-                f"  G&A notes: {len(data_map) - 1} detail items from 10-K + "
-                f"1 remainder row"
+                f"  G&A notes: {len(data_map)} detail rows from filing"
             )
             _write_notes_section(isn_ga_rows, data_map)
         else:
@@ -397,6 +505,12 @@ def _collect_kusd_patches(
                 if pos >= 0:
                     data_map[pos] = (name, yr_vals)
 
+            _balance_data_map_to_total(
+                data_map,
+                financial_data.get(("BS", None, "Property And Equipment, Net"), {}),
+                active_years,
+                ("right-of-use", "leasehold", "office", "it"),
+            )
             logger.info(
                 f"  PP&E notes: {len(gross_items)} gross + "
                 f"{len(dep_items)} depreciation items from 10-K"
@@ -414,12 +528,12 @@ def _collect_kusd_patches(
             ppe_net_vals = financial_data.get(ppe_net_key, {})
 
             gross_all_none = all(
-                ppe_gross_vals.get(y) is None for y in all_template_years
+                ppe_gross_vals.get(y) is None for y in active_years
             )
             if gross_all_none and ppe_net_vals:
                 # Compute gross = net - dep (dep stored as negative)
                 computed_gross: Dict[int, float] = {}
-                for year in all_template_years:
+                for year in active_years:
                     net = ppe_net_vals.get(year) or 0
                     dep = ppe_dep_vals.get(year) or 0  # negative
                     computed_gross[year] = net - dep  # net + |dep|
@@ -443,7 +557,7 @@ def _collect_kusd_patches(
         acc_total_vals = financial_data.get(acc_total_key, {})
         if acc_detail:
             n_rows = len(bsn_acc_rows)
-            max_detail = n_rows - 1  # reserve last slot for remainder
+            max_detail = n_rows if len(acc_detail) <= n_rows else n_rows - 1
 
             # If more items than available slots, combine smallest into "Other"
             if len(acc_detail) > max_detail:
@@ -480,20 +594,27 @@ def _collect_kusd_patches(
                     break
                 data_map[i] = (name, yr_vals)
 
-            # Compute remainder = BS total - SUM(detail items)
-            acc_remainder: Dict[int, float] = {}
-            for year in all_template_years:
-                total = acc_total_vals.get(year) or 0
-                detail_sum = sum(
-                    (data_map[j][1].get(year, 0) if isinstance(data_map[j][1], dict) else 0)
-                    for j in data_map
-                )
-                acc_remainder[year] = total - detail_sum
-            data_map[n_rows - 1] = ("Other Accrued Expenses", acc_remainder)
+            if len(acc_detail) > max_detail:
+                acc_remainder: Dict[int, float] = {}
+                for year in active_years:
+                    total = acc_total_vals.get(year) or 0
+                    detail_sum = sum(
+                        (data_map[j][1].get(year, 0) if isinstance(data_map[j][1], dict) else 0)
+                        for j in data_map
+                    )
+                    acc_remainder[year] = total - detail_sum
+                data_map[n_rows - 1] = ("Other Accrued Expenses", acc_remainder)
+
+            _balance_data_map_to_total(
+                data_map,
+                acc_total_vals,
+                active_years,
+                ("other", "payroll", "project"),
+            )
 
             logger.info(
-                f"  Accrued notes: {len(data_map) - 1} detail items from 10-K + "
-                f"1 remainder row (of {n_rows} available rows)"
+                f"  Accrued notes: {len(data_map)} detail rows from filing "
+                f"(of {n_rows} available rows)"
             )
             _write_notes_section(bsn_acc_rows, data_map)
         else:
@@ -503,9 +624,9 @@ def _collect_kusd_patches(
             other_key = ("BSN", 2, "Other Accrued Liabilities")
             n = len(bsn_acc_rows)
             _write_notes_section(bsn_acc_rows, {
-                0: ("Accrued Employee Benefits", emp_key),
-                1: ("Other Accrued Liabilities (Balancing)", bal_key),
-                n - 1: ("Other Accrued Liabilities", other_key),
+                0: ("Accrued Expenses", emp_key),
+                1: ("Other Accrued Expenses", bal_key),
+                n - 1: ("Other", other_key),
             })
 
     # ── Mark ISN/BSN data keys as handled (skip in main loop below) ─────────
@@ -559,9 +680,9 @@ def _collect_kusd_patches(
             patches.append((row_num, COL_D, ("text", new_name)))
             logger.info(f"  Renaming R{row_num} col D: '{excel_key[2]}' → '{new_name}'")
 
-        # Write values for ALL template year columns
-        # None → 0 to replace template placeholders
-        for year in all_template_years:
+        # Write values for requested fiscal years.  None → 0 to replace
+        # template placeholders.
+        for year in active_years:
             if year not in year_col:
                 continue
             col_idx = year_col[year]
@@ -576,6 +697,10 @@ def _collect_kusd_patches(
             logger.debug(
                 f"  K USD [{col_c}|{col_b}|{col_d[:30]}] year={year} → {val:,}"
             )
+        for col_idx in extra_cols:
+            cell = ws.cell(row=row_num, column=col_idx)
+            if not _is_formula(cell.value):
+                patches.append((row_num, col_idx, 0))
 
     # ── Fix template D column label mismatches ──────────────────────────────
     # SUM rows (ISN/BSN with B≠None and formula in F) and Check rows
@@ -659,18 +784,21 @@ def _collect_mm_patches(
     """Return [(row, col, formula)] for blank FY DATA cells needing SUMIFS."""
     ws_mm      = wb[SHEET_MM]
     ws_mm_data = wb_data[SHEET_MM]
-    year_col_mm = _build_year_col_map(ws_mm)
+    year_col_mm = _active_year_col_map(years)
     row_map_mm  = _build_row_map(ws_mm, ws_mm_data, year_col_mm)
 
     patches: List[Tuple[int, int, Any]] = []
+    _add_year_header_patches(patches, year_col_mm)
+    extra_cols = _extra_year_cols(year_col_mm)
+
     for row_num in set(row_map_mm.values()):
+        if row_num <= HEADER_ROW:
+            continue
         for year in years:
             if year not in year_col_mm:
                 continue
             col_idx    = year_col_mm[year]
             col_letter = get_column_letter(col_idx)
-            if ws_mm.cell(row=row_num, column=col_idx).value is not None:
-                continue
             formula = (
                 f"=SUMIFS('FY DATA K USD'!{col_letter}:{col_letter},"
                 f"'FY DATA K USD'!$D:$D,'FY DATA'!$D{row_num},"
@@ -678,6 +806,8 @@ def _collect_mm_patches(
                 f"'FY DATA K USD'!$B:$B,'FY DATA'!$B{row_num})/1000"
             )
             patches.append((row_num, col_idx, formula))
+        for col_idx in extra_cols:
+            patches.append((row_num, col_idx, "=0"))
 
     logger.info(f"FY DATA: {len(patches)} SUMIFS formulas to inject")
     return patches
@@ -724,6 +854,8 @@ def _patch_numeric_cell(xml: str, addr: str, val_str: str) -> str:
     The original XML bytes are preserved character-for-character except for
     the value text — no re-serialization, no namespace changes.
     """
+    import re as _re
+
     search = f'r="{addr}"'
     start  = 0
     while True:
@@ -745,26 +877,22 @@ def _patch_numeric_cell(xml: str, addr: str, val_str: str) -> str:
         # Find the end of the opening tag
         tag_end = xml.index(">", lt) + 1
 
+        # Numeric writes must remove any previous t="s"/t="inlineStr"; otherwise
+        # Excel/openpyxl will interpret the numeric <v> as a shared-string index.
+        open_tag = _re.sub(r'\s+t="[^"]*"', '', xml[lt:tag_end - 1])
+
         # Self-closing?  <c r="F9" s="21" />  → expand it
         if xml[tag_end - 2 : tag_end] == "/>":
-            return (
-                xml[: tag_end - 2]
-                + f"><v>{val_str}</v></c>"
-                + xml[tag_end:]
-            )
+            open_tag = _re.sub(r'\s+t="[^"]*"', '', xml[lt:tag_end - 2])
+            return xml[:lt] + open_tag + f"><v>{val_str}</v></c>" + xml[tag_end:]
 
         # Find </c>
         c_end = xml.index("</c>", tag_end)
         cell_body = xml[tag_end:c_end]
 
-        if "<v>" in cell_body:
-            # Replace existing <v>…</v>
-            v_start = tag_end + cell_body.index("<v>")
-            v_end   = tag_end + cell_body.index("</v>") + 4
-            return xml[:v_start] + f"<v>{val_str}</v>" + xml[v_end:]
-        else:
-            # No <v> yet – insert one before </c>
-            return xml[:c_end] + f"<v>{val_str}</v>" + xml[c_end:]
+        # Replace the entire cell body.  Keeping an old <f> formula while
+        # changing <v> only leaves the formula authoritative after recalc.
+        return xml[:lt] + open_tag + f"><v>{val_str}</v></c>" + xml[c_end + 4:]
 
 
 def _patch_formula_cell(xml: str, row_num: int, addr: str, formula_body: str) -> str:
@@ -807,6 +935,10 @@ def _patch_formula_cell(xml: str, row_num: int, addr: str, formula_body: str) ->
         row_pos = rp + 1
 
     row_tag_end  = xml.index(">", lt) + 1
+    if xml[row_tag_end - 2 : row_tag_end] == "/>":
+        new_cell = f'<c r="{addr}"><f>{formula_body}</f></c>'
+        return xml[: row_tag_end - 2] + f">{new_cell}</row>" + xml[row_tag_end:]
+
     row_end      = xml.index("</row>", row_tag_end)
     row_body     = xml[row_tag_end:row_end]
 

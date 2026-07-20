@@ -21,12 +21,16 @@ DROP VIEW  IF EXISTS v_param_maturity;
 DROP VIEW  IF EXISTS v_param_growth;
 DROP VIEW  IF EXISTS v_param_incidence;
 DROP VIEW  IF EXISTS v_tam_by_group_year;
+DROP VIEW  IF EXISTS v_tam_base_by_group_year;
 DROP VIEW  IF EXISTS v_tam_by_indication_year;
+DROP VIEW  IF EXISTS v_tam_base_by_indication_year;
 DROP VIEW  IF EXISTS v_drug_indication_revenue;
 DROP VIEW  IF EXISTS v_drug_split;
 
 DROP TABLE IF EXISTS peer_metric;
 DROP TABLE IF EXISTS peer_drug;
+DROP TABLE IF EXISTS research_fact;
+DROP TABLE IF EXISTS tam_override;
 DROP TABLE IF EXISTS drug_indication_split;
 DROP TABLE IF EXISTS drug_revenue;
 DROP TABLE IF EXISTS reference_drug_sale;
@@ -103,6 +107,24 @@ CREATE TABLE param_maturity (
     PRIMARY KEY (tier, year_offset)
 );
 
+-- Curated serviceable-market overrides for pipeline assets whose indication
+-- TAM is absent from marketed-sales rows or needs a more precise setting-level
+-- market.  These are still Layer 1 inputs: source and anchors are researched,
+-- while interpolation and export happen in code/views.
+-- source_ticker is part of the key so two tickers' serviceable-market curves for
+-- the SAME indication can coexist (a prior ticker's override must never clobber
+-- or leak into another ticker's build).
+CREATE TABLE tam_override (
+    indication_code VARCHAR NOT NULL REFERENCES indication(indication_code),
+    tam_group       VARCHAR NOT NULL CHECK (tam_group IN ('solid','blood')),
+    year            INTEGER NOT NULL CHECK (year BETWEEN 2000 AND 2050),
+    tam_usd_m       DOUBLE  NOT NULL,
+    source_ticker   VARCHAR NOT NULL DEFAULT '',
+    source_drug     VARCHAR,
+    source_note     VARCHAR,
+    PRIMARY KEY (indication_code, source_ticker, year)
+);
+
 -- Peer Views: drug-vs-drug clinical-readout comparison tables, extracted from
 -- the Peer Views sheet. One row per drug per section; the BIC/T1/AVG rating is
 -- DECODED from cell fill color into explicit text (no more color-as-data).
@@ -125,4 +147,28 @@ CREATE TABLE peer_metric (
     metric     VARCHAR NOT NULL,
     value      VARCHAR,
     PRIMARY KEY (section_id, col, metric)
+);
+
+-- Append-only, provenance-rich facts discovered by any research workflow.
+-- fact_id includes the subject/metric/as-of/source key, so a newer readout is
+-- added without erasing the older data cut.  The latest validated fact can be
+-- selected at query time while the full history remains auditable.
+CREATE TABLE research_fact (
+    fact_id         VARCHAR PRIMARY KEY,
+    context_ticker  VARCHAR NOT NULL,
+    subject         VARCHAR NOT NULL,
+    indication      VARCHAR,
+    comparator      VARCHAR,
+    metric_group    VARCHAR NOT NULL,
+    metric          VARCHAR NOT NULL,
+    value           VARCHAR,
+    unit            VARCHAR,
+    population      VARCHAR,
+    dose            VARCHAR,
+    as_of_date      VARCHAR NOT NULL,
+    source_url      VARCHAR NOT NULL,
+    source_kind     VARCHAR,
+    classification VARCHAR NOT NULL,
+    status          VARCHAR NOT NULL,
+    retrieved_at    VARCHAR NOT NULL
 );

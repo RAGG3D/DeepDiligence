@@ -1,0 +1,255 @@
+{
+  "ticker": "TARA",
+  "event": "ASCO2026",
+  "sheet_name": "Test-ASCO2026",
+  "research_clinical_only": true,
+  "clinical_interpretation_price_blind": true,
+  "pre_event_price_calibration_used": true,
+  "same_day_or_post_event_price_data_used": false,
+  "observed_market_data_used": true,
+  "model_implied_valuation": true,
+  "clinical_only": false,
+  "price_data_used": true,
+  "price_calibration": {
+    "market_ticker": "TARA",
+    "currency": "USD",
+    "provider": "Yahoo Finance via yfinance",
+    "source_url": "https://finance.yahoo.com/quote/TARA/history/",
+    "price_field": "unadjusted Close",
+    "window_days": 7,
+    "window_start": "2026-02-16",
+    "window_end_exclusive": "2026-02-23",
+    "sessions": [
+      {
+        "date": "2026-02-17",
+        "close": 6.550000190734863
+      },
+      {
+        "date": "2026-02-18",
+        "close": 6.670000076293945
+      },
+      {
+        "date": "2026-02-19",
+        "close": 7.150000095367432
+      },
+      {
+        "date": "2026-02-20",
+        "close": 6.840000152587891
+      }
+    ],
+    "session_count": 4,
+    "average_close": 6.802500128746033,
+    "same_day_or_post_event_prices_used": false,
+    "method": "proportional scaling of existing target LOAs with [0%,100%] constraints",
+    "proportional_scale": 1.8952024545060417,
+    "unrisked_total": 35.8932636065998,
+    "feasible_market_price_min": 0.0,
+    "feasible_market_price_max": 35.8932636065998,
+    "prior_risk_adjusted_total": 3.5893263606599803,
+    "estimated_breakdown_total": 6.802500128746034,
+    "relative_error": 2.220446049250313e-16,
+    "targets": {
+      "IV-Choline-Chloride - PS": {
+        "unrisked_value": 13.588545120834517,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 2.575304406617168
+      },
+      "TARA-002-LM - LM": {
+        "unrisked_value": 8.580455929870759,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 1.6261701139071985
+      },
+      "TARA-002-NMIBC - NMIBC-BU": {
+        "unrisked_value": 6.104621178364713,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 1.156949304106637
+      },
+      "TARA-002-NMIBC - NMIBC-BN": {
+        "unrisked_value": 7.619641377529813,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 1.4440763041150302
+      }
+    }
+  },
+  "blind_snapshot": {
+    "frozen_before_post_release_fetch": true,
+    "frozen_at": "2026-07-18T20:35:13.445705+10:00",
+    "original_manifest_sha256": "fc0bcfd81bbb516788b9e869e112cb099c92315edf8c1200256e1cdb04ba269a",
+    "clinical_artifact_sha256": "0e44ccc3e378d725bb383a136169f0bf6e16b29e770ca573ee5071228566bd4a",
+    "blind_prediction_sha256": "aad6c77b0836f2db2158ffa1c7e842621f487b4f1f7556b6dda13286691ef79a",
+    "clinical_interpretation_price_blind": true,
+    "blind_stage_post_release_market_data_used": false,
+    "blind_sheet_digest": "478209132a546845f37c822fe0ce5e75fc64818ae5f0b7efb2a5af1282119ad3",
+    "blind_sheet_original_max_row": 63
+  },
+  "post_release_scoring_market_data_used": true,
+  "post_release_scoring": {
+    "status": "complete",
+    "agent_role": "independent_post_release_agent",
+    "release_date": "2026-02-23",
+    "release_timing_basis": "Company stated the data release was in the evening of 2026-02-23; exclude that day's close.",
+    "include_release_date_close": false,
+    "price_field": "unadjusted Close",
+    "source_url": "https://finance.yahoo.com/quote/TARA/history/",
+    "sessions": [
+      {
+        "date": "2026-02-24",
+        "close": 5.46999979019165
+      },
+      {
+        "date": "2026-02-25",
+        "close": 5.960000038146973
+      },
+      {
+        "date": "2026-02-26",
+        "close": 5.769999980926514
+      }
+    ],
+    "intraday": {
+      "market_ticker": "TARA",
+      "granularity": "60m",
+      "regular_session_only": true,
+      "price_field": "unadjusted High",
+      "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/TARA?period1=1771891200&period2=1772150400&interval=60m&includePrePost=false&events=div%2Csplits",
+      "daily_highs": [
+        {
+          "date": "2026-02-24",
+          "raw_high": 6.329999923706055,
+          "bar_start": "2026-02-24T09:30:00-05:00",
+          "bar_count": 7
+        },
+        {
+          "date": "2026-02-25",
+          "raw_high": 6.09499979019165,
+          "bar_start": "2026-02-25T12:30:00-05:00",
+          "bar_count": 7
+        },
+        {
+          "date": "2026-02-26",
+          "raw_high": 6.047999858856201,
+          "bar_start": "2026-02-26T09:30:00-05:00",
+          "bar_count": 7
+        }
+      ],
+      "three_day_peak": {
+        "date": "2026-02-24",
+        "raw_high": 6.329999923706055,
+        "bar_start": "2026-02-24T09:30:00-05:00",
+        "bar_count": 7
+      },
+      "independent_agent_note": "Regular-session 60m raw High; bar time identifies the peak hour, not the exact trade minute."
+    },
+    "highest_rjconv_scenario_test": {
+      "rule": "max RJConv. (raw Table-3 conviction product); all exact ties retained",
+      "three_day_real_peak": 6.329999923706055,
+      "three_day_peak_bar_start": "2026-02-24T09:30:00-05:00",
+      "highest_rjconv": 0.45499999999999996,
+      "scenarios": [
+        {
+          "row": 10,
+          "scenario_id": 10,
+          "outcomes": {
+            "TARA-002-NMIBC - NMIBC-BU": "Increase",
+            "TARA-002-NMIBC - NMIBC-BN": "Increase"
+          },
+          "rjconv": 0.45499999999999996,
+          "blind_final_market_price": 7.313372424094165,
+          "result": "MISS",
+          "difference_usd_per_share": 0.9833725003881106,
+          "difference_as_pct_of_real_peak": 0.15535110777890357
+        }
+      ]
+    },
+    "target_scores": [
+      {
+        "target": "TARA-002-NMIBC - NMIBC-BU",
+        "score": 3,
+        "rationale": "虽识别12个月数据偏弱，却仍显著高估正面重估。"
+      },
+      {
+        "target": "TARA-002-NMIBC - NMIBC-BN",
+        "score": 2,
+        "rationale": "高 conviction 上调与连续三日负反应方向相反。"
+      }
+    ],
+    "score_artifact": "/home/nazdaq_44sun/Investment/DeepDiligence/artifacts/TARA/TARA_test_ASCO2026_post_release_score.json",
+    "audit": {
+      "blind_prediction_unchanged": true,
+      "blind_sheet_digest": "478209132a546845f37c822fe0ce5e75fc64818ae5f0b7efb2a5af1282119ad3",
+      "post_release_close_cells": [
+        "D2",
+        "E2",
+        "F2"
+      ],
+      "score_cells": {
+        "TARA-002-NMIBC - NMIBC-BU": "L2",
+        "TARA-002-NMIBC - NMIBC-BN": "P2"
+      },
+      "post_release_sessions": [
+        {
+          "date": "2026-02-24",
+          "close": 5.46999979019165
+        },
+        {
+          "date": "2026-02-25",
+          "close": 5.960000038146973
+        },
+        {
+          "date": "2026-02-26",
+          "close": 5.769999980926514
+        }
+      ],
+      "score_count": 2,
+      "strikethrough_cells": 0
+    }
+  },
+  "research": "/home/nazdaq_44sun/Investment/DeepDiligence/artifacts/TARA/TARA_test_ASCO2026_clinical.json",
+  "workbook": "/mnt/c/Users/yzsun/Desktop/DD/TARA/DCF TARA.xlsx",
+  "audit": {
+    "sheet": "Test-ASCO2026",
+    "max_row": 63,
+    "max_col": 24,
+    "formulas": 106,
+    "target_universe": 4,
+    "active_targets": 2,
+    "scenario_count": 6,
+    "scenario_ids": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "scenarios_module": {
+      "label": "Test Scenarios - ASCO2026",
+      "divider_row": 93,
+      "first_id": 10,
+      "last_id": 15
+    },
+    "research_clinical_only": true,
+    "clinical_interpretation_price_blind": true,
+    "pre_event_price_calibration_used": true,
+    "same_day_or_post_event_price_data_used": false,
+    "average_close": 6.802500128746033,
+    "base_breakdown_total": 6.802500128746034,
+    "base_price_relative_error": 2.220446049250313e-16,
+    "model_implied_valuation": true,
+    "observed_market_data_used": true,
+    "native_data_table": "B8:C15",
+    "calculation_state": "automatic_non_stale"
+  },
+  "blind_stage_same_day_or_post_event_price_data_used": false,
+  "rjconv_naming_migration": {
+    "migrated_at": "2026-07-18T11:16:04+00:00",
+    "scope": "terminology_only",
+    "old_main_label": "Conv.",
+    "new_main_label": "RJConv.",
+    "formula_or_value_change": false,
+    "table3_target_conviction_label_retained": true
+  }
+}

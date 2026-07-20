@@ -6,7 +6,7 @@ An automated biotech/pharmaceutical DCF (Discounted Cash Flow) valuation pipelin
 
 ![AUTO_DCF Excel Tab Structure](auto_dcf_tabs.png)
 
-The workbook is organised into five functional groups: **Output** sheets (Catalyst, Earnings, Valuation), **Catalyst-specific forecasting** (FSA, Scenarios, Peer View, Pipeline), **Financials / DCF model** (RIS, RBS, RCFS, Schedules, FY DATA, FY DATA K USD), **Sentiment & historical data** (Historical Events, BBG DAPI), and **Database / variable generation** (TAM Solid, TAM Blood, Peer Views).
+The delivered workbook is organised into four functional groups: **Output** sheets (Catalyst, Earnings, Valuation), **Catalyst-specific forecasting** (FSA, Scenarios, Peer View, Pipeline), **Financials / DCF model** (RIS, RBS, RCFS, Schedules, FY DATA, FY DATA K USD), and **Sentiment & historical data** (Historical Events, BBG DAPI). TAM and peer readout data live in the repository data center; build-time helper tabs are removed from final workbooks by `tools/trim_model_tabs.py`.
 
 ## Architecture Overview
 
@@ -17,10 +17,10 @@ ClinicalTrials   │
 .gov API v2 ─────┼─> research/clinical_trials_fetcher.py ──> trials.json
                   │                                               │
 Yahoo Finance ───┤                                                ▼
-News RSS ────────┼─> fill/fill_events.py ──────────────────> Historical Events sheet
+Official IR archive + conference sources
+          ───────┼─> tools/fill_historical_events.py ─────> Historical Events sheet
 Claude Haiku ────┘
-                     fill/fill_tam.py ─────────────────────> TAM Solid / TAM Blood sheets
-                     tam/expand_tam.py ────────────────────> TAM Solid (new drugs)
+                     datastore/export/*.csv ───────────────> TAM / peer data center
 
 trials.json ─────┐
                   ├─> research/gemini_research.py ──> per-drug .md/.docx reports
@@ -28,7 +28,8 @@ Gemini Deep Res ──┘                                        │
                                                            ▼
                      generate/generate_scenarios.py ─────> Scenarios sheet
                      generate/generate_pipeline.py ──────> Pipeline sheet
-                     fill/fill_peer_views.py ────────────> Peer Views sheet
+                     tools/build_peer_view_summary.py ───> Peer View sheet
+                     tools/trim_model_tabs.py ───────────> final workbook tab trim
                      generate/generate_financials.py ────> RBS / RCFS sheets
 ```
 
@@ -38,17 +39,32 @@ Gemini Deep Res ──┘                                        │
 |--------|----------------|---------|
 | `create_template.py` | FY DATA K USD, FY DATA, Historical Events | Generate blank formatted DCF template |
 | `main.py` + `core/sec_fetcher.py` + `core/excel_writer.py` | FY DATA K USD, FY DATA | Fill financial statements (IS/BS/CFS) from SEC XBRL |
-| `fill/fill_events.py` | Historical Events | Fill daily stock prices, news, AI-generated summaries |
+| `tools/fill_historical_events.py` | Historical Events | Exhaustive official PR crawl, PR+abstract clinical summaries, prices and source hyperlinks |
 | `fill/fill_tam.py` | TAM Solid+MM, TAM Blood | Fill drug revenue data (FY2024/2025 sales) |
 | `tam/expand_tam.py` | TAM Solid+MM | Insert new drugs into TAM oncology section |
 | `fill/fill_tam_forecast.py` | TAM Solid+MM, TAM Blood | Fill TAM forecast parameters and growth rates |
 | `research/clinical_trials_fetcher.py` | *(JSON output)* | Fetch clinical trial data from ClinicalTrials.gov API |
+| `research/gpt_research.py` | `artifacts/{TICKER}/{TICKER}_company_facts.json` + briefs | Primary-source company identity/corporate-action gate, shares/liquidity facts, and research briefs |
 | `research/gemini_research.py` | *(Markdown/Word output)* | Gemini Deep Research per-drug analysis reports |
+| `tools/update_peer_database_from_reports.py` | datastore/export peer CSVs | Promote new ticker PEER_VIEW report blocks into the data center |
 | `generate/generate_scenarios.py` | Scenarios | Generate BASE/BULL/BEAR/CATALYST scenario sheets |
-| `generate/generate_pipeline.py` | Pipeline | Fill Revenue Forecasting rows from research reports |
+| `generate/build_catalyst_framework.py` | Catalyst, Scenarios, VALUATION | Build the unified v7 layout for active or neutral runs: `Scenario → Base Case → Final Market → Upside → RJConv. → active outcomes → full target breakdown`, an Excel What-If table embedded in Catalyst B:C at visible 3% terminal growth, target Conv. ≥10% Cartesian combinations sorted by RJConv., active blocks first, visible grey-masked inactive blocks, and an empty retired VALUATION O:P area |
+| `tools/catalyst_workflow.py` | Catalyst + persistent snapshot DB | Open active runs, refresh v7 RJConv.-ranked combinations after analyst inputs change, preserve historical Test Scenarios modules, apply the active mask, and snapshot price reaction/interpretation before post-catalyst reset |
+| `tools/test_catalyst_event.py` | `Test-EVENT`, Scenarios | Execute `TICKER test EVENT` for a completed clinical disclosure: retrieve only allowlisted clinical sources, combine them with clinical-only peer-database rows, infer MS/LOA changes, filter Conv. ≥10%, build every surviving outcome combination, retain all non-event targets visibly grey, append a globally unique `Test Scenarios - EVENT` module linked only to the Test tab, and hard-reject any security-price content |
+| `generate/generate_pipeline.py` | Pipeline | Fill Revenue Forecasting rows from research reports; ratings come from approved assumptions/datastore, then report assessments before AVG fallback |
+| `generate/wire_tam.py` | Pipeline | Write indication TAM from `datastore/export/tam_by_indication_year.csv`; database-sourced values are displayed in dark green |
 | `generate/generate_peer_views.py` | Peer Views | Style Peer Views sections with per-drug rating colors |
 | `fill/fill_peer_views.py` | Peer Views | Parse research reports and fill drug readout data |
 | `generate/generate_financials.py` | RBS, RCFS | Generate Restated Balance Sheet / Cash Flow sheets |
+| `tools/fix_statement_logic.py` | RIS, Schedules, RBS | Keep FY DATA-derived breakdowns, stage-link R&D/G&A, and driver-link schedules/RBS forecasts |
+| `tools/fix_liquidity_rollforward.py` | RBS, RCFS, VALUATION, Catalyst | Reclassify non-current securities, roll unrestricted liquidity consistently, and prevent cash double counting |
+| `tools/apply_reference_model_styles.py` | All 15 delivered tabs | Apply approved formats without changing model data; Pipeline alone is locked to `DCF MOLN completed_pre_calcstate_20260709_035047.xlsx`, while other tabs use the active MOLN reference |
+| `tools/workbook_style_audit.py` | All 15 delivered tabs | Fail closed on reference-style drift, Catalyst Table-3 misalignment, legacy Table 2, or numeric-only Catalyst scenario headers |
+| `tools/build_valuation_charts.py` | VALUATION | Rebuild the Football Field and Waterfall after final style application; chart creation runs in manual calculation mode and fails if the Waterfall object is absent |
+| `tools/trim_model_tabs.py` | Workbook structure | Inline build-time database references and delete Welcome/Playground/TAM/Peer Views tabs before delivery |
+| `tools/repair_excel_namespaces.py` | Workbook package XML | Restore Excel-compatible OOXML namespace prefixes after XML patching |
+| `tools/excel_repair_saveas.ps1` | Workbook package XML | Final Excel-native repair-save normalization so delivered files open without repair prompts |
+| `tools/normalize_calc_state.py` | Workbook calculation metadata | Finalize Automatic calculation, remove stale `calcFeatures`/calcChain metadata, and prevent Excel's visual stale-value strikethrough; the workbook audit fails closed if Manual/incomplete state returns |
 | `fix/fix_financials.py` | FY DATA K USD | Fix/adjust financial data post-fill |
 | `fix/fix_tam_layout.py` | TAM Solid+MM | Fix TAM sheet layout and formatting |
 | `fix/fix_tam_styles.py` | TAM Solid+MM | Fix TAM cell styles and conditional formatting |
@@ -69,13 +85,42 @@ The generated DCF workbook contains the following sheets:
 | **FY DATA K USD** | Core financial data in thousands (IS, BS, CFS, ISN, BSN) |
 | **FY DATA** | Summary in millions (SUMIFS referencing K USD sheet) |
 | **Historical Events** | 4-year daily stock prices + news catalysts with AI summaries |
-| **TAM Solid+MM** | Total Addressable Market for solid tumor oncology drugs |
-| **TAM Blood** | Total Addressable Market for hematology drugs |
 | **Pipeline** | Per-drug revenue forecasting (TAM x market share x pricing) |
 | **Scenarios** | BASE/BULL/BEAR/CATALYST market share projections (2024-2038) |
-| **Peer Views** | Drug-vs-drug clinical readout comparison tables |
+| **Peer View** | Current ticker drug-vs-peer clinical readout comparison |
 | **RBS** | Restated Balance Sheet (auto-generated from FY DATA) |
 | **RCFS** | Restated Cash Flow Statement (auto-generated from FY DATA) |
+
+Market-price QA is company-identity aware: Lifetime statistics begin at the researched
+`price_history_start_date`, exclude predecessor/shell history after reverse mergers, and use a
+single completed daily OHLC session. Shares outstanding and liquidity components retain their
+filing as-of dates and are not silently substituted with weighted-average shares or a generic
+"cash" total.
+
+Catalyst/Historical Events builds are fail-closed. Every Catalyst target is a distinct
+drug×indication, and every official issuer press release in the four displayed years is retained
+with its canonical URL. The operational `catalyst run` / `post-catalyst` sequence, durable workbook
+snapshot rules, PR+conference-abstract requirement, and clean-model gate are specified in
+[`information/CATALYST_HISTORICAL_EVENTS_WORKFLOW.md`](information/CATALYST_HISTORICAL_EVENTS_WORKFLOW.md).
+The pinned canonical tree is [`00_WORKFLOW_STRUCTURE.md`](00_WORKFLOW_STRUCTURE.md);
+every workflow change must update it in the same change. The same detailed
+workflow document defines `TICKER test EVENT`: clinical interpretation is
+price-blind, then Base breakdown LOAs are calibrated to the average raw close in
+the seven calendar days strictly before the earliest public disclosure. Catalyst
+and Test tables show `RJConv.` (Raw Joint Conviction) and sort it descending. After the
+blind artifact is hashed, a different agent may use only the first three eligible
+post-release closes and their regular-session 60-minute High bars to score each
+target and test the highest-RJConv. blind price. Post-release data never flow
+back into the locked clinical prediction.
+
+The conversational `event EVENT` command performs an event-wide, price-blind
+screen. It returns only US-listed biotech tickers that pass an isolated
+sub-USD-1B capital gate and either disclosed qualifying quantitative human
+clinical data at a completed event or officially announced such a readout for a
+future event. The clinical branch and output never receive security-price data.
+All research entrypoints keep the database scan active; competitor completeness
+explicitly includes mPFS/PFS and mOS/OS in addition to response, safety, dose and
+commercial fields.
 
 ## Prerequisites
 
@@ -95,7 +140,7 @@ pip install google-genai python-docx feedparser
 | Variable | Used By | Purpose |
 |----------|---------|---------|
 | `GEMINI_API_KEY` | `gemini_research.py` | Google Gemini Deep Research + Flash |
-| `ANTHROPIC_API_KEY` | `fill_events.py` | Claude Haiku news summarisation |
+| `OPENAI_API_KEY` | `research/gpt_research.py` | Company facts, exhaustive events and catalyst/post-catalyst web research |
 
 ## User Manual
 
@@ -111,7 +156,8 @@ python create_template.py --ticker BHVN
 python main.py --ticker BHVN --years 2020 2021 2022 2023 2024
 
 # Step 3 — Fill Historical Events (stock prices + news)
-python fill/fill_events.py BHVN
+python tools/fill_historical_events.py --ticker BHVN --company-name "Biohaven Ltd" \
+  --news-url "<official IR press-release archive>" --require-official-news
 
 # Step 4 — Fill TAM drug data
 python fill/fill_tam.py
@@ -121,6 +167,12 @@ python research/clinical_trials_fetcher.py --ticker BHVN --company-name "Biohave
 
 # Step 6 — Run Gemini Deep Research (per drug)
 python research/gemini_research.py --ticker BHVN --company-name "Biohaven Ltd"
+
+# Step 6b — Promote newly researched TAM/Peer facts into the data center
+python tools/update_tam_database_from_reports.py --ticker BHVN \
+    --report-dir /mnt/c/Users/yzsun/Desktop/DD/BHVN/pipeline_base4
+python tools/update_peer_database_from_reports.py --ticker BHVN \
+    --report-dir /mnt/c/Users/yzsun/Desktop/DD/BHVN/pipeline_base4
 
 # Step 7 — Generate Scenarios sheet
 python generate/generate_scenarios.py --ticker BHVN \
@@ -174,7 +226,8 @@ Fetches XBRL data from SEC EDGAR and surgically patches FY DATA sheets. The `--d
 #### Step 3: Fill Historical Events
 
 ```bash
-python fill/fill_events.py BHVN
+python tools/fill_historical_events.py --ticker BHVN --company-name "Biohaven Ltd" \
+  --news-url "<official IR press-release archive>" --require-official-news
 ```
 
 Fetches from 6 sources: Yahoo Finance prices, GlobeNewswire RSS, Google News RSS, SEC EDGAR 8-K filings, SEC EDGAR EFTS (conferences), and generates AI summaries via Claude Haiku (30 words for news, 65 words for moves >5%).
@@ -307,7 +360,7 @@ auto_dcf/
     generate_financials.py       #   RBS / RCFS sheet generation
   │
   fill/                          # Data filling operations
-    fill_events.py               #   Historical Events (prices + news + AI)
+    fill_events.py               #   Legacy only; production uses tools/fill_historical_events.py
     fill_tam.py                  #   TAM drug revenue data (FY2024/2025)
     fill_tam_forecast.py         #   TAM forecast parameters & growth rates
     fill_peer_views.py           #   Peer Views data from Gemini reports

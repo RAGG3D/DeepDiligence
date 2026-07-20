@@ -1,0 +1,24 @@
+{
+  "ticker": "CMPX",
+  "as_of": "2026-07-12",
+  "event_date": null,
+  "event_name": "CTX-8371 Phase 1 expansion update (Q4 2026)",
+  "drug": "CTX-8371",
+  "indication": "Post-checkpoint NSCLC, TNBC and Hodgkin lymphoma",
+  "expected_disclosure": "Additional Phase 1 expansion data in Q4 2026 from the NSCLC (planned n=28), TNBC (planned n=28), and Hodgkin lymphoma (planned n=12) cohorts. Expected fields are evaluable patient count, safety/DLTs, RECIST or lymphoma response outcomes (ORR/CR/PR/DCR), depth and durability/follow-up. The company has not yet announced the exact conference, cutoff date, or final data fields.",
+  "relevant_targets": [
+    "CTX-8371 - NSCLC",
+    "CTX-8371 - TNBC",
+    "CTX-8371 - HL"
+  ],
+  "sources": [
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-present-promising-phase-1-clinical-data-ctx",
+    "https://investors.compasstherapeutics.com/news-releases/news-release-details/compass-therapeutics-reports-2026-first-quarter-financial",
+    "https://ascopubs.org/doi/10.1200/JCO.2026.44.16_suppl.2629",
+    "https://clinicaltrials.gov/study/NCT06150664"
+  ],
+  "uncertainties": [
+    "The Q4 2026 venue and precise data cutoff have not been announced.",
+    "The list of expected metrics is based on the Phase 1 design and prior ASCO reporting; Compass has only committed to additional data."
+  ]
+}

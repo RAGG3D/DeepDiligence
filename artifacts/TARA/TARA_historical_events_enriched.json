@@ -1,0 +1,1244 @@
+{
+  "official_release_count": 81,
+  "official_release_urls": [
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-closing-100-million-public-offering",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-closing-75-million-public-offering",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-positive-results-ongoing-phase-2-advanced-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-pricing-100-million-public-offering",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-pricing-75-million-public-offering",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-proposed-public-offering",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-proposed-public-offering-0",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-highlights-recent-updates-and-anticipated-2025",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-addition-russell-3000r-index",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-alignment-fda-registrational-path",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-leonardo-viana",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-patrick-fabbio-chief",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-william-conkling",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-completion-first-cohort-phase-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-1b2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-3",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patients-phase-1b",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-encore-presentation-results",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2023-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2024-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2025-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2026-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2022",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2023",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2024",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2025",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-oversubscribed-45-million-private",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-interim-results",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-interim-results-0",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-preliminary-data",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-three-month-data-tara",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-updated-12-month-data",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-presentation-additional",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-results-thrive-1-prospective",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2023-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2024-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2025-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2023-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2024-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2025-financial",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-updated-interim-data-phase-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-granted-fda-fast-track-designation",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-highlights-recent-updates-and-anticipated",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-0",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-1",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-new",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-virtual-investor-webinar-discuss-tara",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grant-under-nasdaq",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-10",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-11",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-12",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-7",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-8",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-9",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-named-2026-best-places-work-winner-biospace",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-0",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-1",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-3",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-4",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-43rd-annual-jp-morgan-healthcare",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-44th-annual-jp-morgan-healthcare",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-guggenheim-healthcare-talks",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-guggenheim-inaugural-healthcare",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-hc-wainwright-25th-annual-global",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-hc-wainwright-26th-annual-global",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-interim-analysis-phase-2-advanced-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-new-interim-data-phase-2-advanced-0",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-new-interim-data-phase-2-advanced-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-oppenheimer-35th-annual-healthcare",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-44th-annual-health-care",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-45th-annual-health-care",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-5th-annual-oncology",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-7th-annual-oncology",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-updated-interim-12-month-data-phase",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-updated-interim-data-phase-2",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-receives-both-fda-breakthrough-therapy-and",
+    "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-receives-regulatory-clearance-fda-commence",
+    "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg"
+  ],
+  "events": [
+    {
+      "date": "2023-01-30",
+      "title": "Protara Therapeutics Announces Appointment of Patrick Fabbio as Chief Financial Officer",
+      "evt": "Announces Appointment of Patrick Fabbio as Chief Financial Officer",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-patrick-fabbio-chief",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-patrick-fabbio-chief",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-02-02",
+      "title": "Protara Therapeutics to Present at the Guggenheim Healthcare Talks Oncology Day",
+      "evt": "to Present at the Guggenheim Healthcare Talks Oncology Day",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-guggenheim-healthcare-talks",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-guggenheim-healthcare-talks",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-02-23",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-03-01",
+      "title": "Protara Therapeutics to Participate in Upcoming Investor Conferences",
+      "evt": "to Participate in Upcoming Investor Conferences",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-0",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-0",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-03-08",
+      "title": "Protara Therapeutics Announces Fourth Quarter and Full Year 2022 Financial Results and Provides Business Update",
+      "evt": "Announces Fourth Quarter and Full Year 2022 Financial Results and Provides Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2022",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2022",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-03-10",
+      "evt": "Share move after Announces Fourth Quarter and Full Year 2022",
+      "category": "Other"
+    },
+    {
+      "date": "2023-03-13",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-03-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-03-17",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-04-21",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-04-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-04-28",
+      "title": "Protara Therapeutics Announces Positive Preliminary Data from ADVANCED-1 Phase 1a Dose Escalation Trial of TARA-002 in NMIBC Supporting Advancement into Phase 2 Clinical Development",
+      "evt": "[COMPANY PR] Phase 1a; Preliminary Data; generally well tolerated",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-preliminary-data",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-preliminary-data",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-05-02",
+      "title": "Protara Therapeutics Receives Regulatory Clearance from FDA to Commence Phase 2 STARBORN-1 Trial of TARA-002 in Pediatric Patients with Lymphatic Malformations",
+      "evt": "[COMPANY PR] Phase 2; primary",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-receives-regulatory-clearance-fda-commence",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-receives-regulatory-clearance-fda-commence",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-05-04",
+      "title": "Protara Therapeutics Announces First Quarter 2023 Financial Results and Business Update",
+      "evt": "Announces First Quarter 2023 Financial Results and Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2023-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2023-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-05-15",
+      "title": "Protara Therapeutics Announces Dosing of First Patients in Phase 1b ADVANCED-1EXP Trial of TARA-002 in NMIBC Patients with Carcinoma in Situ",
+      "evt": "[COMPANY PR] Phase 1b; preliminary data; generally well tolerated",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patients-phase-1b",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patients-phase-1b",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-08-03",
+      "title": "Protara Therapeutics Announces Second Quarter 2023 Financial Results and Business Update",
+      "evt": "Announces Second Quarter 2023 Financial Results and Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2023-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2023-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-09-05",
+      "title": "Protara Therapeutics to Present at the H.C. Wainwright 25th Annual Global Investment Conference",
+      "evt": "to Present at the H.C. Wainwright 25th Annual Global Investment Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-hc-wainwright-25th-annual-global",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-hc-wainwright-25th-annual-global",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-09-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-09-20",
+      "evt": "[COMPANY PR] Phase 1b/2; first patient dosed in ADVANCED-2; planned N=102",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-1b2",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-1b2",
+      "venue": "COMPANY PR",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2023-10-18",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-10-23",
+      "title": "Protara Therapeutics Announces Dosing of First Patient in Phase 2 STARBORN-1 Trial of TARA-002 in Pediatric Patients with Lymphatic Malformations",
+      "evt": "[COMPANY PR] Phase 2; primary",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-2",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-2",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-10-25",
+      "evt": "Share move after COMPANY PR Phase 2 primary",
+      "category": "Other"
+    },
+    {
+      "date": "2023-11-03",
+      "title": "Protara Therapeutics Announces Third Quarter 2023 Financial Results and Business Update",
+      "evt": "Announces Third Quarter 2023 Financial Results and Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2023-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2023-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-11-07",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-11-27",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-11-30",
+      "title": "Protara Therapeutics Announces Presentation of Additional Encouraging Data from Phase 1a ADVANCED-1 Trial of TARA-002 in NMIBC at the 24th Annual Meeting of the Society of Urologic Oncology",
+      "evt": "[COMPANY PR] Phase 1a; preliminary results; n=27; generally well tolerated",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-presentation-additional",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-presentation-additional",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2023-12-08",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-12-12",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2023-12-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-02",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-09",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-16",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-19",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-26",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-01-31",
+      "title": "Protara Therapeutics to Participate in Upcoming Investor Conferences",
+      "evt": "to Participate in Upcoming Investor Conferences",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-1",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-1",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-02-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-16",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-26",
+      "evt": "Share move after to Present at the TD Cowen 44th",
+      "category": "Other"
+    },
+    {
+      "date": "2024-02-28",
+      "title": "Protara Therapeutics to Present at the TD Cowen 44th Annual Health Care Conference",
+      "evt": "to Present at the TD Cowen 44th Annual Health Care Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-44th-annual-health-care",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-44th-annual-health-care",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-03-05",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-03-13",
+      "title": "Protara Therapeutics Announces Fourth Quarter and Full Year 2023 Financial Results and Provides Business Update",
+      "evt": "Announces Fourth Quarter and Full Year 2023 Financial Results and Provides Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2023",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2023",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-03-18",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-04-05",
+      "evt": "$45 million private placement announced to fund TARA-002 and IV Choline",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-oversubscribed-45-million-private",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-oversubscribed-45-million-private",
+      "venue": "COMPANY PR",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2024-04-05",
+      "title": "Protara Therapeutics Announces Positive Three-Month Data from TARA-002 Clinical Program in NMIBC",
+      "evt": "[COMPANY PR] Phase 2; Preliminary data; n=75; complete response rate of 43%; no Grade 3 or greater treatment-related adverse events Preliminary data from six-month evaluable patient",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-three-month-data-tara",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-three-month-data-tara",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-04-05",
+      "title": "Protara Therapeutics Announces Alignment with FDA on Registrational Path Forward for IV Choline Chloride in Patients Dependent on Parenteral Nutrition",
+      "evt": "[COMPANY PR] Phase 2b; primary",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-alignment-fda-registrational-path",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-alignment-fda-registrational-path",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-04-22",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-04-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-05-02",
+      "title": "Protara Therapeutics Announces First Quarter 2024 Financial Results and Provides Business Update",
+      "evt": "Announces First Quarter 2024 Financial Results and Provides Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2024-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2024-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-05-13",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-05-15",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-05-17",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-05-21",
+      "title": "Protara Therapeutics to Present at the TD Cowen 5th Annual Oncology Innovation Summit",
+      "evt": "to Present at the TD Cowen 5th Annual Oncology Innovation Summit",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-5th-annual-oncology",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-5th-annual-oncology",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-06-18",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-06-24",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grant Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grant Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grant-under-nasdaq",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grant-under-nasdaq",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-06-27",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-07-10",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-08-06",
+      "title": "Protara Therapeutics Announces Second Quarter 2024 Financial Results and Provides a Business Update",
+      "evt": "Announces Second Quarter 2024 Financial Results and Provides a Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2024-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2024-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-08-07",
+      "evt": "Share move after Announces Second Quarter 2024 Financial Results and",
+      "category": "Other"
+    },
+    {
+      "date": "2024-09-03",
+      "title": "Protara Therapeutics to Present at the H.C. Wainwright 26th Annual Global Investment Conference",
+      "evt": "to Present at the H.C. Wainwright 26th Annual Global Investment Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-hc-wainwright-26th-annual-global",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-hc-wainwright-26th-annual-global",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-09-09",
+      "evt": "[COMPANY PR] Phase 2 initial data; N=3; CR=2/3; all TEAEs mild/moderate and resolved",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-completion-first-cohort-phase-2"
+    },
+    {
+      "date": "2024-09-09",
+      "evt": "[ESPEN Poster] prospective observational data; N=78; choline deficiency=78% (61/78); liver injury among deficient=63% (38/60)",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-results-thrive-1-prospective",
+      "abstract_url": "https://ir.protaratx.com/static-files/7b90a75c-d146-4edb-a39f-87ad5393fe91"
+    },
+    {
+      "date": "2024-09-13",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-10-14",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-10-21",
+      "title": "Protara Therapeutics Granted FDA Fast Track Designation for Intravenous Choline Chloride for Patients Receiving Parenteral Support",
+      "evt": "[COMPANY PR] Phase 2b; primary",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-granted-fda-fast-track-designation",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-granted-fda-fast-track-designation",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-10-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-11-06",
+      "title": "Protara Therapeutics to Present at the Guggenheim Inaugural Healthcare Innovation Conference",
+      "evt": "to Present at the Guggenheim Inaugural Healthcare Innovation Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-guggenheim-inaugural-healthcare",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-guggenheim-inaugural-healthcare",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-11-12",
+      "title": "Protara Therapeutics Announces Third Quarter 2024 Financial Results and Provides a Business Update",
+      "evt": "Announces Third Quarter 2024 Financial Results and Provides a Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2024-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2024-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-11-15",
+      "title": "Protara Therapeutics to Present New Interim Data from Phase 2 ADVANCED-2 Trial of TARA-002 in Patients with NMIBC at the 25th Annual Meeting of the Society of Urologic Oncology",
+      "evt": "[COMPANY PR] Phase 2; Interim Data; n=27",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-new-interim-data-phase-2-advanced-2",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-new-interim-data-phase-2-advanced-2",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-11-25",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-11-26",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-02",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-03",
+      "evt": "Share move after CALL Phase 2 initial data N 27",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-04",
+      "evt": "Share move after CALL Phase 2 initial data N 27",
+      "category": "Other"
+    },
+    {
+      "date": "2024-12-05",
+      "evt": "[CALL] Phase 2 initial data; N=27; 72% 6m landmark CR; no Grade 2+ TRAEs",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-positive-results-ongoing-phase-2-advanced-2"
+    },
+    {
+      "date": "2024-12-05",
+      "title": "Protara Therapeutics to Host Conference Call and Webcast to Review New Interim Data from Phase 2 ADVANCED-2 Trial of TARA-002 in Patients with NMIBC on Thursday, December 5, 2024",
+      "evt": "[CALL] Phase 2; Interim Data; n=27",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-new",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-new",
+      "source_kind": "company_press_release",
+      "venue": "CALL"
+    },
+    {
+      "date": "2024-12-09",
+      "evt": "$100 million underwritten public offering priced at $6.25 per share",
+      "category": "Financing"
+    },
+    {
+      "date": "2024-12-09",
+      "title": "Protara Announces Pricing of $100 Million Public Offering",
+      "evt": "Protara Announces Pricing of $100 Million Public Offering",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-pricing-100-million-public-offering",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-pricing-100-million-public-offering",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-12-09",
+      "title": "Protara Announces Proposed Public Offering",
+      "evt": "Protara Announces Proposed Public Offering",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-proposed-public-offering",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-proposed-public-offering",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-12-11",
+      "title": "Protara Announces Closing of $100 Million Public Offering",
+      "evt": "Protara Announces Closing of $100 Million Public Offering",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-closing-100-million-public-offering",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-closing-100-million-public-offering",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2024-12-18",
+      "evt": "Share move with market/biotech weakness",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-03",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Protara Therapeutics to Present at the 43rd Annual J.P. Morgan Healthcare Conference",
+      "evt": "to Present at the 43rd Annual J.P. Morgan Healthcare Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-43rd-annual-jp-morgan-healthcare",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-43rd-annual-jp-morgan-healthcare",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Protara Highlights Recent Updates and Anticipated 2025 Milestones",
+      "evt": "Protara Highlights Recent Updates and Anticipated 2025 Milestones",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-highlights-recent-updates-and-anticipated-2025",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-highlights-recent-updates-and-anticipated-2025",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-01-31",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Protara Therapeutics to Present at the Oppenheimer 35th Annual Healthcare Life Sciences Conference",
+      "evt": "to Present at the Oppenheimer 35th Annual Healthcare Life Sciences Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-oppenheimer-35th-annual-healthcare",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-oppenheimer-35th-annual-healthcare",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-02-07",
+      "evt": "Share move after to Present at the Oppenheimer 35th Annual",
+      "category": "Other"
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Protara Therapeutics to Present at the TD Cowen 45th Annual Health Care Conference",
+      "evt": "to Present at the TD Cowen 45th Annual Health Care Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-45th-annual-health-care",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-45th-annual-health-care",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-02-28",
+      "evt": "Share move after to Present at the TD Cowen 45th",
+      "category": "Other"
+    },
+    {
+      "date": "2025-03-03",
+      "evt": "Share move after FY2024 update guided to multiple 2025 TARA-002",
+      "category": "Other"
+    },
+    {
+      "date": "2025-03-05",
+      "evt": "FY2024 update guided to multiple 2025 TARA-002 readouts and THRIVE-3 start",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2024",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2024",
+      "venue": "COMPANY PR",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2025-03-11",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Protara Therapeutics Announces Encore Presentation of Results from THRIVE-1 Prospective Observational Study Evaluating the Prevalence of Choline Deficiency and Liver Injury in Patients Dependent on Parenteral Support",
+      "evt": "[COMPANY PR] Phase 3; n=24",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-encore-presentation-results",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-encore-presentation-results",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-04-04",
+      "evt": "Share move with market/biotech weakness",
+      "category": "Other"
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Protara Therapeutics to Present Interim Analysis from the Phase 2 ADVANCED-2 Trial of TARA-002 in Patients with NMIBC at the American Urological Association Annual Meeting",
+      "evt": "[COMPANY PR] Phase 2; Interim; n=30",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-interim-analysis-phase-2-advanced-2",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-interim-analysis-phase-2-advanced-2",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Protara Therapeutics Announces Appointment of Leonardo Viana Nicacio, M.D., as Chief Medical Officer",
+      "evt": "Announces Appointment of Leonardo Viana Nicacio, M.D., as Chief Medical Officer",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-leonardo-viana",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-leonardo-viana",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Protara Therapeutics Announces Positive Interim Results Demonstrating Durable Responses in the Ongoing Phase 2 ADVANCED-2 Trial of TARA-002 in Patients with NMIBC",
+      "evt": "[CALL] Phase 2; Interim Results; n=31; no Grade 3 or greater treatment-related adverse events On track to present updated interim data from app",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-interim-results",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-interim-results",
+      "source_kind": "company_press_release",
+      "venue": "CALL"
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Protara Therapeutics to Host Conference Call and Webcast to Review Interim Data from Phase 2 ADVANCED-2 Trial of TARA-002 in Patients with NMIBC on Monday, April 28, 2025",
+      "evt": "[CALL] Phase 2; Interim Data; n=31",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review",
+      "source_kind": "company_press_release",
+      "venue": "CALL"
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-7",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-7",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-05-08",
+      "title": "Protara Therapeutics Announces First Quarter 2025 Financial Results and Provides Business Update",
+      "evt": "Announces First Quarter 2025 Financial Results and Provides Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2025-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2025-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-05-13",
+      "title": "Protara Therapeutics to Participate in Upcoming Investor Conferences",
+      "evt": "to Participate in Upcoming Investor Conferences",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-2",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-2",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-06-02",
+      "title": "Protara Therapeutics Announces Appointment of William Conkling as Chief Commercial Officer",
+      "evt": "Announces Appointment of William Conkling as Chief Commercial Officer",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-william-conkling",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-appointment-william-conkling",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-06-30",
+      "title": "Protara Therapeutics Announces Addition to the Russell 3000\u00ae Index",
+      "evt": "Announces Addition to the Russell 3000\u00ae Index",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-addition-russell-3000r-index",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-addition-russell-3000r-index",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-07-01",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-8",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-8",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-07-08",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-07-21",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-08-01",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-9",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-9",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-08-11",
+      "evt": "Q2 update maintained 2025 STARBORN-1 and NMIBC milestones",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2025-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-second-quarter-2025-financial",
+      "venue": "COMPANY PR",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2025-08-27",
+      "title": "Protara Therapeutics to Participate in Upcoming Investor Conferences",
+      "evt": "to Participate in Upcoming Investor Conferences",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-3",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-3",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-09-02",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-10",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-10",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-09-22",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-09-24",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-10-01",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-11",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-11",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-10-03",
+      "evt": "Share move after Reports Inducement Grants Under Nasdaq Listing Rule",
+      "category": "Other"
+    },
+    {
+      "date": "2025-10-09",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2025-11-04",
+      "title": "Protara Therapeutics Named a 2026 Best Places to Work Winner by BioSpace",
+      "evt": "Named a 2026 Best Places to Work Winner by BioSpace",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-named-2026-best-places-work-winner-biospace",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-named-2026-best-places-work-winner-biospace",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-11-10",
+      "title": "Protara Therapeutics Announces Third Quarter 2025 Financial Results and Provides Business Update",
+      "evt": "Announces Third Quarter 2025 Financial Results and Provides Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2025-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-third-quarter-2025-financial",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-11-11",
+      "evt": "Share move after Announces Third Quarter 2025 Financial Results and",
+      "category": "Other"
+    },
+    {
+      "date": "2025-11-17",
+      "title": "Protara Therapeutics to Present New Interim Data from Phase 2 ADVANCED-2 Trial of TARA-002 in BCG-Na\u00efve NMIBC Patients at the 26th Annual Meeting of the Society of Urologic Oncology",
+      "evt": "[COMPANY PR] Phase 2; Interim Data; n=31",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-new-interim-data-phase-2-advanced-0",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-new-interim-data-phase-2-advanced-0",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-11-18",
+      "evt": "Share move after COMPANY PR Phase 2 Interim Data n",
+      "category": "Other"
+    },
+    {
+      "date": "2025-11-19",
+      "evt": "[CALL] Phase 2 interim; N=12; 8/8 8-week clinical success; 5/6 macrocystic CR; no serious AEs",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-interim-results-0"
+    },
+    {
+      "date": "2025-11-19",
+      "title": "Protara Therapeutics to Host Conference Call and Webcast to Review New Interim Data from Phase 2 STARBORN-1 Trial of TARA-002 in Pediatric Patients with Lymphatic Malformations on Wednesday, November 19, 2025",
+      "evt": "[CALL] Phase 2; Interim Data",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-0",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-0",
+      "source_kind": "company_press_release",
+      "venue": "CALL"
+    },
+    {
+      "date": "2025-11-21",
+      "evt": "Share move after CALL Phase 2 interim N 12 8",
+      "category": "Other"
+    },
+    {
+      "date": "2025-12-01",
+      "evt": "Share move after CALL Phase 2 updated interim N 31",
+      "category": "Other"
+    },
+    {
+      "date": "2025-12-03",
+      "evt": "[CALL] Phase 2 updated interim; N=31/29 efficacy; 69% 6m and 50% 12m landmark CR; no Grade 3+ TRAEs",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-updated-interim-data-phase-2"
+    },
+    {
+      "date": "2025-12-03",
+      "title": "Protara Therapeutics to Host Conference Call and Webcast to Review New Interim Data from Phase 2 ADVANCED-2 Trial of TARA-002 in BCG-Na\u00efve NMIBC Patients on Wednesday, December 3, 2025",
+      "evt": "[CALL] Phase 2; Interim Data",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-1",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-conference-call-and-webcast-review-1",
+      "source_kind": "company_press_release",
+      "venue": "CALL"
+    },
+    {
+      "date": "2025-12-04",
+      "evt": "$75 million public offering priced at $5.75 per share before option exercise",
+      "category": "Financing"
+    },
+    {
+      "date": "2025-12-04",
+      "title": "Protara Announces Pricing of $75 Million Public Offering",
+      "evt": "Protara Announces Pricing of $75 Million Public Offering",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-pricing-75-million-public-offering",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-pricing-75-million-public-offering",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-12-04",
+      "title": "Protara Announces Proposed Public Offering",
+      "evt": "Protara Announces Proposed Public Offering",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-proposed-public-offering-0",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-proposed-public-offering-0",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2025-12-05",
+      "evt": "Share move after $75 million public offering priced at $5.75",
+      "category": "Other"
+    },
+    {
+      "date": "2025-12-08",
+      "title": "Protara Announces Closing of $75 Million Public Offering",
+      "evt": "Protara Announces Closing of $75 Million Public Offering",
+      "category": "Financing",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-closing-75-million-public-offering",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-announces-closing-75-million-public-offering",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-01-05",
+      "title": "Protara Therapeutics Receives Both FDA Breakthrough Therapy and Fast Track Designations for TARA-002 in Pediatric Patients with Lymphatic Malformations",
+      "evt": "[COMPANY PR] Phase 2; preliminary",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-receives-both-fda-breakthrough-therapy-and",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-receives-both-fda-breakthrough-therapy-and",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-01-07",
+      "evt": "[COMPANY PR] Phase 2b/3; first patient dosed in registrational THRIVE-3",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-3",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-dosing-first-patient-phase-3",
+      "venue": "COMPANY PR",
+      "source_kind": "company_press_release"
+    },
+    {
+      "date": "2026-01-07",
+      "title": "Protara Therapeutics to Present at the 44th Annual J.P. Morgan Healthcare Conference",
+      "evt": "to Present at the 44th Annual J.P. Morgan Healthcare Conference",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-44th-annual-jp-morgan-healthcare",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-44th-annual-jp-morgan-healthcare",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-01-12",
+      "evt": "Company disclosed FDA Breakthrough Therapy and Fast Track designations for TARA-002 in LM",
+      "category": "Regulatory"
+    },
+    {
+      "date": "2026-01-12",
+      "title": "Protara Therapeutics Highlights Recent Updates and Anticipated 2026 Milestones",
+      "evt": "Highlights Recent Updates and Anticipated 2026 Milestones",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-highlights-recent-updates-and-anticipated",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-highlights-recent-updates-and-anticipated",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-01-20",
+      "evt": "Share move after ASCO Phase 2 Interim Data N 75",
+      "category": "Other"
+    },
+    {
+      "date": "2026-01-22",
+      "title": "Protara Therapeutics to Present Updated Interim Data from Phase 2 ADVANCED-2 Trial of TARA-002 in BCG-Unresponsive NMIBC Patients at the ASCO Genitourinary Cancers Symposium",
+      "evt": "[ASCO] Phase 2; Interim Data; N=75",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-updated-interim-data-phase-2",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-updated-interim-data-phase-2",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-01-27",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-02-02",
+      "title": "Protara Therapeutics, Inc. Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "evt": "Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-12",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-inc-reports-inducement-grants-under-12",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-02-19",
+      "title": "Protara Therapeutics to Participate in Upcoming Investor Conferences",
+      "evt": "to Participate in Upcoming Investor Conferences",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-4",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-participate-upcoming-investor-conferences-4",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-02-23",
+      "evt": "[ASCO GU Poster] Phase 2 updated interim; N=35; CR-any=65.7% (23/35); 6m CR=68.2% (15/22); 12m CR=33.3% (5/15); no Grade 3+ TRAEs",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "abstract_url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.7_suppl.743"
+    },
+    {
+      "date": "2026-02-24",
+      "evt": "Share move after ASCO GU Poster Phase 2 updated interim",
+      "category": "Other"
+    },
+    {
+      "date": "2026-02-25",
+      "evt": "Share move after ASCO GU Poster Phase 2 updated interim",
+      "category": "Other"
+    },
+    {
+      "date": "2026-02-27",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    },
+    {
+      "date": "2026-03-10",
+      "title": "Protara Therapeutics Announces Fourth Quarter and Full Year 2025 Financial Results and Provides a Business Update",
+      "evt": "Announces Fourth Quarter and Full Year 2025 Financial Results and Provides a Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2025",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-fourth-quarter-and-full-year-2025",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-03-10",
+      "evt": "FY2025 results reported $197.9 million unrestricted liquidity and runway into 2028",
+      "category": "Corporate"
+    },
+    {
+      "date": "2026-04-27",
+      "title": "Protara Therapeutics to Present Updated, Interim 12-Month Data from the Phase 2 ADVANCED-2 Trial of TARA-002 in BCG-Na\u00efve NMIBC Patients at the American Urological Association Annual Meeting",
+      "evt": "[ASCO] Phase 2; interim data",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-updated-interim-12-month-data-phase",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-updated-interim-12-month-data-phase",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Protara Therapeutics Announces First Quarter 2026 Financial Results and Provides a Business Update",
+      "evt": "Announces First Quarter 2026 Financial Results and Provides a Business Update",
+      "category": "Corporate",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2026-financial",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-first-quarter-2026-financial",
+      "source_kind": "company_press_release",
+      "venue": "ISSVA"
+    },
+    {
+      "date": "2026-05-13",
+      "evt": "Q1 update disclosed planned LM BLA submission in the second half of 2027",
+      "category": "Regulatory"
+    },
+    {
+      "date": "2026-05-15",
+      "evt": "[AUA 2026 Poster] Phase 2 updated 12m data; N=29; CR-any=72.4% (21/29); 6m CR=66.7% (18/27); 12m CR=55% (11/20)",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-announces-positive-updated-12-month-data"
+    },
+    {
+      "date": "2026-05-18",
+      "evt": "Share move after to Host Virtual Investor Webinar to Discuss",
+      "category": "Other"
+    },
+    {
+      "date": "2026-05-19",
+      "title": "Protara Therapeutics to Host Virtual Investor Webinar to Discuss TARA-002 for Lymphatic Malformations on Tuesday, May 19, 2026",
+      "evt": "to Host Virtual Investor Webinar to Discuss TARA-002 for Lymphatic Malformations on Tuesday, May 19,",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-virtual-investor-webinar-discuss-tara",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-host-virtual-investor-webinar-discuss-tara",
+      "source_kind": "company_press_release",
+      "venue": "COMPANY PR"
+    },
+    {
+      "date": "2026-05-20",
+      "evt": "[ISSVA Poster] Phase 2 updated interim; N=16 treated; 10/10 8-week clinical success; 1/16 related Grade 3 TEAE; no serious TEAEs",
+      "category": "Clinical Data",
+      "url": "https://ir.protaratx.com/static-files/9197cd45-87a3-419b-b988-68181d3c29cf",
+      "abstract_url": "https://ir.protaratx.com/static-files/9197cd45-87a3-419b-b988-68181d3c29cf"
+    },
+    {
+      "date": "2026-05-20",
+      "title": "Protara Therapeutics to Present at the TD Cowen 7th Annual Oncology Innovation Summit: Insights for ASCO & EHA",
+      "evt": "to Present at the TD Cowen 7th Annual Oncology Innovation Summit: Insights for ASCO &",
+      "category": "Other",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-7th-annual-oncology",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/protara-therapeutics-present-td-cowen-7th-annual-oncology",
+      "source_kind": "company_press_release",
+      "venue": "ASCO"
+    },
+    {
+      "date": "2026-06-30",
+      "evt": "Large share move; no company news found",
+      "category": "Other"
+    }
+  ]
+}

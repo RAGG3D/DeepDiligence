@@ -1,0 +1,43 @@
+{
+  "reference_workbook": "/mnt/c/Users/yzsun/Desktop/DD/MOLN/DCF MOLN.xlsx",
+  "pipeline_reference_workbook": "/mnt/c/Users/yzsun/Desktop/DD/MOLN/DCF MOLN completed_pre_calcstate_20260709_035047.xlsx",
+  "static_sheets": {
+    "Earnings": {"range": "A1:H18", "rows": 18, "cols": 8},
+    "VALUATION": {"range": "A1:P73", "rows": 73, "cols": 16},
+    "FSA": {"range": "A1:Y132", "rows": 132, "cols": 25},
+    "RIS": {"range": "A1:Y98", "rows": 98, "cols": 25},
+    "RBS": {"range": "A1:Y67", "rows": 67, "cols": 25},
+    "RCFS": {"range": "A1:W69", "rows": 69, "cols": 23},
+    "Schedules": {"range": "A1:X73", "rows": 73, "cols": 24},
+    "FY DATA": {"range": "A1:K143", "rows": 143, "cols": 11},
+    "FY DATA K USD": {"range": "A1:L130", "rows": 130, "cols": 12},
+    "Historical Events": {"range": "A1:AR374", "rows": 374, "cols": 44},
+    "BBG DAPI": {"range": "A1:AV113", "rows": 113, "cols": 48}
+  },
+  "dynamic_sheets": {
+    "Catalyst": {
+      "rule": "v3 two-table; cycle MOLN G:J/K:N/O:R/S:V target styles; Table 3 MS/LOA/Conv aligned below main"
+    },
+    "Scenarios": {
+      "rule": "rows 1:9 exact; semantic rows = spacer/divider/scenario-header/asset/market-share"
+    },
+    "Pipeline": {
+      "rule": "Pipeline-only authority is pipeline_reference_workbook; rows 1:8 exact; semantic rows = asset/TAM/market-share/list-price/revenue/COGS/spacer; conditional formatting = B1:B6 plus F:AH on every market-share row"
+    },
+    "Peer View": {
+      "rule": "rows 1:7 exact; company/peer rows mapped by BIC/T1/AVG rating"
+    }
+  },
+  "global": {
+    "copy": [
+      "font name/size/color/bold/italic/underline",
+      "fill and black divider/decorative rows",
+      "border",
+      "alignment and wrap",
+      "number format",
+      "row height",
+      "column width and hidden state"
+    ],
+    "preserve": ["values", "formulas", "hyperlinks", "comments", "data tables", "charts"]
+  }
+}

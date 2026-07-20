@@ -38,7 +38,7 @@ JOIN v_drug_split s ON s.drug_id = r.drug_id;
 -- 3) THE TAM. Total addressable market by indication × year
 --    = sum of every drug's revenue attributed to that indication.
 --    (This is the GROUP BY that replaces the sheet's SUMIF column.)
-CREATE VIEW v_tam_by_indication_year AS
+CREATE VIEW v_tam_base_by_indication_year AS
 SELECT
     indication_code,
     year,
@@ -46,8 +46,24 @@ SELECT
 FROM v_drug_indication_revenue
 GROUP BY indication_code, year;
 
+CREATE VIEW v_tam_by_indication_year AS
+SELECT
+    indication_code,
+    year,
+    tam_usd_m
+FROM v_tam_base_by_indication_year b
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM tam_override o
+    WHERE o.indication_code = b.indication_code
+      AND o.year = b.year
+)
+UNION ALL
+SELECT indication_code, year, tam_usd_m
+FROM tam_override;
+
 -- 3b) TAM rolled up to the solid / blood world (drug.tam_group).
-CREATE VIEW v_tam_by_group_year AS
+CREATE VIEW v_tam_base_by_group_year AS
 SELECT
     d.tam_group,
     v.indication_code,
@@ -56,6 +72,24 @@ SELECT
 FROM v_drug_indication_revenue v
 JOIN drug d ON d.drug_id = v.drug_id
 GROUP BY d.tam_group, v.indication_code, v.year;
+
+CREATE VIEW v_tam_by_group_year AS
+SELECT
+    tam_group,
+    indication_code,
+    year,
+    tam_usd_m
+FROM v_tam_base_by_group_year b
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM tam_override o
+    WHERE o.tam_group = b.tam_group
+      AND o.indication_code = b.indication_code
+      AND o.year = b.year
+)
+UNION ALL
+SELECT tam_group, indication_code, year, tam_usd_m
+FROM tam_override;
 
 -- 4) Derived parameter: incidence (passed through from inputs, exposed for Excel).
 CREATE VIEW v_param_incidence AS

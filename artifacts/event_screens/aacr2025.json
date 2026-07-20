@@ -1,0 +1,221 @@
+{
+  "event": "AACR Annual Meeting 2025",
+  "mode": "completed",
+  "event_dates": {
+    "start": "2025-04-25",
+    "end": "2025-04-30"
+  },
+  "screen_as_of": "2026-07-19",
+  "price_blind": true,
+  "candidates": [
+    {
+      "ticker": "ACTU",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pr", "dor", "pfs", "os", "trae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT212"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "AGEN",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["cr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT130"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "ALXO",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-LB369"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "BCAX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "trae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT034"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "BCTX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["pfs", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT100"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "BDTX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pr", "dcr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT023"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "BOLT",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dcr", "pr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT154"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "CHRS",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dcr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT038"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "CUE",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["dcr", "pr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT205"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "EVAX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-4538"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "IKNA",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pr", "dcr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT268"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "NVCT",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["pr", "dcr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT153"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "PPBT",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["os", "pfs", "orr", "dcr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-7141"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "RPTX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "dcr", "pfs", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT262"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "SNTI",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT143"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "VSTM",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "cr", "pr", "pfs", "ae"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT028"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "ZNTL",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "quantitative_clinical_data_disclosed",
+      "important_metrics": ["orr", "pfs"],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-3254"],
+      "eligible": true,
+      "exclusion_reason": ""
+    },
+    {
+      "ticker": "ATOS",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "trial_design_only",
+      "important_metrics": [],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT237"],
+      "eligible": false,
+      "exclusion_reason": "AACR disclosure was a trial-design abstract without quantitative human clinical outcomes."
+    },
+    {
+      "ticker": "CMPX",
+      "us_listing_verified": true,
+      "biopharma": true,
+      "capital_under_1000m": true,
+      "clinical_data_status": "trial_design_only",
+      "important_metrics": [],
+      "official_clinical_sources": ["https://doi.org/10.1158/1538-7445.AM2025-CT118"],
+      "eligible": false,
+      "exclusion_reason": "AACR disclosure was a trial-design abstract without quantitative human clinical outcomes."
+    }
+  ]
+}

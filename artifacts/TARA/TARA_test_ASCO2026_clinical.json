@@ -1,0 +1,2210 @@
+{
+  "ticker": "TARA",
+  "event": "ASCO2026",
+  "event_name": "ASCO2026",
+  "event_date": "2026-02-27",
+  "public_disclosure_date": "2026-02-23",
+  "venue": "2026 ASCO Genitourinary Cancers Symposium",
+  "data_cutoff": "2026-01-28",
+  "trial": "NCT05951179",
+  "phase": "Phase 2 open-label ADVANCED-2",
+  "relevant_targets": [
+    "TARA-002-NMIBC - NMIBC-BU",
+    "TARA-002-NMIBC - NMIBC-BN"
+  ],
+  "reported_data": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "n_enrolled": 35,
+      "n_evaluable": 35,
+      "efficacy": "Complete response at any time was 65.7% (23/35), six-month complete response was 68.2% (15/22), and 12-month complete response was 33.3% (5/15). The Kaplan-Meier estimated probability of maintaining complete response for six months was 71.1%; 5/5 responders maintained response from nine to 12 months, and reinduction converted 8/13 patients to a six-month complete response.",
+      "safety": "Most treatment-related adverse events were grade 1 and transient. There were no grade 3 or greater treatment-related adverse events, no related serious adverse events and no discontinuations due to treatment-related adverse events.",
+      "follow_up": "Landmark follow-up was available through 12 months for 15 patients, but the denominator was still small and the registrational cohort remained open to enrollment.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "n_enrolled": 31,
+      "n_evaluable": 29,
+      "efficacy": "Complete response at any time was 72.4% (21/29), six-month complete response was 66.7% (18/27), and 12-month complete response was 57.9% (11/19). The Kaplan-Meier estimated probability of maintaining complete response for six months was 73.1%; 11/11 responders maintained response from nine to 12 months, and reinduction converted 4/6 patients to a six-month complete response.",
+      "safety": "Most treatment-related adverse events were grade 1 and transient. There were no grade 3 or greater treatment-related adverse events, no related serious adverse events and no discontinuations due to treatment-related adverse events.",
+      "follow_up": "Landmark follow-up was available through 12 months for 19 patients; the cohort was fully enrolled but longer durability remained immature.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    }
+  ],
+  "competitor_comparisons": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "matched_setting": "BCG-unresponsive NMIBC with carcinoma in situ with or without papillary tumors in a single-arm registrational cohort.",
+      "clinical_comparison": "The FDA clinical summary reported an 82% complete response rate among 83 patients, with 51% of responders maintaining response for at least 12 months. TARA-002 showed encouraging six-month activity and a favorable safety profile, but its 12-month landmark denominator was small and its observed 12-month complete-response proportion was lower.",
+      "limitations": "Cross-trial comparison with different schedules, response adjudication, follow-up maturity and denominators; the TARA-002 cohort remained an interim analysis.",
+      "source_ids": [
+        "S4"
+      ]
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "matched_setting": "BCG-naïve high-risk NMIBC after resection; randomized Phase 3 evidence, although the systemic checkpoint-plus-BCG regimen and endpoint differ from intravesical TARA-002.",
+      "clinical_comparison": "CREST randomized 352 patients to sasanlimab plus BCG induction and maintenance and 351 to BCG alone, with an event-free-survival hazard ratio of 0.68 and estimated 36-month event-free survival of 82.1% versus 74.8%. TARA-002's 57.9% 12-month complete response and clean early tolerability are encouraging, but follow-up and sample size are far less mature.",
+      "limitations": "Cross-trial comparison across different endpoints, treatment modalities, follow-up horizons and study designs; TARA-002 lacks randomized evidence at this event.",
+      "source_ids": [
+        "S5"
+      ]
+    }
+  ],
+  "target_assessments": [
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BU",
+      "observed_outcome": "Increase",
+      "data_quality": "Moderate: clinically meaningful six-month activity and a clean tolerability profile in 35 evaluable patients, offset by a small 12-month denominator, declining landmark response and ongoing enrollment.",
+      "clinical_interpretation": "The six-month response, successful reinduction and lack of severe treatment-related toxicity support a positive revision. The lower 12-month landmark result and stronger mature intravesical competitor benchmark constrain the size and preserve both neutral and modest downside branches.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.05,
+          "loa_change": 0.04,
+          "conviction": 0.65,
+          "rationale": "A 68.2% six-month complete response, reinduction activity and no grade 3 or greater treatment-related toxicity support a meaningful positive adjustment."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.25,
+          "rationale": "The immature 12-month denominator and competitive efficacy bar could leave assumptions unchanged until the registrational cohort matures."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.04,
+          "loa_change": -0.03,
+          "conviction": 0.1,
+          "rationale": "The 33.3% 12-month landmark proportion and stronger mature benchmark create a limited downside branch despite favorable six-month data."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "Observed efficacy, tolerability and continuing registrational enrollment do not support suspension."
+        }
+      ]
+    },
+    {
+      "target": "TARA-002-NMIBC - NMIBC-BN",
+      "observed_outcome": "Increase",
+      "data_quality": "Moderate: a nearly complete cohort with 29 evaluable patients, consistent six- and 12-month complete responses and favorable safety, but still a small nonrandomized dataset.",
+      "clinical_interpretation": "The 57.9% 12-month complete response and clean safety support a positive revision. The randomized CREST benchmark and the lack of a control arm keep a substantial neutral branch and limit extrapolation.",
+      "outcomes": [
+        {
+          "outcome": "Increase",
+          "market_share_change": 0.04,
+          "loa_change": 0.035,
+          "conviction": 0.7,
+          "rationale": "Consistent six- and 12-month complete responses, reinduction activity and no severe treatment-related toxicity support an upward adjustment."
+        },
+        {
+          "outcome": "Remain",
+          "market_share_change": 0.0,
+          "loa_change": 0.0,
+          "conviction": 0.25,
+          "rationale": "The nonrandomized 29-patient evidence may not justify a durable assumption change against a mature randomized competitor standard."
+        },
+        {
+          "outcome": "Decrease",
+          "market_share_change": -0.03,
+          "loa_change": -0.025,
+          "conviction": 0.05,
+          "rationale": "A downside interpretation would require later durability or controlled efficacy to disappoint; current data make this below the retention threshold."
+        },
+        {
+          "outcome": "Suspension",
+          "market_share_change": -1.0,
+          "loa_change": -1.0,
+          "conviction": 0.0,
+          "rationale": "The efficacy and safety disclosure does not support suspension."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "source_kind": "company_clinical_release",
+      "title": "TARA-002 interim ADVANCED-2 results presented at ASCO GU 2026",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S2",
+      "url": "https://ascopubs.org/doi/10.1200/JCO.2026.44.7_suppl.743",
+      "source_kind": "conference_abstract",
+      "title": "ADVANCED-2 interim efficacy and safety in BCG-unresponsive high-grade NMIBC",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S3",
+      "url": "https://clinicaltrials.gov/study/NCT05951179",
+      "source_kind": "clinical_trial_registry",
+      "title": "ADVANCED-2 study of intravesical TARA-002 in high-risk NMIBC",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S4",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+      "source_kind": "regulator_clinical_document",
+      "title": "FDA clinical efficacy summary for gemcitabine intravesical system in BCG-unresponsive NMIBC",
+      "accessed": "2026-07-18"
+    },
+    {
+      "id": "S5",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40450141/",
+      "source_kind": "peer_reviewed_publication",
+      "title": "Randomized Phase 3 CREST study of sasanlimab plus BCG in BCG-naïve high-risk NMIBC",
+      "accessed": "2026-07-18"
+    }
+  ],
+  "limitations": [
+    "The BCG-unresponsive 12-month landmark denominator was 15 and the cohort remained open, so durability estimates were immature.",
+    "The BCG-naïve cohort was nonrandomized and had 29 evaluable participants despite near-complete enrollment.",
+    "Competitor comparisons differ in endpoint, modality, schedule, adjudication and follow-up and are used only to bound clinical interpretation.",
+    "Only information available for the ASCO GU 2026 disclosure was used; later updates were not used to revise the event interpretation.",
+    "No security-market information was retrieved or used."
+  ],
+  "internal_clinical_context_rows": [
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "0.724 any time; 0.667 at six months; 0.550 at twelve months",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "AUA 2025",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Intravesical live attenuated immunotherapy standard of care",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "0.657 any time; 0.682 at six months; 0.333 at twelve months",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "CR",
+      "value": "0.82",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "0.62",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "CR",
+      "value": "0.51",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Conference",
+      "value": "First-patient company announcement",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "JPEN publication",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "ISSVA World Congress 2026",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Conference",
+      "value": "Laryngoscope publication",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "CR",
+      "value": "0.85",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Conference",
+      "value": "FDA approval",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "AUA 2026",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2025-04-26",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "ASCO GU 2026",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Conference",
+      "value": "FDA approval",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "FDA approval",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Conference",
+      "value": "FDA approval",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2026-01-07",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2001-09-01",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-05-20",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2009-01-01",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Conference",
+      "value": "Journal of Pediatric Surgery systematic review",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "2022-04-05",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-05-15",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "352 combination; 351 BCG control",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2026-02-23",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Date",
+      "value": "2025-09-09",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2024-04-22",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Date",
+      "value": "2022-12-16",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "129 planned",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "15 randomized; 7 choline and 8 usual TPN",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "16 treated; 12 completed treatment; 10 eight-week evaluable",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "117 randomized intent-to-treat",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Date",
+      "value": "2022-02-09",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "37 efficacy-evaluable",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "29 efficacy-evaluable; 27 at six months; 20 at twelve months",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Subcutaneous PD-1 inhibitor plus BCG",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Approved standard of care",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "35 efficacy-evaluable; 22 at six months; 15 at twelve months",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Evaluable Patients",
+      "value": "83",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "77 efficacy-evaluable",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Evaluable Patients",
+      "value": "98 efficacy-evaluable",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "First standardized intravenous choline substrate replacement",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Direct choline replacement added to TPN",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "0 serious treatment-emergent adverse events reported",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "Intralesional inactivated Streptococcus pyogenes immunotherapy",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Evaluable Patients",
+      "value": "52 pooled head and neck LM cases for doxycycline complete regression estimate",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Oral PI3K-alpha inhibitor for PIK3CA-related overgrowth spectrum",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "0",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Intravesical",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "GEQ G3 SAE/Patients",
+      "value": "0",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Innovation",
+      "value": "Sustained-release intravesical gemcitabine system",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "IL-15 superagonist plus BCG",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Innovation",
+      "value": "Non-replicating adenoviral interferon alfa-2b gene therapy",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Standardized intracystic immunopotentiator derived from OK-432 master cell bank",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Off-label chemical sclerotherapy",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "Inactivated Streptococcus pyogenes immunopotentiator",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "Innate and adaptive immune activation",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Innovation",
+      "value": "BCG-free inactivated Streptococcus pyogenes immunopotentiator",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT04165317",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Bacillus Calmette-Guerin",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "BCG-naive high-risk NMIBC",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Median OS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "NCT#",
+      "value": "NCT06910943",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "NCT#",
+      "value": "NCT00010452",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "ORR",
+      "value": "0.27 radiologic response at week 24",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Median PFS",
+      "value": "NR",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "NCT#",
+      "value": "NCT04640623",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT03022825",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "NCT#",
+      "value": "NCT02773849",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "II/III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Randomized placebo-controlled proof-of-requirement study",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT05871970",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "ORR",
+      "value": "0.68 complete or substantial overall; 0.94 macrocystic; 0.63 mixed",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "0.85 complete regression estimate",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "Real-world evidence",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT05951179",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Phase 3 met primary event-free survival endpoint",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "NCT#",
+      "value": "NCT05951179",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Readout Phase",
+      "value": "III",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Registrational Phase 2b/3 underway",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Intravenous in TPN",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "ORR",
+      "value": "0.833 clinical success or improvement among treatment completers; 1.00 clinical success among eight-week evaluable",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "Literature review",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "FDA accelerated approval for severe PROS",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Subcutaneous plus intravesical BCG",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "FDA approved 2025",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "FDA approved 2024",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Result",
+      "value": "FDA approved 2022",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Route",
+      "value": "Intravenous with parenteral support",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "Choline deficiency and associated hepatic abnormalities",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Readout Phase",
+      "value": "II",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Result",
+      "value": "Approved in Japan and Taiwan for LM",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "Established off-label procedure",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Route",
+      "value": "Oral",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "55.0% twelve-month landmark complete response",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "PD-1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "68.2% six-month landmark complete response",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Route",
+      "value": "Intravesical system",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Intravesical with BCG",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Route",
+      "value": "Intravesical",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "Choline deficiency during long-term parenteral support",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "Intravenous choline chloride",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "Long-term TPN patients",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Result",
+      "value": "100% clinical success among eight-week evaluable patients",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Route",
+      "value": "Intralesional",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Percutaneous intralesional",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "PI3K-alpha",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Intravesical",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "Sasanlimab + BCG",
+      "ticker": "PFE",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "BCG-naive high-risk NMIBC",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Intravesical",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "DNA synthesis",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "IL-15 receptor complex",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Target",
+      "value": "IFN-alpha2b",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 21,
+      "section": "Long-Term Parenteral Support with Choline Deficiency (PS)",
+      "drug": "IV-Choline-Chloride",
+      "ticker": "TARA",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "Long-term parenteral support when oral or enteral nutrition is inadequate",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Route",
+      "value": "Intracystic",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Target",
+      "value": "Local immune activation",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "Endothelial injury and cyst ablation",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Vijoice (alpelisib)",
+      "ticker": "NVS",
+      "rating": "AVG",
+      "metric": "Treatment Line",
+      "value": "Severe PIK3CA-related overgrowth spectrum requiring systemic therapy",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "TLR2/NOD2 innate and adaptive immune activation",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "TLR2/NOD2 innate and adaptive immune activation",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Inlexzo (gemcitabine intravesical system)",
+      "ticker": "JNJ",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "ANKTIVA + BCG",
+      "ticker": "IBRX",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "Adstiladrin (nadofaragene firadenovec)",
+      "ticker": "Private",
+      "rating": "AVG",
+      "metric": "Treatment Line",
+      "value": "BCG-unresponsive high-risk NMIBC with CIS +/- papillary tumors",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Target",
+      "value": "Local TLR2/NOD2-linked immune activation",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "OK-432 (Picibanil)",
+      "ticker": "4519 JP Equity",
+      "rating": "BIC",
+      "metric": "Treatment Line",
+      "value": "Pediatric cervicofacial lymphatic malformations",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "Doxycycline sclerotherapy",
+      "ticker": "",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "Pediatric head and neck LM",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 19,
+      "section": "BCG-Naive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BN)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "BCG-naive high-risk NMIBC with CIS +/- Ta/T1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 20,
+      "section": "BCG-Unresponsive High-Risk Non-Muscle Invasive Bladder Cancer (NMIBC-BU)",
+      "drug": "TARA-002-NMIBC",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "BCG-unresponsive high-risk NMIBC with CIS +/- Ta/T1",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section_id": 22,
+      "section": "Macrocystic and Mixed Cystic Lymphatic Malformations (LM)",
+      "drug": "TARA-002-LM",
+      "ticker": "TARA",
+      "rating": "T1",
+      "metric": "Treatment Line",
+      "value": "Pediatric macrocystic or mixed cystic LM",
+      "origin": "dd.duckdb.peer_metric"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "clinical_comparison",
+      "value": "CREST randomized 352 patients to sasanlimab plus BCG induction and maintenance and 351 to BCG alone, with an event-free-survival hazard ratio of 0.68 and estimated 36-month event-free survival of 82.1% versus 74.8%. TARA-002's 57.9% 12-month complete response and clean early tolerability are encouraging, but follow-up and sample size are far less mature.",
+      "population": "BCG-naïve high-risk NMIBC after resection; randomized Phase 3 evidence, although the systemic checkpoint-plus-BCG regimen and endpoint differ from intravesical TARA-002.",
+      "dose": null,
+      "as_of_date": "2026-02-23",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40450141/",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "cross_trial_limitations",
+      "value": "Cross-trial comparison across different endpoints, treatment modalities, follow-up horizons and study designs; TARA-002 lacks randomized evidence at this event.",
+      "population": "BCG-naïve high-risk NMIBC after resection; randomized Phase 3 evidence, although the systemic checkpoint-plus-BCG regimen and endpoint differ from intravesical TARA-002.",
+      "dose": null,
+      "as_of_date": "2026-02-23",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/40450141/",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "clinical_comparison",
+      "value": "The FDA clinical summary reported an 82% complete response rate among 83 patients, with 51% of responders maintaining response for at least 12 months. TARA-002 showed encouraging six-month activity and a favorable safety profile, but its 12-month landmark denominator was small and its observed 12-month complete-response proportion was lower.",
+      "population": "BCG-unresponsive NMIBC with carcinoma in situ with or without papillary tumors in a single-arm registrational cohort.",
+      "dose": null,
+      "as_of_date": "2026-02-23",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "cross_trial_limitations",
+      "value": "Cross-trial comparison with different schedules, response adjudication, follow-up maturity and denominators; the TARA-002 cohort remained an interim analysis.",
+      "population": "BCG-unresponsive NMIBC with carcinoma in situ with or without papillary tumors in a single-arm registrational cohort.",
+      "dose": null,
+      "as_of_date": "2026-02-23",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": null,
+      "metric": "efficacy_summary",
+      "value": "Complete response at any time was 72.4% (21/29), six-month complete response was 66.7% (18/27), and 12-month complete response was 57.9% (11/19). The Kaplan-Meier estimated probability of maintaining complete response for six months was 73.1%; 11/11 responders maintained response from nine to 12 months, and reinduction converted 4/6 patients to a six-month complete response.",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": null,
+      "metric": "follow_up",
+      "value": "Landmark follow-up was available through 12 months for 19 patients; the cohort was fully enrolled but longer durability remained immature.",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": null,
+      "metric": "n_enrolled",
+      "value": "31",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": null,
+      "metric": "n_evaluable",
+      "value": "29",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BN",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": null,
+      "metric": "safety_overview",
+      "value": "Most treatment-related adverse events were grade 1 and transient. There were no grade 3 or greater treatment-related adverse events, no related serious adverse events and no discontinuations due to treatment-related adverse events.",
+      "population": "High-risk BCG-naïve NMIBC with carcinoma in situ with or without Ta/T1. Enrollment was complete at 31 participants; 29 were evaluable, 27 at six months and 19 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": null,
+      "metric": "efficacy_summary",
+      "value": "Complete response at any time was 65.7% (23/35), six-month complete response was 68.2% (15/22), and 12-month complete response was 33.3% (5/15). The Kaplan-Meier estimated probability of maintaining complete response for six months was 71.1%; 5/5 responders maintained response from nine to 12 months, and reinduction converted 8/13 patients to a six-month complete response.",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": null,
+      "metric": "follow_up",
+      "value": "Landmark follow-up was available through 12 months for 15 patients, but the denominator was still small and the registrational cohort remained open to enrollment.",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": null,
+      "metric": "n_enrolled",
+      "value": "35",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": null,
+      "metric": "n_evaluable",
+      "value": "35",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "NMIBC-BU",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": null,
+      "metric": "safety_overview",
+      "value": "Most treatment-related adverse events were grade 1 and transient. There were no grade 3 or greater treatment-related adverse events, no related serious adverse events and no discontinuations due to treatment-related adverse events.",
+      "population": "High-risk BCG-unresponsive NMIBC with carcinoma in situ with or without Ta/T1. The interim disclosure included 35 evaluable participants, with 22 evaluable at six months and 15 at 12 months.",
+      "dose": null,
+      "as_of_date": "2026-01-28",
+      "source_url": "https://ir.protaratx.com/news-releases/news-release-details/tara-002-demonstrates-68-complete-response-rate-six-months-bcg",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "adverse_event",
+      "value": "Urinary frequency; urinary tract infection; dysuria; micturition urgency; urinary tract pain; hematuria",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": null,
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219683s000lbl.pdf",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "adverse_event_rate",
+      "value": "Urinary frequency 48%, UTI 44% (grade 3/4 6%), dysuria 42%, urgency 34%, urinary tract pain 26% (grade 3/4 7%), hematuria 24% (grade 3/4 2.4%)",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": null,
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219683s000lbl.pdf",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "cr",
+      "value": "82% (95% CI 72%-90%)",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": null,
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "dose",
+      "value": "225 mg intravesical system every 3 weeks for 6 months, then every 12 weeks for up to 18 months",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": "225 mg intravesical system every 3 weeks for 6 months, then every 12 weeks for up to 18 months",
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219683s000lbl.pdf",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "orr",
+      "value": "Not reported; ORR was not an efficacy endpoint for CIS NMIBC",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": null,
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "pr",
+      "value": "Not applicable/not reported; response endpoint was complete response",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": null,
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gemcitabine-intravesical-system-non-muscle-invasive-bladder-cancer",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-unresponsive NMIBC with CIS +/- papillary tumors",
+      "drug": "TARA-002-NMIBC - NMIBC-BU",
+      "competitor": "Gemcitabine intravesical system in SunRISe-1",
+      "metric": "safety_overview",
+      "value": "Safety N=85: serious adverse reactions 24%, fatal adverse reactions 1.2%, permanent discontinuation 7%",
+      "population": "SunRISe-1 Cohort 2 efficacy N=83; safety N=85",
+      "dose": null,
+      "as_of_date": "2025-09-09",
+      "source_url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/219683s000lbl.pdf",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "adverse_event",
+      "value": "Dysuria; pollakiuria; hematuria; immune-related thyroid disorders; rash; immune-related hepatitis",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": null,
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "adverse_event_rate",
+      "value": "Dysuria 29.4%, pollakiuria 22.9%, hematuria 20.9%; any-grade irAE 42.6%, grade >=3 irAE 15.7%; thyroid disorders 17.7%, rash 13.1%, grade 3/4 immune hepatitis 3.4%",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": null,
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "cr",
+      "value": "89.8% at any time in the Arm A CIS subgroup",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": null,
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "dose",
+      "value": "Sasanlimab 300 mg SC every 4 weeks for up to 25 cycles plus intravesical BCG induction and maintenance",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": "Sasanlimab 300 mg SC every 4 weeks for up to 25 cycles plus intravesical BCG induction and maintenance",
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "orr",
+      "value": "Not reported; mixed high-risk NMIBC efficacy was assessed by EFS and CIS complete response",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": null,
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "pr",
+      "value": "Not applicable/not reported for NMIBC CIS response assessment",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": null,
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    },
+    {
+      "section": "BCG-naive high-risk NMIBC",
+      "drug": "TARA-002-NMIBC - NMIBC-BN",
+      "competitor": "Sasanlimab plus BCG induction and maintenance in CREST",
+      "metric": "safety_overview",
+      "value": "Arm A safety N=350: treatment-related AE 87.1%; grade >=3 treatment-related AE 29.1%; no treatment-related deaths",
+      "population": "CREST Arm A N=352; CIS subgroup N=88; safety N=350",
+      "dose": null,
+      "as_of_date": "2024-12-02",
+      "source_url": "https://www.nature.com/articles/s41591-025-03738-z",
+      "origin": "dd.duckdb.research_fact"
+    }
+  ],
+  "target_universe": [
+    "IV-Choline-Chloride - PS",
+    "TARA-002-LM - LM",
+    "TARA-002-NMIBC - NMIBC-BU",
+    "TARA-002-NMIBC - NMIBC-BN"
+  ],
+  "sheet_name": "Test-ASCO2026",
+  "clinical_only": true,
+  "price_data_used": true,
+  "pre_event_price_calibration": {
+    "market_ticker": "TARA",
+    "currency": "USD",
+    "provider": "Yahoo Finance via yfinance",
+    "source_url": "https://finance.yahoo.com/quote/TARA/history/",
+    "price_field": "unadjusted Close",
+    "window_days": 7,
+    "window_start": "2026-02-16",
+    "window_end_exclusive": "2026-02-23",
+    "sessions": [
+      {
+        "date": "2026-02-17",
+        "close": 6.550000190734863
+      },
+      {
+        "date": "2026-02-18",
+        "close": 6.670000076293945
+      },
+      {
+        "date": "2026-02-19",
+        "close": 7.150000095367432
+      },
+      {
+        "date": "2026-02-20",
+        "close": 6.840000152587891
+      }
+    ],
+    "session_count": 4,
+    "average_close": 6.802500128746033,
+    "same_day_or_post_event_prices_used": false,
+    "method": "proportional scaling of existing target LOAs with [0%,100%] constraints",
+    "proportional_scale": 1.8952024545060417,
+    "unrisked_total": 35.8932636065998,
+    "feasible_market_price_min": 0.0,
+    "feasible_market_price_max": 35.8932636065998,
+    "prior_risk_adjusted_total": 3.5893263606599803,
+    "estimated_breakdown_total": 6.802500128746034,
+    "relative_error": 2.220446049250313e-16,
+    "targets": {
+      "IV-Choline-Chloride - PS": {
+        "unrisked_value": 13.588545120834517,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 2.575304406617168
+      },
+      "TARA-002-LM - LM": {
+        "unrisked_value": 8.580455929870759,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 1.6261701139071985
+      },
+      "TARA-002-NMIBC - NMIBC-BU": {
+        "unrisked_value": 6.104621178364713,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 1.156949304106637
+      },
+      "TARA-002-NMIBC - NMIBC-BN": {
+        "unrisked_value": 7.619641377529813,
+        "prior_loa": 0.1,
+        "estimated_loa": 0.1895202454506042,
+        "calibrated_market_price": 1.4440763041150302
+      }
+    }
+  },
+  "clinical_interpretation_price_blind": true,
+  "pre_event_price_calibration_used": true,
+  "same_day_or_post_event_price_data_used": false
+}
